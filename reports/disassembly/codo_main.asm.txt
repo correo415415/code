@@ -1,0 +1,328 @@
+
+original/pico-8/pico8_dyn:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+00000000004b7620 <codo_main>:
+  4b7620:	55                   	push   rbp
+  4b7621:	53                   	push   rbx
+  4b7622:	48 89 f3             	mov    rbx,rsi
+  4b7625:	89 fd                	mov    ebp,edi
+  4b7627:	48 8d 3d f2 3c 3b 00 	lea    rdi,[rip+0x3b3cf2]        # 86b320 <codo_argv0>
+  4b762e:	48 83 ec 08          	sub    rsp,0x8
+  4b7632:	48 8b 36             	mov    rsi,QWORD PTR [rsi]
+  4b7635:	e8 b6 7e 07 00       	call   52f4f0 <codo_strcpy>
+  4b763a:	83 fd 01             	cmp    ebp,0x1
+  4b763d:	89 2d a1 72 2d 00    	mov    DWORD PTR [rip+0x2d72a1],ebp        # 78e8e4 <codo_argc>
+  4b7643:	48 89 1d 4e 3f 3b 00 	mov    QWORD PTR [rip+0x3b3f4e],rbx        # 86b598 <codo_argv>
+  4b764a:	7e 1f                	jle    4b766b <codo_main+0x4b>
+  4b764c:	48 8b 73 08          	mov    rsi,QWORD PTR [rbx+0x8]
+  4b7650:	48 8d 3d 81 f1 08 00 	lea    rdi,[rip+0x8f181]        # 5467d8 <CodeMask+0x1b58>
+  4b7657:	b9 0b 00 00 00       	mov    ecx,0xb
+  4b765c:	f3 a6                	repz cmps BYTE PTR ds:[rsi],BYTE PTR es:[rdi]
+  4b765e:	0f 97 c0             	seta   al
+  4b7661:	1c 00                	sbb    al,0x0
+  4b7663:	84 c0                	test   al,al
+  4b7665:	0f 84 f8 04 00 00    	je     4b7b63 <codo_main+0x543>
+  4b766b:	48 89 de             	mov    rsi,rbx
+  4b766e:	89 ef                	mov    edi,ebp
+  4b7670:	48 bb cf f7 53 e3 a5 	movabs rbx,0x20c49ba5e353f7cf
+  4b7677:	9b c4 20 
+  4b767a:	e8 f1 01 f5 ff       	call   407870 <codo_main_init>
+  4b767f:	c7 05 9f 3e 3b 00 00 	mov    DWORD PTR [rip+0x3b3e9f],0x0        # 86b528 <codo_quit>
+  4b7686:	00 00 00 
+  4b7689:	31 c0                	xor    eax,eax
+  4b768b:	e9 c1 00 00 00       	jmp    4b7751 <codo_main+0x131>
+  4b7690:	31 c0                	xor    eax,eax
+  4b7692:	e8 c9 62 05 00       	call   50d960 <codo_handle_system_messages>
+  4b7697:	8b 05 ef 3e 3b 00    	mov    eax,DWORD PTR [rip+0x3b3eef]        # 86b58c <codo_processing_gui>
+  4b769d:	85 c0                	test   eax,eax
+  4b769f:	75 1b                	jne    4b76bc <codo_main+0x9c>
+  4b76a1:	31 c0                	xor    eax,eax
+  4b76a3:	c7 05 df 3e 3b 00 01 	mov    DWORD PTR [rip+0x3b3edf],0x1        # 86b58c <codo_processing_gui>
+  4b76aa:	00 00 00 
+  4b76ad:	e8 7e 69 00 00       	call   4be030 <codo_process_gui>
+  4b76b2:	c7 05 d0 3e 3b 00 00 	mov    DWORD PTR [rip+0x3b3ed0],0x0        # 86b58c <codo_processing_gui>
+  4b76b9:	00 00 00 
+  4b76bc:	48 8d 35 5d 3e 3b 00 	lea    rsi,[rip+0x3b3e5d]        # 86b520 <codo_last_mouse_y>
+  4b76c3:	48 8d 3d 5a 3e 3b 00 	lea    rdi,[rip+0x3b3e5a]        # 86b524 <codo_last_mouse_x>
+  4b76ca:	31 d2                	xor    edx,edx
+  4b76cc:	e8 3f 8e 05 00       	call   510510 <codo_get_mouse>
+  4b76d1:	31 c0                	xor    eax,eax
+  4b76d3:	e8 e8 00 05 00       	call   5077c0 <codo_update_music_fading>
+  4b76d8:	8b 05 7a f1 51 00    	mov    eax,DWORD PTR [rip+0x51f17a]        # 9d6858 <cconfig+0xb8>
+  4b76de:	85 c0                	test   eax,eax
+  4b76e0:	0f 85 9a 00 00 00    	jne    4b7780 <codo_main+0x160>
+  4b76e6:	c7 05 90 3e 3b 00 00 	mov    DWORD PTR [rip+0x3b3e90],0x0        # 86b580 <skip_frame>
+  4b76ed:	00 00 00 
+  4b76f0:	31 c0                	xor    eax,eax
+  4b76f2:	e8 f9 71 f5 ff       	call   40e8f0 <codo_main_update>
+  4b76f7:	8b 2d 83 3e 3b 00    	mov    ebp,DWORD PTR [rip+0x3b3e83]        # 86b580 <skip_frame>
+  4b76fd:	85 ed                	test   ebp,ebp
+  4b76ff:	75 3c                	jne    4b773d <codo_main+0x11d>
+  4b7701:	44 8b 1d 50 f1 51 00 	mov    r11d,DWORD PTR [rip+0x51f150]        # 9d6858 <cconfig+0xb8>
+  4b7708:	45 85 db             	test   r11d,r11d
+  4b770b:	0f 85 b7 01 00 00    	jne    4b78c8 <codo_main+0x2a8>
+  4b7711:	31 c0                	xor    eax,eax
+  4b7713:	e8 a8 1e f5 ff       	call   4095c0 <codo_main_draw>
+  4b7718:	44 8b 0d 39 f1 51 00 	mov    r9d,DWORD PTR [rip+0x51f139]        # 9d6858 <cconfig+0xb8>
+  4b771f:	45 85 c9             	test   r9d,r9d
+  4b7722:	0f 85 c8 00 00 00    	jne    4b77f0 <codo_main+0x1d0>
+  4b7728:	8b 05 22 f1 51 00    	mov    eax,DWORD PTR [rip+0x51f122]        # 9d6850 <cconfig+0xb0>
+  4b772e:	85 c0                	test   eax,eax
+  4b7730:	0f 84 26 01 00 00    	je     4b785c <codo_main+0x23c>
+  4b7736:	31 c0                	xor    eax,eax
+  4b7738:	e8 a3 26 05 00       	call   509de0 <codo_register_frame_end_for_fps>
+  4b773d:	8b 0d 15 f1 51 00    	mov    ecx,DWORD PTR [rip+0x51f115]        # 9d6858 <cconfig+0xb8>
+  4b7743:	85 c9                	test   ecx,ecx
+  4b7745:	0f 85 2d 02 00 00    	jne    4b7978 <codo_main+0x358>
+  4b774b:	8b 05 d7 3d 3b 00    	mov    eax,DWORD PTR [rip+0x3b3dd7]        # 86b528 <codo_quit>
+  4b7751:	85 c0                	test   eax,eax
+  4b7753:	0f 85 f7 01 00 00    	jne    4b7950 <codo_main+0x330>
+  4b7759:	31 c0                	xor    eax,eax
+  4b775b:	e8 60 26 05 00       	call   509dc0 <codo_register_frame_start_for_fps>
+  4b7760:	8b 05 f2 f0 51 00    	mov    eax,DWORD PTR [rip+0x51f0f2]        # 9d6858 <cconfig+0xb8>
+  4b7766:	85 c0                	test   eax,eax
+  4b7768:	0f 84 22 ff ff ff    	je     4b7690 <codo_main+0x70>
+  4b776e:	31 c0                	xor    eax,eax
+  4b7770:	e8 fb a8 05 00       	call   512070 <codo_timer_start>
+  4b7775:	e9 16 ff ff ff       	jmp    4b7690 <codo_main+0x70>
+  4b777a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4b7780:	31 c0                	xor    eax,eax
+  4b7782:	83 05 f7 ef 51 00 01 	add    DWORD PTR [rip+0x51eff7],0x1        # 9d6780 <stage_samples>
+  4b7789:	e8 02 a9 05 00       	call   512090 <codo_timer_end>
+  4b778e:	48 89 c1             	mov    rcx,rax
+  4b7791:	48 8b 2d a8 3d 3b 00 	mov    rbp,QWORD PTR [rip+0x3b3da8]        # 86b540 <stage_max_ms>
+  4b7798:	48 f7 eb             	imul   rbx
+  4b779b:	48 c1 f9 3f          	sar    rcx,0x3f
+  4b779f:	31 c0                	xor    eax,eax
+  4b77a1:	48 c1 fa 07          	sar    rdx,0x7
+  4b77a5:	48 29 ca             	sub    rdx,rcx
+  4b77a8:	48 01 15 b1 3d 3b 00 	add    QWORD PTR [rip+0x3b3db1],rdx        # 86b560 <stage_ms>
+  4b77af:	e8 dc a8 05 00       	call   512090 <codo_timer_end>
+  4b77b4:	48 39 c5             	cmp    rbp,rax
+  4b77b7:	0f 8e 83 01 00 00    	jle    4b7940 <codo_main+0x320>
+  4b77bd:	48 8b 05 7c 3d 3b 00 	mov    rax,QWORD PTR [rip+0x3b3d7c]        # 86b540 <stage_max_ms>
+  4b77c4:	48 89 05 75 3d 3b 00 	mov    QWORD PTR [rip+0x3b3d75],rax        # 86b540 <stage_max_ms>
+  4b77cb:	8b 05 87 f0 51 00    	mov    eax,DWORD PTR [rip+0x51f087]        # 9d6858 <cconfig+0xb8>
+  4b77d1:	c7 05 a5 3d 3b 00 00 	mov    DWORD PTR [rip+0x3b3da5],0x0        # 86b580 <skip_frame>
+  4b77d8:	00 00 00 
+  4b77db:	85 c0                	test   eax,eax
+  4b77dd:	0f 84 0d ff ff ff    	je     4b76f0 <codo_main+0xd0>
+  4b77e3:	31 c0                	xor    eax,eax
+  4b77e5:	e8 86 a8 05 00       	call   512070 <codo_timer_start>
+  4b77ea:	e9 01 ff ff ff       	jmp    4b76f0 <codo_main+0xd0>
+  4b77ef:	90                   	nop
+  4b77f0:	31 c0                	xor    eax,eax
+  4b77f2:	83 05 8f ef 51 00 01 	add    DWORD PTR [rip+0x51ef8f],0x1        # 9d6788 <stage_samples+0x8>
+  4b77f9:	e8 92 a8 05 00       	call   512090 <codo_timer_end>
+  4b77fe:	48 89 c1             	mov    rcx,rax
+  4b7801:	48 8b 2d 48 3d 3b 00 	mov    rbp,QWORD PTR [rip+0x3b3d48]        # 86b550 <stage_max_ms+0x10>
+  4b7808:	48 f7 eb             	imul   rbx
+  4b780b:	48 c1 f9 3f          	sar    rcx,0x3f
+  4b780f:	31 c0                	xor    eax,eax
+  4b7811:	48 c1 fa 07          	sar    rdx,0x7
+  4b7815:	48 29 ca             	sub    rdx,rcx
+  4b7818:	48 01 15 51 3d 3b 00 	add    QWORD PTR [rip+0x3b3d51],rdx        # 86b570 <stage_ms+0x10>
+  4b781f:	e8 6c a8 05 00       	call   512090 <codo_timer_end>
+  4b7824:	48 39 c5             	cmp    rbp,rax
+  4b7827:	0f 8e 03 03 00 00    	jle    4b7b30 <codo_main+0x510>
+  4b782d:	48 8b 05 1c 3d 3b 00 	mov    rax,QWORD PTR [rip+0x3b3d1c]        # 86b550 <stage_max_ms+0x10>
+  4b7834:	44 8b 05 1d f0 51 00 	mov    r8d,DWORD PTR [rip+0x51f01d]        # 9d6858 <cconfig+0xb8>
+  4b783b:	48 89 05 0e 3d 3b 00 	mov    QWORD PTR [rip+0x3b3d0e],rax        # 86b550 <stage_max_ms+0x10>
+  4b7842:	45 85 c0             	test   r8d,r8d
+  4b7845:	0f 84 dd fe ff ff    	je     4b7728 <codo_main+0x108>
+  4b784b:	31 c0                	xor    eax,eax
+  4b784d:	e8 1e a8 05 00       	call   512070 <codo_timer_start>
+  4b7852:	8b 3d f8 ef 51 00    	mov    edi,DWORD PTR [rip+0x51eff8]        # 9d6850 <cconfig+0xb0>
+  4b7858:	85 ff                	test   edi,edi
+  4b785a:	75 07                	jne    4b7863 <codo_main+0x243>
+  4b785c:	31 c0                	xor    eax,eax
+  4b785e:	e8 cd 25 05 00       	call   509e30 <codo_blit_back_page>
+  4b7863:	8b 35 ef ef 51 00    	mov    esi,DWORD PTR [rip+0x51efef]        # 9d6858 <cconfig+0xb8>
+  4b7869:	85 f6                	test   esi,esi
+  4b786b:	0f 84 c5 fe ff ff    	je     4b7736 <codo_main+0x116>
+  4b7871:	31 c0                	xor    eax,eax
+  4b7873:	83 05 12 ef 51 00 01 	add    DWORD PTR [rip+0x51ef12],0x1        # 9d678c <stage_samples+0xc>
+  4b787a:	e8 11 a8 05 00       	call   512090 <codo_timer_end>
+  4b787f:	48 89 c1             	mov    rcx,rax
+  4b7882:	48 8b 2d cf 3c 3b 00 	mov    rbp,QWORD PTR [rip+0x3b3ccf]        # 86b558 <stage_max_ms+0x18>
+  4b7889:	48 f7 eb             	imul   rbx
+  4b788c:	48 c1 f9 3f          	sar    rcx,0x3f
+  4b7890:	31 c0                	xor    eax,eax
+  4b7892:	48 c1 fa 07          	sar    rdx,0x7
+  4b7896:	48 29 ca             	sub    rdx,rcx
+  4b7899:	48 01 15 d8 3c 3b 00 	add    QWORD PTR [rip+0x3b3cd8],rdx        # 86b578 <stage_ms+0x18>
+  4b78a0:	e8 eb a7 05 00       	call   512090 <codo_timer_end>
+  4b78a5:	48 39 c5             	cmp    rbp,rax
+  4b78a8:	0f 8e 72 02 00 00    	jle    4b7b20 <codo_main+0x500>
+  4b78ae:	48 8b 05 a3 3c 3b 00 	mov    rax,QWORD PTR [rip+0x3b3ca3]        # 86b558 <stage_max_ms+0x18>
+  4b78b5:	48 89 05 9c 3c 3b 00 	mov    QWORD PTR [rip+0x3b3c9c],rax        # 86b558 <stage_max_ms+0x18>
+  4b78bc:	e9 75 fe ff ff       	jmp    4b7736 <codo_main+0x116>
+  4b78c1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4b78c8:	31 c0                	xor    eax,eax
+  4b78ca:	83 05 b3 ee 51 00 01 	add    DWORD PTR [rip+0x51eeb3],0x1        # 9d6784 <stage_samples+0x4>
+  4b78d1:	e8 ba a7 05 00       	call   512090 <codo_timer_end>
+  4b78d6:	48 89 c1             	mov    rcx,rax
+  4b78d9:	48 8b 2d 68 3c 3b 00 	mov    rbp,QWORD PTR [rip+0x3b3c68]        # 86b548 <stage_max_ms+0x8>
+  4b78e0:	48 f7 eb             	imul   rbx
+  4b78e3:	48 c1 f9 3f          	sar    rcx,0x3f
+  4b78e7:	31 c0                	xor    eax,eax
+  4b78e9:	48 c1 fa 07          	sar    rdx,0x7
+  4b78ed:	48 29 ca             	sub    rdx,rcx
+  4b78f0:	48 01 15 71 3c 3b 00 	add    QWORD PTR [rip+0x3b3c71],rdx        # 86b568 <stage_ms+0x8>
+  4b78f7:	e8 94 a7 05 00       	call   512090 <codo_timer_end>
+  4b78fc:	48 39 c5             	cmp    rbp,rax
+  4b78ff:	0f 8e 0b 02 00 00    	jle    4b7b10 <codo_main+0x4f0>
+  4b7905:	48 8b 05 3c 3c 3b 00 	mov    rax,QWORD PTR [rip+0x3b3c3c]        # 86b548 <stage_max_ms+0x8>
+  4b790c:	44 8b 15 6d 3c 3b 00 	mov    r10d,DWORD PTR [rip+0x3b3c6d]        # 86b580 <skip_frame>
+  4b7913:	48 89 05 2e 3c 3b 00 	mov    QWORD PTR [rip+0x3b3c2e],rax        # 86b548 <stage_max_ms+0x8>
+  4b791a:	8b 0d 38 ef 51 00    	mov    ecx,DWORD PTR [rip+0x51ef38]        # 9d6858 <cconfig+0xb8>
+  4b7920:	45 85 d2             	test   r10d,r10d
+  4b7923:	0f 85 1a fe ff ff    	jne    4b7743 <codo_main+0x123>
+  4b7929:	85 c9                	test   ecx,ecx
+  4b792b:	0f 84 e0 fd ff ff    	je     4b7711 <codo_main+0xf1>
+  4b7931:	31 c0                	xor    eax,eax
+  4b7933:	e8 38 a7 05 00       	call   512070 <codo_timer_start>
+  4b7938:	e9 d4 fd ff ff       	jmp    4b7711 <codo_main+0xf1>
+  4b793d:	0f 1f 00             	nop    DWORD PTR [rax]
+  4b7940:	31 c0                	xor    eax,eax
+  4b7942:	e8 49 a7 05 00       	call   512090 <codo_timer_end>
+  4b7947:	e9 78 fe ff ff       	jmp    4b77c4 <codo_main+0x1a4>
+  4b794c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4b7950:	8b 0d 4a 3c 3b 00    	mov    ecx,DWORD PTR [rip+0x3b3c4a]        # 86b5a0 <codo_inited>
+  4b7956:	85 c9                	test   ecx,ecx
+  4b7958:	74 0e                	je     4b7968 <codo_main+0x348>
+  4b795a:	8b 15 f4 21 52 00    	mov    edx,DWORD PTR [rip+0x5221f4]        # 9d9b54 <codo_state+0x6b4>
+  4b7960:	85 d2                	test   edx,edx
+  4b7962:	0f 84 d8 01 00 00    	je     4b7b40 <codo_main+0x520>
+  4b7968:	48 83 c4 08          	add    rsp,0x8
+  4b796c:	31 c0                	xor    eax,eax
+  4b796e:	5b                   	pop    rbx
+  4b796f:	5d                   	pop    rbp
+  4b7970:	c3                   	ret
+  4b7971:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4b7978:	8b 05 b2 3b 3b 00    	mov    eax,DWORD PTR [rip+0x3b3bb2]        # 86b530 <perf_timing_frame>
+  4b797e:	83 c0 01             	add    eax,0x1
+  4b7981:	99                   	cdq
+  4b7982:	89 05 a8 3b 3b 00    	mov    DWORD PTR [rip+0x3b3ba8],eax        # 86b530 <perf_timing_frame>
+  4b7988:	f7 f9                	idiv   ecx
+  4b798a:	85 d2                	test   edx,edx
+  4b798c:	0f 85 b9 fd ff ff    	jne    4b774b <codo_main+0x12b>
+  4b7992:	66 0f ef ff          	pxor   xmm7,xmm7
+  4b7996:	8b 05 f0 ed 51 00    	mov    eax,DWORD PTR [rip+0x51edf0]        # 9d678c <stage_samples+0xc>
+  4b799c:	66 0f ef f6          	pxor   xmm6,xmm6
+  4b79a0:	8b 0d da ed 51 00    	mov    ecx,DWORD PTR [rip+0x51edda]        # 9d6780 <stage_samples>
+  4b79a6:	8b 15 d8 ed 51 00    	mov    edx,DWORD PTR [rip+0x51edd8]        # 9d6784 <stage_samples+0x4>
+  4b79ac:	f3 48 0f 2a 3d a3 3b 	cvtsi2ss xmm7,QWORD PTR [rip+0x3b3ba3]        # 86b558 <stage_max_ms+0x18>
+  4b79b3:	3b 00 
+  4b79b5:	85 c0                	test   eax,eax
+  4b79b7:	f3 48 0f 2a 35 b8 3b 	cvtsi2ss xmm6,QWORD PTR [rip+0x3b3bb8]        # 86b578 <stage_ms+0x18>
+  4b79be:	3b 00 
+  4b79c0:	f3 0f 5a ff          	cvtss2sd xmm7,xmm7
+  4b79c4:	f3 0f 5a f6          	cvtss2sd xmm6,xmm6
+  4b79c8:	f2 0f 5e 3d f8 f1 08 	divsd  xmm7,QWORD PTR [rip+0x8f1f8]        # 546bc8 <CodeMask+0x1f48>
+  4b79cf:	00 
+  4b79d0:	0f 8e 7a 01 00 00    	jle    4b7b50 <codo_main+0x530>
+  4b79d6:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b79da:	f2 44 0f 10 05 dd f1 	movsd  xmm8,QWORD PTR [rip+0x8f1dd]        # 546bc0 <CodeMask+0x1f40>
+  4b79e1:	08 00 
+  4b79e3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+  4b79e7:	f2 41 0f 59 c0       	mulsd  xmm0,xmm8
+  4b79ec:	66 0f ef ed          	pxor   xmm5,xmm5
+  4b79f0:	8b 05 92 ed 51 00    	mov    eax,DWORD PTR [rip+0x51ed92]        # 9d6788 <stage_samples+0x8>
+  4b79f6:	66 0f ef e4          	pxor   xmm4,xmm4
+  4b79fa:	f2 0f 5e f0          	divsd  xmm6,xmm0
+  4b79fe:	66 41 0f 28 c0       	movapd xmm0,xmm8
+  4b7a03:	f3 48 0f 2a 2d 44 3b 	cvtsi2ss xmm5,QWORD PTR [rip+0x3b3b44]        # 86b550 <stage_max_ms+0x10>
+  4b7a0a:	3b 00 
+  4b7a0c:	85 c0                	test   eax,eax
+  4b7a0e:	f3 48 0f 2a 25 59 3b 	cvtsi2ss xmm4,QWORD PTR [rip+0x3b3b59]        # 86b570 <stage_ms+0x10>
+  4b7a15:	3b 00 
+  4b7a17:	f3 0f 5a ed          	cvtss2sd xmm5,xmm5
+  4b7a1b:	f3 0f 5a e4          	cvtss2sd xmm4,xmm4
+  4b7a1f:	f2 0f 5e 2d a1 f1 08 	divsd  xmm5,QWORD PTR [rip+0x8f1a1]        # 546bc8 <CodeMask+0x1f48>
+  4b7a26:	00 
+  4b7a27:	7e 0d                	jle    4b7a36 <codo_main+0x416>
+  4b7a29:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b7a2d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+  4b7a31:	f2 41 0f 59 c0       	mulsd  xmm0,xmm8
+  4b7a36:	66 0f ef db          	pxor   xmm3,xmm3
+  4b7a3a:	85 d2                	test   edx,edx
+  4b7a3c:	66 0f ef d2          	pxor   xmm2,xmm2
+  4b7a40:	f2 0f 5e e0          	divsd  xmm4,xmm0
+  4b7a44:	66 41 0f 28 c0       	movapd xmm0,xmm8
+  4b7a49:	f3 48 0f 2a 1d f6 3a 	cvtsi2ss xmm3,QWORD PTR [rip+0x3b3af6]        # 86b548 <stage_max_ms+0x8>
+  4b7a50:	3b 00 
+  4b7a52:	f3 48 0f 2a 15 0d 3b 	cvtsi2ss xmm2,QWORD PTR [rip+0x3b3b0d]        # 86b568 <stage_ms+0x8>
+  4b7a59:	3b 00 
+  4b7a5b:	f3 0f 5a db          	cvtss2sd xmm3,xmm3
+  4b7a5f:	f3 0f 5a d2          	cvtss2sd xmm2,xmm2
+  4b7a63:	f2 0f 5e 1d 5d f1 08 	divsd  xmm3,QWORD PTR [rip+0x8f15d]        # 546bc8 <CodeMask+0x1f48>
+  4b7a6a:	00 
+  4b7a6b:	7e 0d                	jle    4b7a7a <codo_main+0x45a>
+  4b7a6d:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b7a71:	f2 0f 2a c2          	cvtsi2sd xmm0,edx
+  4b7a75:	f2 41 0f 59 c0       	mulsd  xmm0,xmm8
+  4b7a7a:	66 0f ef c9          	pxor   xmm1,xmm1
+  4b7a7e:	85 c9                	test   ecx,ecx
+  4b7a80:	f2 0f 5e d0          	divsd  xmm2,xmm0
+  4b7a84:	f3 48 0f 2a 0d b3 3a 	cvtsi2ss xmm1,QWORD PTR [rip+0x3b3ab3]        # 86b540 <stage_max_ms>
+  4b7a8b:	3b 00 
+  4b7a8d:	f3 0f 5a c9          	cvtss2sd xmm1,xmm1
+  4b7a91:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b7a95:	f2 0f 5e 0d 2b f1 08 	divsd  xmm1,QWORD PTR [rip+0x8f12b]        # 546bc8 <CodeMask+0x1f48>
+  4b7a9c:	00 
+  4b7a9d:	f3 48 0f 2a 05 ba 3a 	cvtsi2ss xmm0,QWORD PTR [rip+0x3b3aba]        # 86b560 <stage_ms>
+  4b7aa4:	3b 00 
+  4b7aa6:	f3 0f 5a c0          	cvtss2sd xmm0,xmm0
+  4b7aaa:	7e 0f                	jle    4b7abb <codo_main+0x49b>
+  4b7aac:	66 45 0f ef c9       	pxor   xmm9,xmm9
+  4b7ab1:	f2 44 0f 2a c9       	cvtsi2sd xmm9,ecx
+  4b7ab6:	f2 45 0f 59 c1       	mulsd  xmm8,xmm9
+  4b7abb:	f2 41 0f 5e c0       	divsd  xmm0,xmm8
+  4b7ac0:	48 8d 35 99 f0 08 00 	lea    rsi,[rip+0x8f099]        # 546b60 <CodeMask+0x1ee0>
+  4b7ac7:	bf 01 00 00 00       	mov    edi,0x1
+  4b7acc:	b8 08 00 00 00       	mov    eax,0x8
+  4b7ad1:	e8 ea c2 f4 ff       	call   403dc0 <__printf_chk@plt>
+  4b7ad6:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b7ada:	0f 29 05 9f ec 51 00 	movaps XMMWORD PTR [rip+0x51ec9f],xmm0        # 9d6780 <stage_samples>
+  4b7ae1:	66 0f ef c0          	pxor   xmm0,xmm0
+  4b7ae5:	0f 29 05 54 3a 3b 00 	movaps XMMWORD PTR [rip+0x3b3a54],xmm0        # 86b540 <stage_max_ms>
+  4b7aec:	0f 29 05 5d 3a 3b 00 	movaps XMMWORD PTR [rip+0x3b3a5d],xmm0        # 86b550 <stage_max_ms+0x10>
+  4b7af3:	0f 29 05 66 3a 3b 00 	movaps XMMWORD PTR [rip+0x3b3a66],xmm0        # 86b560 <stage_ms>
+  4b7afa:	0f 29 05 6f 3a 3b 00 	movaps XMMWORD PTR [rip+0x3b3a6f],xmm0        # 86b570 <stage_ms+0x10>
+  4b7b01:	e9 45 fc ff ff       	jmp    4b774b <codo_main+0x12b>
+  4b7b06:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4b7b0d:	00 00 00 
+  4b7b10:	31 c0                	xor    eax,eax
+  4b7b12:	e8 79 a5 05 00       	call   512090 <codo_timer_end>
+  4b7b17:	e9 f0 fd ff ff       	jmp    4b790c <codo_main+0x2ec>
+  4b7b1c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4b7b20:	31 c0                	xor    eax,eax
+  4b7b22:	e8 69 a5 05 00       	call   512090 <codo_timer_end>
+  4b7b27:	e9 89 fd ff ff       	jmp    4b78b5 <codo_main+0x295>
+  4b7b2c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4b7b30:	31 c0                	xor    eax,eax
+  4b7b32:	e8 59 a5 05 00       	call   512090 <codo_timer_end>
+  4b7b37:	e9 f8 fc ff ff       	jmp    4b7834 <codo_main+0x214>
+  4b7b3c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4b7b40:	31 c0                	xor    eax,eax
+  4b7b42:	e8 09 f2 ff ff       	call   4b6d50 <codo_exit.part.1>
+  4b7b47:	48 83 c4 08          	add    rsp,0x8
+  4b7b4b:	31 c0                	xor    eax,eax
+  4b7b4d:	5b                   	pop    rbx
+  4b7b4e:	5d                   	pop    rbp
+  4b7b4f:	c3                   	ret
+  4b7b50:	f2 44 0f 10 05 67 f0 	movsd  xmm8,QWORD PTR [rip+0x8f067]        # 546bc0 <CodeMask+0x1f40>
+  4b7b57:	08 00 
+  4b7b59:	66 41 0f 28 c0       	movapd xmm0,xmm8
+  4b7b5e:	e9 89 fe ff ff       	jmp    4b79ec <codo_main+0x3cc>
+  4b7b63:	e8 b8 f6 ff ff       	call   4b7220 <do_scancode_tester>
+
+Disassembly of section .fini:

@@ -1,0 +1,2256 @@
+
+original/pico-8/pico8_dyn:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+000000000041a4d0 <luaV_execute>:
+  41a4d0:	41 57                	push   r15
+  41a4d2:	41 56                	push   r14
+  41a4d4:	49 89 fe             	mov    r14,rdi
+  41a4d7:	41 55                	push   r13
+  41a4d9:	41 54                	push   r12
+  41a4db:	55                   	push   rbp
+  41a4dc:	53                   	push   rbx
+  41a4dd:	48 83 ec 78          	sub    rsp,0x78
+  41a4e1:	4c 8b 67 20          	mov    r12,QWORD PTR [rdi+0x20]
+  41a4e5:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+  41a4ec:	00 00 
+  41a4ee:	48 89 44 24 68       	mov    QWORD PTR [rsp+0x68],rax
+  41a4f3:	31 c0                	xor    eax,eax
+  41a4f5:	48 8d 7c 24 64       	lea    rdi,[rsp+0x64]
+  41a4fa:	49 8b 44 24 38       	mov    rax,QWORD PTR [r12+0x38]
+  41a4ff:	4d 89 e7             	mov    r15,r12
+  41a502:	48 89 7c 24 30       	mov    QWORD PTR [rsp+0x30],rdi
+  41a507:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  41a50e:	00 00 
+  41a510:	49 8b 17             	mov    rdx,QWORD PTR [r15]
+  41a513:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41a517:	44 8b 0d b2 57 37 00 	mov    r9d,DWORD PTR [rip+0x3757b2]        # 78fcd0 <cpu_superyield>
+  41a51e:	8b 35 b0 57 37 00    	mov    esi,DWORD PTR [rip+0x3757b0]        # 78fcd4 <cpu_cycles_slice>
+  41a524:	44 8b 05 b1 31 37 00 	mov    r8d,DWORD PTR [rip+0x3731b1]        # 78d6dc <cpu_cycles_slice_max>
+  41a52b:	48 8b 3a             	mov    rdi,QWORD PTR [rdx]
+  41a52e:	48 8b 57 18          	mov    rdx,QWORD PTR [rdi+0x18]
+  41a532:	48 89 7c 24 10       	mov    QWORD PTR [rsp+0x10],rdi
+  41a537:	48 8b 7a 10          	mov    rdi,QWORD PTR [rdx+0x10]
+  41a53b:	48 89 7c 24 08       	mov    QWORD PTR [rsp+0x8],rdi
+  41a540:	49 8d 7e 60          	lea    rdi,[r14+0x60]
+  41a544:	48 89 7c 24 20       	mov    QWORD PTR [rsp+0x20],rdi
+  41a549:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41a550:	48 8d 50 04          	lea    rdx,[rax+0x4]
+  41a554:	49 89 57 38          	mov    QWORD PTR [r15+0x38],rdx
+  41a558:	8b 28                	mov    ebp,DWORD PTR [rax]
+  41a55a:	44 89 c8             	mov    eax,r9d
+  41a55d:	09 f0                	or     eax,esi
+  41a55f:	44 39 c0             	cmp    eax,r8d
+  41a562:	0f 8f d8 17 00 00    	jg     41bd40 <luaV_execute+0x1870>
+  41a568:	41 89 ec             	mov    r12d,ebp
+  41a56b:	89 e8                	mov    eax,ebp
+  41a56d:	8d 4e 02             	lea    ecx,[rsi+0x2]
+  41a570:	41 c1 ec 06          	shr    r12d,0x6
+  41a574:	83 e0 3f             	and    eax,0x3f
+  41a577:	41 0f b6 fc          	movzx  edi,r12b
+  41a57b:	89 0d 53 57 37 00    	mov    DWORD PTR [rip+0x375753],ecx        # 78fcd4 <cpu_cycles_slice>
+  41a581:	49 89 fd             	mov    r13,rdi
+  41a584:	49 89 fc             	mov    r12,rdi
+  41a587:	49 c1 e5 04          	shl    r13,0x4
+  41a58b:	83 f8 33             	cmp    eax,0x33
+  41a58e:	4b 8d 1c 2b          	lea    rbx,[r11+r13*1]
+  41a592:	0f 87 77 0e 00 00    	ja     41b40f <luaV_execute+0xf3f>
+  41a598:	48 8d 15 71 c0 11 00 	lea    rdx,[rip+0x11c071]        # 536610 <_IO_stdin_used+0x2030>
+  41a59f:	48 63 04 82          	movsxd rax,DWORD PTR [rdx+rax*4]
+  41a5a3:	48 01 d0             	add    rax,rdx
+  41a5a6:	ff e0                	jmp    rax
+  41a5a8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41a5af:	00 
+  41a5b0:	48 8b 7c 24 10       	mov    rdi,QWORD PTR [rsp+0x10]
+  41a5b5:	c1 ed 0e             	shr    ebp,0xe
+  41a5b8:	48 8b 47 18          	mov    rax,QWORD PTR [rdi+0x18]
+  41a5bc:	4c 8d 6f 20          	lea    r13,[rdi+0x20]
+  41a5c0:	48 8b 40 20          	mov    rax,QWORD PTR [rax+0x20]
+  41a5c4:	4c 8b 24 e8          	mov    r12,QWORD PTR [rax+rbp*8]
+  41a5c8:	49 8b 74 24 40       	mov    rsi,QWORD PTR [r12+0x40]
+  41a5cd:	45 8b 54 24 50       	mov    r10d,DWORD PTR [r12+0x50]
+  41a5d2:	49 8b 4c 24 38       	mov    rcx,QWORD PTR [r12+0x38]
+  41a5d7:	48 85 f6             	test   rsi,rsi
+  41a5da:	0f 84 a3 1e 00 00    	je     41c483 <luaV_execute+0x1fb3>
+  41a5e0:	45 85 d2             	test   r10d,r10d
+  41a5e3:	0f 8e f5 18 00 00    	jle    41bede <luaV_execute+0x1a0e>
+  41a5e9:	41 8d 42 ff          	lea    eax,[r10-0x1]
+  41a5ed:	31 d2                	xor    edx,edx
+  41a5ef:	48 89 c5             	mov    rbp,rax
+  41a5f2:	48 8d 3c c5 08 00 00 	lea    rdi,[rax*8+0x8]
+  41a5f9:	00 
+  41a5fa:	eb 23                	jmp    41a61f <luaV_execute+0x14f>
+  41a5fc:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41a600:	4c 8b 44 16 20       	mov    r8,QWORD PTR [rsi+rdx*1+0x20]
+  41a605:	48 c1 e0 04          	shl    rax,0x4
+  41a609:	4c 01 d8             	add    rax,r11
+  41a60c:	49 39 40 10          	cmp    QWORD PTR [r8+0x10],rax
+  41a610:	75 2d                	jne    41a63f <luaV_execute+0x16f>
+  41a612:	48 83 c2 08          	add    rdx,0x8
+  41a616:	48 39 d7             	cmp    rdi,rdx
+  41a619:	0f 84 bf 18 00 00    	je     41bede <luaV_execute+0x1a0e>
+  41a61f:	80 7c 51 08 00       	cmp    BYTE PTR [rcx+rdx*2+0x8],0x0
+  41a624:	0f b6 44 51 09       	movzx  eax,BYTE PTR [rcx+rdx*2+0x9]
+  41a629:	75 d5                	jne    41a600 <luaV_execute+0x130>
+  41a62b:	49 8b 44 c5 00       	mov    rax,QWORD PTR [r13+rax*8+0x0]
+  41a630:	4c 8b 44 16 20       	mov    r8,QWORD PTR [rsi+rdx*1+0x20]
+  41a635:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+  41a639:	49 39 40 10          	cmp    QWORD PTR [r8+0x10],rax
+  41a63d:	74 d3                	je     41a612 <luaV_execute+0x142>
+  41a63f:	8d 14 ed 28 00 00 00 	lea    edx,[rbp*8+0x28]
+  41a646:	be 06 00 00 00       	mov    esi,0x6
+  41a64b:	4c 89 f7             	mov    rdi,r14
+  41a64e:	4c 89 5c 24 40       	mov    QWORD PTR [rsp+0x40],r11
+  41a653:	48 89 4c 24 38       	mov    QWORD PTR [rsp+0x38],rcx
+  41a658:	48 63 d2             	movsxd rdx,edx
+  41a65b:	44 89 54 24 28       	mov    DWORD PTR [rsp+0x28],r10d
+  41a660:	e8 3b 35 00 00       	call   41dba0 <luaC_newobj.constprop.194>
+  41a665:	44 8b 54 24 28       	mov    r10d,DWORD PTR [rsp+0x28]
+  41a66a:	48 8b 4c 24 38       	mov    rcx,QWORD PTR [rsp+0x38]
+  41a66f:	4c 8b 5c 24 40       	mov    r11,QWORD PTR [rsp+0x40]
+  41a674:	48 89 44 24 18       	mov    QWORD PTR [rsp+0x18],rax
+  41a679:	48 c7 40 18 00 00 00 	mov    QWORD PTR [rax+0x18],0x0
+  41a680:	00 
+  41a681:	44 88 50 0a          	mov    BYTE PTR [rax+0xa],r10b
+  41a685:	49 63 c2             	movsxd rax,r10d
+  41a688:	48 8d 14 ed 08 00 00 	lea    rdx,[rbp*8+0x8]
+  41a68f:	00 
+  41a690:	31 f6                	xor    esi,esi
+  41a692:	48 8d 3c c5 20 00 00 	lea    rdi,[rax*8+0x20]
+  41a699:	00 
+  41a69a:	44 89 54 24 28       	mov    DWORD PTR [rsp+0x28],r10d
+  41a69f:	4c 89 5c 24 40       	mov    QWORD PTR [rsp+0x40],r11
+  41a6a4:	48 89 4c 24 38       	mov    QWORD PTR [rsp+0x38],rcx
+  41a6a9:	48 29 d7             	sub    rdi,rdx
+  41a6ac:	48 03 7c 24 18       	add    rdi,QWORD PTR [rsp+0x18]
+  41a6b1:	e8 fa 94 fe ff       	call   403bb0 <memset@plt>
+  41a6b6:	44 8b 54 24 28       	mov    r10d,DWORD PTR [rsp+0x28]
+  41a6bb:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  41a6c0:	4d 8b 4e 18          	mov    r9,QWORD PTR [r14+0x18]
+  41a6c4:	45 85 d2             	test   r10d,r10d
+  41a6c7:	4c 89 60 18          	mov    QWORD PTR [rax+0x18],r12
+  41a6cb:	48 89 03             	mov    QWORD PTR [rbx],rax
+  41a6ce:	c7 43 08 46 00 00 00 	mov    DWORD PTR [rbx+0x8],0x46
+  41a6d5:	0f 8e 0d 1e 00 00    	jle    41c4e8 <luaV_execute+0x2018>
+  41a6db:	48 8b 4c 24 38       	mov    rcx,QWORD PTR [rsp+0x38]
+  41a6e0:	4c 8d 50 20          	lea    r10,[rax+0x20]
+  41a6e4:	48 8d 44 e8 28       	lea    rax,[rax+rbp*8+0x28]
+  41a6e9:	4c 89 7c 24 48       	mov    QWORD PTR [rsp+0x48],r15
+  41a6ee:	4c 89 64 24 50       	mov    QWORD PTR [rsp+0x50],r12
+  41a6f3:	48 89 5c 24 58       	mov    QWORD PTR [rsp+0x58],rbx
+  41a6f8:	4d 89 d4             	mov    r12,r10
+  41a6fb:	48 89 c3             	mov    rbx,rax
+  41a6fe:	4c 8d 41 09          	lea    r8,[rcx+0x9]
+  41a702:	4d 89 f2             	mov    r10,r14
+  41a705:	4d 89 ee             	mov    r14,r13
+  41a708:	4d 89 c7             	mov    r15,r8
+  41a70b:	eb 1d                	jmp    41a72a <luaV_execute+0x25a>
+  41a70d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41a710:	49 8b 04 ee          	mov    rax,QWORD PTR [r14+rbp*8]
+  41a714:	49 83 c4 08          	add    r12,0x8
+  41a718:	49 83 c7 10          	add    r15,0x10
+  41a71c:	49 89 44 24 f8       	mov    QWORD PTR [r12-0x8],rax
+  41a721:	49 39 dc             	cmp    r12,rbx
+  41a724:	0f 84 d3 00 00 00    	je     41a7fd <luaV_execute+0x32d>
+  41a72a:	41 80 7f ff 00       	cmp    BYTE PTR [r15-0x1],0x0
+  41a72f:	41 0f b6 2f          	movzx  ebp,BYTE PTR [r15]
+  41a733:	74 db                	je     41a710 <luaV_execute+0x240>
+  41a735:	49 8b 42 60          	mov    rax,QWORD PTR [r10+0x60]
+  41a739:	48 c1 e5 04          	shl    rbp,0x4
+  41a73d:	48 03 6c 24 40       	add    rbp,QWORD PTR [rsp+0x40]
+  41a742:	48 85 c0             	test   rax,rax
+  41a745:	0f 84 0b 20 00 00    	je     41c756 <luaV_execute+0x2286>
+  41a74b:	48 3b 68 10          	cmp    rbp,QWORD PTR [rax+0x10]
+  41a74f:	49 89 c5             	mov    r13,rax
+  41a752:	0f 87 fe 1f 00 00    	ja     41c756 <luaV_execute+0x2286>
+  41a758:	75 18                	jne    41a772 <luaV_execute+0x2a2>
+  41a75a:	e9 73 1f 00 00       	jmp    41c6d2 <luaV_execute+0x2202>
+  41a75f:	90                   	nop
+  41a760:	48 3b 68 10          	cmp    rbp,QWORD PTR [rax+0x10]
+  41a764:	48 89 c2             	mov    rdx,rax
+  41a767:	77 11                	ja     41a77a <luaV_execute+0x2aa>
+  41a769:	0f 84 66 1f 00 00    	je     41c6d5 <luaV_execute+0x2205>
+  41a76f:	49 89 c5             	mov    r13,rax
+  41a772:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  41a775:	48 85 c0             	test   rax,rax
+  41a778:	75 e6                	jne    41a760 <luaV_execute+0x290>
+  41a77a:	ba 0a 00 00 00       	mov    edx,0xa
+  41a77f:	4c 89 d7             	mov    rdi,r10
+  41a782:	b9 28 00 00 00       	mov    ecx,0x28
+  41a787:	31 f6                	xor    esi,esi
+  41a789:	4c 89 4c 24 38       	mov    QWORD PTR [rsp+0x38],r9
+  41a78e:	4c 89 54 24 28       	mov    QWORD PTR [rsp+0x28],r10
+  41a793:	e8 38 31 00 00       	call   41d8d0 <luaM_realloc_>
+  41a798:	4c 8b 4c 24 38       	mov    r9,QWORD PTR [rsp+0x38]
+  41a79d:	4c 8b 54 24 28       	mov    r10,QWORD PTR [rsp+0x28]
+  41a7a2:	41 0f b6 51 54       	movzx  edx,BYTE PTR [r9+0x54]
+  41a7a7:	c6 40 08 0a          	mov    BYTE PTR [rax+0x8],0xa
+  41a7ab:	83 e2 03             	and    edx,0x3
+  41a7ae:	88 50 09             	mov    BYTE PTR [rax+0x9],dl
+  41a7b1:	49 8b 55 00          	mov    rdx,QWORD PTR [r13+0x0]
+  41a7b5:	48 89 10             	mov    QWORD PTR [rax],rdx
+  41a7b8:	49 89 45 00          	mov    QWORD PTR [r13+0x0],rax
+  41a7bc:	48 89 c2             	mov    rdx,rax
+  41a7bf:	48 89 68 10          	mov    QWORD PTR [rax+0x10],rbp
+  41a7c3:	49 8d 81 b0 00 00 00 	lea    rax,[r9+0xb0]
+  41a7ca:	48 89 42 18          	mov    QWORD PTR [rdx+0x18],rax
+  41a7ce:	49 8b 81 d0 00 00 00 	mov    rax,QWORD PTR [r9+0xd0]
+  41a7d5:	48 89 42 20          	mov    QWORD PTR [rdx+0x20],rax
+  41a7d9:	48 89 50 18          	mov    QWORD PTR [rax+0x18],rdx
+  41a7dd:	49 89 91 d0 00 00 00 	mov    QWORD PTR [r9+0xd0],rdx
+  41a7e4:	4d 8b 4a 18          	mov    r9,QWORD PTR [r10+0x18]
+  41a7e8:	49 89 14 24          	mov    QWORD PTR [r12],rdx
+  41a7ec:	49 83 c4 08          	add    r12,0x8
+  41a7f0:	49 83 c7 10          	add    r15,0x10
+  41a7f4:	49 39 dc             	cmp    r12,rbx
+  41a7f7:	0f 85 2d ff ff ff    	jne    41a72a <luaV_execute+0x25a>
+  41a7fd:	4c 8b 64 24 50       	mov    r12,QWORD PTR [rsp+0x50]
+  41a802:	4c 8b 7c 24 48       	mov    r15,QWORD PTR [rsp+0x48]
+  41a807:	4d 89 d6             	mov    r14,r10
+  41a80a:	48 8b 5c 24 58       	mov    rbx,QWORD PTR [rsp+0x58]
+  41a80f:	41 0f b6 44 24 09    	movzx  eax,BYTE PTR [r12+0x9]
+  41a815:	a8 04                	test   al,0x4
+  41a817:	0f 84 d9 1c 00 00    	je     41c4f6 <luaV_execute+0x2026>
+  41a81d:	49 83 7c 24 40 00    	cmp    QWORD PTR [r12+0x40],0x0
+  41a823:	0f 84 49 1f 00 00    	je     41c772 <luaV_execute+0x22a2>
+  41a829:	83 e0 fb             	and    eax,0xfffffffb
+  41a82c:	41 88 44 24 09       	mov    BYTE PTR [r12+0x9],al
+  41a831:	49 8b 81 88 00 00 00 	mov    rax,QWORD PTR [r9+0x88]
+  41a838:	49 89 44 24 70       	mov    QWORD PTR [r12+0x70],rax
+  41a83d:	4d 89 a1 88 00 00 00 	mov    QWORD PTR [r9+0x88],r12
+  41a844:	4d 8b 4e 18          	mov    r9,QWORD PTR [r14+0x18]
+  41a848:	e9 a9 1c 00 00       	jmp    41c4f6 <luaV_execute+0x2026>
+  41a84d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41a850:	41 89 ed             	mov    r13d,ebp
+  41a853:	c1 ed 0e             	shr    ebp,0xe
+  41a856:	41 c1 ed 17          	shr    r13d,0x17
+  41a85a:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41a860:	45 85 ed             	test   r13d,r13d
+  41a863:	75 0f                	jne    41a874 <luaV_execute+0x3a4>
+  41a865:	4d 8b 6e 10          	mov    r13,QWORD PTR [r14+0x10]
+  41a869:	49 29 dd             	sub    r13,rbx
+  41a86c:	49 c1 fd 04          	sar    r13,0x4
+  41a870:	41 83 ed 01          	sub    r13d,0x1
+  41a874:	85 ed                	test   ebp,ebp
+  41a876:	75 11                	jne    41a889 <luaV_execute+0x3b9>
+  41a878:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41a87c:	48 8d 50 04          	lea    rdx,[rax+0x4]
+  41a880:	49 89 57 38          	mov    QWORD PTR [r15+0x38],rdx
+  41a884:	8b 28                	mov    ebp,DWORD PTR [rax]
+  41a886:	c1 ed 06             	shr    ebp,0x6
+  41a889:	8d 45 ff             	lea    eax,[rbp-0x1]
+  41a88c:	4c 8b 23             	mov    r12,QWORD PTR [rbx]
+  41a88f:	6b c0 32             	imul   eax,eax,0x32
+  41a892:	44 01 e8             	add    eax,r13d
+  41a895:	41 39 44 24 38       	cmp    DWORD PTR [r12+0x38],eax
+  41a89a:	0f 8c 93 1b 00 00    	jl     41c433 <luaV_execute+0x1f63>
+  41a8a0:	45 85 ed             	test   r13d,r13d
+  41a8a3:	7e 7b                	jle    41a920 <luaV_execute+0x450>
+  41a8a5:	49 63 d5             	movsxd rdx,r13d
+  41a8a8:	89 c7                	mov    edi,eax
+  41a8aa:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41a8af:	48 c1 e2 04          	shl    rdx,0x4
+  41a8b3:	44 29 ef             	sub    edi,r13d
+  41a8b6:	48 01 d3             	add    rbx,rdx
+  41a8b9:	41 89 fd             	mov    r13d,edi
+  41a8bc:	89 c2                	mov    edx,eax
+  41a8be:	66 90                	xchg   ax,ax
+  41a8c0:	48 89 d9             	mov    rcx,rbx
+  41a8c3:	4c 89 e6             	mov    rsi,r12
+  41a8c6:	4c 89 f7             	mov    rdi,r14
+  41a8c9:	8d 6a ff             	lea    ebp,[rdx-0x1]
+  41a8cc:	e8 7f ba 00 00       	call   426350 <luaH_setint>
+  41a8d1:	f6 43 08 40          	test   BYTE PTR [rbx+0x8],0x40
+  41a8d5:	74 39                	je     41a910 <luaV_execute+0x440>
+  41a8d7:	48 8b 03             	mov    rax,QWORD PTR [rbx]
+  41a8da:	f6 40 09 03          	test   BYTE PTR [rax+0x9],0x3
+  41a8de:	74 30                	je     41a910 <luaV_execute+0x440>
+  41a8e0:	41 0f b6 44 24 09    	movzx  eax,BYTE PTR [r12+0x9]
+  41a8e6:	a8 04                	test   al,0x4
+  41a8e8:	74 26                	je     41a910 <luaV_execute+0x440>
+  41a8ea:	49 8b 56 18          	mov    rdx,QWORD PTR [r14+0x18]
+  41a8ee:	83 e0 fb             	and    eax,0xfffffffb
+  41a8f1:	41 88 44 24 09       	mov    BYTE PTR [r12+0x9],al
+  41a8f6:	48 8b 82 88 00 00 00 	mov    rax,QWORD PTR [rdx+0x88]
+  41a8fd:	49 89 44 24 30       	mov    QWORD PTR [r12+0x30],rax
+  41a902:	4c 89 a2 88 00 00 00 	mov    QWORD PTR [rdx+0x88],r12
+  41a909:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41a910:	48 83 eb 10          	sub    rbx,0x10
+  41a914:	44 39 ed             	cmp    ebp,r13d
+  41a917:	89 ea                	mov    edx,ebp
+  41a919:	75 a5                	jne    41a8c0 <luaV_execute+0x3f0>
+  41a91b:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41a920:	49 8b 47 08          	mov    rax,QWORD PTR [r15+0x8]
+  41a924:	e9 9c 07 00 00       	jmp    41b0c5 <luaV_execute+0xbf5>
+  41a929:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41a930:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41a934:	89 ce                	mov    esi,ecx
+  41a936:	8b 53 18             	mov    edx,DWORD PTR [rbx+0x18]
+  41a939:	85 d2                	test   edx,edx
+  41a93b:	0f 84 0f fc ff ff    	je     41a550 <luaV_execute+0x80>
+  41a941:	48 8b 4b 10          	mov    rcx,QWORD PTR [rbx+0x10]
+  41a945:	c1 ed 0e             	shr    ebp,0xe
+  41a948:	89 53 08             	mov    DWORD PTR [rbx+0x8],edx
+  41a94b:	48 8d 84 a8 04 00 f8 	lea    rax,[rax+rbp*4-0x7fffc]
+  41a952:	ff 
+  41a953:	48 89 0b             	mov    QWORD PTR [rbx],rcx
+  41a956:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41a95a:	e9 f1 fb ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41a95f:	90                   	nop
+  41a960:	8b 43 08             	mov    eax,DWORD PTR [rbx+0x8]
+  41a963:	83 f8 03             	cmp    eax,0x3
+  41a966:	0f 84 29 14 00 00    	je     41bd95 <luaV_execute+0x18c5>
+  41a96c:	83 e0 0f             	and    eax,0xf
+  41a96f:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41a974:	83 f8 04             	cmp    eax,0x4
+  41a977:	75 1f                	jne    41a998 <luaV_execute+0x4c8>
+  41a979:	4c 8b 2b             	mov    r13,QWORD PTR [rbx]
+  41a97c:	48 8d 35 50 cc 11 00 	lea    rsi,[rip+0x11cc50]        # 5375d3 <lua_ident+0xb3>
+  41a983:	4d 8d 65 18          	lea    r12,[r13+0x18]
+  41a987:	4c 89 e7             	mov    rdi,r12
+  41a98a:	e8 81 94 fe ff       	call   403e10 <strpbrk@plt>
+  41a98f:	48 85 c0             	test   rax,rax
+  41a992:	0f 84 d2 13 00 00    	je     41bd6a <luaV_execute+0x189a>
+  41a998:	48 8d 35 89 dc 11 00 	lea    rsi,[rip+0x11dc89]        # 538628 <lua_ident+0x1108>
+  41a99f:	4c 89 f7             	mov    rdi,r14
+  41a9a2:	31 c0                	xor    eax,eax
+  41a9a4:	e8 37 1f 00 00       	call   41c8e0 <luaG_runerror>
+  41a9a9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41a9b0:	44 8b 53 20          	mov    r10d,DWORD PTR [rbx+0x20]
+  41a9b4:	8b 3b                	mov    edi,DWORD PTR [rbx]
+  41a9b6:	8b 53 10             	mov    edx,DWORD PTR [rbx+0x10]
+  41a9b9:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41a9bd:	44 01 d7             	add    edi,r10d
+  41a9c0:	45 85 d2             	test   r10d,r10d
+  41a9c3:	0f 8e 33 15 00 00    	jle    41befc <luaV_execute+0x1a2c>
+  41a9c9:	39 d7                	cmp    edi,edx
+  41a9cb:	0f 8f 2b 15 00 00    	jg     41befc <luaV_execute+0x1a2c>
+  41a9d1:	c1 ed 0e             	shr    ebp,0xe
+  41a9d4:	85 ff                	test   edi,edi
+  41a9d6:	89 ce                	mov    esi,ecx
+  41a9d8:	89 ea                	mov    edx,ebp
+  41a9da:	48 8d 84 90 04 00 f8 	lea    rax,[rax+rdx*4-0x7fffc]
+  41a9e1:	ff 
+  41a9e2:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41a9e6:	89 3b                	mov    DWORD PTR [rbx],edi
+  41a9e8:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41a9ef:	89 7b 30             	mov    DWORD PTR [rbx+0x30],edi
+  41a9f2:	c7 43 38 03 00 00 00 	mov    DWORD PTR [rbx+0x38],0x3
+  41a9f9:	0f 88 51 fb ff ff    	js     41a550 <luaV_execute+0x80>
+  41a9ff:	ba ff ff ff 7f       	mov    edx,0x7fffffff
+  41aa04:	29 fa                	sub    edx,edi
+  41aa06:	44 39 d2             	cmp    edx,r10d
+  41aa09:	0f 8f 41 fb ff ff    	jg     41a550 <luaV_execute+0x80>
+  41aa0f:	c7 43 20 00 00 00 00 	mov    DWORD PTR [rbx+0x20],0x0
+  41aa16:	c7 43 28 03 00 00 00 	mov    DWORD PTR [rbx+0x28],0x3
+  41aa1d:	e9 2e fb ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41aa22:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41aa28:	48 8b 43 20          	mov    rax,QWORD PTR [rbx+0x20]
+  41aa2c:	89 ea                	mov    edx,ebp
+  41aa2e:	48 8d 73 30          	lea    rsi,[rbx+0x30]
+  41aa32:	c1 ea 0e             	shr    edx,0xe
+  41aa35:	48 83 c3 60          	add    rbx,0x60
+  41aa39:	81 e2 ff 01 00 00    	and    edx,0x1ff
+  41aa3f:	48 89 43 f0          	mov    QWORD PTR [rbx-0x10],rax
+  41aa43:	8b 43 c8             	mov    eax,DWORD PTR [rbx-0x38]
+  41aa46:	89 43 f8             	mov    DWORD PTR [rbx-0x8],eax
+  41aa49:	48 8b 43 b0          	mov    rax,QWORD PTR [rbx-0x50]
+  41aa4d:	48 89 43 e0          	mov    QWORD PTR [rbx-0x20],rax
+  41aa51:	8b 43 b8             	mov    eax,DWORD PTR [rbx-0x48]
+  41aa54:	89 43 e8             	mov    DWORD PTR [rbx-0x18],eax
+  41aa57:	48 8b 43 a0          	mov    rax,QWORD PTR [rbx-0x60]
+  41aa5b:	48 89 43 d0          	mov    QWORD PTR [rbx-0x30],rax
+  41aa5f:	8b 43 a8             	mov    eax,DWORD PTR [rbx-0x58]
+  41aa62:	89 43 d8             	mov    DWORD PTR [rbx-0x28],eax
+  41aa65:	41 0f b7 46 46       	movzx  eax,WORD PTR [r14+0x46]
+  41aa6a:	49 89 5e 10          	mov    QWORD PTR [r14+0x10],rbx
+  41aa6e:	83 c0 01             	add    eax,0x1
+  41aa71:	66 3d c7 00          	cmp    ax,0xc7
+  41aa75:	66 41 89 46 46       	mov    WORD PTR [r14+0x46],ax
+  41aa7a:	76 14                	jbe    41aa90 <luaV_execute+0x5c0>
+  41aa7c:	66 3d c8 00          	cmp    ax,0xc8
+  41aa80:	0f 84 5b 1d 00 00    	je     41c7e1 <luaV_execute+0x2311>
+  41aa86:	66 3d e0 00          	cmp    ax,0xe0
+  41aa8a:	0f 87 44 1d 00 00    	ja     41c7d4 <luaV_execute+0x2304>
+  41aa90:	4c 89 f7             	mov    rdi,r14
+  41aa93:	e8 98 5e 00 00       	call   420930 <luaD_precall>
+  41aa98:	85 c0                	test   eax,eax
+  41aa9a:	0f 84 d6 19 00 00    	je     41c476 <luaV_execute+0x1fa6>
+  41aaa0:	49 8b 47 08          	mov    rax,QWORD PTR [r15+0x8]
+  41aaa4:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41aaa8:	66 41 83 6e 46 01    	sub    WORD PTR [r14+0x46],0x1
+  41aaae:	44 8b 0d 1b 52 37 00 	mov    r9d,DWORD PTR [rip+0x37521b]        # 78fcd0 <cpu_superyield>
+  41aab5:	8b 35 19 52 37 00    	mov    esi,DWORD PTR [rip+0x375219]        # 78fcd4 <cpu_cycles_slice>
+  41aabb:	44 8b 05 1a 2c 37 00 	mov    r8d,DWORD PTR [rip+0x372c1a]        # 78d6dc <cpu_cycles_slice_max>
+  41aac2:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41aac6:	49 8b 57 38          	mov    rdx,QWORD PTR [r15+0x38]
+  41aaca:	48 8d 42 04          	lea    rax,[rdx+0x4]
+  41aace:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41aad2:	8b 2a                	mov    ebp,DWORD PTR [rdx]
+  41aad4:	89 eb                	mov    ebx,ebp
+  41aad6:	c1 eb 06             	shr    ebx,0x6
+  41aad9:	0f b6 db             	movzx  ebx,bl
+  41aadc:	48 c1 e3 04          	shl    rbx,0x4
+  41aae0:	4c 01 db             	add    rbx,r11
+  41aae3:	e9 4e fe ff ff       	jmp    41a936 <luaV_execute+0x466>
+  41aae8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41aaef:	00 
+  41aaf0:	c1 ed 17             	shr    ebp,0x17
+  41aaf3:	85 ed                	test   ebp,ebp
+  41aaf5:	74 0d                	je     41ab04 <luaV_execute+0x634>
+  41aaf7:	48 c1 e5 04          	shl    rbp,0x4
+  41aafb:	48 8d 44 2b f0       	lea    rax,[rbx+rbp*1-0x10]
+  41ab00:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41ab04:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41ab09:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+  41ab0d:	8b 40 60             	mov    eax,DWORD PTR [rax+0x60]
+  41ab10:	85 c0                	test   eax,eax
+  41ab12:	7e 0b                	jle    41ab1f <luaV_execute+0x64f>
+  41ab14:	4c 89 de             	mov    rsi,r11
+  41ab17:	4c 89 f7             	mov    rdi,r14
+  41ab1a:	e8 e1 34 00 00       	call   41e000 <luaF_close>
+  41ab1f:	49 8b 56 20          	mov    rdx,QWORD PTR [r14+0x20]
+  41ab23:	44 0f bf 42 20       	movsx  r8d,WORD PTR [rdx+0x20]
+  41ab28:	48 8b 7a 10          	mov    rdi,QWORD PTR [rdx+0x10]
+  41ab2c:	48 8b 02             	mov    rax,QWORD PTR [rdx]
+  41ab2f:	49 89 7e 20          	mov    QWORD PTR [r14+0x20],rdi
+  41ab33:	45 85 c0             	test   r8d,r8d
+  41ab36:	0f 84 4f 18 00 00    	je     41c38b <luaV_execute+0x1ebb>
+  41ab3c:	49 8b 76 10          	mov    rsi,QWORD PTR [r14+0x10]
+  41ab40:	44 89 c2             	mov    edx,r8d
+  41ab43:	eb 1e                	jmp    41ab63 <luaV_execute+0x693>
+  41ab45:	0f 1f 00             	nop    DWORD PTR [rax]
+  41ab48:	48 83 c3 10          	add    rbx,0x10
+  41ab4c:	48 8b 4b f0          	mov    rcx,QWORD PTR [rbx-0x10]
+  41ab50:	48 83 c0 10          	add    rax,0x10
+  41ab54:	83 ea 01             	sub    edx,0x1
+  41ab57:	48 89 48 f0          	mov    QWORD PTR [rax-0x10],rcx
+  41ab5b:	8b 4b f8             	mov    ecx,DWORD PTR [rbx-0x8]
+  41ab5e:	89 48 f8             	mov    DWORD PTR [rax-0x8],ecx
+  41ab61:	74 37                	je     41ab9a <luaV_execute+0x6ca>
+  41ab63:	48 39 f3             	cmp    rbx,rsi
+  41ab66:	72 e0                	jb     41ab48 <luaV_execute+0x678>
+  41ab68:	85 d2                	test   edx,edx
+  41ab6a:	8d 72 ff             	lea    esi,[rdx-0x1]
+  41ab6d:	7e 2b                	jle    41ab9a <luaV_execute+0x6ca>
+  41ab6f:	48 89 f1             	mov    rcx,rsi
+  41ab72:	48 8d 50 08          	lea    rdx,[rax+0x8]
+  41ab76:	48 c1 e1 04          	shl    rcx,0x4
+  41ab7a:	48 8d 4c 08 18       	lea    rcx,[rax+rcx*1+0x18]
+  41ab7f:	90                   	nop
+  41ab80:	c7 02 00 00 00 00    	mov    DWORD PTR [rdx],0x0
+  41ab86:	48 83 c2 10          	add    rdx,0x10
+  41ab8a:	48 39 ca             	cmp    rdx,rcx
+  41ab8d:	75 f1                	jne    41ab80 <luaV_execute+0x6b0>
+  41ab8f:	48 83 c6 01          	add    rsi,0x1
+  41ab93:	48 c1 e6 04          	shl    rsi,0x4
+  41ab97:	48 01 f0             	add    rax,rsi
+  41ab9a:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41ab9e:	41 f6 47 22 04       	test   BYTE PTR [r15+0x22],0x4
+  41aba3:	0f 84 8a 1b 00 00    	je     41c733 <luaV_execute+0x2263>
+  41aba9:	41 83 f8 ff          	cmp    r8d,0xffffffff
+  41abad:	0f 85 e7 17 00 00    	jne    41c39a <luaV_execute+0x1eca>
+  41abb3:	48 8b 47 38          	mov    rax,QWORD PTR [rdi+0x38]
+  41abb7:	49 89 ff             	mov    r15,rdi
+  41abba:	e9 51 f9 ff ff       	jmp    41a510 <luaV_execute+0x40>
+  41abbf:	90                   	nop
+  41abc0:	85 ff                	test   edi,edi
+  41abc2:	74 2f                	je     41abf3 <luaV_execute+0x723>
+  41abc4:	49 8b 47 30          	mov    rax,QWORD PTR [r15+0x30]
+  41abc8:	4c 89 f7             	mov    rdi,r14
+  41abcb:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41abd0:	4a 8d 74 28 f0       	lea    rsi,[rax+r13*1-0x10]
+  41abd5:	e8 26 34 00 00       	call   41e000 <luaF_close>
+  41abda:	44 8b 0d ef 50 37 00 	mov    r9d,DWORD PTR [rip+0x3750ef]        # 78fcd0 <cpu_superyield>
+  41abe1:	8b 0d ed 50 37 00    	mov    ecx,DWORD PTR [rip+0x3750ed]        # 78fcd4 <cpu_cycles_slice>
+  41abe7:	44 8b 05 ee 2a 37 00 	mov    r8d,DWORD PTR [rip+0x372aee]        # 78d6dc <cpu_cycles_slice_max>
+  41abee:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41abf3:	c1 ed 0e             	shr    ebp,0xe
+  41abf6:	49 8b 57 38          	mov    rdx,QWORD PTR [r15+0x38]
+  41abfa:	89 ce                	mov    esi,ecx
+  41abfc:	8d 85 01 00 fe ff    	lea    eax,[rbp-0x1ffff]
+  41ac02:	48 98                	cdqe
+  41ac04:	48 8d 04 82          	lea    rax,[rdx+rax*4]
+  41ac08:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41ac0c:	e9 3f f9 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ac11:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41ac18:	c1 ed 17             	shr    ebp,0x17
+  41ac1b:	48 89 de             	mov    rsi,rbx
+  41ac1e:	4c 89 f7             	mov    rdi,r14
+  41ac21:	89 ea                	mov    edx,ebp
+  41ac23:	48 c1 e2 04          	shl    rdx,0x4
+  41ac27:	4c 01 da             	add    rdx,r11
+  41ac2a:	e8 41 68 00 00       	call   421470 <luaV_objlen>
+  41ac2f:	90                   	nop
+  41ac30:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41ac34:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41ac38:	44 8b 0d 91 50 37 00 	mov    r9d,DWORD PTR [rip+0x375091]        # 78fcd0 <cpu_superyield>
+  41ac3f:	8b 35 8f 50 37 00    	mov    esi,DWORD PTR [rip+0x37508f]        # 78fcd4 <cpu_cycles_slice>
+  41ac45:	44 8b 05 90 2a 37 00 	mov    r8d,DWORD PTR [rip+0x372a90]        # 78d6dc <cpu_cycles_slice_max>
+  41ac4c:	e9 ff f8 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ac51:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41ac58:	c1 ed 17             	shr    ebp,0x17
+  41ac5b:	ba 01 00 00 00       	mov    edx,0x1
+  41ac60:	89 e8                	mov    eax,ebp
+  41ac62:	48 c1 e0 04          	shl    rax,0x4
+  41ac66:	4c 01 d8             	add    rax,r11
+  41ac69:	8b 70 08             	mov    esi,DWORD PTR [rax+0x8]
+  41ac6c:	85 f6                	test   esi,esi
+  41ac6e:	74 10                	je     41ac80 <luaV_execute+0x7b0>
+  41ac70:	31 d2                	xor    edx,edx
+  41ac72:	83 fe 01             	cmp    esi,0x1
+  41ac75:	75 09                	jne    41ac80 <luaV_execute+0x7b0>
+  41ac77:	8b 28                	mov    ebp,DWORD PTR [rax]
+  41ac79:	31 d2                	xor    edx,edx
+  41ac7b:	85 ed                	test   ebp,ebp
+  41ac7d:	0f 94 c2             	sete   dl
+  41ac80:	89 13                	mov    DWORD PTR [rbx],edx
+  41ac82:	c7 43 08 01 00 00 00 	mov    DWORD PTR [rbx+0x8],0x1
+  41ac89:	89 ce                	mov    esi,ecx
+  41ac8b:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41ac8f:	e9 bc f8 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ac94:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41ac98:	81 e5 00 c0 7f 00    	and    ebp,0x7fc000
+  41ac9e:	8b 43 08             	mov    eax,DWORD PTR [rbx+0x8]
+  41aca1:	0f 84 b9 11 00 00    	je     41be60 <luaV_execute+0x1990>
+  41aca7:	85 c0                	test   eax,eax
+  41aca9:	0f 84 c9 11 00 00    	je     41be78 <luaV_execute+0x19a8>
+  41acaf:	83 f8 01             	cmp    eax,0x1
+  41acb2:	0f 84 41 1a 00 00    	je     41c6f9 <luaV_execute+0x2229>
+  41acb8:	49 8b 77 38          	mov    rsi,QWORD PTR [r15+0x38]
+  41acbc:	8b 1e                	mov    ebx,DWORD PTR [rsi]
+  41acbe:	89 da                	mov    edx,ebx
+  41acc0:	c1 ea 06             	shr    edx,0x6
+  41acc3:	81 e2 ff 00 00 00    	and    edx,0xff
+  41acc9:	74 3a                	je     41ad05 <luaV_execute+0x835>
+  41accb:	49 8b 4f 30          	mov    rcx,QWORD PTR [r15+0x30]
+  41accf:	48 63 d2             	movsxd rdx,edx
+  41acd2:	4c 89 f7             	mov    rdi,r14
+  41acd5:	48 c1 e2 04          	shl    rdx,0x4
+  41acd9:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41acde:	48 8d 74 11 f0       	lea    rsi,[rcx+rdx*1-0x10]
+  41ace3:	e8 18 33 00 00       	call   41e000 <luaF_close>
+  41ace8:	49 8b 77 38          	mov    rsi,QWORD PTR [r15+0x38]
+  41acec:	44 8b 0d dd 4f 37 00 	mov    r9d,DWORD PTR [rip+0x374fdd]        # 78fcd0 <cpu_superyield>
+  41acf3:	8b 0d db 4f 37 00    	mov    ecx,DWORD PTR [rip+0x374fdb]        # 78fcd4 <cpu_cycles_slice>
+  41acf9:	44 8b 05 dc 29 37 00 	mov    r8d,DWORD PTR [rip+0x3729dc]        # 78d6dc <cpu_cycles_slice_max>
+  41ad00:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41ad05:	89 d8                	mov    eax,ebx
+  41ad07:	c1 e8 0e             	shr    eax,0xe
+  41ad0a:	2d ff ff 01 00       	sub    eax,0x1ffff
+  41ad0f:	48 98                	cdqe
+  41ad11:	48 8d 44 86 04       	lea    rax,[rsi+rax*4+0x4]
+  41ad16:	89 ce                	mov    esi,ecx
+  41ad18:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41ad1c:	e9 2f f8 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ad21:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41ad28:	89 e8                	mov    eax,ebp
+  41ad2a:	c1 e8 0e             	shr    eax,0xe
+  41ad2d:	f6 c4 01             	test   ah,0x1
+  41ad30:	0f 84 7c 13 00 00    	je     41c0b2 <luaV_execute+0x1be2>
+  41ad36:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41ad3b:	0f b6 c0             	movzx  eax,al
+  41ad3e:	48 c1 e0 04          	shl    rax,0x4
+  41ad42:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41ad46:	c1 ed 17             	shr    ebp,0x17
+  41ad49:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41ad4f:	0f 84 4d 13 00 00    	je     41c0a2 <luaV_execute+0x1bd2>
+  41ad55:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41ad5a:	40 0f b6 ed          	movzx  ebp,bpl
+  41ad5e:	48 c1 e5 04          	shl    rbp,0x4
+  41ad62:	48 8d 34 28          	lea    rsi,[rax+rbp*1]
+  41ad66:	4c 89 f7             	mov    rdi,r14
+  41ad69:	e8 b2 99 00 00       	call   424720 <luaV_lessequal>
+  41ad6e:	41 39 c4             	cmp    r12d,eax
+  41ad71:	74 78                	je     41adeb <luaV_execute+0x91b>
+  41ad73:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41ad77:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41ad7b:	48 83 c0 04          	add    rax,0x4
+  41ad7f:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41ad83:	44 8b 0d 46 4f 37 00 	mov    r9d,DWORD PTR [rip+0x374f46]        # 78fcd0 <cpu_superyield>
+  41ad8a:	8b 35 44 4f 37 00    	mov    esi,DWORD PTR [rip+0x374f44]        # 78fcd4 <cpu_cycles_slice>
+  41ad90:	44 8b 05 45 29 37 00 	mov    r8d,DWORD PTR [rip+0x372945]        # 78d6dc <cpu_cycles_slice_max>
+  41ad97:	e9 b4 f7 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ad9c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41ada0:	89 e8                	mov    eax,ebp
+  41ada2:	c1 e8 0e             	shr    eax,0xe
+  41ada5:	f6 c4 01             	test   ah,0x1
+  41ada8:	0f 84 1e 12 00 00    	je     41bfcc <luaV_execute+0x1afc>
+  41adae:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41adb3:	0f b6 c0             	movzx  eax,al
+  41adb6:	48 c1 e0 04          	shl    rax,0x4
+  41adba:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41adbe:	c1 ed 17             	shr    ebp,0x17
+  41adc1:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41adc7:	0f 84 ef 11 00 00    	je     41bfbc <luaV_execute+0x1aec>
+  41adcd:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41add2:	40 0f b6 ed          	movzx  ebp,bpl
+  41add6:	48 c1 e5 04          	shl    rbp,0x4
+  41adda:	48 8d 34 28          	lea    rsi,[rax+rbp*1]
+  41adde:	4c 89 f7             	mov    rdi,r14
+  41ade1:	e8 ea 97 00 00       	call   4245d0 <luaV_lessthan>
+  41ade6:	41 39 c4             	cmp    r12d,eax
+  41ade9:	75 88                	jne    41ad73 <luaV_execute+0x8a3>
+  41adeb:	49 8b 57 38          	mov    rdx,QWORD PTR [r15+0x38]
+  41adef:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41adf3:	8b 1a                	mov    ebx,DWORD PTR [rdx]
+  41adf5:	89 d8                	mov    eax,ebx
+  41adf7:	c1 e8 06             	shr    eax,0x6
+  41adfa:	25 ff 00 00 00       	and    eax,0xff
+  41adff:	74 1b                	je     41ae1c <luaV_execute+0x94c>
+  41ae01:	48 98                	cdqe
+  41ae03:	4c 89 f7             	mov    rdi,r14
+  41ae06:	48 c1 e0 04          	shl    rax,0x4
+  41ae0a:	49 8d 74 03 f0       	lea    rsi,[r11+rax*1-0x10]
+  41ae0f:	e8 ec 31 00 00       	call   41e000 <luaF_close>
+  41ae14:	49 8b 57 38          	mov    rdx,QWORD PTR [r15+0x38]
+  41ae18:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41ae1c:	c1 eb 0e             	shr    ebx,0xe
+  41ae1f:	8d 83 01 00 fe ff    	lea    eax,[rbx-0x1ffff]
+  41ae25:	48 98                	cdqe
+  41ae27:	48 8d 44 82 04       	lea    rax,[rdx+rax*4+0x4]
+  41ae2c:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41ae30:	e9 4e ff ff ff       	jmp    41ad83 <luaV_execute+0x8b3>
+  41ae35:	0f 1f 00             	nop    DWORD PTR [rax]
+  41ae38:	c1 ed 17             	shr    ebp,0x17
+  41ae3b:	83 c6 01             	add    esi,0x1
+  41ae3e:	89 ea                	mov    edx,ebp
+  41ae40:	89 35 8e 4e 37 00    	mov    DWORD PTR [rip+0x374e8e],esi        # 78fcd4 <cpu_cycles_slice>
+  41ae46:	48 c1 e2 04          	shl    rdx,0x4
+  41ae4a:	4c 01 da             	add    rdx,r11
+  41ae4d:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41ae51:	0f 85 57 15 00 00    	jne    41c3ae <luaV_execute+0x1ede>
+  41ae57:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41ae59:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41ae60:	f7 d8                	neg    eax
+  41ae62:	89 03                	mov    DWORD PTR [rbx],eax
+  41ae64:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41ae68:	e9 e3 f6 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41ae6d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41ae70:	89 e8                	mov    eax,ebp
+  41ae72:	83 c6 01             	add    esi,0x1
+  41ae75:	c1 e8 17             	shr    eax,0x17
+  41ae78:	89 35 56 4e 37 00    	mov    DWORD PTR [rip+0x374e56],esi        # 78fcd4 <cpu_cycles_slice>
+  41ae7e:	f6 c4 01             	test   ah,0x1
+  41ae81:	0f 84 d7 10 00 00    	je     41bf5e <luaV_execute+0x1a8e>
+  41ae87:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41ae8c:	0f b6 c0             	movzx  eax,al
+  41ae8f:	c1 ed 0e             	shr    ebp,0xe
+  41ae92:	48 c1 e0 04          	shl    rax,0x4
+  41ae96:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41ae9c:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41aea0:	0f 84 d1 10 00 00    	je     41bf77 <luaV_execute+0x1aa7>
+  41aea6:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41aeab:	40 0f b6 ed          	movzx  ebp,bpl
+  41aeaf:	48 c1 e5 04          	shl    rbp,0x4
+  41aeb3:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41aeb7:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41aebb:	75 0a                	jne    41aec7 <luaV_execute+0x9f7>
+  41aebd:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41aec1:	0f 84 60 17 00 00    	je     41c627 <luaV_execute+0x2157>
+  41aec7:	41 b8 18 00 00 00    	mov    r8d,0x18
+  41aecd:	48 89 de             	mov    rsi,rbx
+  41aed0:	4c 89 f7             	mov    rdi,r14
+  41aed3:	e8 c8 9a 00 00       	call   4249a0 <luaV_arith>
+  41aed8:	e9 53 fd ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41aedd:	0f 1f 00             	nop    DWORD PTR [rax]
+  41aee0:	89 e8                	mov    eax,ebp
+  41aee2:	c1 ed 0e             	shr    ebp,0xe
+  41aee5:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41aeeb:	c1 e8 17             	shr    eax,0x17
+  41aeee:	83 ed 01             	sub    ebp,0x1
+  41aef1:	85 c0                	test   eax,eax
+  41aef3:	74 0b                	je     41af00 <luaV_execute+0xa30>
+  41aef5:	48 c1 e0 04          	shl    rax,0x4
+  41aef9:	48 01 d8             	add    rax,rbx
+  41aefc:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41af00:	89 ea                	mov    edx,ebp
+  41af02:	48 89 de             	mov    rsi,rbx
+  41af05:	4c 89 f7             	mov    rdi,r14
+  41af08:	e8 23 5a 00 00       	call   420930 <luaD_precall>
+  41af0d:	85 c0                	test   eax,eax
+  41af0f:	0f 84 4b 18 00 00    	je     41c760 <luaV_execute+0x2290>
+  41af15:	83 fd ff             	cmp    ebp,0xffffffff
+  41af18:	0f 84 12 fd ff ff    	je     41ac30 <luaV_execute+0x760>
+  41af1e:	49 8b 47 08          	mov    rax,QWORD PTR [r15+0x8]
+  41af22:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41af26:	e9 05 fd ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41af2b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  41af30:	89 e8                	mov    eax,ebp
+  41af32:	c1 e8 17             	shr    eax,0x17
+  41af35:	48 c1 e0 04          	shl    rax,0x4
+  41af39:	4c 01 d8             	add    rax,r11
+  41af3c:	81 e5 00 c0 7f 00    	and    ebp,0x7fc000
+  41af42:	8b 50 08             	mov    edx,DWORD PTR [rax+0x8]
+  41af45:	0f 84 e3 11 00 00    	je     41c12e <luaV_execute+0x1c5e>
+  41af4b:	85 d2                	test   edx,edx
+  41af4d:	0f 84 25 0f 00 00    	je     41be78 <luaV_execute+0x19a8>
+  41af53:	83 fa 01             	cmp    edx,0x1
+  41af56:	0f 84 ba 17 00 00    	je     41c716 <luaV_execute+0x2246>
+  41af5c:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  41af5f:	49 8b 77 38          	mov    rsi,QWORD PTR [r15+0x38]
+  41af63:	89 53 08             	mov    DWORD PTR [rbx+0x8],edx
+  41af66:	48 89 03             	mov    QWORD PTR [rbx],rax
+  41af69:	e9 4e fd ff ff       	jmp    41acbc <luaV_execute+0x7ec>
+  41af6e:	66 90                	xchg   ax,ax
+  41af70:	89 e8                	mov    eax,ebp
+  41af72:	c1 e8 17             	shr    eax,0x17
+  41af75:	f6 c4 01             	test   ah,0x1
+  41af78:	0f 84 97 12 00 00    	je     41c215 <luaV_execute+0x1d45>
+  41af7e:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41af83:	0f b6 c0             	movzx  eax,al
+  41af86:	48 c1 e0 04          	shl    rax,0x4
+  41af8a:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41af8e:	c1 ed 0e             	shr    ebp,0xe
+  41af91:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41af97:	0f 84 65 12 00 00    	je     41c202 <luaV_execute+0x1d32>
+  41af9d:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41afa2:	40 0f b6 ed          	movzx  ebp,bpl
+  41afa6:	48 c1 e5 04          	shl    rbp,0x4
+  41afaa:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41afae:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41afb2:	75 0a                	jne    41afbe <luaV_execute+0xaee>
+  41afb4:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41afb8:	0f 84 56 16 00 00    	je     41c614 <luaV_execute+0x2144>
+  41afbe:	41 b8 15 00 00 00    	mov    r8d,0x15
+  41afc4:	48 89 de             	mov    rsi,rbx
+  41afc7:	4c 89 f7             	mov    rdi,r14
+  41afca:	e8 d1 99 00 00       	call   4249a0 <luaV_arith>
+  41afcf:	e9 5c fc ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41afd4:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41afd8:	89 e8                	mov    eax,ebp
+  41afda:	83 c6 01             	add    esi,0x1
+  41afdd:	c1 e8 17             	shr    eax,0x17
+  41afe0:	89 35 ee 4c 37 00    	mov    DWORD PTR [rip+0x374cee],esi        # 78fcd4 <cpu_cycles_slice>
+  41afe6:	f6 c4 01             	test   ah,0x1
+  41afe9:	0f 84 14 10 00 00    	je     41c003 <luaV_execute+0x1b33>
+  41afef:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41aff4:	0f b6 c0             	movzx  eax,al
+  41aff7:	48 c1 e0 04          	shl    rax,0x4
+  41affb:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41afff:	c1 ed 0e             	shr    ebp,0xe
+  41b002:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b008:	0f 84 e2 0f 00 00    	je     41bff0 <luaV_execute+0x1b20>
+  41b00e:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b013:	40 0f b6 ed          	movzx  ebp,bpl
+  41b017:	48 c1 e5 04          	shl    rbp,0x4
+  41b01b:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b01f:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b023:	75 0a                	jne    41b02f <luaV_execute+0xb5f>
+  41b025:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b029:	0f 84 8f 15 00 00    	je     41c5be <luaV_execute+0x20ee>
+  41b02f:	41 b8 14 00 00 00    	mov    r8d,0x14
+  41b035:	48 89 de             	mov    rsi,rbx
+  41b038:	4c 89 f7             	mov    rdi,r14
+  41b03b:	e8 60 99 00 00       	call   4249a0 <luaV_arith>
+  41b040:	e9 eb fb ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b045:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b048:	89 eb                	mov    ebx,ebp
+  41b04a:	c1 ed 0e             	shr    ebp,0xe
+  41b04d:	4c 89 f7             	mov    rdi,r14
+  41b050:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41b056:	c1 eb 17             	shr    ebx,0x17
+  41b059:	48 63 c5             	movsxd rax,ebp
+  41b05c:	29 dd                	sub    ebp,ebx
+  41b05e:	48 83 c0 01          	add    rax,0x1
+  41b062:	8d 75 01             	lea    esi,[rbp+0x1]
+  41b065:	48 c1 e0 04          	shl    rax,0x4
+  41b069:	49 01 c3             	add    r11,rax
+  41b06c:	4d 89 5e 10          	mov    QWORD PTR [r14+0x10],r11
+  41b070:	e8 eb 64 00 00       	call   421560 <luaV_concat>
+  41b075:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41b079:	89 d8                	mov    eax,ebx
+  41b07b:	48 c1 e0 04          	shl    rax,0x4
+  41b07f:	4c 01 d8             	add    rax,r11
+  41b082:	4d 01 dd             	add    r13,r11
+  41b085:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  41b088:	49 89 55 00          	mov    QWORD PTR [r13+0x0],rdx
+  41b08c:	8b 50 08             	mov    edx,DWORD PTR [rax+0x8]
+  41b08f:	41 89 55 08          	mov    DWORD PTR [r13+0x8],edx
+  41b093:	49 8b 56 18          	mov    rdx,QWORD PTR [r14+0x18]
+  41b097:	48 83 7a 18 00       	cmp    QWORD PTR [rdx+0x18],0x0
+  41b09c:	0f 8e 7e f8 ff ff    	jle    41a920 <luaV_execute+0x450>
+  41b0a2:	49 8d 55 10          	lea    rdx,[r13+0x10]
+  41b0a6:	49 39 c5             	cmp    r13,rax
+  41b0a9:	4c 89 f7             	mov    rdi,r14
+  41b0ac:	48 0f 43 c2          	cmovae rax,rdx
+  41b0b0:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41b0b4:	e8 67 3e 00 00       	call   41ef20 <luaC_step>
+  41b0b9:	49 8b 47 08          	mov    rax,QWORD PTR [r15+0x8]
+  41b0bd:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41b0c1:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41b0c5:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41b0c9:	44 8b 0d 00 4c 37 00 	mov    r9d,DWORD PTR [rip+0x374c00]        # 78fcd0 <cpu_superyield>
+  41b0d0:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b0d4:	8b 35 fa 4b 37 00    	mov    esi,DWORD PTR [rip+0x374bfa]        # 78fcd4 <cpu_cycles_slice>
+  41b0da:	44 8b 05 fb 25 37 00 	mov    r8d,DWORD PTR [rip+0x3725fb]        # 78d6dc <cpu_cycles_slice_max>
+  41b0e1:	e9 6a f4 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b0e6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  41b0ed:	00 00 00 
+  41b0f0:	89 e8                	mov    eax,ebp
+  41b0f2:	83 c6 01             	add    esi,0x1
+  41b0f5:	c1 e8 17             	shr    eax,0x17
+  41b0f8:	89 35 d6 4b 37 00    	mov    DWORD PTR [rip+0x374bd6],esi        # 78fcd4 <cpu_cycles_slice>
+  41b0fe:	f6 c4 01             	test   ah,0x1
+  41b101:	0f 84 ec 10 00 00    	je     41c1f3 <luaV_execute+0x1d23>
+  41b107:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b10c:	0f b6 c0             	movzx  eax,al
+  41b10f:	48 c1 e0 04          	shl    rax,0x4
+  41b113:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b117:	c1 ed 0e             	shr    ebp,0xe
+  41b11a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b120:	0f 84 83 0e 00 00    	je     41bfa9 <luaV_execute+0x1ad9>
+  41b126:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b12b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b12f:	48 c1 e5 04          	shl    rbp,0x4
+  41b133:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b137:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b13b:	75 0a                	jne    41b147 <luaV_execute+0xc77>
+  41b13d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b141:	0f 84 bf 14 00 00    	je     41c606 <luaV_execute+0x2136>
+  41b147:	41 b8 17 00 00 00    	mov    r8d,0x17
+  41b14d:	48 89 de             	mov    rsi,rbx
+  41b150:	4c 89 f7             	mov    rdi,r14
+  41b153:	e8 48 98 00 00       	call   4249a0 <luaV_arith>
+  41b158:	e9 d3 fa ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b15d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b160:	89 e8                	mov    eax,ebp
+  41b162:	83 c6 01             	add    esi,0x1
+  41b165:	c1 e8 17             	shr    eax,0x17
+  41b168:	89 35 66 4b 37 00    	mov    DWORD PTR [rip+0x374b66],esi        # 78fcd4 <cpu_cycles_slice>
+  41b16e:	f6 c4 01             	test   ah,0x1
+  41b171:	0f 84 6d 10 00 00    	je     41c1e4 <luaV_execute+0x1d14>
+  41b177:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b17c:	0f b6 c0             	movzx  eax,al
+  41b17f:	48 c1 e0 04          	shl    rax,0x4
+  41b183:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b187:	c1 ed 0e             	shr    ebp,0xe
+  41b18a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b190:	0f 84 2e 0f 00 00    	je     41c0c4 <luaV_execute+0x1bf4>
+  41b196:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b19b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b19f:	48 c1 e5 04          	shl    rbp,0x4
+  41b1a3:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b1a7:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b1ab:	75 0a                	jne    41b1b7 <luaV_execute+0xce7>
+  41b1ad:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b1b1:	0f 84 be 14 00 00    	je     41c675 <luaV_execute+0x21a5>
+  41b1b7:	41 b8 16 00 00 00    	mov    r8d,0x16
+  41b1bd:	48 89 de             	mov    rsi,rbx
+  41b1c0:	4c 89 f7             	mov    rdi,r14
+  41b1c3:	e8 d8 97 00 00       	call   4249a0 <luaV_arith>
+  41b1c8:	e9 63 fa ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b1cd:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b1d0:	89 e8                	mov    eax,ebp
+  41b1d2:	c1 e8 17             	shr    eax,0x17
+  41b1d5:	f6 c4 01             	test   ah,0x1
+  41b1d8:	0f 84 b5 0e 00 00    	je     41c093 <luaV_execute+0x1bc3>
+  41b1de:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b1e3:	0f b6 c0             	movzx  eax,al
+  41b1e6:	48 c1 e0 04          	shl    rax,0x4
+  41b1ea:	48 8d 34 07          	lea    rsi,[rdi+rax*1]
+  41b1ee:	c1 ed 0e             	shr    ebp,0xe
+  41b1f1:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b1f7:	0f 84 15 0e 00 00    	je     41c012 <luaV_execute+0x1b42>
+  41b1fd:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b202:	40 0f b6 ed          	movzx  ebp,bpl
+  41b206:	31 c9                	xor    ecx,ecx
+  41b208:	48 c1 e5 04          	shl    rbp,0x4
+  41b20c:	48 8d 14 28          	lea    rdx,[rax+rbp*1]
+  41b210:	8b 42 08             	mov    eax,DWORD PTR [rdx+0x8]
+  41b213:	39 46 08             	cmp    DWORD PTR [rsi+0x8],eax
+  41b216:	0f 84 12 0e 00 00    	je     41c02e <luaV_execute+0x1b5e>
+  41b21c:	41 39 cc             	cmp    r12d,ecx
+  41b21f:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b223:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41b227:	0f 84 21 0e 00 00    	je     41c04e <luaV_execute+0x1b7e>
+  41b22d:	48 83 c0 04          	add    rax,0x4
+  41b231:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41b235:	e9 49 fb ff ff       	jmp    41ad83 <luaV_execute+0x8b3>
+  41b23a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41b240:	c1 ed 17             	shr    ebp,0x17
+  41b243:	85 ed                	test   ebp,ebp
+  41b245:	74 0c                	je     41b253 <luaV_execute+0xd83>
+  41b247:	48 c1 e5 04          	shl    rbp,0x4
+  41b24b:	48 8d 04 2b          	lea    rax,[rbx+rbp*1]
+  41b24f:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41b253:	ba ff ff ff ff       	mov    edx,0xffffffff
+  41b258:	48 89 de             	mov    rsi,rbx
+  41b25b:	4c 89 f7             	mov    rdi,r14
+  41b25e:	e8 cd 56 00 00       	call   420930 <luaD_precall>
+  41b263:	85 c0                	test   eax,eax
+  41b265:	0f 85 c5 f9 ff ff    	jne    41ac30 <luaV_execute+0x760>
+  41b26b:	4d 8b 66 20          	mov    r12,QWORD PTR [r14+0x20]
+  41b26f:	49 8b 2c 24          	mov    rbp,QWORD PTR [r12]
+  41b273:	49 8b 74 24 30       	mov    rsi,QWORD PTR [r12+0x30]
+  41b278:	4d 8b 7c 24 10       	mov    r15,QWORD PTR [r12+0x10]
+  41b27d:	48 8b 45 00          	mov    rax,QWORD PTR [rbp+0x0]
+  41b281:	4d 8b 2f             	mov    r13,QWORD PTR [r15]
+  41b284:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+  41b288:	0f b6 58 78          	movzx  ebx,BYTE PTR [rax+0x78]
+  41b28c:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41b291:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+  41b295:	48 c1 e3 04          	shl    rbx,0x4
+  41b299:	48 01 f3             	add    rbx,rsi
+  41b29c:	8b 50 60             	mov    edx,DWORD PTR [rax+0x60]
+  41b29f:	85 d2                	test   edx,edx
+  41b2a1:	7e 11                	jle    41b2b4 <luaV_execute+0xde4>
+  41b2a3:	49 8b 77 30          	mov    rsi,QWORD PTR [r15+0x30]
+  41b2a7:	4c 89 f7             	mov    rdi,r14
+  41b2aa:	e8 51 2d 00 00       	call   41e000 <luaF_close>
+  41b2af:	49 8b 74 24 30       	mov    rsi,QWORD PTR [r12+0x30]
+  41b2b4:	48 39 dd             	cmp    rbp,rbx
+  41b2b7:	73 35                	jae    41b2ee <luaV_execute+0xe1e>
+  41b2b9:	48 89 e8             	mov    rax,rbp
+  41b2bc:	48 8d 55 08          	lea    rdx,[rbp+0x8]
+  41b2c0:	49 8d 4d 08          	lea    rcx,[r13+0x8]
+  41b2c4:	48 f7 d0             	not    rax
+  41b2c7:	48 01 d8             	add    rax,rbx
+  41b2ca:	48 83 e0 f0          	and    rax,0xfffffffffffffff0
+  41b2ce:	48 8d 7c 05 18       	lea    rdi,[rbp+rax*1+0x18]
+  41b2d3:	48 8b 42 f8          	mov    rax,QWORD PTR [rdx-0x8]
+  41b2d7:	48 83 c2 10          	add    rdx,0x10
+  41b2db:	48 83 c1 10          	add    rcx,0x10
+  41b2df:	48 89 41 e8          	mov    QWORD PTR [rcx-0x18],rax
+  41b2e3:	8b 42 f0             	mov    eax,DWORD PTR [rdx-0x10]
+  41b2e6:	89 41 f0             	mov    DWORD PTR [rcx-0x10],eax
+  41b2e9:	48 39 fa             	cmp    rdx,rdi
+  41b2ec:	75 e5                	jne    41b2d3 <luaV_execute+0xe03>
+  41b2ee:	48 89 f0             	mov    rax,rsi
+  41b2f1:	48 29 e8             	sub    rax,rbp
+  41b2f4:	4c 01 e8             	add    rax,r13
+  41b2f7:	49 89 47 30          	mov    QWORD PTR [r15+0x30],rax
+  41b2fb:	49 8b 46 10          	mov    rax,QWORD PTR [r14+0x10]
+  41b2ff:	48 29 e8             	sub    rax,rbp
+  41b302:	49 01 c5             	add    r13,rax
+  41b305:	4d 89 6e 10          	mov    QWORD PTR [r14+0x10],r13
+  41b309:	49 8b 44 24 38       	mov    rax,QWORD PTR [r12+0x38]
+  41b30e:	4d 89 6f 08          	mov    QWORD PTR [r15+0x8],r13
+  41b312:	41 80 4f 22 40       	or     BYTE PTR [r15+0x22],0x40
+  41b317:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41b31b:	4d 89 7e 20          	mov    QWORD PTR [r14+0x20],r15
+  41b31f:	e9 ec f1 ff ff       	jmp    41a510 <luaV_execute+0x40>
+  41b324:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41b328:	89 ee                	mov    esi,ebp
+  41b32a:	c1 ed 0e             	shr    ebp,0xe
+  41b32d:	c1 ee 17             	shr    esi,0x17
+  41b330:	48 c1 e6 04          	shl    rsi,0x4
+  41b334:	4c 01 de             	add    rsi,r11
+  41b337:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b33d:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+  41b340:	48 89 43 10          	mov    QWORD PTR [rbx+0x10],rax
+  41b344:	8b 46 08             	mov    eax,DWORD PTR [rsi+0x8]
+  41b347:	89 43 18             	mov    DWORD PTR [rbx+0x18],eax
+  41b34a:	0f 84 f6 0e 00 00    	je     41c246 <luaV_execute+0x1d76>
+  41b350:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b355:	40 0f b6 ed          	movzx  ebp,bpl
+  41b359:	48 c1 e5 04          	shl    rbp,0x4
+  41b35d:	48 8d 14 28          	lea    rdx,[rax+rbp*1]
+  41b361:	48 89 d9             	mov    rcx,rbx
+  41b364:	4c 89 f7             	mov    rdi,r14
+  41b367:	e8 94 9e 00 00       	call   425200 <luaV_gettable>
+  41b36c:	e9 bf f8 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b371:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41b378:	89 e8                	mov    eax,ebp
+  41b37a:	83 c6 01             	add    esi,0x1
+  41b37d:	c1 e8 17             	shr    eax,0x17
+  41b380:	89 35 4e 49 37 00    	mov    DWORD PTR [rip+0x37494e],esi        # 78fcd4 <cpu_cycles_slice>
+  41b386:	f6 c4 01             	test   ah,0x1
+  41b389:	0f 84 ff 0e 00 00    	je     41c28e <luaV_execute+0x1dbe>
+  41b38f:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b394:	0f b6 c0             	movzx  eax,al
+  41b397:	48 c1 e0 04          	shl    rax,0x4
+  41b39b:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b39f:	c1 ed 0e             	shr    ebp,0xe
+  41b3a2:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b3a8:	0f 84 cd 0e 00 00    	je     41c27b <luaV_execute+0x1dab>
+  41b3ae:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b3b3:	40 0f b6 ed          	movzx  ebp,bpl
+  41b3b7:	48 c1 e5 04          	shl    rbp,0x4
+  41b3bb:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b3bf:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b3c3:	75 0a                	jne    41b3cf <luaV_execute+0xeff>
+  41b3c5:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b3c9:	0f 84 81 11 00 00    	je     41c550 <luaV_execute+0x2080>
+  41b3cf:	41 b8 0d 00 00 00    	mov    r8d,0xd
+  41b3d5:	48 89 de             	mov    rsi,rbx
+  41b3d8:	4c 89 f7             	mov    rdi,r14
+  41b3db:	e8 c0 95 00 00       	call   4249a0 <luaV_arith>
+  41b3e0:	e9 4b f8 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b3e5:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b3e8:	c1 ed 17             	shr    ebp,0x17
+  41b3eb:	48 8d 43 08          	lea    rax,[rbx+0x8]
+  41b3ef:	48 c1 e5 04          	shl    rbp,0x4
+  41b3f3:	48 8d 54 2b 18       	lea    rdx,[rbx+rbp*1+0x18]
+  41b3f8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41b3ff:	00 
+  41b400:	c7 00 00 00 00 00    	mov    DWORD PTR [rax],0x0
+  41b406:	48 83 c0 10          	add    rax,0x10
+  41b40a:	48 39 d0             	cmp    rax,rdx
+  41b40d:	75 f1                	jne    41b400 <luaV_execute+0xf30>
+  41b40f:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b413:	89 ce                	mov    esi,ecx
+  41b415:	e9 36 f1 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b41a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41b420:	89 e8                	mov    eax,ebp
+  41b422:	c7 43 08 01 00 00 00 	mov    DWORD PTR [rbx+0x8],0x1
+  41b429:	89 ce                	mov    esi,ecx
+  41b42b:	c1 e8 17             	shr    eax,0x17
+  41b42e:	81 e5 00 c0 7f 00    	and    ebp,0x7fc000
+  41b434:	89 03                	mov    DWORD PTR [rbx],eax
+  41b436:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b43a:	0f 84 10 f1 ff ff    	je     41a550 <luaV_execute+0x80>
+  41b440:	48 83 c0 04          	add    rax,0x4
+  41b444:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41b448:	e9 03 f1 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b44d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b450:	49 8b 57 38          	mov    rdx,QWORD PTR [r15+0x38]
+  41b454:	48 8d 42 04          	lea    rax,[rdx+0x4]
+  41b458:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41b45c:	8b 12                	mov    edx,DWORD PTR [rdx]
+  41b45e:	c1 ea 06             	shr    edx,0x6
+  41b461:	48 c1 e2 04          	shl    rdx,0x4
+  41b465:	48 03 54 24 08       	add    rdx,QWORD PTR [rsp+0x8]
+  41b46a:	48 8b 32             	mov    rsi,QWORD PTR [rdx]
+  41b46d:	8b 52 08             	mov    edx,DWORD PTR [rdx+0x8]
+  41b470:	48 89 33             	mov    QWORD PTR [rbx],rsi
+  41b473:	89 53 08             	mov    DWORD PTR [rbx+0x8],edx
+  41b476:	89 ce                	mov    esi,ecx
+  41b478:	e9 d3 f0 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b47d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b480:	c1 ed 0e             	shr    ebp,0xe
+  41b483:	83 c6 01             	add    esi,0x1
+  41b486:	89 e8                	mov    eax,ebp
+  41b488:	89 35 46 48 37 00    	mov    DWORD PTR [rip+0x374846],esi        # 78fcd4 <cpu_cycles_slice>
+  41b48e:	48 c1 e0 04          	shl    rax,0x4
+  41b492:	48 03 44 24 08       	add    rax,QWORD PTR [rsp+0x8]
+  41b497:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  41b49a:	48 89 13             	mov    QWORD PTR [rbx],rdx
+  41b49d:	8b 40 08             	mov    eax,DWORD PTR [rax+0x8]
+  41b4a0:	89 43 08             	mov    DWORD PTR [rbx+0x8],eax
+  41b4a3:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b4a7:	e9 a4 f0 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b4ac:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41b4b0:	c1 ed 17             	shr    ebp,0x17
+  41b4b3:	83 c6 01             	add    esi,0x1
+  41b4b6:	89 e8                	mov    eax,ebp
+  41b4b8:	89 35 16 48 37 00    	mov    DWORD PTR [rip+0x374816],esi        # 78fcd4 <cpu_cycles_slice>
+  41b4be:	48 c1 e0 04          	shl    rax,0x4
+  41b4c2:	4c 01 d8             	add    rax,r11
+  41b4c5:	eb d0                	jmp    41b497 <luaV_execute+0xfc7>
+  41b4c7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  41b4ce:	00 00 
+  41b4d0:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41b4d5:	4d 89 dc             	mov    r12,r11
+  41b4d8:	4d 2b 27             	sub    r12,QWORD PTR [r15]
+  41b4db:	c1 ed 17             	shr    ebp,0x17
+  41b4de:	83 ed 01             	sub    ebp,0x1
+  41b4e1:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+  41b4e5:	49 c1 fc 04          	sar    r12,0x4
+  41b4e9:	0f b6 40 78          	movzx  eax,BYTE PTR [rax+0x78]
+  41b4ed:	41 29 c4             	sub    r12d,eax
+  41b4f0:	41 83 ec 01          	sub    r12d,0x1
+  41b4f4:	83 fd ff             	cmp    ebp,0xffffffff
+  41b4f7:	0f 84 ca 0e 00 00    	je     41c3c7 <luaV_execute+0x1ef7>
+  41b4fd:	85 ed                	test   ebp,ebp
+  41b4ff:	7e 30                	jle    41b531 <luaV_execute+0x1061>
+  41b501:	45 85 e4             	test   r12d,r12d
+  41b504:	0f 8f 81 09 00 00    	jg     41be8b <luaV_execute+0x19bb>
+  41b50a:	31 c0                	xor    eax,eax
+  41b50c:	48 63 d0             	movsxd rdx,eax
+  41b50f:	48 c1 e2 04          	shl    rdx,0x4
+  41b513:	48 8d 54 13 08       	lea    rdx,[rbx+rdx*1+0x8]
+  41b518:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41b51f:	00 
+  41b520:	83 c0 01             	add    eax,0x1
+  41b523:	c7 02 00 00 00 00    	mov    DWORD PTR [rdx],0x0
+  41b529:	48 83 c2 10          	add    rdx,0x10
+  41b52d:	39 c5                	cmp    ebp,eax
+  41b52f:	7f ef                	jg     41b520 <luaV_execute+0x1050>
+  41b531:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b535:	e9 49 f8 ff ff       	jmp    41ad83 <luaV_execute+0x8b3>
+  41b53a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41b540:	89 e8                	mov    eax,ebp
+  41b542:	c1 e8 0e             	shr    eax,0xe
+  41b545:	f6 c4 01             	test   ah,0x1
+  41b548:	0f 84 5f 0d 00 00    	je     41c2ad <luaV_execute+0x1ddd>
+  41b54e:	48 8b 4c 24 08       	mov    rcx,QWORD PTR [rsp+0x8]
+  41b553:	0f b6 c0             	movzx  eax,al
+  41b556:	48 c1 e0 04          	shl    rax,0x4
+  41b55a:	48 01 c1             	add    rcx,rax
+  41b55d:	c1 ed 17             	shr    ebp,0x17
+  41b560:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b566:	0f 84 31 0d 00 00    	je     41c29d <luaV_execute+0x1dcd>
+  41b56c:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b571:	40 0f b6 ed          	movzx  ebp,bpl
+  41b575:	48 c1 e5 04          	shl    rbp,0x4
+  41b579:	48 8d 14 28          	lea    rdx,[rax+rbp*1]
+  41b57d:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41b582:	48 8b 44 f8 20       	mov    rax,QWORD PTR [rax+rdi*8+0x20]
+  41b587:	4c 89 f7             	mov    rdi,r14
+  41b58a:	48 8b 70 10          	mov    rsi,QWORD PTR [rax+0x10]
+  41b58e:	e8 ed a9 00 00       	call   425f80 <luaV_settable>
+  41b593:	e9 98 f6 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b598:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41b59f:	00 
+  41b5a0:	89 e8                	mov    eax,ebp
+  41b5a2:	c1 ed 0e             	shr    ebp,0xe
+  41b5a5:	c1 e8 17             	shr    eax,0x17
+  41b5a8:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b5ae:	0f 84 23 0b 00 00    	je     41c0d7 <luaV_execute+0x1c07>
+  41b5b4:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b5b9:	40 0f b6 ed          	movzx  ebp,bpl
+  41b5bd:	48 c1 e5 04          	shl    rbp,0x4
+  41b5c1:	48 8d 14 2f          	lea    rdx,[rdi+rbp*1]
+  41b5c5:	48 8b 7c 24 10       	mov    rdi,QWORD PTR [rsp+0x10]
+  41b5ca:	48 89 d9             	mov    rcx,rbx
+  41b5cd:	48 8b 44 c7 20       	mov    rax,QWORD PTR [rdi+rax*8+0x20]
+  41b5d2:	4c 89 f7             	mov    rdi,r14
+  41b5d5:	48 8b 70 10          	mov    rsi,QWORD PTR [rax+0x10]
+  41b5d9:	e8 22 9c 00 00       	call   425200 <luaV_gettable>
+  41b5de:	e9 4d f6 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b5e3:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  41b5e8:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41b5ed:	c1 ed 17             	shr    ebp,0x17
+  41b5f0:	89 ce                	mov    esi,ecx
+  41b5f2:	48 8b 44 e8 20       	mov    rax,QWORD PTR [rax+rbp*8+0x20]
+  41b5f7:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+  41b5fb:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  41b5fe:	8b 40 08             	mov    eax,DWORD PTR [rax+0x8]
+  41b601:	48 89 13             	mov    QWORD PTR [rbx],rdx
+  41b604:	89 43 08             	mov    DWORD PTR [rbx+0x8],eax
+  41b607:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41b60b:	e9 40 ef ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41b610:	89 e8                	mov    eax,ebp
+  41b612:	83 c6 01             	add    esi,0x1
+  41b615:	c1 e8 17             	shr    eax,0x17
+  41b618:	89 35 b6 46 37 00    	mov    DWORD PTR [rip+0x3746b6],esi        # 78fcd4 <cpu_cycles_slice>
+  41b61e:	f6 c4 01             	test   ah,0x1
+  41b621:	0f 84 ab 0c 00 00    	je     41c2d2 <luaV_execute+0x1e02>
+  41b627:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b62c:	0f b6 c0             	movzx  eax,al
+  41b62f:	48 c1 e0 04          	shl    rax,0x4
+  41b633:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b637:	c1 ed 0e             	shr    ebp,0xe
+  41b63a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b640:	0f 84 79 0c 00 00    	je     41c2bf <luaV_execute+0x1def>
+  41b646:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b64b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b64f:	48 c1 e5 04          	shl    rbp,0x4
+  41b653:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b657:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b65b:	75 0a                	jne    41b667 <luaV_execute+0x1197>
+  41b65d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b661:	0f 84 45 10 00 00    	je     41c6ac <luaV_execute+0x21dc>
+  41b667:	41 b8 11 00 00 00    	mov    r8d,0x11
+  41b66d:	48 89 de             	mov    rsi,rbx
+  41b670:	4c 89 f7             	mov    rdi,r14
+  41b673:	e8 28 93 00 00       	call   4249a0 <luaV_arith>
+  41b678:	e9 b3 f5 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b67d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b680:	89 e8                	mov    eax,ebp
+  41b682:	83 c6 01             	add    esi,0x1
+  41b685:	c1 e8 17             	shr    eax,0x17
+  41b688:	89 35 46 46 37 00    	mov    DWORD PTR [rip+0x374646],esi        # 78fcd4 <cpu_cycles_slice>
+  41b68e:	f6 c4 01             	test   ah,0x1
+  41b691:	0f 84 66 0a 00 00    	je     41c0fd <luaV_execute+0x1c2d>
+  41b697:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b69c:	0f b6 c0             	movzx  eax,al
+  41b69f:	48 c1 e0 04          	shl    rax,0x4
+  41b6a3:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b6a7:	c1 ed 0e             	shr    ebp,0xe
+  41b6aa:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b6b0:	0f 84 34 0a 00 00    	je     41c0ea <luaV_execute+0x1c1a>
+  41b6b6:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b6bb:	40 0f b6 ed          	movzx  ebp,bpl
+  41b6bf:	48 c1 e5 04          	shl    rbp,0x4
+  41b6c3:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b6c7:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b6cb:	75 0a                	jne    41b6d7 <luaV_execute+0x1207>
+  41b6cd:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b6d1:	0f 84 e8 0f 00 00    	je     41c6bf <luaV_execute+0x21ef>
+  41b6d7:	41 b8 10 00 00 00    	mov    r8d,0x10
+  41b6dd:	48 89 de             	mov    rsi,rbx
+  41b6e0:	4c 89 f7             	mov    rdi,r14
+  41b6e3:	e8 b8 92 00 00       	call   4249a0 <luaV_arith>
+  41b6e8:	e9 43 f5 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b6ed:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b6f0:	89 e8                	mov    eax,ebp
+  41b6f2:	83 c6 01             	add    esi,0x1
+  41b6f5:	c1 e8 17             	shr    eax,0x17
+  41b6f8:	89 35 d6 45 37 00    	mov    DWORD PTR [rip+0x3745d6],esi        # 78fcd4 <cpu_cycles_slice>
+  41b6fe:	f6 c4 01             	test   ah,0x1
+  41b701:	0f 84 ed 0b 00 00    	je     41c2f4 <luaV_execute+0x1e24>
+  41b707:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b70c:	0f b6 c0             	movzx  eax,al
+  41b70f:	48 c1 e0 04          	shl    rax,0x4
+  41b713:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b717:	c1 ed 0e             	shr    ebp,0xe
+  41b71a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b720:	0f 84 bb 0b 00 00    	je     41c2e1 <luaV_execute+0x1e11>
+  41b726:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b72b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b72f:	48 c1 e5 04          	shl    rbp,0x4
+  41b733:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b737:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b73b:	75 0a                	jne    41b747 <luaV_execute+0x1277>
+  41b73d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b741:	0f 84 9d 0e 00 00    	je     41c5e4 <luaV_execute+0x2114>
+  41b747:	41 b8 0f 00 00 00    	mov    r8d,0xf
+  41b74d:	48 89 de             	mov    rsi,rbx
+  41b750:	4c 89 f7             	mov    rdi,r14
+  41b753:	e8 48 92 00 00       	call   4249a0 <luaV_arith>
+  41b758:	e9 d3 f4 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b75d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b760:	89 e8                	mov    eax,ebp
+  41b762:	83 c6 01             	add    esi,0x1
+  41b765:	c1 e8 17             	shr    eax,0x17
+  41b768:	89 35 66 45 37 00    	mov    DWORD PTR [rip+0x374566],esi        # 78fcd4 <cpu_cycles_slice>
+  41b76e:	f6 c4 01             	test   ah,0x1
+  41b771:	0f 84 a8 09 00 00    	je     41c11f <luaV_execute+0x1c4f>
+  41b777:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b77c:	0f b6 c0             	movzx  eax,al
+  41b77f:	48 c1 e0 04          	shl    rax,0x4
+  41b783:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b787:	c1 ed 0e             	shr    ebp,0xe
+  41b78a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b790:	0f 84 76 09 00 00    	je     41c10c <luaV_execute+0x1c3c>
+  41b796:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b79b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b79f:	48 c1 e5 04          	shl    rbp,0x4
+  41b7a3:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b7a7:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b7ab:	75 0a                	jne    41b7b7 <luaV_execute+0x12e7>
+  41b7ad:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b7b1:	0f 84 db 0d 00 00    	je     41c592 <luaV_execute+0x20c2>
+  41b7b7:	41 b8 0e 00 00 00    	mov    r8d,0xe
+  41b7bd:	48 89 de             	mov    rsi,rbx
+  41b7c0:	4c 89 f7             	mov    rdi,r14
+  41b7c3:	e8 d8 91 00 00       	call   4249a0 <luaV_arith>
+  41b7c8:	e9 63 f4 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b7cd:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b7d0:	89 e8                	mov    eax,ebp
+  41b7d2:	83 c6 01             	add    esi,0x1
+  41b7d5:	c1 e8 17             	shr    eax,0x17
+  41b7d8:	89 35 f6 44 37 00    	mov    DWORD PTR [rip+0x3744f6],esi        # 78fcd4 <cpu_cycles_slice>
+  41b7de:	f6 c4 01             	test   ah,0x1
+  41b7e1:	0f 84 2f 0b 00 00    	je     41c316 <luaV_execute+0x1e46>
+  41b7e7:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b7ec:	0f b6 c0             	movzx  eax,al
+  41b7ef:	48 c1 e0 04          	shl    rax,0x4
+  41b7f3:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b7f7:	c1 ed 0e             	shr    ebp,0xe
+  41b7fa:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b800:	0f 84 fd 0a 00 00    	je     41c303 <luaV_execute+0x1e33>
+  41b806:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b80b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b80f:	48 c1 e5 04          	shl    rbp,0x4
+  41b813:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b817:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b81b:	75 0a                	jne    41b827 <luaV_execute+0x1357>
+  41b81d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b821:	0f 84 0e 0e 00 00    	je     41c635 <luaV_execute+0x2165>
+  41b827:	41 b8 13 00 00 00    	mov    r8d,0x13
+  41b82d:	48 89 de             	mov    rsi,rbx
+  41b830:	4c 89 f7             	mov    rdi,r14
+  41b833:	e8 68 91 00 00       	call   4249a0 <luaV_arith>
+  41b838:	e9 f3 f3 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b83d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b840:	89 e8                	mov    eax,ebp
+  41b842:	83 c6 01             	add    esi,0x1
+  41b845:	c1 e8 17             	shr    eax,0x17
+  41b848:	89 35 86 44 37 00    	mov    DWORD PTR [rip+0x374486],esi        # 78fcd4 <cpu_cycles_slice>
+  41b84e:	f6 c4 01             	test   ah,0x1
+  41b851:	0f 84 7e 09 00 00    	je     41c1d5 <luaV_execute+0x1d05>
+  41b857:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b85c:	0f b6 c0             	movzx  eax,al
+  41b85f:	48 c1 e0 04          	shl    rax,0x4
+  41b863:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b867:	c1 ed 0e             	shr    ebp,0xe
+  41b86a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b870:	0f 84 4c 09 00 00    	je     41c1c2 <luaV_execute+0x1cf2>
+  41b876:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b87b:	40 0f b6 ed          	movzx  ebp,bpl
+  41b87f:	48 c1 e5 04          	shl    rbp,0x4
+  41b883:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b887:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b88b:	75 0a                	jne    41b897 <luaV_execute+0x13c7>
+  41b88d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b891:	0f 84 ae 0d 00 00    	je     41c645 <luaV_execute+0x2175>
+  41b897:	41 b8 12 00 00 00    	mov    r8d,0x12
+  41b89d:	48 89 de             	mov    rsi,rbx
+  41b8a0:	4c 89 f7             	mov    rdi,r14
+  41b8a3:	e8 f8 90 00 00       	call   4249a0 <luaV_arith>
+  41b8a8:	e9 83 f3 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b8ad:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b8b0:	89 e8                	mov    eax,ebp
+  41b8b2:	c1 e8 17             	shr    eax,0x17
+  41b8b5:	f6 c4 01             	test   ah,0x1
+  41b8b8:	0f 84 7a 0a 00 00    	je     41c338 <luaV_execute+0x1e68>
+  41b8be:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b8c3:	0f b6 c0             	movzx  eax,al
+  41b8c6:	48 c1 e0 04          	shl    rax,0x4
+  41b8ca:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b8ce:	c1 ed 0e             	shr    ebp,0xe
+  41b8d1:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b8d7:	0f 84 48 0a 00 00    	je     41c325 <luaV_execute+0x1e55>
+  41b8dd:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b8e2:	40 0f b6 ed          	movzx  ebp,bpl
+  41b8e6:	48 c1 e5 04          	shl    rbp,0x4
+  41b8ea:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b8ee:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b8f2:	75 0a                	jne    41b8fe <luaV_execute+0x142e>
+  41b8f4:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b8f8:	0f 84 57 0d 00 00    	je     41c655 <luaV_execute+0x2185>
+  41b8fe:	41 b8 09 00 00 00    	mov    r8d,0x9
+  41b904:	48 89 de             	mov    rsi,rbx
+  41b907:	4c 89 f7             	mov    rdi,r14
+  41b90a:	e8 91 90 00 00       	call   4249a0 <luaV_arith>
+  41b90f:	e9 1c f3 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b914:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41b918:	89 e8                	mov    eax,ebp
+  41b91a:	c1 e8 17             	shr    eax,0x17
+  41b91d:	f6 c4 01             	test   ah,0x1
+  41b920:	0f 84 8d 08 00 00    	je     41c1b3 <luaV_execute+0x1ce3>
+  41b926:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b92b:	0f b6 c0             	movzx  eax,al
+  41b92e:	48 c1 e0 04          	shl    rax,0x4
+  41b932:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b936:	c1 ed 0e             	shr    ebp,0xe
+  41b939:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b93f:	0f 84 5b 08 00 00    	je     41c1a0 <luaV_execute+0x1cd0>
+  41b945:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b94a:	40 0f b6 ed          	movzx  ebp,bpl
+  41b94e:	48 c1 e5 04          	shl    rbp,0x4
+  41b952:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b956:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b95a:	75 0a                	jne    41b966 <luaV_execute+0x1496>
+  41b95c:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b960:	0f 84 ff 0c 00 00    	je     41c665 <luaV_execute+0x2195>
+  41b966:	41 b8 08 00 00 00    	mov    r8d,0x8
+  41b96c:	48 89 de             	mov    rsi,rbx
+  41b96f:	4c 89 f7             	mov    rdi,r14
+  41b972:	e8 29 90 00 00       	call   4249a0 <luaV_arith>
+  41b977:	e9 b4 f2 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b97c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41b980:	89 e8                	mov    eax,ebp
+  41b982:	83 c6 01             	add    esi,0x1
+  41b985:	c1 e8 17             	shr    eax,0x17
+  41b988:	89 35 46 43 37 00    	mov    DWORD PTR [rip+0x374346],esi        # 78fcd4 <cpu_cycles_slice>
+  41b98e:	f6 c4 01             	test   ah,0x1
+  41b991:	0f 84 c3 09 00 00    	je     41c35a <luaV_execute+0x1e8a>
+  41b997:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41b99c:	0f b6 c0             	movzx  eax,al
+  41b99f:	48 c1 e0 04          	shl    rax,0x4
+  41b9a3:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41b9a7:	c1 ed 0e             	shr    ebp,0xe
+  41b9aa:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41b9b0:	0f 84 91 09 00 00    	je     41c347 <luaV_execute+0x1e77>
+  41b9b6:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41b9bb:	40 0f b6 ed          	movzx  ebp,bpl
+  41b9bf:	48 c1 e5 04          	shl    rbp,0x4
+  41b9c3:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41b9c7:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41b9cb:	75 0a                	jne    41b9d7 <luaV_execute+0x1507>
+  41b9cd:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41b9d1:	0f 84 8f 0b 00 00    	je     41c566 <luaV_execute+0x2096>
+  41b9d7:	41 b8 07 00 00 00    	mov    r8d,0x7
+  41b9dd:	48 89 de             	mov    rsi,rbx
+  41b9e0:	4c 89 f7             	mov    rdi,r14
+  41b9e3:	e8 b8 8f 00 00       	call   4249a0 <luaV_arith>
+  41b9e8:	e9 43 f2 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41b9ed:	0f 1f 00             	nop    DWORD PTR [rax]
+  41b9f0:	89 e8                	mov    eax,ebp
+  41b9f2:	83 c6 01             	add    esi,0x1
+  41b9f5:	c1 e8 17             	shr    eax,0x17
+  41b9f8:	89 35 d6 42 37 00    	mov    DWORD PTR [rip+0x3742d6],esi        # 78fcd4 <cpu_cycles_slice>
+  41b9fe:	f6 c4 01             	test   ah,0x1
+  41ba01:	0f 84 8a 07 00 00    	je     41c191 <luaV_execute+0x1cc1>
+  41ba07:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41ba0c:	0f b6 c0             	movzx  eax,al
+  41ba0f:	48 c1 e0 04          	shl    rax,0x4
+  41ba13:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41ba17:	c1 ed 0e             	shr    ebp,0xe
+  41ba1a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41ba20:	0f 84 58 07 00 00    	je     41c17e <luaV_execute+0x1cae>
+  41ba26:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41ba2b:	40 0f b6 ed          	movzx  ebp,bpl
+  41ba2f:	48 c1 e5 04          	shl    rbp,0x4
+  41ba33:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41ba37:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41ba3b:	75 0a                	jne    41ba47 <luaV_execute+0x1577>
+  41ba3d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41ba41:	0f 84 35 0b 00 00    	je     41c57c <luaV_execute+0x20ac>
+  41ba47:	41 b8 06 00 00 00    	mov    r8d,0x6
+  41ba4d:	48 89 de             	mov    rsi,rbx
+  41ba50:	4c 89 f7             	mov    rdi,r14
+  41ba53:	e8 48 8f 00 00       	call   4249a0 <luaV_arith>
+  41ba58:	e9 d3 f1 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41ba5d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41ba60:	89 e8                	mov    eax,ebp
+  41ba62:	c1 e8 17             	shr    eax,0x17
+  41ba65:	f6 c4 01             	test   ah,0x1
+  41ba68:	0f 84 0e 09 00 00    	je     41c37c <luaV_execute+0x1eac>
+  41ba6e:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41ba73:	0f b6 c0             	movzx  eax,al
+  41ba76:	48 c1 e0 04          	shl    rax,0x4
+  41ba7a:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41ba7e:	c1 ed 0e             	shr    ebp,0xe
+  41ba81:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41ba87:	0f 84 dc 08 00 00    	je     41c369 <luaV_execute+0x1e99>
+  41ba8d:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41ba92:	40 0f b6 ed          	movzx  ebp,bpl
+  41ba96:	48 c1 e5 04          	shl    rbp,0x4
+  41ba9a:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41ba9e:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41baa2:	75 0a                	jne    41baae <luaV_execute+0x15de>
+  41baa4:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41baa8:	0f 84 d8 0b 00 00    	je     41c686 <luaV_execute+0x21b6>
+  41baae:	41 b8 0b 00 00 00    	mov    r8d,0xb
+  41bab4:	48 89 de             	mov    rsi,rbx
+  41bab7:	4c 89 f7             	mov    rdi,r14
+  41baba:	e8 e1 8e 00 00       	call   4249a0 <luaV_arith>
+  41babf:	e9 6c f1 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41bac4:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41bac8:	89 e8                	mov    eax,ebp
+  41baca:	c1 e8 17             	shr    eax,0x17
+  41bacd:	f6 c4 01             	test   ah,0x1
+  41bad0:	0f 84 99 06 00 00    	je     41c16f <luaV_execute+0x1c9f>
+  41bad6:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41badb:	0f b6 c0             	movzx  eax,al
+  41bade:	48 c1 e0 04          	shl    rax,0x4
+  41bae2:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41bae6:	c1 ed 0e             	shr    ebp,0xe
+  41bae9:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41baef:	0f 84 67 06 00 00    	je     41c15c <luaV_execute+0x1c8c>
+  41baf5:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41bafa:	40 0f b6 ed          	movzx  ebp,bpl
+  41bafe:	48 c1 e5 04          	shl    rbp,0x4
+  41bb02:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41bb06:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41bb0a:	75 0a                	jne    41bb16 <luaV_execute+0x1646>
+  41bb0c:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41bb10:	0f 84 83 0b 00 00    	je     41c699 <luaV_execute+0x21c9>
+  41bb16:	41 b8 0a 00 00 00    	mov    r8d,0xa
+  41bb1c:	48 89 de             	mov    rsi,rbx
+  41bb1f:	4c 89 f7             	mov    rdi,r14
+  41bb22:	e8 79 8e 00 00       	call   4249a0 <luaV_arith>
+  41bb27:	e9 04 f1 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41bb2c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  41bb30:	89 e8                	mov    eax,ebp
+  41bb32:	83 c6 01             	add    esi,0x1
+  41bb35:	c1 e8 17             	shr    eax,0x17
+  41bb38:	89 35 96 41 37 00    	mov    DWORD PTR [rip+0x374196],esi        # 78fcd4 <cpu_cycles_slice>
+  41bb3e:	f6 c4 01             	test   ah,0x1
+  41bb41:	0f 84 f0 06 00 00    	je     41c237 <luaV_execute+0x1d67>
+  41bb47:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41bb4c:	0f b6 c0             	movzx  eax,al
+  41bb4f:	48 c1 e0 04          	shl    rax,0x4
+  41bb53:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41bb57:	c1 ed 0e             	shr    ebp,0xe
+  41bb5a:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41bb60:	0f 84 be 06 00 00    	je     41c224 <luaV_execute+0x1d54>
+  41bb66:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41bb6b:	40 0f b6 ed          	movzx  ebp,bpl
+  41bb6f:	48 c1 e5 04          	shl    rbp,0x4
+  41bb73:	48 8d 0c 28          	lea    rcx,[rax+rbp*1]
+  41bb77:	83 7a 08 03          	cmp    DWORD PTR [rdx+0x8],0x3
+  41bb7b:	75 0a                	jne    41bb87 <luaV_execute+0x16b7>
+  41bb7d:	83 79 08 03          	cmp    DWORD PTR [rcx+0x8],0x3
+  41bb81:	0f 84 21 0a 00 00    	je     41c5a8 <luaV_execute+0x20d8>
+  41bb87:	41 b8 0c 00 00 00    	mov    r8d,0xc
+  41bb8d:	48 89 de             	mov    rsi,rbx
+  41bb90:	4c 89 f7             	mov    rdi,r14
+  41bb93:	e8 08 8e 00 00       	call   4249a0 <luaV_arith>
+  41bb98:	e9 93 f0 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41bb9d:	0f 1f 00             	nop    DWORD PTR [rax]
+  41bba0:	89 e8                	mov    eax,ebp
+  41bba2:	c1 e8 0e             	shr    eax,0xe
+  41bba5:	f6 c4 01             	test   ah,0x1
+  41bba8:	0f 84 bb 06 00 00    	je     41c269 <luaV_execute+0x1d99>
+  41bbae:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41bbb3:	0f b6 c0             	movzx  eax,al
+  41bbb6:	48 c1 e0 04          	shl    rax,0x4
+  41bbba:	48 8d 0c 07          	lea    rcx,[rdi+rax*1]
+  41bbbe:	c1 ed 17             	shr    ebp,0x17
+  41bbc1:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41bbc7:	0f 84 8c 06 00 00    	je     41c259 <luaV_execute+0x1d89>
+  41bbcd:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  41bbd2:	40 0f b6 ed          	movzx  ebp,bpl
+  41bbd6:	48 c1 e5 04          	shl    rbp,0x4
+  41bbda:	48 8d 14 28          	lea    rdx,[rax+rbp*1]
+  41bbde:	48 89 de             	mov    rsi,rbx
+  41bbe1:	4c 89 f7             	mov    rdi,r14
+  41bbe4:	e8 97 a3 00 00       	call   425f80 <luaV_settable>
+  41bbe9:	e9 42 f0 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41bbee:	66 90                	xchg   ax,ax
+  41bbf0:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  41bbf5:	c1 ed 17             	shr    ebp,0x17
+  41bbf8:	48 8b 13             	mov    rdx,QWORD PTR [rbx]
+  41bbfb:	48 8b 74 e8 20       	mov    rsi,QWORD PTR [rax+rbp*8+0x20]
+  41bc00:	48 8b 46 10          	mov    rax,QWORD PTR [rsi+0x10]
+  41bc04:	48 89 10             	mov    QWORD PTR [rax],rdx
+  41bc07:	8b 53 08             	mov    edx,DWORD PTR [rbx+0x8]
+  41bc0a:	89 50 08             	mov    DWORD PTR [rax+0x8],edx
+  41bc0d:	f6 43 08 40          	test   BYTE PTR [rbx+0x8],0x40
+  41bc11:	0f 84 f8 f7 ff ff    	je     41b40f <luaV_execute+0xf3f>
+  41bc17:	48 8b 13             	mov    rdx,QWORD PTR [rbx]
+  41bc1a:	f6 42 09 03          	test   BYTE PTR [rdx+0x9],0x3
+  41bc1e:	0f 84 eb f7 ff ff    	je     41b40f <luaV_execute+0xf3f>
+  41bc24:	f6 46 09 04          	test   BYTE PTR [rsi+0x9],0x4
+  41bc28:	0f 84 e1 f7 ff ff    	je     41b40f <luaV_execute+0xf3f>
+  41bc2e:	4c 89 f7             	mov    rdi,r14
+  41bc31:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41bc36:	e8 45 d3 ff ff       	call   418f80 <luaC_barrier_>
+  41bc3b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  41bc40:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41bc44:	44 8b 0d 85 40 37 00 	mov    r9d,DWORD PTR [rip+0x374085]        # 78fcd0 <cpu_superyield>
+  41bc4b:	8b 35 83 40 37 00    	mov    esi,DWORD PTR [rip+0x374083]        # 78fcd4 <cpu_cycles_slice>
+  41bc51:	44 8b 05 84 1a 37 00 	mov    r8d,DWORD PTR [rip+0x371a84]        # 78d6dc <cpu_cycles_slice_max>
+  41bc58:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41bc5d:	e9 ee e8 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41bc62:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41bc68:	41 89 ec             	mov    r12d,ebp
+  41bc6b:	c1 ed 0e             	shr    ebp,0xe
+  41bc6e:	4c 89 f7             	mov    rdi,r14
+  41bc71:	41 c1 ec 17          	shr    r12d,0x17
+  41bc75:	41 89 ed             	mov    r13d,ebp
+  41bc78:	e8 c3 1f 00 00       	call   41dc40 <luaH_new>
+  41bc7d:	41 81 e5 ff 01 00 00 	and    r13d,0x1ff
+  41bc84:	44 89 e7             	mov    edi,r12d
+  41bc87:	48 89 03             	mov    QWORD PTR [rbx],rax
+  41bc8a:	44 09 ef             	or     edi,r13d
+  41bc8d:	c7 43 08 45 00 00 00 	mov    DWORD PTR [rbx+0x8],0x45
+  41bc94:	74 43                	je     41bcd9 <luaV_execute+0x1809>
+  41bc96:	44 89 e9             	mov    ecx,r13d
+  41bc99:	c1 f9 03             	sar    ecx,0x3
+  41bc9c:	83 e1 1f             	and    ecx,0x1f
+  41bc9f:	74 0e                	je     41bcaf <luaV_execute+0x17df>
+  41bca1:	83 e5 07             	and    ebp,0x7
+  41bca4:	83 e9 01             	sub    ecx,0x1
+  41bca7:	8d 55 08             	lea    edx,[rbp+0x8]
+  41bcaa:	d3 e2                	shl    edx,cl
+  41bcac:	41 89 d5             	mov    r13d,edx
+  41bcaf:	44 89 e1             	mov    ecx,r12d
+  41bcb2:	c1 f9 03             	sar    ecx,0x3
+  41bcb5:	83 e1 1f             	and    ecx,0x1f
+  41bcb8:	74 0e                	je     41bcc8 <luaV_execute+0x17f8>
+  41bcba:	41 83 e4 07          	and    r12d,0x7
+  41bcbe:	83 e9 01             	sub    ecx,0x1
+  41bcc1:	41 83 c4 08          	add    r12d,0x8
+  41bcc5:	41 d3 e4             	shl    r12d,cl
+  41bcc8:	44 89 e9             	mov    ecx,r13d
+  41bccb:	44 89 e2             	mov    edx,r12d
+  41bcce:	48 89 c6             	mov    rsi,rax
+  41bcd1:	4c 89 f7             	mov    rdi,r14
+  41bcd4:	e8 87 99 00 00       	call   425660 <luaH_resize>
+  41bcd9:	49 8b 46 18          	mov    rax,QWORD PTR [r14+0x18]
+  41bcdd:	48 83 78 18 00       	cmp    QWORD PTR [rax+0x18],0x0
+  41bce2:	0f 8e 48 ef ff ff    	jle    41ac30 <luaV_execute+0x760>
+  41bce8:	48 83 c3 10          	add    rbx,0x10
+  41bcec:	4c 89 f7             	mov    rdi,r14
+  41bcef:	49 89 5e 10          	mov    QWORD PTR [r14+0x10],rbx
+  41bcf3:	e8 28 32 00 00       	call   41ef20 <luaC_step>
+  41bcf8:	e9 21 f2 ff ff       	jmp    41af1e <luaV_execute+0xa4e>
+  41bcfd:	0f 1f 00             	nop    DWORD PTR [rax]
+  41bd00:	89 e8                	mov    eax,ebp
+  41bd02:	c1 e8 0e             	shr    eax,0xe
+  41bd05:	f6 c4 01             	test   ah,0x1
+  41bd08:	0f 84 d0 02 00 00    	je     41bfde <luaV_execute+0x1b0e>
+  41bd0e:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  41bd13:	0f b6 c0             	movzx  eax,al
+  41bd16:	48 c1 e0 04          	shl    rax,0x4
+  41bd1a:	48 8d 14 07          	lea    rdx,[rdi+rax*1]
+  41bd1e:	c1 ed 17             	shr    ebp,0x17
+  41bd21:	48 89 d9             	mov    rcx,rbx
+  41bd24:	4c 89 f7             	mov    rdi,r14
+  41bd27:	89 ee                	mov    esi,ebp
+  41bd29:	48 c1 e6 04          	shl    rsi,0x4
+  41bd2d:	4c 01 de             	add    rsi,r11
+  41bd30:	e8 cb 94 00 00       	call   425200 <luaV_gettable>
+  41bd35:	e9 f6 ee ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41bd3a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41bd40:	49 8b 5e 20          	mov    rbx,QWORD PTR [r14+0x20]
+  41bd44:	41 c7 86 d4 00 00 00 	mov    DWORD PTR [r14+0xd4],0x1
+  41bd4b:	01 00 00 00 
+  41bd4f:	0f b6 43 22          	movzx  eax,BYTE PTR [rbx+0x22]
+  41bd53:	84 c0                	test   al,al
+  41bd55:	0f 89 3d 0a 00 00    	jns    41c798 <luaV_execute+0x22c8>
+  41bd5b:	83 e0 7f             	and    eax,0x7f
+  41bd5e:	88 43 22             	mov    BYTE PTR [rbx+0x22],al
+  41bd61:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41bd65:	e9 fe e7 ff ff       	jmp    41a568 <luaV_execute+0x98>
+  41bd6a:	49 8b 75 10          	mov    rsi,QWORD PTR [r13+0x10]
+  41bd6e:	48 8b 54 24 30       	mov    rdx,QWORD PTR [rsp+0x30]
+  41bd73:	4c 89 e7             	mov    rdi,r12
+  41bd76:	e8 35 ab ff ff       	call   4168b0 <luaO_str2d.part.50>
+  41bd7b:	85 c0                	test   eax,eax
+  41bd7d:	0f 84 15 ec ff ff    	je     41a998 <luaV_execute+0x4c8>
+  41bd83:	8b 44 24 64          	mov    eax,DWORD PTR [rsp+0x64]
+  41bd87:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41bd8c:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41bd93:	89 03                	mov    DWORD PTR [rbx],eax
+  41bd95:	8b 43 18             	mov    eax,DWORD PTR [rbx+0x18]
+  41bd98:	83 f8 03             	cmp    eax,0x3
+  41bd9b:	74 71                	je     41be0e <luaV_execute+0x193e>
+  41bd9d:	83 e0 0f             	and    eax,0xf
+  41bda0:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41bda5:	83 f8 04             	cmp    eax,0x4
+  41bda8:	75 1c                	jne    41bdc6 <luaV_execute+0x18f6>
+  41bdaa:	4c 8b 6b 10          	mov    r13,QWORD PTR [rbx+0x10]
+  41bdae:	48 8d 35 1e b8 11 00 	lea    rsi,[rip+0x11b81e]        # 5375d3 <lua_ident+0xb3>
+  41bdb5:	4d 8d 65 18          	lea    r12,[r13+0x18]
+  41bdb9:	4c 89 e7             	mov    rdi,r12
+  41bdbc:	e8 4f 80 fe ff       	call   403e10 <strpbrk@plt>
+  41bdc1:	48 85 c0             	test   rax,rax
+  41bdc4:	74 1a                	je     41bde0 <luaV_execute+0x1910>
+  41bdc6:	48 8d 35 3a b8 11 00 	lea    rsi,[rip+0x11b83a]        # 537607 <lua_ident+0xe7>
+  41bdcd:	4c 89 f7             	mov    rdi,r14
+  41bdd0:	31 c0                	xor    eax,eax
+  41bdd2:	e8 09 0b 00 00       	call   41c8e0 <luaG_runerror>
+  41bdd7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  41bdde:	00 00 
+  41bde0:	49 8b 75 10          	mov    rsi,QWORD PTR [r13+0x10]
+  41bde4:	48 8b 54 24 30       	mov    rdx,QWORD PTR [rsp+0x30]
+  41bde9:	4c 89 e7             	mov    rdi,r12
+  41bdec:	e8 bf aa ff ff       	call   4168b0 <luaO_str2d.part.50>
+  41bdf1:	85 c0                	test   eax,eax
+  41bdf3:	74 d1                	je     41bdc6 <luaV_execute+0x18f6>
+  41bdf5:	8b 44 24 64          	mov    eax,DWORD PTR [rsp+0x64]
+  41bdf9:	48 83 fb f0          	cmp    rbx,0xfffffffffffffff0
+  41bdfd:	c7 43 18 03 00 00 00 	mov    DWORD PTR [rbx+0x18],0x3
+  41be04:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41be09:	89 43 10             	mov    DWORD PTR [rbx+0x10],eax
+  41be0c:	74 b8                	je     41bdc6 <luaV_execute+0x18f6>
+  41be0e:	8b 43 28             	mov    eax,DWORD PTR [rbx+0x28]
+  41be11:	83 f8 03             	cmp    eax,0x3
+  41be14:	0f 84 e1 05 00 00    	je     41c3fb <luaV_execute+0x1f2b>
+  41be1a:	83 e0 0f             	and    eax,0xf
+  41be1d:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41be22:	83 f8 04             	cmp    eax,0x4
+  41be25:	75 20                	jne    41be47 <luaV_execute+0x1977>
+  41be27:	4c 8b 6b 20          	mov    r13,QWORD PTR [rbx+0x20]
+  41be2b:	48 8d 35 a1 b7 11 00 	lea    rsi,[rip+0x11b7a1]        # 5375d3 <lua_ident+0xb3>
+  41be32:	4d 8d 65 18          	lea    r12,[r13+0x18]
+  41be36:	4c 89 e7             	mov    rdi,r12
+  41be39:	e8 d2 7f fe ff       	call   403e10 <strpbrk@plt>
+  41be3e:	48 85 c0             	test   rax,rax
+  41be41:	0f 84 c5 06 00 00    	je     41c50c <luaV_execute+0x203c>
+  41be47:	48 8d 35 d6 b7 11 00 	lea    rsi,[rip+0x11b7d6]        # 537624 <lua_ident+0x104>
+  41be4e:	4c 89 f7             	mov    rdi,r14
+  41be51:	31 c0                	xor    eax,eax
+  41be53:	e8 88 0a 00 00       	call   41c8e0 <luaG_runerror>
+  41be58:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  41be5f:	00 
+  41be60:	85 c0                	test   eax,eax
+  41be62:	0f 84 50 ee ff ff    	je     41acb8 <luaV_execute+0x7e8>
+  41be68:	83 f8 01             	cmp    eax,0x1
+  41be6b:	0f 84 19 01 00 00    	je     41bf8a <luaV_execute+0x1aba>
+  41be71:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41be78:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41be7c:	89 ce                	mov    esi,ecx
+  41be7e:	48 83 c0 04          	add    rax,0x4
+  41be82:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41be86:	e9 c5 e6 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41be8b:	44 39 e5             	cmp    ebp,r12d
+  41be8e:	44 89 e7             	mov    edi,r12d
+  41be91:	4d 63 e4             	movsxd r12,r12d
+  41be94:	0f 4e fd             	cmovle edi,ebp
+  41be97:	49 f7 dc             	neg    r12
+  41be9a:	48 8d 53 08          	lea    rdx,[rbx+0x8]
+  41be9e:	49 c1 e4 04          	shl    r12,0x4
+  41bea2:	31 c0                	xor    eax,eax
+  41bea4:	4b 8d 4c 23 08       	lea    rcx,[r11+r12*1+0x8]
+  41bea9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  41beb0:	48 8b 71 f8          	mov    rsi,QWORD PTR [rcx-0x8]
+  41beb4:	83 c0 01             	add    eax,0x1
+  41beb7:	48 83 c1 10          	add    rcx,0x10
+  41bebb:	48 83 c2 10          	add    rdx,0x10
+  41bebf:	48 89 72 e8          	mov    QWORD PTR [rdx-0x18],rsi
+  41bec3:	8b 71 f0             	mov    esi,DWORD PTR [rcx-0x10]
+  41bec6:	89 72 f0             	mov    DWORD PTR [rdx-0x10],esi
+  41bec9:	39 f8                	cmp    eax,edi
+  41becb:	7c e3                	jl     41beb0 <luaV_execute+0x19e0>
+  41becd:	39 c5                	cmp    ebp,eax
+  41becf:	0f 8f 37 f6 ff ff    	jg     41b50c <luaV_execute+0x103c>
+  41bed5:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41bed9:	e9 a5 ee ff ff       	jmp    41ad83 <luaV_execute+0x8b3>
+  41bede:	4d 8b 4e 18          	mov    r9,QWORD PTR [r14+0x18]
+  41bee2:	48 89 33             	mov    QWORD PTR [rbx],rsi
+  41bee5:	c7 43 08 46 00 00 00 	mov    DWORD PTR [rbx+0x8],0x46
+  41beec:	49 83 79 18 00       	cmp    QWORD PTR [r9+0x18],0x0
+  41bef1:	0f 8e 39 ed ff ff    	jle    41ac30 <luaV_execute+0x760>
+  41bef7:	e9 ec fd ff ff       	jmp    41bce8 <luaV_execute+0x1818>
+  41befc:	45 85 d2             	test   r10d,r10d
+  41beff:	0f 89 00 06 00 00    	jns    41c505 <luaV_execute+0x2035>
+  41bf05:	39 d7                	cmp    edi,edx
+  41bf07:	0f 8c f8 05 00 00    	jl     41c505 <luaV_execute+0x2035>
+  41bf0d:	c1 ed 0e             	shr    ebp,0xe
+  41bf10:	89 ea                	mov    edx,ebp
+  41bf12:	48 8d 84 90 04 00 f8 	lea    rax,[rax+rdx*4-0x7fffc]
+  41bf19:	ff 
+  41bf1a:	ba 00 00 00 80       	mov    edx,0x80000000
+  41bf1f:	29 fa                	sub    edx,edi
+  41bf21:	41 39 d2             	cmp    r10d,edx
+  41bf24:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41bf28:	89 3b                	mov    DWORD PTR [rbx],edi
+  41bf2a:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41bf31:	89 7b 30             	mov    DWORD PTR [rbx+0x30],edi
+  41bf34:	c7 43 38 03 00 00 00 	mov    DWORD PTR [rbx+0x38],0x3
+  41bf3b:	0f 8d c4 05 00 00    	jge    41c505 <luaV_execute+0x2035>
+  41bf41:	85 ff                	test   edi,edi
+  41bf43:	0f 89 bc 05 00 00    	jns    41c505 <luaV_execute+0x2035>
+  41bf49:	c7 43 20 00 00 00 00 	mov    DWORD PTR [rbx+0x20],0x0
+  41bf50:	c7 43 28 03 00 00 00 	mov    DWORD PTR [rbx+0x28],0x3
+  41bf57:	89 ce                	mov    esi,ecx
+  41bf59:	e9 f2 e5 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41bf5e:	48 98                	cdqe
+  41bf60:	c1 ed 0e             	shr    ebp,0xe
+  41bf63:	48 c1 e0 04          	shl    rax,0x4
+  41bf67:	f7 c5 00 01 00 00    	test   ebp,0x100
+  41bf6d:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41bf71:	0f 85 2f ef ff ff    	jne    41aea6 <luaV_execute+0x9d6>
+  41bf77:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41bf7d:	48 c1 e5 04          	shl    rbp,0x4
+  41bf81:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41bf85:	e9 2d ef ff ff       	jmp    41aeb7 <luaV_execute+0x9e7>
+  41bf8a:	44 8b 13             	mov    r10d,DWORD PTR [rbx]
+  41bf8d:	45 85 d2             	test   r10d,r10d
+  41bf90:	0f 84 22 ed ff ff    	je     41acb8 <luaV_execute+0x7e8>
+  41bf96:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41bf9a:	89 ce                	mov    esi,ecx
+  41bf9c:	48 83 c0 04          	add    rax,0x4
+  41bfa0:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41bfa4:	e9 a7 e5 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41bfa9:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41bfaf:	48 c1 e5 04          	shl    rbp,0x4
+  41bfb3:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41bfb7:	e9 7b f1 ff ff       	jmp    41b137 <luaV_execute+0xc67>
+  41bfbc:	48 63 ed             	movsxd rbp,ebp
+  41bfbf:	48 c1 e5 04          	shl    rbp,0x4
+  41bfc3:	49 8d 34 2b          	lea    rsi,[r11+rbp*1]
+  41bfc7:	e9 12 ee ff ff       	jmp    41adde <luaV_execute+0x90e>
+  41bfcc:	25 ff 01 00 00       	and    eax,0x1ff
+  41bfd1:	48 c1 e0 04          	shl    rax,0x4
+  41bfd5:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41bfd9:	e9 e0 ed ff ff       	jmp    41adbe <luaV_execute+0x8ee>
+  41bfde:	25 ff 01 00 00       	and    eax,0x1ff
+  41bfe3:	48 c1 e0 04          	shl    rax,0x4
+  41bfe7:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41bfeb:	e9 2e fd ff ff       	jmp    41bd1e <luaV_execute+0x184e>
+  41bff0:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41bff6:	48 c1 e5 04          	shl    rbp,0x4
+  41bffa:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41bffe:	e9 1c f0 ff ff       	jmp    41b01f <luaV_execute+0xb4f>
+  41c003:	48 98                	cdqe
+  41c005:	48 c1 e0 04          	shl    rax,0x4
+  41c009:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c00d:	e9 ed ef ff ff       	jmp    41afff <luaV_execute+0xb2f>
+  41c012:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c018:	31 c9                	xor    ecx,ecx
+  41c01a:	48 c1 e5 04          	shl    rbp,0x4
+  41c01e:	49 8d 14 2b          	lea    rdx,[r11+rbp*1]
+  41c022:	8b 42 08             	mov    eax,DWORD PTR [rdx+0x8]
+  41c025:	39 46 08             	cmp    DWORD PTR [rsi+0x8],eax
+  41c028:	0f 85 ee f1 ff ff    	jne    41b21c <luaV_execute+0xd4c>
+  41c02e:	4c 89 f7             	mov    rdi,r14
+  41c031:	e8 5a 4f 00 00       	call   420f90 <luaV_equalobj_>
+  41c036:	31 c9                	xor    ecx,ecx
+  41c038:	85 c0                	test   eax,eax
+  41c03a:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41c03e:	0f 95 c1             	setne  cl
+  41c041:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c045:	41 39 cc             	cmp    r12d,ecx
+  41c048:	0f 85 df f1 ff ff    	jne    41b22d <luaV_execute+0xd5d>
+  41c04e:	8b 18                	mov    ebx,DWORD PTR [rax]
+  41c050:	89 da                	mov    edx,ebx
+  41c052:	c1 ea 06             	shr    edx,0x6
+  41c055:	81 e2 ff 00 00 00    	and    edx,0xff
+  41c05b:	74 1c                	je     41c079 <luaV_execute+0x1ba9>
+  41c05d:	48 63 d2             	movsxd rdx,edx
+  41c060:	4c 89 f7             	mov    rdi,r14
+  41c063:	48 c1 e2 04          	shl    rdx,0x4
+  41c067:	49 8d 74 13 f0       	lea    rsi,[r11+rdx*1-0x10]
+  41c06c:	e8 8f 1f 00 00       	call   41e000 <luaF_close>
+  41c071:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c075:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41c079:	c1 eb 0e             	shr    ebx,0xe
+  41c07c:	8d 93 01 00 fe ff    	lea    edx,[rbx-0x1ffff]
+  41c082:	48 63 d2             	movsxd rdx,edx
+  41c085:	48 8d 44 90 04       	lea    rax,[rax+rdx*4+0x4]
+  41c08a:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41c08e:	e9 f0 ec ff ff       	jmp    41ad83 <luaV_execute+0x8b3>
+  41c093:	48 98                	cdqe
+  41c095:	48 c1 e0 04          	shl    rax,0x4
+  41c099:	49 8d 34 03          	lea    rsi,[r11+rax*1]
+  41c09d:	e9 4c f1 ff ff       	jmp    41b1ee <luaV_execute+0xd1e>
+  41c0a2:	48 63 ed             	movsxd rbp,ebp
+  41c0a5:	48 c1 e5 04          	shl    rbp,0x4
+  41c0a9:	49 8d 34 2b          	lea    rsi,[r11+rbp*1]
+  41c0ad:	e9 b4 ec ff ff       	jmp    41ad66 <luaV_execute+0x896>
+  41c0b2:	25 ff 01 00 00       	and    eax,0x1ff
+  41c0b7:	48 c1 e0 04          	shl    rax,0x4
+  41c0bb:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c0bf:	e9 82 ec ff ff       	jmp    41ad46 <luaV_execute+0x876>
+  41c0c4:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c0ca:	48 c1 e5 04          	shl    rbp,0x4
+  41c0ce:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c0d2:	e9 d0 f0 ff ff       	jmp    41b1a7 <luaV_execute+0xcd7>
+  41c0d7:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c0dd:	48 c1 e5 04          	shl    rbp,0x4
+  41c0e1:	49 8d 14 2b          	lea    rdx,[r11+rbp*1]
+  41c0e5:	e9 db f4 ff ff       	jmp    41b5c5 <luaV_execute+0x10f5>
+  41c0ea:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c0f0:	48 c1 e5 04          	shl    rbp,0x4
+  41c0f4:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c0f8:	e9 ca f5 ff ff       	jmp    41b6c7 <luaV_execute+0x11f7>
+  41c0fd:	48 98                	cdqe
+  41c0ff:	48 c1 e0 04          	shl    rax,0x4
+  41c103:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c107:	e9 9b f5 ff ff       	jmp    41b6a7 <luaV_execute+0x11d7>
+  41c10c:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c112:	48 c1 e5 04          	shl    rbp,0x4
+  41c116:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c11a:	e9 88 f6 ff ff       	jmp    41b7a7 <luaV_execute+0x12d7>
+  41c11f:	48 98                	cdqe
+  41c121:	48 c1 e0 04          	shl    rax,0x4
+  41c125:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c129:	e9 59 f6 ff ff       	jmp    41b787 <luaV_execute+0x12b7>
+  41c12e:	85 d2                	test   edx,edx
+  41c130:	0f 84 26 ee ff ff    	je     41af5c <luaV_execute+0xa8c>
+  41c136:	83 fa 01             	cmp    edx,0x1
+  41c139:	0f 85 39 fd ff ff    	jne    41be78 <luaV_execute+0x19a8>
+  41c13f:	8b 30                	mov    esi,DWORD PTR [rax]
+  41c141:	85 f6                	test   esi,esi
+  41c143:	0f 84 13 ee ff ff    	je     41af5c <luaV_execute+0xa8c>
+  41c149:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c14d:	89 ce                	mov    esi,ecx
+  41c14f:	48 83 c0 04          	add    rax,0x4
+  41c153:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41c157:	e9 f4 e3 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c15c:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c162:	48 c1 e5 04          	shl    rbp,0x4
+  41c166:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c16a:	e9 97 f9 ff ff       	jmp    41bb06 <luaV_execute+0x1636>
+  41c16f:	48 98                	cdqe
+  41c171:	48 c1 e0 04          	shl    rax,0x4
+  41c175:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c179:	e9 68 f9 ff ff       	jmp    41bae6 <luaV_execute+0x1616>
+  41c17e:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c184:	48 c1 e5 04          	shl    rbp,0x4
+  41c188:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c18c:	e9 a6 f8 ff ff       	jmp    41ba37 <luaV_execute+0x1567>
+  41c191:	48 98                	cdqe
+  41c193:	48 c1 e0 04          	shl    rax,0x4
+  41c197:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c19b:	e9 77 f8 ff ff       	jmp    41ba17 <luaV_execute+0x1547>
+  41c1a0:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c1a6:	48 c1 e5 04          	shl    rbp,0x4
+  41c1aa:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c1ae:	e9 a3 f7 ff ff       	jmp    41b956 <luaV_execute+0x1486>
+  41c1b3:	48 98                	cdqe
+  41c1b5:	48 c1 e0 04          	shl    rax,0x4
+  41c1b9:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c1bd:	e9 74 f7 ff ff       	jmp    41b936 <luaV_execute+0x1466>
+  41c1c2:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c1c8:	48 c1 e5 04          	shl    rbp,0x4
+  41c1cc:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c1d0:	e9 b2 f6 ff ff       	jmp    41b887 <luaV_execute+0x13b7>
+  41c1d5:	48 98                	cdqe
+  41c1d7:	48 c1 e0 04          	shl    rax,0x4
+  41c1db:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c1df:	e9 83 f6 ff ff       	jmp    41b867 <luaV_execute+0x1397>
+  41c1e4:	48 98                	cdqe
+  41c1e6:	48 c1 e0 04          	shl    rax,0x4
+  41c1ea:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c1ee:	e9 94 ef ff ff       	jmp    41b187 <luaV_execute+0xcb7>
+  41c1f3:	48 98                	cdqe
+  41c1f5:	48 c1 e0 04          	shl    rax,0x4
+  41c1f9:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c1fd:	e9 15 ef ff ff       	jmp    41b117 <luaV_execute+0xc47>
+  41c202:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c208:	48 c1 e5 04          	shl    rbp,0x4
+  41c20c:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c210:	e9 99 ed ff ff       	jmp    41afae <luaV_execute+0xade>
+  41c215:	48 98                	cdqe
+  41c217:	48 c1 e0 04          	shl    rax,0x4
+  41c21b:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c21f:	e9 6a ed ff ff       	jmp    41af8e <luaV_execute+0xabe>
+  41c224:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c22a:	48 c1 e5 04          	shl    rbp,0x4
+  41c22e:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c232:	e9 40 f9 ff ff       	jmp    41bb77 <luaV_execute+0x16a7>
+  41c237:	48 98                	cdqe
+  41c239:	48 c1 e0 04          	shl    rax,0x4
+  41c23d:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c241:	e9 11 f9 ff ff       	jmp    41bb57 <luaV_execute+0x1687>
+  41c246:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c24c:	48 c1 e5 04          	shl    rbp,0x4
+  41c250:	49 8d 14 2b          	lea    rdx,[r11+rbp*1]
+  41c254:	e9 08 f1 ff ff       	jmp    41b361 <luaV_execute+0xe91>
+  41c259:	48 63 ed             	movsxd rbp,ebp
+  41c25c:	48 c1 e5 04          	shl    rbp,0x4
+  41c260:	49 8d 14 2b          	lea    rdx,[r11+rbp*1]
+  41c264:	e9 75 f9 ff ff       	jmp    41bbde <luaV_execute+0x170e>
+  41c269:	25 ff 01 00 00       	and    eax,0x1ff
+  41c26e:	48 c1 e0 04          	shl    rax,0x4
+  41c272:	49 8d 0c 03          	lea    rcx,[r11+rax*1]
+  41c276:	e9 43 f9 ff ff       	jmp    41bbbe <luaV_execute+0x16ee>
+  41c27b:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c281:	48 c1 e5 04          	shl    rbp,0x4
+  41c285:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c289:	e9 31 f1 ff ff       	jmp    41b3bf <luaV_execute+0xeef>
+  41c28e:	48 98                	cdqe
+  41c290:	48 c1 e0 04          	shl    rax,0x4
+  41c294:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c298:	e9 02 f1 ff ff       	jmp    41b39f <luaV_execute+0xecf>
+  41c29d:	48 63 ed             	movsxd rbp,ebp
+  41c2a0:	48 c1 e5 04          	shl    rbp,0x4
+  41c2a4:	49 8d 14 2b          	lea    rdx,[r11+rbp*1]
+  41c2a8:	e9 d0 f2 ff ff       	jmp    41b57d <luaV_execute+0x10ad>
+  41c2ad:	25 ff 01 00 00       	and    eax,0x1ff
+  41c2b2:	48 c1 e0 04          	shl    rax,0x4
+  41c2b6:	49 8d 0c 03          	lea    rcx,[r11+rax*1]
+  41c2ba:	e9 9e f2 ff ff       	jmp    41b55d <luaV_execute+0x108d>
+  41c2bf:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c2c5:	48 c1 e5 04          	shl    rbp,0x4
+  41c2c9:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c2cd:	e9 85 f3 ff ff       	jmp    41b657 <luaV_execute+0x1187>
+  41c2d2:	48 98                	cdqe
+  41c2d4:	48 c1 e0 04          	shl    rax,0x4
+  41c2d8:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c2dc:	e9 56 f3 ff ff       	jmp    41b637 <luaV_execute+0x1167>
+  41c2e1:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c2e7:	48 c1 e5 04          	shl    rbp,0x4
+  41c2eb:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c2ef:	e9 43 f4 ff ff       	jmp    41b737 <luaV_execute+0x1267>
+  41c2f4:	48 98                	cdqe
+  41c2f6:	48 c1 e0 04          	shl    rax,0x4
+  41c2fa:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c2fe:	e9 14 f4 ff ff       	jmp    41b717 <luaV_execute+0x1247>
+  41c303:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c309:	48 c1 e5 04          	shl    rbp,0x4
+  41c30d:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c311:	e9 01 f5 ff ff       	jmp    41b817 <luaV_execute+0x1347>
+  41c316:	48 98                	cdqe
+  41c318:	48 c1 e0 04          	shl    rax,0x4
+  41c31c:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c320:	e9 d2 f4 ff ff       	jmp    41b7f7 <luaV_execute+0x1327>
+  41c325:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c32b:	48 c1 e5 04          	shl    rbp,0x4
+  41c32f:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c333:	e9 b6 f5 ff ff       	jmp    41b8ee <luaV_execute+0x141e>
+  41c338:	48 98                	cdqe
+  41c33a:	48 c1 e0 04          	shl    rax,0x4
+  41c33e:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c342:	e9 87 f5 ff ff       	jmp    41b8ce <luaV_execute+0x13fe>
+  41c347:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c34d:	48 c1 e5 04          	shl    rbp,0x4
+  41c351:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c355:	e9 6d f6 ff ff       	jmp    41b9c7 <luaV_execute+0x14f7>
+  41c35a:	48 98                	cdqe
+  41c35c:	48 c1 e0 04          	shl    rax,0x4
+  41c360:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c364:	e9 3e f6 ff ff       	jmp    41b9a7 <luaV_execute+0x14d7>
+  41c369:	81 e5 ff 01 00 00    	and    ebp,0x1ff
+  41c36f:	48 c1 e5 04          	shl    rbp,0x4
+  41c373:	49 8d 0c 2b          	lea    rcx,[r11+rbp*1]
+  41c377:	e9 22 f7 ff ff       	jmp    41ba9e <luaV_execute+0x15ce>
+  41c37c:	48 98                	cdqe
+  41c37e:	48 c1 e0 04          	shl    rax,0x4
+  41c382:	49 8d 14 03          	lea    rdx,[r11+rax*1]
+  41c386:	e9 f3 f6 ff ff       	jmp    41ba7e <luaV_execute+0x15ae>
+  41c38b:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41c38f:	41 f6 47 22 04       	test   BYTE PTR [r15+0x22],0x4
+  41c394:	0f 84 99 03 00 00    	je     41c733 <luaV_execute+0x2263>
+  41c39a:	48 8b 47 08          	mov    rax,QWORD PTR [rdi+0x8]
+  41c39e:	49 89 ff             	mov    r15,rdi
+  41c3a1:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41c3a5:	48 8b 47 38          	mov    rax,QWORD PTR [rdi+0x38]
+  41c3a9:	e9 62 e1 ff ff       	jmp    41a510 <luaV_execute+0x40>
+  41c3ae:	41 b8 19 00 00 00    	mov    r8d,0x19
+  41c3b4:	48 89 d1             	mov    rcx,rdx
+  41c3b7:	48 89 de             	mov    rsi,rbx
+  41c3ba:	4c 89 f7             	mov    rdi,r14
+  41c3bd:	e8 de 85 00 00       	call   4249a0 <luaV_arith>
+  41c3c2:	e9 69 e8 ff ff       	jmp    41ac30 <luaV_execute+0x760>
+  41c3c7:	49 8b 46 30          	mov    rax,QWORD PTR [r14+0x30]
+  41c3cb:	49 2b 46 10          	sub    rax,QWORD PTR [r14+0x10]
+  41c3cf:	49 63 ec             	movsxd rbp,r12d
+  41c3d2:	48 c1 f8 04          	sar    rax,0x4
+  41c3d6:	48 39 e8             	cmp    rax,rbp
+  41c3d9:	0f 8e f5 01 00 00    	jle    41c5d4 <luaV_execute+0x2104>
+  41c3df:	4d 8b 5f 30          	mov    r11,QWORD PTR [r15+0x30]
+  41c3e3:	48 c1 e5 04          	shl    rbp,0x4
+  41c3e7:	4b 8d 1c 2b          	lea    rbx,[r11+r13*1]
+  41c3eb:	48 8d 04 2b          	lea    rax,[rbx+rbp*1]
+  41c3ef:	44 89 e5             	mov    ebp,r12d
+  41c3f2:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+  41c3f6:	e9 02 f1 ff ff       	jmp    41b4fd <luaV_execute+0x102d>
+  41c3fb:	8b 43 20             	mov    eax,DWORD PTR [rbx+0x20]
+  41c3fe:	29 03                	sub    DWORD PTR [rbx],eax
+  41c400:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c404:	c1 ed 0e             	shr    ebp,0xe
+  41c407:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c40e:	44 8b 0d bb 38 37 00 	mov    r9d,DWORD PTR [rip+0x3738bb]        # 78fcd0 <cpu_superyield>
+  41c415:	8b 35 b9 38 37 00    	mov    esi,DWORD PTR [rip+0x3738b9]        # 78fcd4 <cpu_cycles_slice>
+  41c41b:	44 8b 05 ba 12 37 00 	mov    r8d,DWORD PTR [rip+0x3712ba]        # 78d6dc <cpu_cycles_slice_max>
+  41c422:	48 8d 84 a8 04 00 f8 	lea    rax,[rax+rbp*4-0x7fffc]
+  41c429:	ff 
+  41c42a:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41c42e:	e9 1d e1 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c433:	31 c9                	xor    ecx,ecx
+  41c435:	48 8d 3d e4 ae 11 00 	lea    rdi,[rip+0x11aee4]        # 537320 <dummynode_>
+  41c43c:	49 39 7c 24 20       	cmp    QWORD PTR [r12+0x20],rdi
+  41c441:	74 0f                	je     41c452 <luaV_execute+0x1f82>
+  41c443:	41 0f b6 4c 24 0b    	movzx  ecx,BYTE PTR [r12+0xb]
+  41c449:	ba 01 00 00 00       	mov    edx,0x1
+  41c44e:	d3 e2                	shl    edx,cl
+  41c450:	89 d1                	mov    ecx,edx
+  41c452:	89 c2                	mov    edx,eax
+  41c454:	4c 89 e6             	mov    rsi,r12
+  41c457:	4c 89 f7             	mov    rdi,r14
+  41c45a:	4c 89 5c 24 28       	mov    QWORD PTR [rsp+0x28],r11
+  41c45f:	89 44 24 18          	mov    DWORD PTR [rsp+0x18],eax
+  41c463:	e8 f8 91 00 00       	call   425660 <luaH_resize>
+  41c468:	8b 44 24 18          	mov    eax,DWORD PTR [rsp+0x18]
+  41c46c:	4c 8b 5c 24 28       	mov    r11,QWORD PTR [rsp+0x28]
+  41c471:	e9 2a e4 ff ff       	jmp    41a8a0 <luaV_execute+0x3d0>
+  41c476:	4c 89 f7             	mov    rdi,r14
+  41c479:	e8 52 e0 ff ff       	call   41a4d0 <luaV_execute>
+  41c47e:	e9 1d e6 ff ff       	jmp    41aaa0 <luaV_execute+0x5d0>
+  41c483:	41 8d 6a ff          	lea    ebp,[r10-0x1]
+  41c487:	be 06 00 00 00       	mov    esi,0x6
+  41c48c:	4c 89 f7             	mov    rdi,r14
+  41c48f:	4c 89 5c 24 40       	mov    QWORD PTR [rsp+0x40],r11
+  41c494:	48 89 4c 24 38       	mov    QWORD PTR [rsp+0x38],rcx
+  41c499:	8d 14 ed 28 00 00 00 	lea    edx,[rbp*8+0x28]
+  41c4a0:	44 89 54 24 28       	mov    DWORD PTR [rsp+0x28],r10d
+  41c4a5:	48 63 d2             	movsxd rdx,edx
+  41c4a8:	e8 f3 16 00 00       	call   41dba0 <luaC_newobj.constprop.194>
+  41c4ad:	44 8b 54 24 28       	mov    r10d,DWORD PTR [rsp+0x28]
+  41c4b2:	48 89 44 24 18       	mov    QWORD PTR [rsp+0x18],rax
+  41c4b7:	48 c7 40 18 00 00 00 	mov    QWORD PTR [rax+0x18],0x0
+  41c4be:	00 
+  41c4bf:	48 8b 4c 24 38       	mov    rcx,QWORD PTR [rsp+0x38]
+  41c4c4:	4c 8b 5c 24 40       	mov    r11,QWORD PTR [rsp+0x40]
+  41c4c9:	45 85 d2             	test   r10d,r10d
+  41c4cc:	44 88 50 0a          	mov    BYTE PTR [rax+0xa],r10b
+  41c4d0:	0f 85 af e1 ff ff    	jne    41a685 <luaV_execute+0x1b5>
+  41c4d6:	4d 8b 4e 18          	mov    r9,QWORD PTR [r14+0x18]
+  41c4da:	4c 89 60 18          	mov    QWORD PTR [rax+0x18],r12
+  41c4de:	48 89 03             	mov    QWORD PTR [rbx],rax
+  41c4e1:	c7 43 08 46 00 00 00 	mov    DWORD PTR [rbx+0x8],0x46
+  41c4e8:	41 0f b6 44 24 09    	movzx  eax,BYTE PTR [r12+0x9]
+  41c4ee:	a8 04                	test   al,0x4
+  41c4f0:	0f 85 27 e3 ff ff    	jne    41a81d <luaV_execute+0x34d>
+  41c4f6:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  41c4fb:	49 89 44 24 40       	mov    QWORD PTR [r12+0x40],rax
+  41c500:	e9 e7 f9 ff ff       	jmp    41beec <luaV_execute+0x1a1c>
+  41c505:	89 ce                	mov    esi,ecx
+  41c507:	e9 44 e0 ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c50c:	49 8b 75 10          	mov    rsi,QWORD PTR [r13+0x10]
+  41c510:	48 8b 54 24 30       	mov    rdx,QWORD PTR [rsp+0x30]
+  41c515:	4c 89 e7             	mov    rdi,r12
+  41c518:	e8 93 a3 ff ff       	call   4168b0 <luaO_str2d.part.50>
+  41c51d:	85 c0                	test   eax,eax
+  41c51f:	0f 84 22 f9 ff ff    	je     41be47 <luaV_execute+0x1977>
+  41c525:	8b 44 24 64          	mov    eax,DWORD PTR [rsp+0x64]
+  41c529:	48 83 fb e0          	cmp    rbx,0xffffffffffffffe0
+  41c52d:	c7 43 28 03 00 00 00 	mov    DWORD PTR [rbx+0x28],0x3
+  41c534:	4c 8b 5c 24 18       	mov    r11,QWORD PTR [rsp+0x18]
+  41c539:	89 43 20             	mov    DWORD PTR [rbx+0x20],eax
+  41c53c:	0f 85 bc fe ff ff    	jne    41c3fe <luaV_execute+0x1f2e>
+  41c542:	e9 00 f9 ff ff       	jmp    41be47 <luaV_execute+0x1977>
+  41c547:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  41c54e:	00 00 
+  41c550:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41c552:	0b 01                	or     eax,DWORD PTR [rcx]
+  41c554:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c55b:	89 03                	mov    DWORD PTR [rbx],eax
+  41c55d:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c561:	e9 ea df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c566:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41c568:	2b 01                	sub    eax,DWORD PTR [rcx]
+  41c56a:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c571:	89 03                	mov    DWORD PTR [rbx],eax
+  41c573:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c577:	e9 d4 df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c57c:	8b 01                	mov    eax,DWORD PTR [rcx]
+  41c57e:	03 02                	add    eax,DWORD PTR [rdx]
+  41c580:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c587:	89 03                	mov    DWORD PTR [rbx],eax
+  41c589:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c58d:	e9 be df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c592:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41c594:	33 01                	xor    eax,DWORD PTR [rcx]
+  41c596:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c59d:	89 03                	mov    DWORD PTR [rbx],eax
+  41c59f:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c5a3:	e9 a8 df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c5a8:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41c5aa:	23 01                	and    eax,DWORD PTR [rcx]
+  41c5ac:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c5b3:	89 03                	mov    DWORD PTR [rbx],eax
+  41c5b5:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c5b9:	e9 92 df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c5be:	8b 02                	mov    eax,DWORD PTR [rdx]
+  41c5c0:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c5c7:	f7 d0                	not    eax
+  41c5c9:	89 03                	mov    DWORD PTR [rbx],eax
+  41c5cb:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c5cf:	e9 7c df ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c5d4:	44 89 e6             	mov    esi,r12d
+  41c5d7:	4c 89 f7             	mov    rdi,r14
+  41c5da:	e8 e1 41 00 00       	call   4207c0 <luaD_growstack>
+  41c5df:	e9 fb fd ff ff       	jmp    41c3df <luaV_execute+0x1f0f>
+  41c5e4:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c5e6:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c5e8:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c5ed:	e8 ae 46 07 00       	call   490ca0 <pico8_shl>
+  41c5f2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  41c5f8:	89 03                	mov    DWORD PTR [rbx],eax
+  41c5fa:	c7 43 08 03 00 00 00 	mov    DWORD PTR [rbx+0x8],0x3
+  41c601:	e9 3a f6 ff ff       	jmp    41bc40 <luaV_execute+0x1770>
+  41c606:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c608:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c60d:	e8 8e 27 06 00       	call   47eda0 <pico8_peek_2>
+  41c612:	eb e4                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c614:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c616:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c618:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c61d:	e8 ee 3e 07 00       	call   490510 <p8_fdiv>
+  41c622:	66 31 c0             	xor    ax,ax
+  41c625:	eb d1                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c627:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c629:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c62e:	e8 1d 10 06 00       	call   47d650 <pico8_peek_4>
+  41c633:	eb c3                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c635:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c637:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c639:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c63e:	e8 2d 46 07 00       	call   490c70 <pico8_rotr>
+  41c643:	eb b3                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c645:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c647:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c649:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c64e:	e8 ed 45 07 00       	call   490c40 <pico8_rotl>
+  41c653:	eb a3                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c655:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c657:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c659:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c65e:	e8 ad 3e 07 00       	call   490510 <p8_fdiv>
+  41c663:	eb 93                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c665:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c667:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c669:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c66e:	e8 3d 3e 07 00       	call   4904b0 <p8_fmul>
+  41c673:	eb 83                	jmp    41c5f8 <luaV_execute+0x2128>
+  41c675:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c677:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c67c:	e8 7f 32 06 00       	call   47f900 <pico8_peek_1>
+  41c681:	e9 72 ff ff ff       	jmp    41c5f8 <luaV_execute+0x2128>
+  41c686:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c688:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c68a:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c68f:	e8 1c 40 07 00       	call   4906b0 <p8_fpow>
+  41c694:	e9 5f ff ff ff       	jmp    41c5f8 <luaV_execute+0x2128>
+  41c699:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c69b:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c69d:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c6a2:	e8 59 3f 07 00       	call   490600 <p8_fmod>
+  41c6a7:	e9 4c ff ff ff       	jmp    41c5f8 <luaV_execute+0x2128>
+  41c6ac:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c6ae:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c6b0:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c6b5:	e8 46 46 07 00       	call   490d00 <pico8_lshr>
+  41c6ba:	e9 39 ff ff ff       	jmp    41c5f8 <luaV_execute+0x2128>
+  41c6bf:	8b 31                	mov    esi,DWORD PTR [rcx]
+  41c6c1:	8b 3a                	mov    edi,DWORD PTR [rdx]
+  41c6c3:	4c 89 5c 24 18       	mov    QWORD PTR [rsp+0x18],r11
+  41c6c8:	e8 03 46 07 00       	call   490cd0 <pico8_ashr>
+  41c6cd:	e9 26 ff ff ff       	jmp    41c5f8 <luaV_execute+0x2128>
+  41c6d2:	48 89 c2             	mov    rdx,rax
+  41c6d5:	0f b6 48 09          	movzx  ecx,BYTE PTR [rax+0x9]
+  41c6d9:	41 0f b6 71 54       	movzx  esi,BYTE PTR [r9+0x54]
+  41c6de:	83 f1 03             	xor    ecx,0x3
+  41c6e1:	83 f6 03             	xor    esi,0x3
+  41c6e4:	40 84 ce             	test   sil,cl
+  41c6e7:	0f 85 fb e0 ff ff    	jne    41a7e8 <luaV_execute+0x318>
+  41c6ed:	88 48 09             	mov    BYTE PTR [rax+0x9],cl
+  41c6f0:	4d 8b 4a 18          	mov    r9,QWORD PTR [r10+0x18]
+  41c6f4:	e9 ef e0 ff ff       	jmp    41a7e8 <luaV_execute+0x318>
+  41c6f9:	8b 1b                	mov    ebx,DWORD PTR [rbx]
+  41c6fb:	85 db                	test   ebx,ebx
+  41c6fd:	0f 85 b5 e5 ff ff    	jne    41acb8 <luaV_execute+0x7e8>
+  41c703:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c707:	89 ce                	mov    esi,ecx
+  41c709:	48 83 c0 04          	add    rax,0x4
+  41c70d:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41c711:	e9 3a de ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c716:	8b 38                	mov    edi,DWORD PTR [rax]
+  41c718:	85 ff                	test   edi,edi
+  41c71a:	0f 85 3c e8 ff ff    	jne    41af5c <luaV_execute+0xa8c>
+  41c720:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c724:	89 ce                	mov    esi,ecx
+  41c726:	48 83 c0 04          	add    rax,0x4
+  41c72a:	49 89 47 38          	mov    QWORD PTR [r15+0x38],rax
+  41c72e:	e9 1d de ff ff       	jmp    41a550 <luaV_execute+0x80>
+  41c733:	48 8b 44 24 68       	mov    rax,QWORD PTR [rsp+0x68]
+  41c738:	64 48 33 04 25 28 00 	xor    rax,QWORD PTR fs:0x28
+  41c73f:	00 00 
+  41c741:	0f 85 88 00 00 00    	jne    41c7cf <luaV_execute+0x22ff>
+  41c747:	48 83 c4 78          	add    rsp,0x78
+  41c74b:	5b                   	pop    rbx
+  41c74c:	5d                   	pop    rbp
+  41c74d:	41 5c                	pop    r12
+  41c74f:	41 5d                	pop    r13
+  41c751:	41 5e                	pop    r14
+  41c753:	41 5f                	pop    r15
+  41c755:	c3                   	ret
+  41c756:	4c 8b 6c 24 20       	mov    r13,QWORD PTR [rsp+0x20]
+  41c75b:	e9 1a e0 ff ff       	jmp    41a77a <luaV_execute+0x2aa>
+  41c760:	4d 8b 7e 20          	mov    r15,QWORD PTR [r14+0x20]
+  41c764:	41 80 4f 22 04       	or     BYTE PTR [r15+0x22],0x4
+  41c769:	49 8b 47 38          	mov    rax,QWORD PTR [r15+0x38]
+  41c76d:	e9 9e dd ff ff       	jmp    41a510 <luaV_execute+0x40>
+  41c772:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  41c777:	f6 40 09 03          	test   BYTE PTR [rax+0x9],0x3
+  41c77b:	0f 84 75 fd ff ff    	je     41c4f6 <luaV_execute+0x2026>
+  41c781:	48 89 c2             	mov    rdx,rax
+  41c784:	4c 89 e6             	mov    rsi,r12
+  41c787:	4c 89 f7             	mov    rdi,r14
+  41c78a:	e8 f1 c7 ff ff       	call   418f80 <luaC_barrier_>
+  41c78f:	4d 8b 4e 18          	mov    r9,QWORD PTR [r14+0x18]
+  41c793:	e9 5e fd ff ff       	jmp    41c4f6 <luaV_execute+0x2026>
+  41c798:	31 f6                	xor    esi,esi
+  41c79a:	4c 89 f7             	mov    rdi,r14
+  41c79d:	31 c9                	xor    ecx,ecx
+  41c79f:	31 d2                	xor    edx,edx
+  41c7a1:	e8 ea 04 00 00       	call   41cc90 <lua_yieldk>
+  41c7a6:	48 8b 43 38          	mov    rax,QWORD PTR [rbx+0x38]
+  41c7aa:	be 01 00 00 00       	mov    esi,0x1
+  41c7af:	4c 89 f7             	mov    rdi,r14
+  41c7b2:	49 89 46 28          	mov    QWORD PTR [r14+0x28],rax
+  41c7b6:	48 83 6b 38 04       	sub    QWORD PTR [rbx+0x38],0x4
+  41c7bb:	80 4b 22 80          	or     BYTE PTR [rbx+0x22],0x80
+  41c7bf:	49 8b 46 10          	mov    rax,QWORD PTR [r14+0x10]
+  41c7c3:	48 83 e8 10          	sub    rax,0x10
+  41c7c7:	48 89 03             	mov    QWORD PTR [rbx],rax
+  41c7ca:	e8 71 c4 ff ff       	call   418c40 <luaD_throw>
+  41c7cf:	e8 bc 7c fe ff       	call   404490 <__stack_chk_fail@plt>
+  41c7d4:	be 06 00 00 00       	mov    esi,0x6
+  41c7d9:	4c 89 f7             	mov    rdi,r14
+  41c7dc:	e8 5f c4 ff ff       	call   418c40 <luaD_throw>
+  41c7e1:	48 8d 35 58 ae 11 00 	lea    rsi,[rip+0x11ae58]        # 537640 <lua_ident+0x120>
+  41c7e8:	4c 89 f7             	mov    rdi,r14
+  41c7eb:	31 c0                	xor    eax,eax
+  41c7ed:	e8 ee 00 00 00       	call   41c8e0 <luaG_runerror>
+
+Disassembly of section .fini:

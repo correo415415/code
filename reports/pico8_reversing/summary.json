@@ -1,0 +1,16 @@
+{
+  "sha256": "a48bb8c4a36873c324990a265d0070bf9f8aba866071b33da80b4bcd729326c8",
+  "defined_sized_function_symbols": 5046,
+  "dwarf_units": 117,
+  "dwarf_non_sdl_units": [],
+  "runtime_ascii_strings": 5425,
+  "embedded_lua_blobs": 2,
+  "recovered_api_pairs": 149,
+  "direct_control_flow_edges": 25372,
+  "indirect_calls": 2274,
+  "string_reference_candidates": 7894,
+  "text_bytes": 2281634,
+  "decoded_bytes": 2281634,
+  "invalid_chunks": 0,
+  "limitation": "Static direct references only; no computed-pointer resolution or whole-program decompilation"
+}

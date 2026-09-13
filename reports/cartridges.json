@@ -1,0 +1,284 @@
+[
+  {
+    "source": "resources/pico8.dat.contents/pod/pico8_boot.p8",
+    "kind": "p8-text",
+    "name": "pico8_boot.p8",
+    "lua_sha256": "17082e8608d16ee0536e84621023ea47c0f7e433014eae8308befa7033a10ca1",
+    "sections": [
+      "lua",
+      "gfx",
+      "gff",
+      "map",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 60,
+    "lua_size": 49
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/hello.p8",
+    "kind": "p8-text",
+    "name": "hello.p8",
+    "lua_sha256": "49c976fa0c2ef860dd459ab7bef73442a1cde0e75f898a18cb2624070b0529e8",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 487
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/api.p8",
+    "kind": "p8-text",
+    "name": "api.p8",
+    "lua_sha256": "3450817f64361854937f5a4848605c0492f48d07c6b9c4231c4e81d0076e0ac0",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "map",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 2805
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/auto2d.p8",
+    "kind": "p8-text",
+    "name": "auto2d.p8",
+    "lua_sha256": "583d6eee3442d92326f6e77480a99d98b0c8f79dbd0161bc2e760a8cb24ce139",
+    "sections": [
+      "lua",
+      "gfx",
+      "label"
+    ],
+    "lua_offset": 61,
+    "lua_size": 761
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/bounce.p8",
+    "kind": "p8-text",
+    "name": "bounce.p8",
+    "lua_sha256": "bf03c36b0b89e2da90d58c4a14ca147a80e6dd88bf524de5829a823a4dc29da3",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "sfx"
+    ],
+    "lua_offset": 61,
+    "lua_size": 1040
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/cast.p8",
+    "kind": "p8-text",
+    "name": "cast.p8",
+    "lua_sha256": "d70c965d54f0b1c36219afa3b2b3b6e3f7a7b50a1277f6043946e10cc625a9d5",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "map",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 4219
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/collide.p8",
+    "kind": "p8-text",
+    "name": "collide.p8",
+    "lua_sha256": "7582064185c641843f48c709326c458a7adac1dd25e3b841635eddd0aeae8642",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "gff",
+      "map",
+      "sfx"
+    ],
+    "lua_offset": 61,
+    "lua_size": 4320
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/dots3d.p8",
+    "kind": "p8-text",
+    "name": "dots3d.p8",
+    "lua_sha256": "bc6ab0bb305eb808a4d63df483c9a113fd9cb435ddd8a96a297e0714cfd07b50",
+    "sections": [
+      "lua",
+      "gfx",
+      "label"
+    ],
+    "lua_offset": 61,
+    "lua_size": 1254
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/drippy.p8",
+    "kind": "p8-text",
+    "name": "drippy.p8",
+    "lua_sha256": "e5e8b1226de35aa9d1e5fc85b4292b4c52fb3359a2b83d5a531a91f23250ec9f",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 528
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/jelpi.p8",
+    "kind": "p8-text",
+    "name": "jelpi.p8",
+    "lua_sha256": "0d80e6ca43867c6755e8a00c8052489e1da4aec35a65929a707e4505f9eb8411",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "gff",
+      "map",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 31002
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/sort.p8",
+    "kind": "p8-text",
+    "name": "sort.p8",
+    "lua_sha256": "de8d3c8cad8707f1df939033d2b7930aaedeaac795f885f1d33ebfdeb9a0a904",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "sfx"
+    ],
+    "lua_offset": 61,
+    "lua_size": 997
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/wander.p8",
+    "kind": "p8-text",
+    "name": "wander.p8",
+    "lua_sha256": "069ea2eb61725bf08d0c6b9bcb976d8cdbe7ec21e6c917e239bb2f4838ae6893",
+    "sections": [
+      "lua",
+      "gfx",
+      "label",
+      "map",
+      "sfx",
+      "music"
+    ],
+    "lua_offset": 61,
+    "lua_size": 925
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/waves.p8",
+    "kind": "p8-text",
+    "name": "waves.p8",
+    "lua_sha256": "778ca132b650f10d5a0b17973def13590501b85b12e2faee21ad6b36cba44f3b",
+    "sections": [
+      "lua",
+      "gfx",
+      "label"
+    ],
+    "lua_offset": 61,
+    "lua_size": 184
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/celeste.p8.png",
+    "kind": "p8-png",
+    "name": "celeste.p8.png",
+    "version_byte": 5,
+    "memory_sha256": "6dacd7130b9b6109a3b62ac61014423df162b39bc669b51c611eb9f4d1614163",
+    "lua_sha256": "efe6360170857a6c41f2a4767bd8a6962274c8f7d0e7b76d7e0b231a8a554688",
+    "utf8_sha256": "efe6360170857a6c41f2a4767bd8a6962274c8f7d0e7b76d7e0b231a8a554688",
+    "format": "legacy",
+    "declared_size": 26589,
+    "decoded_size": 26589,
+    "compressed_size": 9109
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/frog_home.p8.png",
+    "kind": "p8-png",
+    "name": "frog_home.p8.png",
+    "version_byte": 39,
+    "memory_sha256": "4f4e5e74734007d7417885cef92604f6f89bc01b4cf2e0f8783dea323ae09b26",
+    "lua_sha256": "24a6e7364c9dc1578f24f5b360d1d0d45a01a5bde3b5e309fa3c3bcd2202ee0c",
+    "utf8_sha256": "24a6e7364c9dc1578f24f5b360d1d0d45a01a5bde3b5e309fa3c3bcd2202ee0c",
+    "format": "pxa",
+    "declared_size": 17771,
+    "decoded_size": 17771,
+    "compressed_size": 5392
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/hug.p8.png",
+    "kind": "p8-png",
+    "name": "hug.p8.png",
+    "version_byte": 0,
+    "memory_sha256": "4b72bdf3f12816c196b2b1e06d0a31b93216c3ec26a9fa94970112640e716b97",
+    "lua_sha256": "47daa156b423c569be6c5a97cf0c3a6ffd2737dafc46597c8d9d9036fd0f91ba",
+    "utf8_sha256": "47daa156b423c569be6c5a97cf0c3a6ffd2737dafc46597c8d9d9036fd0f91ba",
+    "format": "uncompressed",
+    "decoded_size": 15258
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/archeos_2020.p8.png",
+    "kind": "p8-png",
+    "name": "archeos_2020.p8.png",
+    "version_byte": 28,
+    "memory_sha256": "ee42b2de0d82592c72dd4e990f8c2dd1d03a51fa0f1ecaf5d136fd8e163bae96",
+    "lua_sha256": "48148542f25fba95fb44e2749480eae53f8ac74a83cfe881ba619dd618e4b301",
+    "utf8_sha256": "278cada52e6f994de2f0d42815c2b12e7b0338ba854521b972633d2ea6a68db3",
+    "format": "pxa",
+    "declared_size": 31061,
+    "decoded_size": 31061,
+    "compressed_size": 12390
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/dusk.p8.png",
+    "kind": "p8-png",
+    "name": "dusk.p8.png",
+    "version_byte": 5,
+    "memory_sha256": "7a8c673c01f92e8a2ade870ac998e7cc585e7a9238cfb56d1f4cb03d32011d73",
+    "lua_sha256": "8e668985293b517974d9dd8222f7c10bac1f7af77744ae816b6fa4609e1689e2",
+    "utf8_sha256": "8e668985293b517974d9dd8222f7c10bac1f7af77744ae816b6fa4609e1689e2",
+    "format": "legacy",
+    "declared_size": 31550,
+    "decoded_size": 31550,
+    "compressed_size": 11995
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/8legs.p8.png",
+    "kind": "p8-png",
+    "name": "8legs.p8.png",
+    "version_byte": 8,
+    "memory_sha256": "351d832f68b630cc4e5838db79a4f334bd127bd5fa5a230d2b967caa5b06021a",
+    "lua_sha256": "f6793c448c29568f9f3eb885b2a4da8976cc179dcfb985f66d4ff33959b2ef01",
+    "utf8_sha256": "f6793c448c29568f9f3eb885b2a4da8976cc179dcfb985f66d4ff33959b2ef01",
+    "format": "legacy",
+    "declared_size": 41987,
+    "decoded_size": 41987,
+    "compressed_size": 15275
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/embrace.p8.png",
+    "kind": "p8-png",
+    "name": "embrace.p8.png",
+    "version_byte": 16,
+    "memory_sha256": "7325a2441174d89c0b73f1eb377d601ceda27c30661fc31708dc44d2350f6627",
+    "lua_sha256": "5c3a45a8cc78130fc322e425ff6006f4f60a746a7e4c1e358b13cbf015e5023a",
+    "utf8_sha256": "4dedb26a510a925026950908b22d5e2e584b730c8e4d1afb2df13f0bd5dfd6fd",
+    "format": "legacy",
+    "declared_size": 33002,
+    "decoded_size": 33002,
+    "compressed_size": 11938
+  }
+]

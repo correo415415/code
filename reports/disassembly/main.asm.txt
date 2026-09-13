@@ -1,0 +1,14 @@
+
+original/pico-8/pico8_dyn:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+0000000000405310 <main>:
+  405310:	e9 0b 23 0b 00       	jmp    4b7620 <codo_main>
+
+Disassembly of section .fini:

@@ -1,0 +1,215 @@
+ANALISIS Y REVERSING DE PICO-8 0.2.5g
+====================================
+Muestra aportada por el usuario; trabajo sobre el repositorio privado.
+PR: https://github.com/correo415415/code/pull/1
+
+1. RESULTADO Y ALCANCE
+---------------------
+Se ha extraido el ZIP y sus contenedores internos, recuperado el codigo que
+realmente estaba almacenado en texto y analizado el ejecutable original pico8.
+NO se ha recuperado el proyecto C original completo ni se ha reconstruido un
+PICO-8 compilable desde fuentes. Un desensamblado no equivale a ese proyecto.
+
+El ZIP contiene cuatro archivos y una entrada de directorio:
+- pico8: ELF x86-64, 9.377.000 bytes, con simbolos y DWARF.
+- pico8_dyn: ELF x86-64, 1.761.480 bytes, con simbolos, sin .debug_info.
+- pico8.dat: 17.721.245 bytes, contenedor CPOD de recursos.
+- lexaloffle-pico8.png: icono, 442 bytes.
+
+SHA256 del ZIP:
+4d6c30a30e21c7332cace81db9c1ef7147af69a93d9aa49098561f12eeeb795c
+SHA256 del pico8 objeto del reversing:
+a48bb8c4a36873c324990a265d0070bf9f8aba866071b33da80b4bcd729326c8
+
+La version 0.2.5g se observa en strings del binario. No se ha certificado la
+procedencia comercial del archivo ni su autenticidad frente al fabricante.
+
+2. POR DONDE EMPEZAR A LEER
+--------------------------
+Lo importante para estudiar el MOTOR NATIVO esta en:
+  reports/pico8_reversing/
+
+- summary.json: cifras y limites del analisis.
+- identity.json: hash, arquitectura, entry point, secciones y offsets.
+- functions.json: 5.046 simbolos definidos de funcion con tamano no nulo.
+  La categoria es una pista por nombre, no la unidad C original recuperada.
+- symbols.tsv: tabla de simbolos, incluidos datos/globales.
+- source_filenames.json: nombres STT_FILE. Son nombres, NO contenidos C.
+- dwarf_units.json: 117 unidades de compilacion; todas corresponden a SDL.
+- runtime_strings.json: 5.425 secuencias ASCII en secciones cargadas de datos.
+  Se excluyen .debug_str y los nombres almacenados solo en .symtab/.strtab.
+- string_xrefs.json: 7.894 referencias candidatas desde instrucciones a strings.
+  Distingue operandos relativos a RIP e inmediatos; estos ultimos pueden ser
+  coincidencias numericas y necesitan confirmacion manual.
+- direct_edges.json: 25.372 llamadas/saltos directos a nivel de instrucciones.
+  No son 25.372 pares caller/callee unicos ni un callgraph completo.
+- indirect_calls.json: 2.274 sitios de llamada indirecta sin destino resuelto.
+- api_bindings.json: 149 pares locales de registro Lua/C identificados por
+  llamadas adyacentes lua_pushcclosure / lua_setglobal con RSI concreto.
+  Incluye nombres publicos y auxiliares internos; no pretende ser toda la API.
+- functions/: desensamblados individuales de 21 funciones seleccionadas.
+- full_disassembly.asm: desensamblado lineal completo de .text de pico8.
+  2.281.634 bytes consumidos; cero fragmentos invalidos en Capstone.
+  Esto NO demuestra que todos esos bytes sean codigo alcanzable.
+- manifest.json: SHA256 de los archivos de este bloque, salvo el propio manifiesto.
+
+El desensamblado completo puede superar el limite de visualizacion de GitHub:
+clonar el repositorio o descargar el archivo, no depender de la vista web.
+Las direcciones de pico8 NO deben trasladarse sin verificar a pico8_dyn.
+reports/disassembly/ y reports/pico8_dyn_* corresponden a la variante _dyn.
+
+3. CODIGO LUA INCRUSTADO EN EL PROPIO EJECUTABLE
+----------------------------------------------
+Esto es texto extraido literalmente, no pseudocodigo generado:
+
+A) embedded_lua/lua_at_00632af0.lua
+   Direccion virtual: 0x632af0; offset de archivo: 0x232af0.
+   Longitud: 1.270 bytes, sin incluir terminador NUL.
+   Referencia: apply_legacy_changes.part.0, instruccion 0x41056f.
+   Contiene auxiliares de colecciones y compatibilidad, como _validate, all,
+   foreach, add, count y del. La asociacion con compatibilidad legacy esta
+   respaldada por el nombre de la funcion que referencia este string.
+
+B) embedded_lua/lua_at_006366c0.lua
+   Direccion virtual: 0x6366c0; offset de archivo: 0x2366c0.
+   Longitud: 4.026 bytes, sin incluir terminador NUL.
+   Referencias: run_program, instrucciones 0x4414a9, 0x441759 y 0x441a0d.
+   Contiene envoltorios de menuitem, pairs, ipairs, all, foreach, tostr,
+   stop, print, printh, load, extcmd, coresume y flip.
+   Guarda auxiliares internos en locales y despues borra determinados nombres
+   globales auxiliares. No es el codigo nativo del renderizador o del audio.
+
+embedded_lua.json registra hashes, offsets y evidencias. Los .lua preservan los
+bytes originales. Los .tab_view.txt solo sustituyen tabuladores por saltos de
+linea para facilitar la lectura; NO son un formateado sintactico.
+Ambos .lua pasan el parser independiente de shrinko8.
+
+4. FUNCIONES NATIVAS: RUTA DE ESTUDIO Y COMPORTAMIENTO
+---------------------------------------------------
+La funcion main salta a codo_main. Empezar por sus desensamblados y seguir las
+referencias a codo_main_init, codo_main_update y codo_main_draw.
+
+reset_lua_machine (0x43e840):
+- Cierra L0_cart mediante lua_close si ya existe.
+- Crea un estado con lua_newstate y guarda L0_cart y L0.
+- Crea L0_command con lua_newthread.
+- Llama a add_c_functions.
+- Invoca lua_gc con pares de argumentos numericos (6,100) y (7,200).
+No se han inventado tipos de estructuras internas ausentes en el DWARF.
+
+add_c_functions (0x469320):
+- Enlaza nombres Lua con funciones nativas.
+- Ejemplos confirmados: pset -> p8f_pset; pget -> p8f_pget.
+- api_bindings.json incluye direcciones de ambas llamadas que justifican
+  cada enlace. Es un reconocedor de un patron local, no ejecucion simbolica.
+
+Generador aleatorio: modelos manuales en tools/reverse_pico8.py.
+Todas las sumas siguientes son modulo 2^32:
+  high = ROL32(high,16) + low
+  low = low + high
+  pico8_rand devuelve high.
+
+pico8_srand (0x490ad0):
+  low = seed, o 0xdeadbeef si seed es cero.
+  high = low XOR 0xbead29ba.
+  Ejecuta 32 pasos de la recurrencia y termina en spend_cpu(8).
+
+pico8_random (0x490b20):
+  Si bound == 0, devuelve cero SIN avanzar el estado.
+  En otro caso, avanza una vez y devuelve high % bound (division sin signo).
+Este helper nativo NO es una reconstruccion completa de rnd() de Lua, sus
+conversiones de punto fijo, ni su variante para tablas.
+
+Se contrastaron 206 casos por funcion, 618 ejecuciones aisladas en total,
+contra las instrucciones x86 de la muestra usando Unicorn. Se mapearon solo
+paginas de codigo/estado/pila; no se inicio PICO-8 ni se cargaron bibliotecas
+nativas. Para srand se detuvo ANTES de spend_cpu: su coste no se emulo.
+Se verificaron limites de instrucciones/tiempo y el punto de parada.
+
+get_boot_fps (0x409490), observacion estatica:
+  Con draws <= 5 devuelve cero. Despues calcula divisiones enteras con signo:
+  promedio = (codo_get_time() - t0) / (draws - 5); resultado = 1000 / promedio.
+No se observa un chequeo explicito de promedio == 0 en esta funcion. Esto no
+es por si solo una vulnerabilidad demostrada; sus invariantes no se probaron.
+
+5. RECURSOS Y CARTUCHOS
+----------------------
+Nueve contenedores CPOD completamente recorridos, 910 registros:
+  130 CFIL, 777 CBMP, 3 CPAL.
+Se preservan los cuatro registros sin nombre con identificadores por indice.
+Los nombres originales no se inventan. Algunos CFIL vacios no permiten
+distinguir con certeza archivos, directorios o antiguos enlaces de framework;
+se preservan sin recrear enlaces ni afirmar un framework macOS funcional.
+
+readable/ contiene 112 archivos legibles o auxiliares:
+- cartridges/: 12 demos .p8 y el cartucho boot.
+- lua/: sus secciones Lua y el Lua decodificado de 7 cartuchos PNG.
+  El Lua del boot solo contiene separadores/comentarios: no es el motor.
+- web_export/: JavaScript compilado/de soporte y plantilla HTML de exportacion.
+  El JS no equivale al C original ni a una aplicacion web lista sin cartucho.
+- sdl_headers/ y sdl_metadata/: cabeceras, avisos y metadatos de terceros.
+
+El DAT tambien incluye exportadores/jugadores ELF, PE, Mach-O, WebAssembly y
+una biblioteca Metal. Hay 14 artefactos binarios identificados. ELF tiene
+analisis de cabeceras, simbolos y dependencias; PE, cabeceras/importaciones;
+Wasm, validacion e imports/exports sin instanciar el modulo. Mach-O y Metal
+solo tienen identificacion de formato/cabecera: no reversing exhaustivo.
+
+Originales, memoria de cartuchos, recursos crudos y 777 previews se generan en
+local/analysis/, excluido de Git. Los CBMP de 8 bits se visualizan como indices
+en gris; no se supone una paleta. En los de 32 bits, RGBA es una hipotesis de
+visualizacion expresamente marcada; los bytes crudos se conservan.
+
+6. VALIDACION Y LIMITES
+----------------------
+reports/test_results.txt: 24 pruebas, todas correctas, sin tests omitidos en
+la ejecucion registrada con muestra y referencia disponibles.
+Incluyen ZIP traversal/enlaces/colisiones/CRC/limites; truncamientos POD;
+compresion antigua y PXA; conversion de canales PNG; hashes de extraccion y
+reversing; comparacion de 7 decodificaciones con shrinko8; sintaxis de 20 Lua
+de cartuchos + 2 Lua incrustados; sintaxis de ambos JS; emulacion del PRNG.
+
+La prueba de sintaxis no ejecuta juegos ni verifica comportamiento grafico.
+No se lanzaron el editor, Splore ni los ejecutables del ZIP como procesos.
+No se eludieron controles de licencia. La extraccion estatica y el reversing
+no conceden derechos de redistribucion: conservar el repositorio privado y
+respetar las licencias de PICO-8, los cartuchos y SDL.
+
+Limites pendientes para una investigacion mas profunda:
+- Descompilacion y tipado manual del motor nativo completo.
+- Resolucion de llamadas indirectas y punteros calculados.
+- Semantica detallada de VM, punto fijo, renderizado, audio y formatos restantes.
+- Pruebas funcionales del programa en un entorno grafico aislado.
+
+7. REPRODUCIR DESPUES DE UN RESET
+--------------------------------
+Desde /home/user/webapp (o el directorio raiz del clon en otra maquina):
+  git fetch origin
+  git switch genspark_ai_developer
+  mkdir -p local
+  python -m pip install --target local/python --cache-dir local/pip-cache -r requirements.txt
+  export PYTHONPATH="$PWD/local/python"
+  python tools/analyze.py "/ruta/al/zip para extraer.zip" --output local/analysis
+  python tools/reverse_pico8.py local/analysis/original/pico-8/pico8 --output local/reversing
+
+Los directorios de salida deben ser nuevos. Si ya existen, elegir otros y
+ajustar PICO_ANALYSIS; no borrar originales para forzar una nueva ejecucion.
+Se necesitan Python 3.10+, node, file y GNU binutils (readelf/objdump/nm/strings).
+La ejecucion validada utilizo Python 3.13. Capstone procesa lotes de 512
+instrucciones para evitar agotar la memoria al desensamblar todo el ELF.
+
+Pruebas independientes opcionales (referencia con licencia MIT):
+  git clone https://github.com/thisismypassport/shrinko8.git local/shrinko8
+  git -C local/shrinko8 checkout 17f2076a9dbb128b746286b9110e9d6570b25f34
+  PICO_ANALYSIS=local/analysis SHRINKO8_ROOT=local/shrinko8 \
+    PYTHONPATH=local/python python -m unittest discover -s tests -v
+
+Sin PICO_ANALYSIS se omiten las pruebas de la muestra privada. Sin SHRINKO8_ROOT
+se omite la comparacion independiente; los otros tests siguen disponibles.
+THIRD_PARTY.txt documenta la referencia de compresion y tabla de caracteres.
+Los manifests de extraccion se interpretan respecto a local/analysis/, no al
+raiz del repositorio. El manifest de reversing es relativo a su propia carpeta.
+
+Estado durable: herramientas, pruebas, informe, codigo legible y resultados de
+reversing estan versionados en la PR. Solo los artefactos locales regenerables
+y el ZIP/binarios originales quedan fuera de Git.

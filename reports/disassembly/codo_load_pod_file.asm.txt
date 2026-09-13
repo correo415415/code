@@ -1,0 +1,2693 @@
+
+original/pico-8/pico8_dyn:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+00000000004c6a60 <codo_load_pod_file>:
+  4c6a60:	41 57                	push   r15
+  4c6a62:	41 56                	push   r14
+  4c6a64:	41 55                	push   r13
+  4c6a66:	41 54                	push   r12
+  4c6a68:	55                   	push   rbp
+  4c6a69:	53                   	push   rbx
+  4c6a6a:	48 83 ec 58          	sub    rsp,0x58
+  4c6a6e:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+  4c6a75:	00 00 
+  4c6a77:	48 89 44 24 48       	mov    QWORD PTR [rsp+0x48],rax
+  4c6a7c:	31 c0                	xor    eax,eax
+  4c6a7e:	48 85 f6             	test   rsi,rsi
+  4c6a81:	0f 84 69 24 00 00    	je     4c8ef0 <codo_load_pod_file+0x2490>
+  4c6a87:	31 ff                	xor    edi,edi
+  4c6a89:	49 89 f7             	mov    r15,rsi
+  4c6a8c:	e8 3f 5a ff ff       	call   4bc4d0 <codo_create_pod>
+  4c6a91:	48 85 c0             	test   rax,rax
+  4c6a94:	48 89 44 24 18       	mov    QWORD PTR [rsp+0x18],rax
+  4c6a99:	0f 84 21 09 00 00    	je     4c73c0 <codo_load_pod_file+0x960>
+  4c6a9f:	45 8b 37             	mov    r14d,DWORD PTR [r15]
+  4c6aa2:	c7 44 24 14 00 00 00 	mov    DWORD PTR [rsp+0x14],0x0
+  4c6aa9:	00 
+  4c6aaa:	4c 89 fb             	mov    rbx,r15
+  4c6aad:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c6ab0:	45 85 f6             	test   r14d,r14d
+  4c6ab3:	74 43                	je     4c6af8 <codo_load_pod_file+0x98>
+  4c6ab5:	41 83 fe 01          	cmp    r14d,0x1
+  4c6ab9:	0f 84 b9 01 00 00    	je     4c6c78 <codo_load_pod_file+0x218>
+  4c6abf:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c6ac4:	8b 48 20             	mov    ecx,DWORD PTR [rax+0x20]
+  4c6ac7:	85 c9                	test   ecx,ecx
+  4c6ac9:	0f 84 cb 27 00 00    	je     4c929a <codo_load_pod_file+0x283a>
+  4c6acf:	48 8b 7c 24 48       	mov    rdi,QWORD PTR [rsp+0x48]
+  4c6ad4:	64 48 33 3c 25 28 00 	xor    rdi,QWORD PTR fs:0x28
+  4c6adb:	00 00 
+  4c6add:	0f 85 bb 29 00 00    	jne    4c949e <codo_load_pod_file+0x2a3e>
+  4c6ae3:	48 83 c4 58          	add    rsp,0x58
+  4c6ae7:	5b                   	pop    rbx
+  4c6ae8:	5d                   	pop    rbp
+  4c6ae9:	41 5c                	pop    r12
+  4c6aeb:	41 5d                	pop    r13
+  4c6aed:	41 5e                	pop    r14
+  4c6aef:	41 5f                	pop    r15
+  4c6af1:	c3                   	ret
+  4c6af2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c6af8:	48 8b 7b 08          	mov    rdi,QWORD PTR [rbx+0x8]
+  4c6afc:	e8 7f da f3 ff       	call   404580 <feof@plt>
+  4c6b01:	89 c5                	mov    ebp,eax
+  4c6b03:	85 ed                	test   ebp,ebp
+  4c6b05:	75 b8                	jne    4c6abf <codo_load_pod_file+0x5f>
+  4c6b07:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6b09:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6b10:	00 
+  4c6b11:	85 c0                	test   eax,eax
+  4c6b13:	0f 85 0f 08 00 00    	jne    4c7328 <codo_load_pod_file+0x8c8>
+  4c6b19:	48 8d 44 24 44       	lea    rax,[rsp+0x44]
+  4c6b1e:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6b22:	ba 01 00 00 00       	mov    edx,0x1
+  4c6b27:	be 04 00 00 00       	mov    esi,0x4
+  4c6b2c:	48 89 c7             	mov    rdi,rax
+  4c6b2f:	48 89 44 24 08       	mov    QWORD PTR [rsp+0x8],rax
+  4c6b34:	e8 a7 d8 f3 ff       	call   4043e0 <fread@plt>
+  4c6b39:	44 8b 74 24 44       	mov    r14d,DWORD PTR [rsp+0x44]
+  4c6b3e:	45 85 f6             	test   r14d,r14d
+  4c6b41:	0f 84 78 ff ff ff    	je     4c6abf <codo_load_pod_file+0x5f>
+  4c6b47:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6b49:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6b50:	00 
+  4c6b51:	85 c0                	test   eax,eax
+  4c6b53:	0f 85 37 01 00 00    	jne    4c6c90 <codo_load_pod_file+0x230>
+  4c6b59:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6b5d:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6b62:	ba 01 00 00 00       	mov    edx,0x1
+  4c6b67:	be 04 00 00 00       	mov    esi,0x4
+  4c6b6c:	e8 6f d8 f3 ff       	call   4043e0 <fread@plt>
+  4c6b71:	44 8b 64 24 44       	mov    r12d,DWORD PTR [rsp+0x44]
+  4c6b76:	8b 44 24 14          	mov    eax,DWORD PTR [rsp+0x14]
+  4c6b7a:	85 c0                	test   eax,eax
+  4c6b7c:	75 0d                	jne    4c6b8b <codo_load_pod_file+0x12b>
+  4c6b7e:	41 81 fe 43 50 4f 44 	cmp    r14d,0x444f5043
+  4c6b85:	0f 85 35 08 00 00    	jne    4c73c0 <codo_load_pod_file+0x960>
+  4c6b8b:	8b 44 24 14          	mov    eax,DWORD PTR [rsp+0x14]
+  4c6b8f:	85 c0                	test   eax,eax
+  4c6b91:	0f 84 51 01 00 00    	je     4c6ce8 <codo_load_pod_file+0x288>
+  4c6b97:	41 81 fe 43 50 4f 44 	cmp    r14d,0x444f5043
+  4c6b9e:	0f 84 ec 1c 00 00    	je     4c8890 <codo_load_pod_file+0x1e30>
+  4c6ba4:	41 81 fe 43 4e 4f 50 	cmp    r14d,0x504f4e43
+  4c6bab:	0f 84 df 1c 00 00    	je     4c8890 <codo_load_pod_file+0x1e30>
+  4c6bb1:	44 89 f0             	mov    eax,r14d
+  4c6bb4:	83 e0 df             	and    eax,0xffffffdf
+  4c6bb7:	3d 43 42 4d 50       	cmp    eax,0x504d4243
+  4c6bbc:	0f 84 de 01 00 00    	je     4c6da0 <codo_load_pod_file+0x340>
+  4c6bc2:	3d 43 56 4d 50       	cmp    eax,0x504d5643
+  4c6bc7:	0f 84 2b 03 00 00    	je     4c6ef8 <codo_load_pod_file+0x498>
+  4c6bcd:	41 81 fe 43 50 41 4c 	cmp    r14d,0x4c415043
+  4c6bd4:	0f 84 2e 06 00 00    	je     4c7208 <codo_load_pod_file+0x7a8>
+  4c6bda:	41 81 fe 43 4d 4f 44 	cmp    r14d,0x444f4d43
+  4c6be1:	0f 84 29 0d 00 00    	je     4c7910 <codo_load_pod_file+0xeb0>
+  4c6be7:	41 81 fe 43 4d 41 54 	cmp    r14d,0x54414d43
+  4c6bee:	0f 84 8c 07 00 00    	je     4c7380 <codo_load_pod_file+0x920>
+  4c6bf4:	41 81 fe 43 41 4e 49 	cmp    r14d,0x494e4143
+  4c6bfb:	0f 84 df 07 00 00    	je     4c73e0 <codo_load_pod_file+0x980>
+  4c6c01:	41 81 fe 43 53 4e 44 	cmp    r14d,0x444e5343
+  4c6c08:	0f 84 5a 06 00 00    	je     4c7268 <codo_load_pod_file+0x808>
+  4c6c0e:	41 81 fe 43 53 59 4e 	cmp    r14d,0x4e595343
+  4c6c15:	0f 84 95 1c 00 00    	je     4c88b0 <codo_load_pod_file+0x1e50>
+  4c6c1b:	3d 43 46 49 4c       	cmp    eax,0x4c494643
+  4c6c20:	0f 84 6a 0c 00 00    	je     4c7890 <codo_load_pod_file+0xe30>
+  4c6c26:	48 8b 05 0b 4a 3a 00 	mov    rax,QWORD PTR [rip+0x3a4a0b]        # 86b638 <codo_load_item_func>
+  4c6c2d:	48 85 c0             	test   rax,rax
+  4c6c30:	74 15                	je     4c6c47 <codo_load_pod_file+0x1e7>
+  4c6c32:	44 89 f2             	mov    edx,r14d
+  4c6c35:	48 8b 74 24 18       	mov    rsi,QWORD PTR [rsp+0x18]
+  4c6c3a:	48 89 df             	mov    rdi,rbx
+  4c6c3d:	ff d0                	call   rax
+  4c6c3f:	85 c0                	test   eax,eax
+  4c6c41:	0f 84 92 06 00 00    	je     4c72d9 <codo_load_pod_file+0x879>
+  4c6c47:	48 8d 3d 32 03 08 00 	lea    rdi,[rip+0x80332]        # 546f80 <codo_font1_dat+0x260>
+  4c6c4e:	e8 bd fe fe ff       	call   4b6b10 <codo_debug>
+  4c6c53:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6c56:	45 85 f6             	test   r14d,r14d
+  4c6c59:	0f 84 69 06 00 00    	je     4c72c8 <codo_load_pod_file+0x868>
+  4c6c5f:	41 83 fe 01          	cmp    r14d,0x1
+  4c6c63:	0f 85 82 02 00 00    	jne    4c6eeb <codo_load_pod_file+0x48b>
+  4c6c69:	44 01 63 1c          	add    DWORD PTR [rbx+0x1c],r12d
+  4c6c6d:	83 44 24 14 01       	add    DWORD PTR [rsp+0x14],0x1
+  4c6c72:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c6c78:	31 ed                	xor    ebp,ebp
+  4c6c7a:	8b 43 18             	mov    eax,DWORD PTR [rbx+0x18]
+  4c6c7d:	39 43 1c             	cmp    DWORD PTR [rbx+0x1c],eax
+  4c6c80:	40 0f 9d c5          	setge  bpl
+  4c6c84:	e9 7a fe ff ff       	jmp    4c6b03 <codo_load_pod_file+0xa3>
+  4c6c89:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c6c90:	45 31 e4             	xor    r12d,r12d
+  4c6c93:	83 f8 01             	cmp    eax,0x1
+  4c6c96:	0f 85 da fe ff ff    	jne    4c6b76 <codo_load_pod_file+0x116>
+  4c6c9c:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c6ca0:	44 8b 6b 18          	mov    r13d,DWORD PTR [rbx+0x18]
+  4c6ca4:	b8 04 00 00 00       	mov    eax,0x4
+  4c6ca9:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6cae:	b9 04 00 00 00       	mov    ecx,0x4
+  4c6cb3:	41 29 f5             	sub    r13d,esi
+  4c6cb6:	49 89 f7             	mov    r15,rsi
+  4c6cb9:	41 83 fd 04          	cmp    r13d,0x4
+  4c6cbd:	44 0f 4f e8          	cmovg  r13d,eax
+  4c6cc1:	45 85 ed             	test   r13d,r13d
+  4c6cc4:	45 0f 48 ec          	cmovs  r13d,r12d
+  4c6cc8:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c6ccc:	49 63 d5             	movsxd rdx,r13d
+  4c6ccf:	45 01 fd             	add    r13d,r15d
+  4c6cd2:	e8 29 d2 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c6cd7:	44 89 6b 1c          	mov    DWORD PTR [rbx+0x1c],r13d
+  4c6cdb:	44 8b 64 24 44       	mov    r12d,DWORD PTR [rsp+0x44]
+  4c6ce0:	e9 91 fe ff ff       	jmp    4c6b76 <codo_load_pod_file+0x116>
+  4c6ce5:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c6ce8:	41 81 fe 43 50 4f 44 	cmp    r14d,0x444f5043
+  4c6cef:	0f 85 bc fe ff ff    	jne    4c6bb1 <codo_load_pod_file+0x151>
+  4c6cf5:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6cf8:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6cff:	00 
+  4c6d00:	45 85 f6             	test   r14d,r14d
+  4c6d03:	0f 85 df 03 00 00    	jne    4c70e8 <codo_load_pod_file+0x688>
+  4c6d09:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6d0e:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6d12:	ba 01 00 00 00       	mov    edx,0x1
+  4c6d17:	be 04 00 00 00       	mov    esi,0x4
+  4c6d1c:	e8 bf d6 f3 ff       	call   4043e0 <fread@plt>
+  4c6d21:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6d24:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c6d29:	45 85 f6             	test   r14d,r14d
+  4c6d2c:	48 8d 78 30          	lea    rdi,[rax+0x30]
+  4c6d30:	0f 85 18 27 00 00    	jne    4c944e <codo_load_pod_file+0x29ee>
+  4c6d36:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6d3a:	ba 20 00 00 00       	mov    edx,0x20
+  4c6d3f:	be 01 00 00 00       	mov    esi,0x1
+  4c6d44:	e8 97 d6 f3 ff       	call   4043e0 <fread@plt>
+  4c6d49:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6d4c:	45 85 f6             	test   r14d,r14d
+  4c6d4f:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6d56:	00 
+  4c6d57:	0f 85 95 03 00 00    	jne    4c70f2 <codo_load_pod_file+0x692>
+  4c6d5d:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6d61:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6d66:	ba 01 00 00 00       	mov    edx,0x1
+  4c6d6b:	be 04 00 00 00       	mov    esi,0x4
+  4c6d70:	e8 6b d6 f3 ff       	call   4043e0 <fread@plt>
+  4c6d75:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6d78:	45 85 f6             	test   r14d,r14d
+  4c6d7b:	0f 85 87 05 00 00    	jne    4c7308 <codo_load_pod_file+0x8a8>
+  4c6d81:	48 8b 7b 08          	mov    rdi,QWORD PTR [rbx+0x8]
+  4c6d85:	ba 01 00 00 00       	mov    edx,0x1
+  4c6d8a:	be 1c 00 00 00       	mov    esi,0x1c
+  4c6d8f:	e8 cc cf f3 ff       	call   403d60 <fseek@plt>
+  4c6d94:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6d97:	e9 4f 01 00 00       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c6d9c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c6da0:	44 8b 3b             	mov    r15d,DWORD PTR [rbx]
+  4c6da3:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6daa:	00 
+  4c6dab:	45 85 ff             	test   r15d,r15d
+  4c6dae:	0f 85 0c 03 00 00    	jne    4c70c0 <codo_load_pod_file+0x660>
+  4c6db4:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6db8:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6dbd:	ba 01 00 00 00       	mov    edx,0x1
+  4c6dc2:	be 04 00 00 00       	mov    esi,0x4
+  4c6dc7:	e8 14 d6 f3 ff       	call   4043e0 <fread@plt>
+  4c6dcc:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6dce:	44 8b 6c 24 44       	mov    r13d,DWORD PTR [rsp+0x44]
+  4c6dd3:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6dda:	00 
+  4c6ddb:	85 c0                	test   eax,eax
+  4c6ddd:	0f 85 57 26 00 00    	jne    4c943a <codo_load_pod_file+0x29da>
+  4c6de3:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6de7:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6dec:	ba 01 00 00 00       	mov    edx,0x1
+  4c6df1:	be 04 00 00 00       	mov    esi,0x4
+  4c6df6:	e8 e5 d5 f3 ff       	call   4043e0 <fread@plt>
+  4c6dfb:	44 8b 3b             	mov    r15d,DWORD PTR [rbx]
+  4c6dfe:	44 8b 4c 24 44       	mov    r9d,DWORD PTR [rsp+0x44]
+  4c6e03:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6e0a:	00 
+  4c6e0b:	45 85 ff             	test   r15d,r15d
+  4c6e0e:	0f 85 bc 02 00 00    	jne    4c70d0 <codo_load_pod_file+0x670>
+  4c6e14:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6e18:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6e1d:	ba 01 00 00 00       	mov    edx,0x1
+  4c6e22:	be 04 00 00 00       	mov    esi,0x4
+  4c6e27:	44 89 4c 24 20       	mov    DWORD PTR [rsp+0x20],r9d
+  4c6e2c:	e8 af d5 f3 ff       	call   4043e0 <fread@plt>
+  4c6e31:	44 8b 7c 24 44       	mov    r15d,DWORD PTR [rsp+0x44]
+  4c6e36:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c6e3b:	45 89 fc             	mov    r12d,r15d
+  4c6e3e:	41 c1 fc 03          	sar    r12d,0x3
+  4c6e42:	45 0f af e5          	imul   r12d,r13d
+  4c6e46:	45 0f af e1          	imul   r12d,r9d
+  4c6e4a:	44 89 ef             	mov    edi,r13d
+  4c6e4d:	44 89 fa             	mov    edx,r15d
+  4c6e50:	44 89 ce             	mov    esi,r9d
+  4c6e53:	e8 f8 1e ff ff       	call   4b8d50 <codo_create_bitmap>
+  4c6e58:	49 89 c5             	mov    r13,rax
+  4c6e5b:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6e5d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6e64:	00 
+  4c6e65:	85 c0                	test   eax,eax
+  4c6e67:	0f 85 e3 01 00 00    	jne    4c7050 <codo_load_pod_file+0x5f0>
+  4c6e6d:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6e71:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6e76:	ba 01 00 00 00       	mov    edx,0x1
+  4c6e7b:	be 04 00 00 00       	mov    esi,0x4
+  4c6e80:	e8 5b d5 f3 ff       	call   4043e0 <fread@plt>
+  4c6e85:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6e87:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c6e8b:	85 c0                	test   eax,eax
+  4c6e8d:	41 89 55 20          	mov    DWORD PTR [r13+0x20],edx
+  4c6e91:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6e98:	00 
+  4c6e99:	0f 85 e3 25 00 00    	jne    4c9482 <codo_load_pod_file+0x2a22>
+  4c6e9f:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6ea3:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6ea8:	ba 01 00 00 00       	mov    edx,0x1
+  4c6ead:	be 04 00 00 00       	mov    esi,0x4
+  4c6eb2:	e8 29 d5 f3 ff       	call   4043e0 <fread@plt>
+  4c6eb7:	41 81 fe 63 42 4d 50 	cmp    r14d,0x504d4263
+  4c6ebe:	4d 8b 7d 10          	mov    r15,QWORD PTR [r13+0x10]
+  4c6ec2:	0f 84 aa 01 00 00    	je     4c7072 <codo_load_pod_file+0x612>
+  4c6ec8:	48 89 da             	mov    rdx,rbx
+  4c6ecb:	44 89 e6             	mov    esi,r12d
+  4c6ece:	4c 89 ff             	mov    rdi,r15
+  4c6ed1:	e8 4a 94 ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c6ed6:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c6edb:	4c 89 ea             	mov    rdx,r13
+  4c6ede:	be 04 00 00 00       	mov    esi,0x4
+  4c6ee3:	e8 58 5f ff ff       	call   4bce40 <cpod_add_item>
+  4c6ee8:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c6eeb:	83 44 24 14 01       	add    DWORD PTR [rsp+0x14],0x1
+  4c6ef0:	e9 bb fb ff ff       	jmp    4c6ab0 <codo_load_pod_file+0x50>
+  4c6ef5:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c6ef8:	44 8b 3b             	mov    r15d,DWORD PTR [rbx]
+  4c6efb:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6f02:	00 
+  4c6f03:	45 85 ff             	test   r15d,r15d
+  4c6f06:	0f 85 d4 02 00 00    	jne    4c71e0 <codo_load_pod_file+0x780>
+  4c6f0c:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6f10:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6f15:	ba 01 00 00 00       	mov    edx,0x1
+  4c6f1a:	be 04 00 00 00       	mov    esi,0x4
+  4c6f1f:	e8 bc d4 f3 ff       	call   4043e0 <fread@plt>
+  4c6f24:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6f26:	44 8b 64 24 44       	mov    r12d,DWORD PTR [rsp+0x44]
+  4c6f2b:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6f32:	00 
+  4c6f33:	85 c0                	test   eax,eax
+  4c6f35:	0f 85 90 24 00 00    	jne    4c93cb <codo_load_pod_file+0x296b>
+  4c6f3b:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6f3f:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6f44:	ba 01 00 00 00       	mov    edx,0x1
+  4c6f49:	be 04 00 00 00       	mov    esi,0x4
+  4c6f4e:	e8 8d d4 f3 ff       	call   4043e0 <fread@plt>
+  4c6f53:	44 8b 3b             	mov    r15d,DWORD PTR [rbx]
+  4c6f56:	44 8b 4c 24 44       	mov    r9d,DWORD PTR [rsp+0x44]
+  4c6f5b:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6f62:	00 
+  4c6f63:	45 85 ff             	test   r15d,r15d
+  4c6f66:	0f 85 84 02 00 00    	jne    4c71f0 <codo_load_pod_file+0x790>
+  4c6f6c:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6f70:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6f75:	ba 01 00 00 00       	mov    edx,0x1
+  4c6f7a:	be 04 00 00 00       	mov    esi,0x4
+  4c6f7f:	44 89 4c 24 20       	mov    DWORD PTR [rsp+0x20],r9d
+  4c6f84:	e8 57 d4 f3 ff       	call   4043e0 <fread@plt>
+  4c6f89:	44 8b 7c 24 44       	mov    r15d,DWORD PTR [rsp+0x44]
+  4c6f8e:	45 89 e5             	mov    r13d,r12d
+  4c6f91:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c6f96:	45 0f af ef          	imul   r13d,r15d
+  4c6f9a:	45 0f af e9          	imul   r13d,r9d
+  4c6f9e:	44 89 e7             	mov    edi,r12d
+  4c6fa1:	44 89 fa             	mov    edx,r15d
+  4c6fa4:	44 89 ce             	mov    esi,r9d
+  4c6fa7:	e8 e4 0d ff ff       	call   4b7d90 <codo_create_voxmap>
+  4c6fac:	49 89 c4             	mov    r12,rax
+  4c6faf:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6fb1:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6fb8:	00 
+  4c6fb9:	85 c0                	test   eax,eax
+  4c6fbb:	0f 85 9f 01 00 00    	jne    4c7160 <codo_load_pod_file+0x700>
+  4c6fc1:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6fc5:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6fca:	ba 01 00 00 00       	mov    edx,0x1
+  4c6fcf:	be 04 00 00 00       	mov    esi,0x4
+  4c6fd4:	e8 07 d4 f3 ff       	call   4043e0 <fread@plt>
+  4c6fd9:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c6fdb:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c6fdf:	85 c0                	test   eax,eax
+  4c6fe1:	41 89 54 24 20       	mov    DWORD PTR [r12+0x20],edx
+  4c6fe6:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c6fed:	00 
+  4c6fee:	0f 85 9c 24 00 00    	jne    4c9490 <codo_load_pod_file+0x2a30>
+  4c6ff4:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c6ff8:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c6ffd:	ba 01 00 00 00       	mov    edx,0x1
+  4c7002:	be 04 00 00 00       	mov    esi,0x4
+  4c7007:	e8 d4 d3 f3 ff       	call   4043e0 <fread@plt>
+  4c700c:	41 81 fe 63 56 4d 50 	cmp    r14d,0x504d5663
+  4c7013:	4d 8b 7c 24 10       	mov    r15,QWORD PTR [r12+0x10]
+  4c7018:	0f 84 66 01 00 00    	je     4c7184 <codo_load_pod_file+0x724>
+  4c701e:	48 89 da             	mov    rdx,rbx
+  4c7021:	44 89 ee             	mov    esi,r13d
+  4c7024:	4c 89 ff             	mov    rdi,r15
+  4c7027:	e8 f4 92 ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c702c:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c7031:	4c 89 e2             	mov    rdx,r12
+  4c7034:	be 0a 00 00 00       	mov    esi,0xa
+  4c7039:	e8 02 5e ff ff       	call   4bce40 <cpod_add_item>
+  4c703e:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c7041:	e9 a5 fe ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c7046:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4c704d:	00 00 00 
+  4c7050:	83 f8 01             	cmp    eax,0x1
+  4c7053:	0f 84 e7 0e 00 00    	je     4c7f40 <codo_load_pod_file+0x14e0>
+  4c7059:	41 81 fe 63 42 4d 50 	cmp    r14d,0x504d4263
+  4c7060:	41 c7 45 20 00 00 00 	mov    DWORD PTR [r13+0x20],0x0
+  4c7067:	00 
+  4c7068:	4d 8b 7d 10          	mov    r15,QWORD PTR [r13+0x10]
+  4c706c:	0f 85 56 fe ff ff    	jne    4c6ec8 <codo_load_pod_file+0x468>
+  4c7072:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7074:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c707b:	00 
+  4c707c:	85 c0                	test   eax,eax
+  4c707e:	0f 84 bc 01 00 00    	je     4c7240 <codo_load_pod_file+0x7e0>
+  4c7084:	83 f8 01             	cmp    eax,0x1
+  4c7087:	0f 84 41 1f 00 00    	je     4c8fce <codo_load_pod_file+0x256e>
+  4c708d:	89 ef                	mov    edi,ebp
+  4c708f:	e8 ec 8a 02 00       	call   4efb80 <codo_malloc>
+  4c7094:	48 89 da             	mov    rdx,rbx
+  4c7097:	49 89 c6             	mov    r14,rax
+  4c709a:	89 ee                	mov    esi,ebp
+  4c709c:	48 89 c7             	mov    rdi,rax
+  4c709f:	e8 7c 92 ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c70a4:	44 89 e1             	mov    ecx,r12d
+  4c70a7:	89 ea                	mov    edx,ebp
+  4c70a9:	4c 89 fe             	mov    rsi,r15
+  4c70ac:	4c 89 f7             	mov    rdi,r14
+  4c70af:	e8 2c d5 02 00       	call   4f45e0 <LZ4_decompress_safe>
+  4c70b4:	e9 1d fe ff ff       	jmp    4c6ed6 <codo_load_pod_file+0x476>
+  4c70b9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c70c0:	45 31 c9             	xor    r9d,r9d
+  4c70c3:	45 31 ed             	xor    r13d,r13d
+  4c70c6:	41 83 ff 01          	cmp    r15d,0x1
+  4c70ca:	0f 84 80 0d 00 00    	je     4c7e50 <codo_load_pod_file+0x13f0>
+  4c70d0:	41 83 ff 01          	cmp    r15d,0x1
+  4c70d4:	0f 84 13 0e 00 00    	je     4c7eed <codo_load_pod_file+0x148d>
+  4c70da:	45 31 e4             	xor    r12d,r12d
+  4c70dd:	45 31 ff             	xor    r15d,r15d
+  4c70e0:	e9 65 fd ff ff       	jmp    4c6e4a <codo_load_pod_file+0x3ea>
+  4c70e5:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c70e8:	41 83 fe 01          	cmp    r14d,0x1
+  4c70ec:	0f 84 6e 0f 00 00    	je     4c8060 <codo_load_pod_file+0x1600>
+  4c70f2:	41 83 fe 01          	cmp    r14d,0x1
+  4c70f6:	0f 85 ef fd ff ff    	jne    4c6eeb <codo_load_pod_file+0x48b>
+  4c70fc:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7100:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c7103:	b8 04 00 00 00       	mov    eax,0x4
+  4c7108:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c710d:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7112:	29 f5                	sub    ebp,esi
+  4c7114:	49 89 f4             	mov    r12,rsi
+  4c7117:	83 fd 04             	cmp    ebp,0x4
+  4c711a:	0f 4f e8             	cmovg  ebp,eax
+  4c711d:	b8 00 00 00 00       	mov    eax,0x0
+  4c7122:	85 ed                	test   ebp,ebp
+  4c7124:	0f 48 e8             	cmovs  ebp,eax
+  4c7127:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c712b:	48 63 d5             	movsxd rdx,ebp
+  4c712e:	44 01 e5             	add    ebp,r12d
+  4c7131:	e8 ca cd f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7136:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c7139:	83 43 1c 1c          	add    DWORD PTR [rbx+0x1c],0x1c
+  4c713d:	c7 44 24 14 01 00 00 	mov    DWORD PTR [rsp+0x14],0x1
+  4c7144:	00 
+  4c7145:	31 ed                	xor    ebp,ebp
+  4c7147:	8b 43 18             	mov    eax,DWORD PTR [rbx+0x18]
+  4c714a:	39 43 1c             	cmp    DWORD PTR [rbx+0x1c],eax
+  4c714d:	40 0f 9d c5          	setge  bpl
+  4c7151:	e9 ad f9 ff ff       	jmp    4c6b03 <codo_load_pod_file+0xa3>
+  4c7156:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4c715d:	00 00 00 
+  4c7160:	83 f8 01             	cmp    eax,0x1
+  4c7163:	0f 84 9f 0f 00 00    	je     4c8108 <codo_load_pod_file+0x16a8>
+  4c7169:	41 81 fe 63 56 4d 50 	cmp    r14d,0x504d5663
+  4c7170:	41 c7 44 24 20 00 00 	mov    DWORD PTR [r12+0x20],0x0
+  4c7177:	00 00 
+  4c7179:	4d 8b 7c 24 10       	mov    r15,QWORD PTR [r12+0x10]
+  4c717e:	0f 85 9a fe ff ff    	jne    4c701e <codo_load_pod_file+0x5be>
+  4c7184:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7186:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c718d:	00 
+  4c718e:	85 c0                	test   eax,eax
+  4c7190:	0f 85 5a 0e 00 00    	jne    4c7ff0 <codo_load_pod_file+0x1590>
+  4c7196:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c719a:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c719f:	ba 01 00 00 00       	mov    edx,0x1
+  4c71a4:	be 04 00 00 00       	mov    esi,0x4
+  4c71a9:	e8 32 d2 f3 ff       	call   4043e0 <fread@plt>
+  4c71ae:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c71b2:	89 ef                	mov    edi,ebp
+  4c71b4:	e8 c7 89 02 00       	call   4efb80 <codo_malloc>
+  4c71b9:	48 89 da             	mov    rdx,rbx
+  4c71bc:	49 89 c6             	mov    r14,rax
+  4c71bf:	89 ee                	mov    esi,ebp
+  4c71c1:	48 89 c7             	mov    rdi,rax
+  4c71c4:	e8 57 91 ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c71c9:	44 89 e9             	mov    ecx,r13d
+  4c71cc:	89 ea                	mov    edx,ebp
+  4c71ce:	4c 89 fe             	mov    rsi,r15
+  4c71d1:	4c 89 f7             	mov    rdi,r14
+  4c71d4:	e8 07 d4 02 00       	call   4f45e0 <LZ4_decompress_safe>
+  4c71d9:	e9 4e fe ff ff       	jmp    4c702c <codo_load_pod_file+0x5cc>
+  4c71de:	66 90                	xchg   ax,ax
+  4c71e0:	45 31 c9             	xor    r9d,r9d
+  4c71e3:	45 31 e4             	xor    r12d,r12d
+  4c71e6:	41 83 ff 01          	cmp    r15d,0x1
+  4c71ea:	0f 84 c8 0f 00 00    	je     4c81b8 <codo_load_pod_file+0x1758>
+  4c71f0:	41 83 ff 01          	cmp    r15d,0x1
+  4c71f4:	0f 84 5b 10 00 00    	je     4c8255 <codo_load_pod_file+0x17f5>
+  4c71fa:	45 31 ed             	xor    r13d,r13d
+  4c71fd:	45 31 ff             	xor    r15d,r15d
+  4c7200:	e9 99 fd ff ff       	jmp    4c6f9e <codo_load_pod_file+0x53e>
+  4c7205:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c7208:	31 c0                	xor    eax,eax
+  4c720a:	e8 f1 09 ff ff       	call   4b7c00 <codo_create_palette>
+  4c720f:	48 89 c5             	mov    rbp,rax
+  4c7212:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7214:	85 c0                	test   eax,eax
+  4c7216:	0f 84 cc 00 00 00    	je     4c72e8 <codo_load_pod_file+0x888>
+  4c721c:	83 f8 01             	cmp    eax,0x1
+  4c721f:	0f 84 92 1f 00 00    	je     4c91b7 <codo_load_pod_file+0x2757>
+  4c7225:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c722a:	48 89 ea             	mov    rdx,rbp
+  4c722d:	be 05 00 00 00       	mov    esi,0x5
+  4c7232:	e8 09 5c ff ff       	call   4bce40 <cpod_add_item>
+  4c7237:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c723a:	e9 ac fc ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c723f:	90                   	nop
+  4c7240:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7244:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7249:	ba 01 00 00 00       	mov    edx,0x1
+  4c724e:	be 04 00 00 00       	mov    esi,0x4
+  4c7253:	e8 88 d1 f3 ff       	call   4043e0 <fread@plt>
+  4c7258:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c725c:	e9 2c fe ff ff       	jmp    4c708d <codo_load_pod_file+0x62d>
+  4c7261:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c7268:	4c 8b 7c 24 08       	mov    r15,QWORD PTR [rsp+0x8]
+  4c726d:	48 89 da             	mov    rdx,rbx
+  4c7270:	be 01 00 00 00       	mov    esi,0x1
+  4c7275:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c727c:	00 
+  4c727d:	4c 89 ff             	mov    rdi,r15
+  4c7280:	e8 2b 90 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c7285:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c7289:	48 89 da             	mov    rdx,rbx
+  4c728c:	be 01 00 00 00       	mov    esi,0x1
+  4c7291:	4c 89 ff             	mov    rdi,r15
+  4c7294:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c729b:	00 
+  4c729c:	e8 0f 90 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c72a1:	8b 74 24 44          	mov    esi,DWORD PTR [rsp+0x44]
+  4c72a5:	89 ef                	mov    edi,ebp
+  4c72a7:	e8 14 c1 03 00       	call   5033c0 <codo_create_sound>
+  4c72ac:	48 85 c0             	test   rax,rax
+  4c72af:	48 89 c5             	mov    rbp,rax
+  4c72b2:	0f 85 f0 0f 00 00    	jne    4c82a8 <codo_load_pod_file+0x1848>
+  4c72b8:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c72bb:	41 83 ec 08          	sub    r12d,0x8
+  4c72bf:	45 85 f6             	test   r14d,r14d
+  4c72c2:	0f 85 97 f9 ff ff    	jne    4c6c5f <codo_load_pod_file+0x1ff>
+  4c72c8:	48 8b 7b 08          	mov    rdi,QWORD PTR [rbx+0x8]
+  4c72cc:	49 63 f4             	movsxd rsi,r12d
+  4c72cf:	ba 01 00 00 00       	mov    edx,0x1
+  4c72d4:	e8 87 ca f3 ff       	call   403d60 <fseek@plt>
+  4c72d9:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c72dc:	e9 0a fc ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c72e1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c72e8:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c72ec:	ba 00 03 00 00       	mov    edx,0x300
+  4c72f1:	be 01 00 00 00       	mov    esi,0x1
+  4c72f6:	48 89 ef             	mov    rdi,rbp
+  4c72f9:	e8 e2 d0 f3 ff       	call   4043e0 <fread@plt>
+  4c72fe:	e9 22 ff ff ff       	jmp    4c7225 <codo_load_pod_file+0x7c5>
+  4c7303:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7308:	41 83 fe 01          	cmp    r14d,0x1
+  4c730c:	0f 85 d9 fb ff ff    	jne    4c6eeb <codo_load_pod_file+0x48b>
+  4c7312:	83 43 1c 1c          	add    DWORD PTR [rbx+0x1c],0x1c
+  4c7316:	c7 44 24 14 01 00 00 	mov    DWORD PTR [rsp+0x14],0x1
+  4c731d:	00 
+  4c731e:	e9 22 fe ff ff       	jmp    4c7145 <codo_load_pod_file+0x6e5>
+  4c7323:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7328:	83 f8 01             	cmp    eax,0x1
+  4c732b:	0f 85 8e f7 ff ff    	jne    4c6abf <codo_load_pod_file+0x5f>
+  4c7331:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7335:	44 8b 63 18          	mov    r12d,DWORD PTR [rbx+0x18]
+  4c7339:	b8 04 00 00 00       	mov    eax,0x4
+  4c733e:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7343:	41 29 f4             	sub    r12d,esi
+  4c7346:	49 89 f5             	mov    r13,rsi
+  4c7349:	41 83 fc 04          	cmp    r12d,0x4
+  4c734d:	44 0f 4f e0          	cmovg  r12d,eax
+  4c7351:	48 8d 44 24 44       	lea    rax,[rsp+0x44]
+  4c7356:	45 85 e4             	test   r12d,r12d
+  4c7359:	44 0f 48 e5          	cmovs  r12d,ebp
+  4c735d:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7361:	48 89 c7             	mov    rdi,rax
+  4c7364:	49 63 d4             	movsxd rdx,r12d
+  4c7367:	45 01 ec             	add    r12d,r13d
+  4c736a:	48 89 44 24 08       	mov    QWORD PTR [rsp+0x8],rax
+  4c736f:	e8 8c cb f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7374:	44 89 63 1c          	mov    DWORD PTR [rbx+0x1c],r12d
+  4c7378:	e9 bc f7 ff ff       	jmp    4c6b39 <codo_load_pod_file+0xd9>
+  4c737d:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c7380:	31 c0                	xor    eax,eax
+  4c7382:	e8 d9 60 00 00       	call   4cd460 <codo_create_material>
+  4c7387:	48 89 c5             	mov    rbp,rax
+  4c738a:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c738c:	85 c0                	test   eax,eax
+  4c738e:	0f 84 ac 0c 00 00    	je     4c8040 <codo_load_pod_file+0x15e0>
+  4c7394:	83 f8 01             	cmp    eax,0x1
+  4c7397:	0f 84 b1 1e 00 00    	je     4c924e <codo_load_pod_file+0x27ee>
+  4c739d:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c73a2:	48 89 ea             	mov    rdx,rbp
+  4c73a5:	be 07 00 00 00       	mov    esi,0x7
+  4c73aa:	e8 91 5a ff ff       	call   4bce40 <cpod_add_item>
+  4c73af:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c73b2:	e9 34 fb ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c73b7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  4c73be:	00 00 
+  4c73c0:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c73c5:	e8 06 54 ff ff       	call   4bc7d0 <codo_destroy_pod>
+  4c73ca:	48 c7 44 24 18 00 00 	mov    QWORD PTR [rsp+0x18],0x0
+  4c73d1:	00 00 
+  4c73d3:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c73d8:	e9 f2 f6 ff ff       	jmp    4c6acf <codo_load_pod_file+0x6f>
+  4c73dd:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c73e0:	31 c0                	xor    eax,eax
+  4c73e2:	41 bd 05 00 00 00    	mov    r13d,0x5
+  4c73e8:	41 bc 04 00 00 00    	mov    r12d,0x4
+  4c73ee:	e8 1d 7c 00 00       	call   4cf010 <codo_create_anim>
+  4c73f3:	4c 8b 74 24 08       	mov    r14,QWORD PTR [rsp+0x8]
+  4c73f8:	48 89 da             	mov    rdx,rbx
+  4c73fb:	be 01 00 00 00       	mov    esi,0x1
+  4c7400:	49 89 c7             	mov    r15,rax
+  4c7403:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c740a:	00 
+  4c740b:	4c 89 f7             	mov    rdi,r14
+  4c740e:	e8 9d 8e ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c7413:	48 89 da             	mov    rdx,rbx
+  4c7416:	be 01 00 00 00       	mov    esi,0x1
+  4c741b:	4c 89 f7             	mov    rdi,r14
+  4c741e:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c7422:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7429:	00 
+  4c742a:	e8 81 8e ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c742f:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c7433:	48 89 da             	mov    rdx,rbx
+  4c7436:	be 01 00 00 00       	mov    esi,0x1
+  4c743b:	4c 89 f7             	mov    rdi,r14
+  4c743e:	41 89 47 10          	mov    DWORD PTR [r15+0x10],eax
+  4c7442:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7449:	00 
+  4c744a:	e8 61 8e ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c744f:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c7453:	41 89 47 14          	mov    DWORD PTR [r15+0x14],eax
+  4c7457:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7459:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7460:	00 
+  4c7461:	85 c0                	test   eax,eax
+  4c7463:	0f 85 57 03 00 00    	jne    4c77c0 <codo_load_pod_file+0xd60>
+  4c7469:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c746d:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7472:	ba 01 00 00 00       	mov    edx,0x1
+  4c7477:	be 04 00 00 00       	mov    esi,0x4
+  4c747c:	e8 5f cf f3 ff       	call   4043e0 <fread@plt>
+  4c7481:	41 83 ed 01          	sub    r13d,0x1
+  4c7485:	75 d0                	jne    4c7457 <codo_load_pod_file+0x9f7>
+  4c7487:	85 ed                	test   ebp,ebp
+  4c7489:	0f 8e 9e 02 00 00    	jle    4c772d <codo_load_pod_file+0xccd>
+  4c748f:	8d 45 ff             	lea    eax,[rbp-0x1]
+  4c7492:	4c 8b 64 24 08       	mov    r12,QWORD PTR [rsp+0x8]
+  4c7497:	45 31 f6             	xor    r14d,r14d
+  4c749a:	4c 89 7c 24 20       	mov    QWORD PTR [rsp+0x20],r15
+  4c749f:	49 89 df             	mov    r15,rbx
+  4c74a2:	4c 89 f3             	mov    rbx,r14
+  4c74a5:	48 83 c0 01          	add    rax,0x1
+  4c74a9:	48 89 c2             	mov    rdx,rax
+  4c74ac:	48 c1 e2 04          	shl    rdx,0x4
+  4c74b0:	48 01 d0             	add    rax,rdx
+  4c74b3:	48 c1 e0 03          	shl    rax,0x3
+  4c74b7:	48 89 44 24 28       	mov    QWORD PTR [rsp+0x28],rax
+  4c74bc:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c74c0:	4c 8b 74 24 20       	mov    r14,QWORD PTR [rsp+0x20]
+  4c74c5:	4c 89 f7             	mov    rdi,r14
+  4c74c8:	e8 c3 7c 00 00       	call   4cf190 <canim_new_actor>
+  4c74cd:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c74d0:	49 8b 6e 08          	mov    rbp,QWORD PTR [r14+0x8]
+  4c74d4:	48 01 dd             	add    rbp,rbx
+  4c74d7:	85 d2                	test   edx,edx
+  4c74d9:	89 d0                	mov    eax,edx
+  4c74db:	0f 85 6f 02 00 00    	jne    4c7750 <codo_load_pod_file+0xcf0>
+  4c74e1:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c74e5:	ba 20 00 00 00       	mov    edx,0x20
+  4c74ea:	48 89 ef             	mov    rdi,rbp
+  4c74ed:	be 01 00 00 00       	mov    esi,0x1
+  4c74f2:	e8 e9 ce f3 ff       	call   4043e0 <fread@plt>
+  4c74f7:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c74fa:	48 8d 7d 20          	lea    rdi,[rbp+0x20]
+  4c74fe:	85 d2                	test   edx,edx
+  4c7500:	89 d0                	mov    eax,edx
+  4c7502:	0f 85 78 12 00 00    	jne    4c8780 <codo_load_pod_file+0x1d20>
+  4c7508:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c750c:	ba 20 00 00 00       	mov    edx,0x20
+  4c7511:	be 01 00 00 00       	mov    esi,0x1
+  4c7516:	e8 c5 ce f3 ff       	call   4043e0 <fread@plt>
+  4c751b:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c751e:	85 c0                	test   eax,eax
+  4c7520:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7527:	00 
+  4c7528:	0f 85 f2 0f 00 00    	jne    4c8520 <codo_load_pod_file+0x1ac0>
+  4c752e:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c7532:	ba 01 00 00 00       	mov    edx,0x1
+  4c7537:	be 04 00 00 00       	mov    esi,0x4
+  4c753c:	4c 89 e7             	mov    rdi,r12
+  4c753f:	e8 9c ce f3 ff       	call   4043e0 <fread@plt>
+  4c7544:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c7547:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c754b:	85 c0                	test   eax,eax
+  4c754d:	89 55 44             	mov    DWORD PTR [rbp+0x44],edx
+  4c7550:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7557:	00 
+  4c7558:	0f 85 0a 02 00 00    	jne    4c7768 <codo_load_pod_file+0xd08>
+  4c755e:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c7562:	ba 01 00 00 00       	mov    edx,0x1
+  4c7567:	be 04 00 00 00       	mov    esi,0x4
+  4c756c:	4c 89 e7             	mov    rdi,r12
+  4c756f:	e8 6c ce f3 ff       	call   4043e0 <fread@plt>
+  4c7574:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c7577:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c757b:	85 c0                	test   eax,eax
+  4c757d:	89 55 48             	mov    DWORD PTR [rbp+0x48],edx
+  4c7580:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7587:	00 
+  4c7588:	0f 85 07 1e 00 00    	jne    4c9395 <codo_load_pod_file+0x2935>
+  4c758e:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c7592:	ba 01 00 00 00       	mov    edx,0x1
+  4c7597:	be 04 00 00 00       	mov    esi,0x4
+  4c759c:	4c 89 e7             	mov    rdi,r12
+  4c759f:	e8 3c ce f3 ff       	call   4043e0 <fread@plt>
+  4c75a4:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c75a7:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c75ab:	85 c0                	test   eax,eax
+  4c75ad:	89 55 4c             	mov    DWORD PTR [rbp+0x4c],edx
+  4c75b0:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c75b7:	00 
+  4c75b8:	0f 85 c9 01 00 00    	jne    4c7787 <codo_load_pod_file+0xd27>
+  4c75be:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c75c2:	ba 01 00 00 00       	mov    edx,0x1
+  4c75c7:	be 04 00 00 00       	mov    esi,0x4
+  4c75cc:	4c 89 e7             	mov    rdi,r12
+  4c75cf:	e8 0c ce f3 ff       	call   4043e0 <fread@plt>
+  4c75d4:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c75d7:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c75db:	85 c0                	test   eax,eax
+  4c75dd:	89 55 78             	mov    DWORD PTR [rbp+0x78],edx
+  4c75e0:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c75e7:	00 
+  4c75e8:	0f 85 c6 1d 00 00    	jne    4c93b4 <codo_load_pod_file+0x2954>
+  4c75ee:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c75f2:	ba 01 00 00 00       	mov    edx,0x1
+  4c75f7:	be 04 00 00 00       	mov    esi,0x4
+  4c75fc:	4c 89 e7             	mov    rdi,r12
+  4c75ff:	e8 dc cd f3 ff       	call   4043e0 <fread@plt>
+  4c7604:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c7607:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c760b:	85 c0                	test   eax,eax
+  4c760d:	89 55 7c             	mov    DWORD PTR [rbp+0x7c],edx
+  4c7610:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7617:	00 
+  4c7618:	0f 85 88 01 00 00    	jne    4c77a6 <codo_load_pod_file+0xd46>
+  4c761e:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c7622:	ba 01 00 00 00       	mov    edx,0x1
+  4c7627:	be 04 00 00 00       	mov    esi,0x4
+  4c762c:	4c 89 e7             	mov    rdi,r12
+  4c762f:	e8 ac cd f3 ff       	call   4043e0 <fread@plt>
+  4c7634:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c7638:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c763b:	85 c0                	test   eax,eax
+  4c763d:	89 95 80 00 00 00    	mov    DWORD PTR [rbp+0x80],edx
+  4c7643:	41 bd 03 00 00 00    	mov    r13d,0x3
+  4c7649:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7650:	00 
+  4c7651:	75 2b                	jne    4c767e <codo_load_pod_file+0xc1e>
+  4c7653:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+  4c7657:	ba 01 00 00 00       	mov    edx,0x1
+  4c765c:	be 04 00 00 00       	mov    esi,0x4
+  4c7661:	4c 89 e7             	mov    rdi,r12
+  4c7664:	e8 77 cd f3 ff       	call   4043e0 <fread@plt>
+  4c7669:	41 83 ed 01          	sub    r13d,0x1
+  4c766d:	74 69                	je     4c76d8 <codo_load_pod_file+0xc78>
+  4c766f:	41 8b 07             	mov    eax,DWORD PTR [r15]
+  4c7672:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7679:	00 
+  4c767a:	85 c0                	test   eax,eax
+  4c767c:	74 d5                	je     4c7653 <codo_load_pod_file+0xbf3>
+  4c767e:	83 f8 01             	cmp    eax,0x1
+  4c7681:	75 e6                	jne    4c7669 <codo_load_pod_file+0xc09>
+  4c7683:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c7687:	45 8b 77 18          	mov    r14d,DWORD PTR [r15+0x18]
+  4c768b:	b8 04 00 00 00       	mov    eax,0x4
+  4c7690:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7695:	4c 89 e7             	mov    rdi,r12
+  4c7698:	41 29 f6             	sub    r14d,esi
+  4c769b:	89 74 24 08          	mov    DWORD PTR [rsp+0x8],esi
+  4c769f:	41 83 fe 04          	cmp    r14d,0x4
+  4c76a3:	44 0f 4f f0          	cmovg  r14d,eax
+  4c76a7:	b8 00 00 00 00       	mov    eax,0x0
+  4c76ac:	45 85 f6             	test   r14d,r14d
+  4c76af:	44 0f 48 f0          	cmovs  r14d,eax
+  4c76b3:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c76b7:	49 63 d6             	movsxd rdx,r14d
+  4c76ba:	e8 41 c8 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c76bf:	44 8b 44 24 08       	mov    r8d,DWORD PTR [rsp+0x8]
+  4c76c4:	45 01 c6             	add    r14d,r8d
+  4c76c7:	41 83 ed 01          	sub    r13d,0x1
+  4c76cb:	45 89 77 1c          	mov    DWORD PTR [r15+0x1c],r14d
+  4c76cf:	75 9e                	jne    4c766f <codo_load_pod_file+0xc0f>
+  4c76d1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c76d8:	48 8b 7d 50          	mov    rdi,QWORD PTR [rbp+0x50]
+  4c76dc:	4c 89 fe             	mov    rsi,r15
+  4c76df:	e8 ac 8c ff ff       	call   4c0390 <read_anim_channel.isra.3>
+  4c76e4:	48 8b 7d 58          	mov    rdi,QWORD PTR [rbp+0x58]
+  4c76e8:	4c 89 fe             	mov    rsi,r15
+  4c76eb:	e8 a0 8c ff ff       	call   4c0390 <read_anim_channel.isra.3>
+  4c76f0:	48 8b 7d 60          	mov    rdi,QWORD PTR [rbp+0x60]
+  4c76f4:	4c 89 fe             	mov    rsi,r15
+  4c76f7:	e8 94 8c ff ff       	call   4c0390 <read_anim_channel.isra.3>
+  4c76fc:	8b 7d 7c             	mov    edi,DWORD PTR [rbp+0x7c]
+  4c76ff:	85 ff                	test   edi,edi
+  4c7701:	0f 85 11 01 00 00    	jne    4c7818 <codo_load_pod_file+0xdb8>
+  4c7707:	48 8b 7d 70          	mov    rdi,QWORD PTR [rbp+0x70]
+  4c770b:	4c 89 fe             	mov    rsi,r15
+  4c770e:	48 81 c3 88 00 00 00 	add    rbx,0x88
+  4c7715:	e8 76 8c ff ff       	call   4c0390 <read_anim_channel.isra.3>
+  4c771a:	48 39 5c 24 28       	cmp    QWORD PTR [rsp+0x28],rbx
+  4c771f:	0f 85 9b fd ff ff    	jne    4c74c0 <codo_load_pod_file+0xa60>
+  4c7725:	4c 89 fb             	mov    rbx,r15
+  4c7728:	4c 8b 7c 24 20       	mov    r15,QWORD PTR [rsp+0x20]
+  4c772d:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c7732:	4c 89 fa             	mov    rdx,r15
+  4c7735:	be 08 00 00 00       	mov    esi,0x8
+  4c773a:	e8 01 57 ff ff       	call   4bce40 <cpod_add_item>
+  4c773f:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c7742:	e9 a4 f7 ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c7747:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  4c774e:	00 00 
+  4c7750:	83 fa 01             	cmp    edx,0x1
+  4c7753:	0f 84 b7 0f 00 00    	je     4c8710 <codo_load_pod_file+0x1cb0>
+  4c7759:	c7 45 44 00 00 00 00 	mov    DWORD PTR [rbp+0x44],0x0
+  4c7760:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7767:	00 
+  4c7768:	83 f8 01             	cmp    eax,0x1
+  4c776b:	0f 84 09 0e 00 00    	je     4c857a <codo_load_pod_file+0x1b1a>
+  4c7771:	c7 45 48 00 00 00 00 	mov    DWORD PTR [rbp+0x48],0x0
+  4c7778:	c7 45 4c 00 00 00 00 	mov    DWORD PTR [rbp+0x4c],0x0
+  4c777f:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7786:	00 
+  4c7787:	83 f8 01             	cmp    eax,0x1
+  4c778a:	0f 84 8c 0e 00 00    	je     4c861c <codo_load_pod_file+0x1bbc>
+  4c7790:	c7 45 78 00 00 00 00 	mov    DWORD PTR [rbp+0x78],0x0
+  4c7797:	c7 45 7c 00 00 00 00 	mov    DWORD PTR [rbp+0x7c],0x0
+  4c779e:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c77a5:	00 
+  4c77a6:	83 f8 01             	cmp    eax,0x1
+  4c77a9:	0f 84 0f 0f 00 00    	je     4c86be <codo_load_pod_file+0x1c5e>
+  4c77af:	31 d2                	xor    edx,edx
+  4c77b1:	e9 85 fe ff ff       	jmp    4c763b <codo_load_pod_file+0xbdb>
+  4c77b6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4c77bd:	00 00 00 
+  4c77c0:	83 f8 01             	cmp    eax,0x1
+  4c77c3:	0f 85 b8 fc ff ff    	jne    4c7481 <codo_load_pod_file+0xa21>
+  4c77c9:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c77cd:	44 8b 73 18          	mov    r14d,DWORD PTR [rbx+0x18]
+  4c77d1:	b8 00 00 00 00       	mov    eax,0x0
+  4c77d6:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c77db:	b9 04 00 00 00       	mov    ecx,0x4
+  4c77e0:	41 29 f6             	sub    r14d,esi
+  4c77e3:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c77e7:	41 83 fe 04          	cmp    r14d,0x4
+  4c77eb:	45 0f 4f f4          	cmovg  r14d,r12d
+  4c77ef:	45 85 f6             	test   r14d,r14d
+  4c77f2:	44 0f 48 f0          	cmovs  r14d,eax
+  4c77f6:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c77fa:	49 63 d6             	movsxd rdx,r14d
+  4c77fd:	e8 fe c6 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7802:	44 8b 44 24 20       	mov    r8d,DWORD PTR [rsp+0x20]
+  4c7807:	45 01 f0             	add    r8d,r14d
+  4c780a:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c780e:	e9 6e fc ff ff       	jmp    4c7481 <codo_load_pod_file+0xa21>
+  4c7813:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7818:	c1 e7 03             	shl    edi,0x3
+  4c781b:	e8 60 83 02 00       	call   4efb80 <codo_malloc>
+  4c7820:	8b 75 7c             	mov    esi,DWORD PTR [rbp+0x7c]
+  4c7823:	48 89 45 68          	mov    QWORD PTR [rbp+0x68],rax
+  4c7827:	85 f6                	test   esi,esi
+  4c7829:	0f 8e d8 fe ff ff    	jle    4c7707 <codo_load_pod_file+0xca7>
+  4c782f:	45 31 ed             	xor    r13d,r13d
+  4c7832:	48 89 5c 24 08       	mov    QWORD PTR [rsp+0x8],rbx
+  4c7837:	45 31 f6             	xor    r14d,r14d
+  4c783a:	48 89 eb             	mov    rbx,rbp
+  4c783d:	44 89 ed             	mov    ebp,r13d
+  4c7840:	eb 0a                	jmp    4c784c <codo_load_pod_file+0xdec>
+  4c7842:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c7848:	48 8b 43 68          	mov    rax,QWORD PTR [rbx+0x68]
+  4c784c:	4e 8d 2c 30          	lea    r13,[rax+r14*1]
+  4c7850:	bf 10 00 00 00       	mov    edi,0x10
+  4c7855:	83 c5 01             	add    ebp,0x1
+  4c7858:	e8 43 7b 00 00       	call   4cf3a0 <codo_create_anim_channel>
+  4c785d:	49 89 45 00          	mov    QWORD PTR [r13+0x0],rax
+  4c7861:	48 8b 43 68          	mov    rax,QWORD PTR [rbx+0x68]
+  4c7865:	4c 89 fe             	mov    rsi,r15
+  4c7868:	4a 8b 3c 30          	mov    rdi,QWORD PTR [rax+r14*1]
+  4c786c:	49 83 c6 08          	add    r14,0x8
+  4c7870:	e8 1b 8b ff ff       	call   4c0390 <read_anim_channel.isra.3>
+  4c7875:	3b 6b 7c             	cmp    ebp,DWORD PTR [rbx+0x7c]
+  4c7878:	7c ce                	jl     4c7848 <codo_load_pod_file+0xde8>
+  4c787a:	48 89 dd             	mov    rbp,rbx
+  4c787d:	48 8b 5c 24 08       	mov    rbx,QWORD PTR [rsp+0x8]
+  4c7882:	e9 80 fe ff ff       	jmp    4c7707 <codo_load_pod_file+0xca7>
+  4c7887:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  4c788e:	00 00 
+  4c7890:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7895:	48 89 da             	mov    rdx,rbx
+  4c7898:	be 01 00 00 00       	mov    esi,0x1
+  4c789d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c78a4:	00 
+  4c78a5:	e8 06 8a ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c78aa:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c78ae:	89 ef                	mov    edi,ebp
+  4c78b0:	e8 bb 84 02 00       	call   4efd70 <codo_create_buffer>
+  4c78b5:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c78ba:	49 89 c4             	mov    r12,rax
+  4c78bd:	48 89 c2             	mov    rdx,rax
+  4c78c0:	be 0c 00 00 00       	mov    esi,0xc
+  4c78c5:	e8 76 55 ff ff       	call   4bce40 <cpod_add_item>
+  4c78ca:	49 8d 7c 24 20       	lea    rdi,[r12+0x20]
+  4c78cf:	48 89 da             	mov    rdx,rbx
+  4c78d2:	be 40 00 00 00       	mov    esi,0x40
+  4c78d7:	e8 44 8a ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c78dc:	41 81 fe 63 46 49 4c 	cmp    r14d,0x4c494663
+  4c78e3:	41 c6 44 24 5f 00    	mov    BYTE PTR [r12+0x5f],0x0
+  4c78e9:	49 8b 7c 24 10       	mov    rdi,QWORD PTR [r12+0x10]
+  4c78ee:	48 89 da             	mov    rdx,rbx
+  4c78f1:	89 ee                	mov    esi,ebp
+  4c78f3:	0f 84 b7 0b 00 00    	je     4c84b0 <codo_load_pod_file+0x1a50>
+  4c78f9:	e8 22 8a ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c78fe:	41 89 6c 24 18       	mov    DWORD PTR [r12+0x18],ebp
+  4c7903:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c7906:	e9 e0 f5 ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c790b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7910:	31 c0                	xor    eax,eax
+  4c7912:	e8 79 58 00 00       	call   4cd190 <codo_create_model>
+  4c7917:	4c 8b 7c 24 08       	mov    r15,QWORD PTR [rsp+0x8]
+  4c791c:	48 89 da             	mov    rdx,rbx
+  4c791f:	be 01 00 00 00       	mov    esi,0x1
+  4c7924:	49 89 c5             	mov    r13,rax
+  4c7927:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c792e:	00 
+  4c792f:	4c 89 ff             	mov    rdi,r15
+  4c7932:	e8 79 89 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c7937:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c793b:	48 89 da             	mov    rdx,rbx
+  4c793e:	be 01 00 00 00       	mov    esi,0x1
+  4c7943:	4c 89 ff             	mov    rdi,r15
+  4c7946:	41 89 45 08          	mov    DWORD PTR [r13+0x8],eax
+  4c794a:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7951:	00 
+  4c7952:	e8 59 89 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c7957:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c795b:	48 89 da             	mov    rdx,rbx
+  4c795e:	be 01 00 00 00       	mov    esi,0x1
+  4c7963:	4c 89 ff             	mov    rdi,r15
+  4c7966:	41 89 45 18          	mov    DWORD PTR [r13+0x18],eax
+  4c796a:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7971:	00 
+  4c7972:	e8 39 89 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c7977:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c797b:	41 8b 75 08          	mov    esi,DWORD PTR [r13+0x8]
+  4c797f:	4c 89 ef             	mov    rdi,r13
+  4c7982:	41 89 45 20          	mov    DWORD PTR [r13+0x20],eax
+  4c7986:	e8 d5 46 00 00       	call   4cc060 <cmodel_max_vertices>
+  4c798b:	41 8b 75 18          	mov    esi,DWORD PTR [r13+0x18]
+  4c798f:	4c 89 ef             	mov    rdi,r13
+  4c7992:	e8 79 48 00 00       	call   4cc210 <cmodel_max_polygons>
+  4c7997:	41 8b 45 08          	mov    eax,DWORD PTR [r13+0x8]
+  4c799b:	85 c0                	test   eax,eax
+  4c799d:	7e 6d                	jle    4c7a0c <codo_load_pod_file+0xfac>
+  4c799f:	45 31 e4             	xor    r12d,r12d
+  4c79a2:	45 31 ff             	xor    r15d,r15d
+  4c79a5:	4c 89 e0             	mov    rax,r12
+  4c79a8:	4d 89 ec             	mov    r12,r13
+  4c79ab:	49 89 c5             	mov    r13,rax
+  4c79ae:	66 90                	xchg   ax,ax
+  4c79b0:	31 ed                	xor    ebp,ebp
+  4c79b2:	4d 8b 34 24          	mov    r14,QWORD PTR [r12]
+  4c79b6:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c79b8:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c79bf:	00 
+  4c79c0:	4d 01 ee             	add    r14,r13
+  4c79c3:	85 c0                	test   eax,eax
+  4c79c5:	0f 85 85 02 00 00    	jne    4c7c50 <codo_load_pod_file+0x11f0>
+  4c79cb:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c79cf:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c79d4:	ba 01 00 00 00       	mov    edx,0x1
+  4c79d9:	be 04 00 00 00       	mov    esi,0x4
+  4c79de:	e8 fd c9 f3 ff       	call   4043e0 <fread@plt>
+  4c79e3:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c79e9:	48 63 c5             	movsxd rax,ebp
+  4c79ec:	83 c5 01             	add    ebp,0x1
+  4c79ef:	83 fd 03             	cmp    ebp,0x3
+  4c79f2:	f3 41 0f 11 04 86    	movss  DWORD PTR [r14+rax*4],xmm0
+  4c79f8:	75 b8                	jne    4c79b2 <codo_load_pod_file+0xf52>
+  4c79fa:	41 83 c7 01          	add    r15d,0x1
+  4c79fe:	49 83 c5 0c          	add    r13,0xc
+  4c7a02:	45 39 7c 24 08       	cmp    DWORD PTR [r12+0x8],r15d
+  4c7a07:	7f a7                	jg     4c79b0 <codo_load_pod_file+0xf50>
+  4c7a09:	4d 89 e5             	mov    r13,r12
+  4c7a0c:	41 8b 45 18          	mov    eax,DWORD PTR [r13+0x18]
+  4c7a10:	85 c0                	test   eax,eax
+  4c7a12:	0f 8e c8 02 00 00    	jle    4c7ce0 <codo_load_pod_file+0x1280>
+  4c7a18:	4c 8b 74 24 08       	mov    r14,QWORD PTR [rsp+0x8]
+  4c7a1d:	c7 44 24 20 00 00 00 	mov    DWORD PTR [rsp+0x20],0x0
+  4c7a24:	00 
+  4c7a25:	48 c7 44 24 30 00 00 	mov    QWORD PTR [rsp+0x30],0x0
+  4c7a2c:	00 00 
+  4c7a2e:	4c 89 6c 24 28       	mov    QWORD PTR [rsp+0x28],r13
+  4c7a33:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7a38:	48 8b 44 24 28       	mov    rax,QWORD PTR [rsp+0x28]
+  4c7a3d:	8b 13                	mov    edx,DWORD PTR [rbx]
+  4c7a3f:	4c 8b 64 24 30       	mov    r12,QWORD PTR [rsp+0x30]
+  4c7a44:	4c 03 60 10          	add    r12,QWORD PTR [rax+0x10]
+  4c7a48:	31 c0                	xor    eax,eax
+  4c7a4a:	85 d2                	test   edx,edx
+  4c7a4c:	66 89 44 24 44       	mov    WORD PTR [rsp+0x44],ax
+  4c7a51:	0f 85 99 03 00 00    	jne    4c7df0 <codo_load_pod_file+0x1390>
+  4c7a57:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7a5b:	be 02 00 00 00       	mov    esi,0x2
+  4c7a60:	ba 01 00 00 00       	mov    edx,0x1
+  4c7a65:	4c 89 f7             	mov    rdi,r14
+  4c7a68:	e8 73 c9 f3 ff       	call   4043e0 <fread@plt>
+  4c7a6d:	0f bf 74 24 44       	movsx  esi,WORD PTR [rsp+0x44]
+  4c7a72:	89 f0                	mov    eax,esi
+  4c7a74:	66 41 89 44 24 40    	mov    WORD PTR [r12+0x40],ax
+  4c7a7a:	4c 89 e7             	mov    rdi,r12
+  4c7a7d:	e8 0e 49 00 00       	call   4cc390 <cpoly_set_num_vertices>
+  4c7a82:	31 c0                	xor    eax,eax
+  4c7a84:	66 89 44 24 44       	mov    WORD PTR [rsp+0x44],ax
+  4c7a89:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7a8b:	85 c0                	test   eax,eax
+  4c7a8d:	0f 85 3d 03 00 00    	jne    4c7dd0 <codo_load_pod_file+0x1370>
+  4c7a93:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7a97:	ba 01 00 00 00       	mov    edx,0x1
+  4c7a9c:	be 02 00 00 00       	mov    esi,0x2
+  4c7aa1:	4c 89 f7             	mov    rdi,r14
+  4c7aa4:	45 31 ff             	xor    r15d,r15d
+  4c7aa7:	e8 34 c9 f3 ff       	call   4043e0 <fread@plt>
+  4c7aac:	8b 13                	mov    edx,DWORD PTR [rbx]
+  4c7aae:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c7ab3:	85 d2                	test   edx,edx
+  4c7ab5:	66 41 89 44 24 50    	mov    WORD PTR [r12+0x50],ax
+  4c7abb:	66 44 89 7c 24 44    	mov    WORD PTR [rsp+0x44],r15w
+  4c7ac1:	0f 85 a8 18 00 00    	jne    4c936f <codo_load_pod_file+0x290f>
+  4c7ac7:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7acb:	ba 01 00 00 00       	mov    edx,0x1
+  4c7ad0:	be 02 00 00 00       	mov    esi,0x2
+  4c7ad5:	4c 89 f7             	mov    rdi,r14
+  4c7ad8:	e8 03 c9 f3 ff       	call   4043e0 <fread@plt>
+  4c7add:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c7ae2:	66 41 83 7c 24 40 00 	cmp    WORD PTR [r12+0x40],0x0
+  4c7ae9:	66 41 89 44 24 52    	mov    WORD PTR [r12+0x52],ax
+  4c7aef:	0f 8e cb 01 00 00    	jle    4c7cc0 <codo_load_pod_file+0x1260>
+  4c7af5:	31 ed                	xor    ebp,ebp
+  4c7af7:	e9 b3 00 00 00       	jmp    4c7baf <codo_load_pod_file+0x114f>
+  4c7afc:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c7b00:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7b04:	ba 01 00 00 00       	mov    edx,0x1
+  4c7b09:	be 04 00 00 00       	mov    esi,0x4
+  4c7b0e:	4c 89 f7             	mov    rdi,r14
+  4c7b11:	e8 ca c8 f3 ff       	call   4043e0 <fread@plt>
+  4c7b16:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c7b1a:	41 89 55 00          	mov    DWORD PTR [r13+0x0],edx
+  4c7b1e:	4d 8b 7c 24 38       	mov    r15,QWORD PTR [r12+0x38]
+  4c7b23:	4c 8d 2c ed 00 00 00 	lea    r13,[rbp*8+0x0]
+  4c7b2a:	00 
+  4c7b2b:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7b2d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7b34:	00 
+  4c7b35:	4d 01 ef             	add    r15,r13
+  4c7b38:	85 c0                	test   eax,eax
+  4c7b3a:	0f 85 f0 00 00 00    	jne    4c7c30 <codo_load_pod_file+0x11d0>
+  4c7b40:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7b44:	ba 01 00 00 00       	mov    edx,0x1
+  4c7b49:	be 04 00 00 00       	mov    esi,0x4
+  4c7b4e:	4c 89 f7             	mov    rdi,r14
+  4c7b51:	e8 8a c8 f3 ff       	call   4043e0 <fread@plt>
+  4c7b56:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7b58:	4d 03 6c 24 38       	add    r13,QWORD PTR [r12+0x38]
+  4c7b5d:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c7b63:	f3 41 0f 11 07       	movss  DWORD PTR [r15],xmm0
+  4c7b68:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7b6f:	00 
+  4c7b70:	85 c0                	test   eax,eax
+  4c7b72:	0f 85 e5 18 00 00    	jne    4c945d <codo_load_pod_file+0x29fd>
+  4c7b78:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c7b7c:	ba 01 00 00 00       	mov    edx,0x1
+  4c7b81:	be 04 00 00 00       	mov    esi,0x4
+  4c7b86:	4c 89 f7             	mov    rdi,r14
+  4c7b89:	e8 52 c8 f3 ff       	call   4043e0 <fread@plt>
+  4c7b8e:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c7b94:	41 0f bf 54 24 40    	movsx  edx,WORD PTR [r12+0x40]
+  4c7b9a:	8d 45 01             	lea    eax,[rbp+0x1]
+  4c7b9d:	48 83 c5 01          	add    rbp,0x1
+  4c7ba1:	f3 41 0f 11 45 04    	movss  DWORD PTR [r13+0x4],xmm0
+  4c7ba7:	39 c2                	cmp    edx,eax
+  4c7ba9:	0f 8e 11 01 00 00    	jle    4c7cc0 <codo_load_pod_file+0x1260>
+  4c7baf:	49 8b 44 24 30       	mov    rax,QWORD PTR [r12+0x30]
+  4c7bb4:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7bbb:	00 
+  4c7bbc:	4c 8d 2c a8          	lea    r13,[rax+rbp*4]
+  4c7bc0:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c7bc2:	85 c0                	test   eax,eax
+  4c7bc4:	0f 84 36 ff ff ff    	je     4c7b00 <codo_load_pod_file+0x10a0>
+  4c7bca:	31 d2                	xor    edx,edx
+  4c7bcc:	83 f8 01             	cmp    eax,0x1
+  4c7bcf:	0f 85 45 ff ff ff    	jne    4c7b1a <codo_load_pod_file+0x10ba>
+  4c7bd5:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7bd9:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c7bdd:	b8 04 00 00 00       	mov    eax,0x4
+  4c7be2:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7be7:	4c 89 f7             	mov    rdi,r14
+  4c7bea:	41 29 f7             	sub    r15d,esi
+  4c7bed:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c7bf1:	41 83 ff 04          	cmp    r15d,0x4
+  4c7bf5:	44 0f 4f f8          	cmovg  r15d,eax
+  4c7bf9:	b8 00 00 00 00       	mov    eax,0x0
+  4c7bfe:	45 85 ff             	test   r15d,r15d
+  4c7c01:	44 0f 48 f8          	cmovs  r15d,eax
+  4c7c05:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7c09:	49 63 d7             	movsxd rdx,r15d
+  4c7c0c:	e8 ef c2 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7c11:	44 8b 44 24 38       	mov    r8d,DWORD PTR [rsp+0x38]
+  4c7c16:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c7c1a:	45 01 c7             	add    r15d,r8d
+  4c7c1d:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c7c21:	e9 f4 fe ff ff       	jmp    4c7b1a <codo_load_pod_file+0x10ba>
+  4c7c26:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4c7c2d:	00 00 00 
+  4c7c30:	83 f8 01             	cmp    eax,0x1
+  4c7c33:	0f 84 d7 00 00 00    	je     4c7d10 <codo_load_pod_file+0x12b0>
+  4c7c39:	41 c7 07 00 00 00 00 	mov    DWORD PTR [r15],0x0
+  4c7c40:	4d 89 fd             	mov    r13,r15
+  4c7c43:	66 0f ef c0          	pxor   xmm0,xmm0
+  4c7c47:	e9 48 ff ff ff       	jmp    4c7b94 <codo_load_pod_file+0x1134>
+  4c7c4c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c7c50:	83 f8 01             	cmp    eax,0x1
+  4c7c53:	66 0f ef c0          	pxor   xmm0,xmm0
+  4c7c57:	0f 85 8c fd ff ff    	jne    4c79e9 <codo_load_pod_file+0xf89>
+  4c7c5d:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7c61:	44 8b 4b 18          	mov    r9d,DWORD PTR [rbx+0x18]
+  4c7c65:	b8 04 00 00 00       	mov    eax,0x4
+  4c7c6a:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7c6f:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7c74:	41 29 f1             	sub    r9d,esi
+  4c7c77:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c7c7b:	41 83 f9 04          	cmp    r9d,0x4
+  4c7c7f:	44 0f 4f c8          	cmovg  r9d,eax
+  4c7c83:	b8 00 00 00 00       	mov    eax,0x0
+  4c7c88:	45 85 c9             	test   r9d,r9d
+  4c7c8b:	44 0f 48 c8          	cmovs  r9d,eax
+  4c7c8f:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7c93:	49 63 d1             	movsxd rdx,r9d
+  4c7c96:	44 89 4c 24 28       	mov    DWORD PTR [rsp+0x28],r9d
+  4c7c9b:	e8 60 c2 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7ca0:	44 8b 54 24 20       	mov    r10d,DWORD PTR [rsp+0x20]
+  4c7ca5:	44 8b 4c 24 28       	mov    r9d,DWORD PTR [rsp+0x28]
+  4c7caa:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c7cb0:	45 01 d1             	add    r9d,r10d
+  4c7cb3:	44 89 4b 1c          	mov    DWORD PTR [rbx+0x1c],r9d
+  4c7cb7:	e9 2d fd ff ff       	jmp    4c79e9 <codo_load_pod_file+0xf89>
+  4c7cbc:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c7cc0:	48 8b 7c 24 28       	mov    rdi,QWORD PTR [rsp+0x28]
+  4c7cc5:	83 44 24 20 01       	add    DWORD PTR [rsp+0x20],0x1
+  4c7cca:	8b 44 24 20          	mov    eax,DWORD PTR [rsp+0x20]
+  4c7cce:	48 83 44 24 30 58    	add    QWORD PTR [rsp+0x30],0x58
+  4c7cd4:	39 47 18             	cmp    DWORD PTR [rdi+0x18],eax
+  4c7cd7:	0f 8f 5b fd ff ff    	jg     4c7a38 <codo_load_pod_file+0xfd8>
+  4c7cdd:	49 89 fd             	mov    r13,rdi
+  4c7ce0:	41 8b 6d 20          	mov    ebp,DWORD PTR [r13+0x20]
+  4c7ce4:	85 ed                	test   ebp,ebp
+  4c7ce6:	0f 8f 84 06 00 00    	jg     4c8370 <codo_load_pod_file+0x1910>
+  4c7cec:	4c 89 ef             	mov    rdi,r13
+  4c7cef:	e8 ac 61 00 00       	call   4cdea0 <cmodel_decorate>
+  4c7cf4:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c7cf9:	4c 89 ea             	mov    rdx,r13
+  4c7cfc:	be 06 00 00 00       	mov    esi,0x6
+  4c7d01:	e8 3a 51 ff ff       	call   4bce40 <cpod_add_item>
+  4c7d06:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c7d09:	e9 dd f1 ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c7d0e:	66 90                	xchg   ax,ax
+  4c7d10:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7d14:	44 8b 43 18          	mov    r8d,DWORD PTR [rbx+0x18]
+  4c7d18:	b8 04 00 00 00       	mov    eax,0x4
+  4c7d1d:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7d22:	4c 89 f7             	mov    rdi,r14
+  4c7d25:	41 29 f0             	sub    r8d,esi
+  4c7d28:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c7d2c:	41 83 f8 04          	cmp    r8d,0x4
+  4c7d30:	44 0f 4f c0          	cmovg  r8d,eax
+  4c7d34:	b8 00 00 00 00       	mov    eax,0x0
+  4c7d39:	45 85 c0             	test   r8d,r8d
+  4c7d3c:	44 0f 48 c0          	cmovs  r8d,eax
+  4c7d40:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7d44:	49 63 d0             	movsxd rdx,r8d
+  4c7d47:	44 89 44 24 3c       	mov    DWORD PTR [rsp+0x3c],r8d
+  4c7d4c:	e8 af c1 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7d51:	44 8b 4c 24 38       	mov    r9d,DWORD PTR [rsp+0x38]
+  4c7d56:	44 8b 44 24 3c       	mov    r8d,DWORD PTR [rsp+0x3c]
+  4c7d5b:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c7d61:	4d 03 6c 24 38       	add    r13,QWORD PTR [r12+0x38]
+  4c7d66:	45 01 c8             	add    r8d,r9d
+  4c7d69:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c7d6d:	f3 41 0f 11 07       	movss  DWORD PTR [r15],xmm0
+  4c7d72:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7d79:	00 
+  4c7d7a:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7d7e:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c7d82:	b8 04 00 00 00       	mov    eax,0x4
+  4c7d87:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7d8c:	4c 89 f7             	mov    rdi,r14
+  4c7d8f:	41 29 f7             	sub    r15d,esi
+  4c7d92:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c7d96:	41 83 ff 04          	cmp    r15d,0x4
+  4c7d9a:	44 0f 4f f8          	cmovg  r15d,eax
+  4c7d9e:	b8 00 00 00 00       	mov    eax,0x0
+  4c7da3:	45 85 ff             	test   r15d,r15d
+  4c7da6:	44 0f 48 f8          	cmovs  r15d,eax
+  4c7daa:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7dae:	49 63 d7             	movsxd rdx,r15d
+  4c7db1:	e8 4a c1 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7db6:	44 8b 44 24 38       	mov    r8d,DWORD PTR [rsp+0x38]
+  4c7dbb:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c7dc1:	45 01 c7             	add    r15d,r8d
+  4c7dc4:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c7dc8:	e9 c7 fd ff ff       	jmp    4c7b94 <codo_load_pod_file+0x1134>
+  4c7dcd:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c7dd0:	83 f8 01             	cmp    eax,0x1
+  4c7dd3:	0f 84 17 0a 00 00    	je     4c87f0 <codo_load_pod_file+0x1d90>
+  4c7dd9:	31 d2                	xor    edx,edx
+  4c7ddb:	31 c0                	xor    eax,eax
+  4c7ddd:	66 41 89 54 24 50    	mov    WORD PTR [r12+0x50],dx
+  4c7de3:	e9 fa fc ff ff       	jmp    4c7ae2 <codo_load_pod_file+0x1082>
+  4c7de8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7def:	00 
+  4c7df0:	31 f6                	xor    esi,esi
+  4c7df2:	31 c0                	xor    eax,eax
+  4c7df4:	83 fa 01             	cmp    edx,0x1
+  4c7df7:	0f 85 77 fc ff ff    	jne    4c7a74 <codo_load_pod_file+0x1014>
+  4c7dfd:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7e01:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c7e04:	b8 02 00 00 00       	mov    eax,0x2
+  4c7e09:	b9 02 00 00 00       	mov    ecx,0x2
+  4c7e0e:	4c 89 f7             	mov    rdi,r14
+  4c7e11:	29 f5                	sub    ebp,esi
+  4c7e13:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c7e17:	83 fd 02             	cmp    ebp,0x2
+  4c7e1a:	0f 4f e8             	cmovg  ebp,eax
+  4c7e1d:	b8 00 00 00 00       	mov    eax,0x0
+  4c7e22:	85 ed                	test   ebp,ebp
+  4c7e24:	0f 48 e8             	cmovs  ebp,eax
+  4c7e27:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7e2b:	48 63 d5             	movsxd rdx,ebp
+  4c7e2e:	e8 cd c0 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7e33:	44 8b 44 24 38       	mov    r8d,DWORD PTR [rsp+0x38]
+  4c7e38:	0f bf 74 24 44       	movsx  esi,WORD PTR [rsp+0x44]
+  4c7e3d:	44 01 c5             	add    ebp,r8d
+  4c7e40:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c7e43:	89 f0                	mov    eax,esi
+  4c7e45:	e9 2a fc ff ff       	jmp    4c7a74 <codo_load_pod_file+0x1014>
+  4c7e4a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c7e50:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7e54:	44 8b 63 18          	mov    r12d,DWORD PTR [rbx+0x18]
+  4c7e58:	b8 04 00 00 00       	mov    eax,0x4
+  4c7e5d:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7e62:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7e67:	41 29 f4             	sub    r12d,esi
+  4c7e6a:	49 89 f7             	mov    r15,rsi
+  4c7e6d:	41 83 fc 04          	cmp    r12d,0x4
+  4c7e71:	44 0f 4f e0          	cmovg  r12d,eax
+  4c7e75:	45 85 e4             	test   r12d,r12d
+  4c7e78:	45 0f 48 e5          	cmovs  r12d,r13d
+  4c7e7c:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7e80:	49 63 d4             	movsxd rdx,r12d
+  4c7e83:	45 01 fc             	add    r12d,r15d
+  4c7e86:	e8 75 c0 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7e8b:	44 8b 6c 24 44       	mov    r13d,DWORD PTR [rsp+0x44]
+  4c7e90:	44 89 63 1c          	mov    DWORD PTR [rbx+0x1c],r12d
+  4c7e94:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7e9b:	00 
+  4c7e9c:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7ea0:	44 8b 63 18          	mov    r12d,DWORD PTR [rbx+0x18]
+  4c7ea4:	b8 04 00 00 00       	mov    eax,0x4
+  4c7ea9:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7eae:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7eb3:	41 29 f4             	sub    r12d,esi
+  4c7eb6:	49 89 f7             	mov    r15,rsi
+  4c7eb9:	41 83 fc 04          	cmp    r12d,0x4
+  4c7ebd:	44 0f 4f e0          	cmovg  r12d,eax
+  4c7ec1:	b8 00 00 00 00       	mov    eax,0x0
+  4c7ec6:	45 85 e4             	test   r12d,r12d
+  4c7ec9:	44 0f 48 e0          	cmovs  r12d,eax
+  4c7ecd:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7ed1:	49 63 d4             	movsxd rdx,r12d
+  4c7ed4:	45 01 fc             	add    r12d,r15d
+  4c7ed7:	e8 24 c0 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7edc:	44 8b 4c 24 44       	mov    r9d,DWORD PTR [rsp+0x44]
+  4c7ee1:	44 89 63 1c          	mov    DWORD PTR [rbx+0x1c],r12d
+  4c7ee5:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7eec:	00 
+  4c7eed:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7ef1:	44 8b 63 18          	mov    r12d,DWORD PTR [rbx+0x18]
+  4c7ef5:	b8 04 00 00 00       	mov    eax,0x4
+  4c7efa:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7eff:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7f04:	44 89 4c 24 20       	mov    DWORD PTR [rsp+0x20],r9d
+  4c7f09:	41 29 f4             	sub    r12d,esi
+  4c7f0c:	49 89 f7             	mov    r15,rsi
+  4c7f0f:	41 83 fc 04          	cmp    r12d,0x4
+  4c7f13:	44 0f 4f e0          	cmovg  r12d,eax
+  4c7f17:	b8 00 00 00 00       	mov    eax,0x0
+  4c7f1c:	45 85 e4             	test   r12d,r12d
+  4c7f1f:	44 0f 48 e0          	cmovs  r12d,eax
+  4c7f23:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7f27:	49 63 d4             	movsxd rdx,r12d
+  4c7f2a:	45 01 fc             	add    r12d,r15d
+  4c7f2d:	e8 ce bf f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7f32:	44 89 63 1c          	mov    DWORD PTR [rbx+0x1c],r12d
+  4c7f36:	e9 f6 ee ff ff       	jmp    4c6e31 <codo_load_pod_file+0x3d1>
+  4c7f3b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c7f40:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7f44:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c7f48:	b8 04 00 00 00       	mov    eax,0x4
+  4c7f4d:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7f52:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7f57:	41 29 f7             	sub    r15d,esi
+  4c7f5a:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c7f5e:	41 83 ff 04          	cmp    r15d,0x4
+  4c7f62:	44 0f 4f f8          	cmovg  r15d,eax
+  4c7f66:	b8 00 00 00 00       	mov    eax,0x0
+  4c7f6b:	45 85 ff             	test   r15d,r15d
+  4c7f6e:	44 0f 48 f8          	cmovs  r15d,eax
+  4c7f72:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7f76:	49 63 d7             	movsxd rdx,r15d
+  4c7f79:	e8 82 bf f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7f7e:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c7f83:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c7f87:	45 01 cf             	add    r15d,r9d
+  4c7f8a:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c7f8e:	41 89 45 20          	mov    DWORD PTR [r13+0x20],eax
+  4c7f92:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c7f99:	00 
+  4c7f9a:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7f9e:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c7fa2:	b8 04 00 00 00       	mov    eax,0x4
+  4c7fa7:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c7fac:	b9 04 00 00 00       	mov    ecx,0x4
+  4c7fb1:	41 29 f7             	sub    r15d,esi
+  4c7fb4:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c7fb8:	41 83 ff 04          	cmp    r15d,0x4
+  4c7fbc:	44 0f 4f f8          	cmovg  r15d,eax
+  4c7fc0:	b8 00 00 00 00       	mov    eax,0x0
+  4c7fc5:	45 85 ff             	test   r15d,r15d
+  4c7fc8:	44 0f 48 f8          	cmovs  r15d,eax
+  4c7fcc:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c7fd0:	49 63 d7             	movsxd rdx,r15d
+  4c7fd3:	e8 28 bf f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c7fd8:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c7fdd:	45 01 cf             	add    r15d,r9d
+  4c7fe0:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c7fe4:	e9 ce ee ff ff       	jmp    4c6eb7 <codo_load_pod_file+0x457>
+  4c7fe9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c7ff0:	83 f8 01             	cmp    eax,0x1
+  4c7ff3:	0f 85 b9 f1 ff ff    	jne    4c71b2 <codo_load_pod_file+0x752>
+  4c7ff9:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c7ffd:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c8000:	b8 04 00 00 00       	mov    eax,0x4
+  4c8005:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c800a:	b9 04 00 00 00       	mov    ecx,0x4
+  4c800f:	29 f5                	sub    ebp,esi
+  4c8011:	49 89 f6             	mov    r14,rsi
+  4c8014:	83 fd 04             	cmp    ebp,0x4
+  4c8017:	0f 4f e8             	cmovg  ebp,eax
+  4c801a:	b8 00 00 00 00       	mov    eax,0x0
+  4c801f:	85 ed                	test   ebp,ebp
+  4c8021:	0f 48 e8             	cmovs  ebp,eax
+  4c8024:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8028:	48 63 d5             	movsxd rdx,ebp
+  4c802b:	44 01 f5             	add    ebp,r14d
+  4c802e:	e8 cd be f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8033:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c8036:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c803a:	e9 73 f1 ff ff       	jmp    4c71b2 <codo_load_pod_file+0x752>
+  4c803f:	90                   	nop
+  4c8040:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8044:	ba 01 00 00 00       	mov    edx,0x1
+  4c8049:	be 60 00 00 00       	mov    esi,0x60
+  4c804e:	48 89 ef             	mov    rdi,rbp
+  4c8051:	e8 8a c3 f3 ff       	call   4043e0 <fread@plt>
+  4c8056:	e9 42 f3 ff ff       	jmp    4c739d <codo_load_pod_file+0x93d>
+  4c805b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c8060:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8064:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c8067:	b8 04 00 00 00       	mov    eax,0x4
+  4c806c:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8071:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8076:	29 f5                	sub    ebp,esi
+  4c8078:	49 89 f4             	mov    r12,rsi
+  4c807b:	83 fd 04             	cmp    ebp,0x4
+  4c807e:	0f 4f e8             	cmovg  ebp,eax
+  4c8081:	85 ed                	test   ebp,ebp
+  4c8083:	0f 48 6c 24 14       	cmovs  ebp,DWORD PTR [rsp+0x14]
+  4c8088:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c808c:	48 63 d5             	movsxd rdx,ebp
+  4c808f:	44 01 e5             	add    ebp,r12d
+  4c8092:	e8 69 be f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8097:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c809c:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c809f:	48 8d 78 30          	lea    rdi,[rax+0x30]
+  4c80a3:	48 63 43 1c          	movsxd rax,DWORD PTR [rbx+0x1c]
+  4c80a7:	8b 53 18             	mov    edx,DWORD PTR [rbx+0x18]
+  4c80aa:	b9 20 00 00 00       	mov    ecx,0x20
+  4c80af:	29 c2                	sub    edx,eax
+  4c80b1:	83 fa 20             	cmp    edx,0x20
+  4c80b4:	0f 4f d1             	cmovg  edx,ecx
+  4c80b7:	b9 00 00 00 00       	mov    ecx,0x0
+  4c80bc:	85 d2                	test   edx,edx
+  4c80be:	0f 48 d1             	cmovs  edx,ecx
+  4c80c1:	48 03 43 10          	add    rax,QWORD PTR [rbx+0x10]
+  4c80c5:	83 fa 08             	cmp    edx,0x8
+  4c80c8:	0f 83 d2 0d 00 00    	jae    4c8ea0 <codo_load_pod_file+0x2440>
+  4c80ce:	f6 c2 04             	test   dl,0x4
+  4c80d1:	0f 85 3b 12 00 00    	jne    4c9312 <codo_load_pod_file+0x28b2>
+  4c80d7:	85 d2                	test   edx,edx
+  4c80d9:	74 1d                	je     4c80f8 <codo_load_pod_file+0x1698>
+  4c80db:	0f b6 08             	movzx  ecx,BYTE PTR [rax]
+  4c80de:	f6 c2 02             	test   dl,0x2
+  4c80e1:	88 0f                	mov    BYTE PTR [rdi],cl
+  4c80e3:	74 13                	je     4c80f8 <codo_load_pod_file+0x1698>
+  4c80e5:	89 d1                	mov    ecx,edx
+  4c80e7:	0f b7 44 08 fe       	movzx  eax,WORD PTR [rax+rcx*1-0x2]
+  4c80ec:	66 89 44 0f fe       	mov    WORD PTR [rdi+rcx*1-0x2],ax
+  4c80f1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c80f8:	01 53 1c             	add    DWORD PTR [rbx+0x1c],edx
+  4c80fb:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c80fe:	e9 49 ec ff ff       	jmp    4c6d4c <codo_load_pod_file+0x2ec>
+  4c8103:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c8108:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c810c:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c8110:	b8 04 00 00 00       	mov    eax,0x4
+  4c8115:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c811a:	b9 04 00 00 00       	mov    ecx,0x4
+  4c811f:	41 29 f7             	sub    r15d,esi
+  4c8122:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c8126:	41 83 ff 04          	cmp    r15d,0x4
+  4c812a:	44 0f 4f f8          	cmovg  r15d,eax
+  4c812e:	b8 00 00 00 00       	mov    eax,0x0
+  4c8133:	45 85 ff             	test   r15d,r15d
+  4c8136:	44 0f 48 f8          	cmovs  r15d,eax
+  4c813a:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c813e:	49 63 d7             	movsxd rdx,r15d
+  4c8141:	e8 ba bd f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8146:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c814b:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c814f:	45 01 cf             	add    r15d,r9d
+  4c8152:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c8156:	41 89 44 24 20       	mov    DWORD PTR [r12+0x20],eax
+  4c815b:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8162:	00 
+  4c8163:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8167:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c816b:	b8 04 00 00 00       	mov    eax,0x4
+  4c8170:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8175:	b9 04 00 00 00       	mov    ecx,0x4
+  4c817a:	41 29 f7             	sub    r15d,esi
+  4c817d:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c8181:	41 83 ff 04          	cmp    r15d,0x4
+  4c8185:	44 0f 4f f8          	cmovg  r15d,eax
+  4c8189:	b8 00 00 00 00       	mov    eax,0x0
+  4c818e:	45 85 ff             	test   r15d,r15d
+  4c8191:	44 0f 48 f8          	cmovs  r15d,eax
+  4c8195:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8199:	49 63 d7             	movsxd rdx,r15d
+  4c819c:	e8 5f bd f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c81a1:	44 8b 4c 24 20       	mov    r9d,DWORD PTR [rsp+0x20]
+  4c81a6:	45 01 cf             	add    r15d,r9d
+  4c81a9:	44 89 7b 1c          	mov    DWORD PTR [rbx+0x1c],r15d
+  4c81ad:	e9 5a ee ff ff       	jmp    4c700c <codo_load_pod_file+0x5ac>
+  4c81b2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c81b8:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c81bc:	44 8b 6b 18          	mov    r13d,DWORD PTR [rbx+0x18]
+  4c81c0:	b8 04 00 00 00       	mov    eax,0x4
+  4c81c5:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c81ca:	b9 04 00 00 00       	mov    ecx,0x4
+  4c81cf:	41 29 f5             	sub    r13d,esi
+  4c81d2:	49 89 f7             	mov    r15,rsi
+  4c81d5:	41 83 fd 04          	cmp    r13d,0x4
+  4c81d9:	44 0f 4f e8          	cmovg  r13d,eax
+  4c81dd:	45 85 ed             	test   r13d,r13d
+  4c81e0:	45 0f 48 ec          	cmovs  r13d,r12d
+  4c81e4:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c81e8:	49 63 d5             	movsxd rdx,r13d
+  4c81eb:	45 01 fd             	add    r13d,r15d
+  4c81ee:	e8 0d bd f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c81f3:	44 8b 64 24 44       	mov    r12d,DWORD PTR [rsp+0x44]
+  4c81f8:	44 89 6b 1c          	mov    DWORD PTR [rbx+0x1c],r13d
+  4c81fc:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8203:	00 
+  4c8204:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8208:	44 8b 6b 18          	mov    r13d,DWORD PTR [rbx+0x18]
+  4c820c:	b8 04 00 00 00       	mov    eax,0x4
+  4c8211:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8216:	b9 04 00 00 00       	mov    ecx,0x4
+  4c821b:	41 29 f5             	sub    r13d,esi
+  4c821e:	49 89 f7             	mov    r15,rsi
+  4c8221:	41 83 fd 04          	cmp    r13d,0x4
+  4c8225:	44 0f 4f e8          	cmovg  r13d,eax
+  4c8229:	b8 00 00 00 00       	mov    eax,0x0
+  4c822e:	45 85 ed             	test   r13d,r13d
+  4c8231:	44 0f 48 e8          	cmovs  r13d,eax
+  4c8235:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8239:	49 63 d5             	movsxd rdx,r13d
+  4c823c:	45 01 fd             	add    r13d,r15d
+  4c823f:	e8 bc bc f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8244:	44 8b 4c 24 44       	mov    r9d,DWORD PTR [rsp+0x44]
+  4c8249:	44 89 6b 1c          	mov    DWORD PTR [rbx+0x1c],r13d
+  4c824d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8254:	00 
+  4c8255:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8259:	44 8b 6b 18          	mov    r13d,DWORD PTR [rbx+0x18]
+  4c825d:	b8 04 00 00 00       	mov    eax,0x4
+  4c8262:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8267:	b9 04 00 00 00       	mov    ecx,0x4
+  4c826c:	44 89 4c 24 20       	mov    DWORD PTR [rsp+0x20],r9d
+  4c8271:	41 29 f5             	sub    r13d,esi
+  4c8274:	49 89 f7             	mov    r15,rsi
+  4c8277:	41 83 fd 04          	cmp    r13d,0x4
+  4c827b:	44 0f 4f e8          	cmovg  r13d,eax
+  4c827f:	b8 00 00 00 00       	mov    eax,0x0
+  4c8284:	45 85 ed             	test   r13d,r13d
+  4c8287:	44 0f 48 e8          	cmovs  r13d,eax
+  4c828b:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c828f:	49 63 d5             	movsxd rdx,r13d
+  4c8292:	45 01 fd             	add    r13d,r15d
+  4c8295:	e8 66 bc f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c829a:	44 89 6b 1c          	mov    DWORD PTR [rbx+0x1c],r13d
+  4c829e:	e9 e6 ec ff ff       	jmp    4c6f89 <codo_load_pod_file+0x529>
+  4c82a3:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c82a8:	48 89 da             	mov    rdx,rbx
+  4c82ab:	be 01 00 00 00       	mov    esi,0x1
+  4c82b0:	4c 89 ff             	mov    rdi,r15
+  4c82b3:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c82ba:	00 
+  4c82bb:	e8 f0 7f ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c82c0:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c82c4:	48 89 da             	mov    rdx,rbx
+  4c82c7:	be 01 00 00 00       	mov    esi,0x1
+  4c82cc:	4c 89 ff             	mov    rdi,r15
+  4c82cf:	89 45 08             	mov    DWORD PTR [rbp+0x8],eax
+  4c82d2:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c82d9:	00 
+  4c82da:	e8 d1 7f ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c82df:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c82e3:	48 89 da             	mov    rdx,rbx
+  4c82e6:	be 01 00 00 00       	mov    esi,0x1
+  4c82eb:	4c 89 ff             	mov    rdi,r15
+  4c82ee:	89 45 0c             	mov    DWORD PTR [rbp+0xc],eax
+  4c82f1:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c82f8:	00 
+  4c82f9:	e8 b2 7f ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c82fe:	48 89 da             	mov    rdx,rbx
+  4c8301:	be 01 00 00 00       	mov    esi,0x1
+  4c8306:	4c 89 ff             	mov    rdi,r15
+  4c8309:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8310:	00 
+  4c8311:	e8 9a 7f ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c8316:	48 89 ef             	mov    rdi,rbp
+  4c8319:	e8 72 e7 03 00       	call   506a90 <codo_sound_lock>
+  4c831e:	8b 75 00             	mov    esi,DWORD PTR [rbp+0x0]
+  4c8321:	48 89 d9             	mov    rcx,rbx
+  4c8324:	48 89 c7             	mov    rdi,rax
+  4c8327:	0f af 75 04          	imul   esi,DWORD PTR [rbp+0x4]
+  4c832b:	89 f2                	mov    edx,esi
+  4c832d:	8d 76 07             	lea    esi,[rsi+0x7]
+  4c8330:	85 d2                	test   edx,edx
+  4c8332:	0f 49 f2             	cmovns esi,edx
+  4c8335:	ba 01 00 00 00       	mov    edx,0x1
+  4c833a:	c1 fe 03             	sar    esi,0x3
+  4c833d:	e8 0e be ff ff       	call   4c4150 <codo_fread>
+  4c8342:	48 89 ef             	mov    rdi,rbp
+  4c8345:	e8 56 e7 03 00       	call   506aa0 <codo_sound_release>
+  4c834a:	8b 75 08             	mov    esi,DWORD PTR [rbp+0x8]
+  4c834d:	48 89 ef             	mov    rdi,rbp
+  4c8350:	e8 5b e7 03 00       	call   506ab0 <csound_set_frequency>
+  4c8355:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c835a:	48 89 ea             	mov    rdx,rbp
+  4c835d:	be 09 00 00 00       	mov    esi,0x9
+  4c8362:	e8 d9 4a ff ff       	call   4bce40 <cpod_add_item>
+  4c8367:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c836a:	e9 7c eb ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c836f:	90                   	nop
+  4c8370:	45 8b 5d 08          	mov    r11d,DWORD PTR [r13+0x8]
+  4c8374:	45 85 db             	test   r11d,r11d
+  4c8377:	0f 8e 6f f9 ff ff    	jle    4c7cec <codo_load_pod_file+0x128c>
+  4c837d:	31 ed                	xor    ebp,ebp
+  4c837f:	45 31 e4             	xor    r12d,r12d
+  4c8382:	e9 ed 00 00 00       	jmp    4c8474 <codo_load_pod_file+0x1a14>
+  4c8387:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  4c838e:	00 00 
+  4c8390:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8394:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8399:	be 02 00 00 00       	mov    esi,0x2
+  4c839e:	ba 01 00 00 00       	mov    edx,0x1
+  4c83a3:	e8 38 c0 f3 ff       	call   4043e0 <fread@plt>
+  4c83a8:	4d 8b 45 28          	mov    r8,QWORD PTR [r13+0x28]
+  4c83ac:	8b 33                	mov    esi,DWORD PTR [rbx]
+  4c83ae:	45 31 c9             	xor    r9d,r9d
+  4c83b1:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c83b6:	4d 01 f0             	add    r8,r14
+  4c83b9:	85 f6                	test   esi,esi
+  4c83bb:	66 41 89 07          	mov    WORD PTR [r15],ax
+  4c83bf:	66 44 89 4c 24 44    	mov    WORD PTR [rsp+0x44],r9w
+  4c83c5:	0f 85 a4 10 00 00    	jne    4c946f <codo_load_pod_file+0x2a0f>
+  4c83cb:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c83cf:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c83d4:	be 02 00 00 00       	mov    esi,0x2
+  4c83d9:	ba 01 00 00 00       	mov    edx,0x1
+  4c83de:	4c 89 44 24 20       	mov    QWORD PTR [rsp+0x20],r8
+  4c83e3:	e8 f8 bf f3 ff       	call   4043e0 <fread@plt>
+  4c83e8:	4d 8b 7d 28          	mov    r15,QWORD PTR [r13+0x28]
+  4c83ec:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c83f1:	8b 33                	mov    esi,DWORD PTR [rbx]
+  4c83f3:	4c 8b 44 24 20       	mov    r8,QWORD PTR [rsp+0x20]
+  4c83f8:	4d 01 f7             	add    r15,r14
+  4c83fb:	66 41 89 40 02       	mov    WORD PTR [r8+0x2],ax
+  4c8400:	41 8b 45 20          	mov    eax,DWORD PTR [r13+0x20]
+  4c8404:	41 0f b7 17          	movzx  edx,WORD PTR [r15]
+  4c8408:	8d 48 ff             	lea    ecx,[rax-0x1]
+  4c840b:	41 0f b7 47 02       	movzx  eax,WORD PTR [r15+0x2]
+  4c8410:	39 ca                	cmp    edx,ecx
+  4c8412:	0f 4f d1             	cmovg  edx,ecx
+  4c8415:	85 d2                	test   edx,edx
+  4c8417:	41 0f 48 d4          	cmovs  edx,r12d
+  4c841b:	39 c8                	cmp    eax,ecx
+  4c841d:	0f 4f c1             	cmovg  eax,ecx
+  4c8420:	66 41 89 17          	mov    WORD PTR [r15],dx
+  4c8424:	85 c0                	test   eax,eax
+  4c8426:	41 0f 48 c4          	cmovs  eax,r12d
+  4c842a:	85 f6                	test   esi,esi
+  4c842c:	66 41 89 47 02       	mov    WORD PTR [r15+0x2],ax
+  4c8431:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8438:	00 
+  4c8439:	0f 85 81 00 00 00    	jne    4c84c0 <codo_load_pod_file+0x1a60>
+  4c843f:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8443:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8448:	ba 01 00 00 00       	mov    edx,0x1
+  4c844d:	be 04 00 00 00       	mov    esi,0x4
+  4c8452:	e8 89 bf f3 ff       	call   4043e0 <fread@plt>
+  4c8457:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c845d:	8d 45 01             	lea    eax,[rbp+0x1]
+  4c8460:	48 83 c5 01          	add    rbp,0x1
+  4c8464:	41 39 45 08          	cmp    DWORD PTR [r13+0x8],eax
+  4c8468:	f3 41 0f 11 47 04    	movss  DWORD PTR [r15+0x4],xmm0
+  4c846e:	0f 8e 78 f8 ff ff    	jle    4c7cec <codo_load_pod_file+0x128c>
+  4c8474:	4d 8b 7d 28          	mov    r15,QWORD PTR [r13+0x28]
+  4c8478:	8b 33                	mov    esi,DWORD PTR [rbx]
+  4c847a:	49 89 ee             	mov    r14,rbp
+  4c847d:	49 c1 e6 05          	shl    r14,0x5
+  4c8481:	45 31 d2             	xor    r10d,r10d
+  4c8484:	66 44 89 54 24 44    	mov    WORD PTR [rsp+0x44],r10w
+  4c848a:	4d 01 f7             	add    r15,r14
+  4c848d:	85 f6                	test   esi,esi
+  4c848f:	0f 84 fb fe ff ff    	je     4c8390 <codo_load_pod_file+0x1930>
+  4c8495:	83 fe 01             	cmp    esi,0x1
+  4c8498:	0f 84 65 0a 00 00    	je     4c8f03 <codo_load_pod_file+0x24a3>
+  4c849e:	31 c0                	xor    eax,eax
+  4c84a0:	4d 89 f8             	mov    r8,r15
+  4c84a3:	66 41 89 07          	mov    WORD PTR [r15],ax
+  4c84a7:	31 c0                	xor    eax,eax
+  4c84a9:	e9 4d ff ff ff       	jmp    4c83fb <codo_load_pod_file+0x199b>
+  4c84ae:	66 90                	xchg   ax,ax
+  4c84b0:	e8 4b e4 ff ff       	call   4c6900 <codo_fread_lz4>
+  4c84b5:	e9 44 f4 ff ff       	jmp    4c78fe <codo_load_pod_file+0xe9e>
+  4c84ba:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c84c0:	83 fe 01             	cmp    esi,0x1
+  4c84c3:	66 0f ef c0          	pxor   xmm0,xmm0
+  4c84c7:	75 94                	jne    4c845d <codo_load_pod_file+0x19fd>
+  4c84c9:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c84cd:	44 8b 73 18          	mov    r14d,DWORD PTR [rbx+0x18]
+  4c84d1:	b8 04 00 00 00       	mov    eax,0x4
+  4c84d6:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c84db:	b9 04 00 00 00       	mov    ecx,0x4
+  4c84e0:	41 29 f6             	sub    r14d,esi
+  4c84e3:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c84e7:	41 83 fe 04          	cmp    r14d,0x4
+  4c84eb:	44 0f 4f f0          	cmovg  r14d,eax
+  4c84ef:	45 85 f6             	test   r14d,r14d
+  4c84f2:	45 0f 48 f4          	cmovs  r14d,r12d
+  4c84f6:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c84fa:	49 63 d6             	movsxd rdx,r14d
+  4c84fd:	e8 fe b9 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8502:	44 8b 44 24 20       	mov    r8d,DWORD PTR [rsp+0x20]
+  4c8507:	f3 0f 10 44 24 44    	movss  xmm0,DWORD PTR [rsp+0x44]
+  4c850d:	45 01 f0             	add    r8d,r14d
+  4c8510:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c8514:	e9 44 ff ff ff       	jmp    4c845d <codo_load_pod_file+0x19fd>
+  4c8519:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  4c8520:	83 f8 01             	cmp    eax,0x1
+  4c8523:	0f 85 56 0e 00 00    	jne    4c937f <codo_load_pod_file+0x291f>
+  4c8529:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c852d:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c8531:	b8 04 00 00 00       	mov    eax,0x4
+  4c8536:	b9 04 00 00 00       	mov    ecx,0x4
+  4c853b:	4c 89 e7             	mov    rdi,r12
+  4c853e:	41 29 f5             	sub    r13d,esi
+  4c8541:	49 89 f6             	mov    r14,rsi
+  4c8544:	41 83 fd 04          	cmp    r13d,0x4
+  4c8548:	44 0f 4f e8          	cmovg  r13d,eax
+  4c854c:	b8 00 00 00 00       	mov    eax,0x0
+  4c8551:	45 85 ed             	test   r13d,r13d
+  4c8554:	44 0f 48 e8          	cmovs  r13d,eax
+  4c8558:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c855c:	49 63 d5             	movsxd rdx,r13d
+  4c855f:	45 01 f5             	add    r13d,r14d
+  4c8562:	e8 99 b9 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8567:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c856b:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c856f:	89 45 44             	mov    DWORD PTR [rbp+0x44],eax
+  4c8572:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8579:	00 
+  4c857a:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c857e:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c8582:	b8 04 00 00 00       	mov    eax,0x4
+  4c8587:	b9 04 00 00 00       	mov    ecx,0x4
+  4c858c:	4c 89 e7             	mov    rdi,r12
+  4c858f:	41 29 f5             	sub    r13d,esi
+  4c8592:	49 89 f6             	mov    r14,rsi
+  4c8595:	41 83 fd 04          	cmp    r13d,0x4
+  4c8599:	44 0f 4f e8          	cmovg  r13d,eax
+  4c859d:	b8 00 00 00 00       	mov    eax,0x0
+  4c85a2:	45 85 ed             	test   r13d,r13d
+  4c85a5:	44 0f 48 e8          	cmovs  r13d,eax
+  4c85a9:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c85ad:	49 63 d5             	movsxd rdx,r13d
+  4c85b0:	45 01 f5             	add    r13d,r14d
+  4c85b3:	e8 48 b9 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c85b8:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c85bc:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c85c0:	89 45 48             	mov    DWORD PTR [rbp+0x48],eax
+  4c85c3:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c85ca:	00 
+  4c85cb:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c85cf:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c85d3:	b8 04 00 00 00       	mov    eax,0x4
+  4c85d8:	b9 04 00 00 00       	mov    ecx,0x4
+  4c85dd:	4c 89 e7             	mov    rdi,r12
+  4c85e0:	41 29 f5             	sub    r13d,esi
+  4c85e3:	49 89 f6             	mov    r14,rsi
+  4c85e6:	41 83 fd 04          	cmp    r13d,0x4
+  4c85ea:	44 0f 4f e8          	cmovg  r13d,eax
+  4c85ee:	b8 00 00 00 00       	mov    eax,0x0
+  4c85f3:	45 85 ed             	test   r13d,r13d
+  4c85f6:	44 0f 48 e8          	cmovs  r13d,eax
+  4c85fa:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c85fe:	49 63 d5             	movsxd rdx,r13d
+  4c8601:	45 01 f5             	add    r13d,r14d
+  4c8604:	e8 f7 b8 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8609:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c860d:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c8611:	89 45 4c             	mov    DWORD PTR [rbp+0x4c],eax
+  4c8614:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c861b:	00 
+  4c861c:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c8620:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c8624:	b8 04 00 00 00       	mov    eax,0x4
+  4c8629:	b9 04 00 00 00       	mov    ecx,0x4
+  4c862e:	4c 89 e7             	mov    rdi,r12
+  4c8631:	41 29 f5             	sub    r13d,esi
+  4c8634:	49 89 f6             	mov    r14,rsi
+  4c8637:	41 83 fd 04          	cmp    r13d,0x4
+  4c863b:	44 0f 4f e8          	cmovg  r13d,eax
+  4c863f:	b8 00 00 00 00       	mov    eax,0x0
+  4c8644:	45 85 ed             	test   r13d,r13d
+  4c8647:	44 0f 48 e8          	cmovs  r13d,eax
+  4c864b:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c864f:	49 63 d5             	movsxd rdx,r13d
+  4c8652:	45 01 f5             	add    r13d,r14d
+  4c8655:	e8 a6 b8 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c865a:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c865e:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c8662:	89 45 78             	mov    DWORD PTR [rbp+0x78],eax
+  4c8665:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c866c:	00 
+  4c866d:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c8671:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c8675:	b8 04 00 00 00       	mov    eax,0x4
+  4c867a:	b9 04 00 00 00       	mov    ecx,0x4
+  4c867f:	4c 89 e7             	mov    rdi,r12
+  4c8682:	41 29 f5             	sub    r13d,esi
+  4c8685:	49 89 f6             	mov    r14,rsi
+  4c8688:	41 83 fd 04          	cmp    r13d,0x4
+  4c868c:	44 0f 4f e8          	cmovg  r13d,eax
+  4c8690:	b8 00 00 00 00       	mov    eax,0x0
+  4c8695:	45 85 ed             	test   r13d,r13d
+  4c8698:	44 0f 48 e8          	cmovs  r13d,eax
+  4c869c:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c86a0:	49 63 d5             	movsxd rdx,r13d
+  4c86a3:	45 01 f5             	add    r13d,r14d
+  4c86a6:	e8 55 b8 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c86ab:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c86af:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c86b3:	89 45 7c             	mov    DWORD PTR [rbp+0x7c],eax
+  4c86b6:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c86bd:	00 
+  4c86be:	49 63 77 1c          	movsxd rsi,DWORD PTR [r15+0x1c]
+  4c86c2:	45 8b 6f 18          	mov    r13d,DWORD PTR [r15+0x18]
+  4c86c6:	b8 04 00 00 00       	mov    eax,0x4
+  4c86cb:	b9 04 00 00 00       	mov    ecx,0x4
+  4c86d0:	4c 89 e7             	mov    rdi,r12
+  4c86d3:	41 29 f5             	sub    r13d,esi
+  4c86d6:	49 89 f6             	mov    r14,rsi
+  4c86d9:	41 83 fd 04          	cmp    r13d,0x4
+  4c86dd:	44 0f 4f e8          	cmovg  r13d,eax
+  4c86e1:	b8 00 00 00 00       	mov    eax,0x0
+  4c86e6:	45 85 ed             	test   r13d,r13d
+  4c86e9:	44 0f 48 e8          	cmovs  r13d,eax
+  4c86ed:	49 03 77 10          	add    rsi,QWORD PTR [r15+0x10]
+  4c86f1:	49 63 d5             	movsxd rdx,r13d
+  4c86f4:	45 01 f5             	add    r13d,r14d
+  4c86f7:	e8 04 b8 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c86fc:	45 89 6f 1c          	mov    DWORD PTR [r15+0x1c],r13d
+  4c8700:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c8704:	b8 01 00 00 00       	mov    eax,0x1
+  4c8709:	e9 2d ef ff ff       	jmp    4c763b <codo_load_pod_file+0xbdb>
+  4c870e:	66 90                	xchg   ax,ax
+  4c8710:	49 63 4f 1c          	movsxd rcx,DWORD PTR [r15+0x1c]
+  4c8714:	41 8b 47 18          	mov    eax,DWORD PTR [r15+0x18]
+  4c8718:	be 20 00 00 00       	mov    esi,0x20
+  4c871d:	29 c8                	sub    eax,ecx
+  4c871f:	83 f8 20             	cmp    eax,0x20
+  4c8722:	0f 4f c6             	cmovg  eax,esi
+  4c8725:	be 00 00 00 00       	mov    esi,0x0
+  4c872a:	85 c0                	test   eax,eax
+  4c872c:	0f 48 c6             	cmovs  eax,esi
+  4c872f:	49 03 4f 10          	add    rcx,QWORD PTR [r15+0x10]
+  4c8733:	83 f8 08             	cmp    eax,0x8
+  4c8736:	0f 83 bc 06 00 00    	jae    4c8df8 <codo_load_pod_file+0x2398>
+  4c873c:	a8 04                	test   al,0x4
+  4c873e:	0f 85 b7 0b 00 00    	jne    4c92fb <codo_load_pod_file+0x289b>
+  4c8744:	85 c0                	test   eax,eax
+  4c8746:	74 20                	je     4c8768 <codo_load_pod_file+0x1d08>
+  4c8748:	0f b6 11             	movzx  edx,BYTE PTR [rcx]
+  4c874b:	a8 02                	test   al,0x2
+  4c874d:	88 55 00             	mov    BYTE PTR [rbp+0x0],dl
+  4c8750:	0f 84 e7 06 00 00    	je     4c8e3d <codo_load_pod_file+0x23dd>
+  4c8756:	89 c2                	mov    edx,eax
+  4c8758:	0f b7 4c 11 fe       	movzx  ecx,WORD PTR [rcx+rdx*1-0x2]
+  4c875d:	66 89 4c 15 fe       	mov    WORD PTR [rbp+rdx*1-0x2],cx
+  4c8762:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c8765:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c8768:	41 01 47 1c          	add    DWORD PTR [r15+0x1c],eax
+  4c876c:	85 d2                	test   edx,edx
+  4c876e:	48 8d 7d 20          	lea    rdi,[rbp+0x20]
+  4c8772:	89 d0                	mov    eax,edx
+  4c8774:	0f 84 8e ed ff ff    	je     4c7508 <codo_load_pod_file+0xaa8>
+  4c877a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c8780:	83 fa 01             	cmp    edx,0x1
+  4c8783:	0f 85 d0 ef ff ff    	jne    4c7759 <codo_load_pod_file+0xcf9>
+  4c8789:	49 63 47 1c          	movsxd rax,DWORD PTR [r15+0x1c]
+  4c878d:	be 20 00 00 00       	mov    esi,0x20
+  4c8792:	41 8b 4f 18          	mov    ecx,DWORD PTR [r15+0x18]
+  4c8796:	29 c1                	sub    ecx,eax
+  4c8798:	83 f9 20             	cmp    ecx,0x20
+  4c879b:	0f 4f ce             	cmovg  ecx,esi
+  4c879e:	be 00 00 00 00       	mov    esi,0x0
+  4c87a3:	85 c9                	test   ecx,ecx
+  4c87a5:	0f 48 ce             	cmovs  ecx,esi
+  4c87a8:	49 03 47 10          	add    rax,QWORD PTR [r15+0x10]
+  4c87ac:	83 f9 08             	cmp    ecx,0x8
+  4c87af:	0f 83 93 06 00 00    	jae    4c8e48 <codo_load_pod_file+0x23e8>
+  4c87b5:	f6 c1 04             	test   cl,0x4
+  4c87b8:	0f 85 26 0b 00 00    	jne    4c92e4 <codo_load_pod_file+0x2884>
+  4c87be:	85 c9                	test   ecx,ecx
+  4c87c0:	74 1e                	je     4c87e0 <codo_load_pod_file+0x1d80>
+  4c87c2:	0f b6 10             	movzx  edx,BYTE PTR [rax]
+  4c87c5:	f6 c1 02             	test   cl,0x2
+  4c87c8:	88 55 20             	mov    BYTE PTR [rbp+0x20],dl
+  4c87cb:	0f 84 bd 06 00 00    	je     4c8e8e <codo_load_pod_file+0x242e>
+  4c87d1:	89 ca                	mov    edx,ecx
+  4c87d3:	0f b7 44 10 fe       	movzx  eax,WORD PTR [rax+rdx*1-0x2]
+  4c87d8:	66 89 44 17 fe       	mov    WORD PTR [rdi+rdx*1-0x2],ax
+  4c87dd:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c87e0:	41 01 4f 1c          	add    DWORD PTR [r15+0x1c],ecx
+  4c87e4:	89 d0                	mov    eax,edx
+  4c87e6:	e9 33 ed ff ff       	jmp    4c751e <codo_load_pod_file+0xabe>
+  4c87eb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c87f0:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c87f4:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c87f7:	b8 02 00 00 00       	mov    eax,0x2
+  4c87fc:	b9 02 00 00 00       	mov    ecx,0x2
+  4c8801:	4c 89 f7             	mov    rdi,r14
+  4c8804:	29 f5                	sub    ebp,esi
+  4c8806:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c880a:	83 fd 02             	cmp    ebp,0x2
+  4c880d:	0f 4f e8             	cmovg  ebp,eax
+  4c8810:	b8 00 00 00 00       	mov    eax,0x0
+  4c8815:	85 ed                	test   ebp,ebp
+  4c8817:	0f 48 e8             	cmovs  ebp,eax
+  4c881a:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c881e:	45 31 ed             	xor    r13d,r13d
+  4c8821:	48 63 d5             	movsxd rdx,ebp
+  4c8824:	e8 d7 b6 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8829:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c882e:	44 8b 44 24 38       	mov    r8d,DWORD PTR [rsp+0x38]
+  4c8833:	44 01 c5             	add    ebp,r8d
+  4c8836:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c8839:	66 41 89 44 24 50    	mov    WORD PTR [r12+0x50],ax
+  4c883f:	66 44 89 6c 24 44    	mov    WORD PTR [rsp+0x44],r13w
+  4c8845:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8849:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c884c:	b8 02 00 00 00       	mov    eax,0x2
+  4c8851:	b9 02 00 00 00       	mov    ecx,0x2
+  4c8856:	4c 89 f7             	mov    rdi,r14
+  4c8859:	29 f5                	sub    ebp,esi
+  4c885b:	89 74 24 38          	mov    DWORD PTR [rsp+0x38],esi
+  4c885f:	83 fd 02             	cmp    ebp,0x2
+  4c8862:	0f 4f e8             	cmovg  ebp,eax
+  4c8865:	b8 00 00 00 00       	mov    eax,0x0
+  4c886a:	85 ed                	test   ebp,ebp
+  4c886c:	0f 48 e8             	cmovs  ebp,eax
+  4c886f:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8873:	48 63 d5             	movsxd rdx,ebp
+  4c8876:	e8 85 b6 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c887b:	44 8b 44 24 38       	mov    r8d,DWORD PTR [rsp+0x38]
+  4c8880:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c8885:	44 01 c5             	add    ebp,r8d
+  4c8888:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c888b:	e9 52 f2 ff ff       	jmp    4c7ae2 <codo_load_pod_file+0x1082>
+  4c8890:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c8892:	85 c0                	test   eax,eax
+  4c8894:	0f 84 9a 09 00 00    	je     4c9234 <codo_load_pod_file+0x27d4>
+  4c889a:	83 f8 01             	cmp    eax,0x1
+  4c889d:	0f 85 1c e2 ff ff    	jne    4c6abf <codo_load_pod_file+0x5f>
+  4c88a3:	83 6b 1c 08          	sub    DWORD PTR [rbx+0x1c],0x8
+  4c88a7:	e9 13 e2 ff ff       	jmp    4c6abf <codo_load_pod_file+0x5f>
+  4c88ac:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4c88b0:	31 ff                	xor    edi,edi
+  4c88b2:	e8 09 98 00 00       	call   4d20c0 <codo_create_synth>
+  4c88b7:	48 8b 7c 24 18       	mov    rdi,QWORD PTR [rsp+0x18]
+  4c88bc:	49 89 c7             	mov    r15,rax
+  4c88bf:	48 89 c2             	mov    rdx,rax
+  4c88c2:	be 0b 00 00 00       	mov    esi,0xb
+  4c88c7:	48 89 44 24 30       	mov    QWORD PTR [rsp+0x30],rax
+  4c88cc:	e8 6f 45 ff ff       	call   4bce40 <cpod_add_item>
+  4c88d1:	31 f6                	xor    esi,esi
+  4c88d3:	ba 20 2c 00 00       	mov    edx,0x2c20
+  4c88d8:	4c 89 ff             	mov    rdi,r15
+  4c88db:	e8 80 74 02 00       	call   4efd60 <codo_memset>
+  4c88e0:	4c 8b 74 24 08       	mov    r14,QWORD PTR [rsp+0x8]
+  4c88e5:	48 89 da             	mov    rdx,rbx
+  4c88e8:	be 01 00 00 00       	mov    esi,0x1
+  4c88ed:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c88f4:	00 
+  4c88f5:	4c 89 f7             	mov    rdi,r14
+  4c88f8:	e8 b3 79 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c88fd:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8901:	48 89 da             	mov    rdx,rbx
+  4c8904:	be 01 00 00 00       	mov    esi,0x1
+  4c8909:	4c 89 f7             	mov    rdi,r14
+  4c890c:	41 89 07             	mov    DWORD PTR [r15],eax
+  4c890f:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8916:	00 
+  4c8917:	e8 94 79 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c891c:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8920:	48 89 da             	mov    rdx,rbx
+  4c8923:	be 01 00 00 00       	mov    esi,0x1
+  4c8928:	4c 89 f7             	mov    rdi,r14
+  4c892b:	41 89 47 04          	mov    DWORD PTR [r15+0x4],eax
+  4c892f:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8936:	00 
+  4c8937:	e8 74 79 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c893c:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c8940:	48 89 da             	mov    rdx,rbx
+  4c8943:	be 01 00 00 00       	mov    esi,0x1
+  4c8948:	4c 89 f7             	mov    rdi,r14
+  4c894b:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8952:	00 
+  4c8953:	e8 58 79 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c8958:	85 ed                	test   ebp,ebp
+  4c895a:	75 0f                	jne    4c896b <codo_load_pod_file+0x1f0b>
+  4c895c:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c895f:	89 d0                	mov    eax,edx
+  4c8961:	c1 e8 1f             	shr    eax,0x1f
+  4c8964:	01 d0                	add    eax,edx
+  4c8966:	d1 f8                	sar    eax,1
+  4c8968:	41 89 07             	mov    DWORD PTR [r15],eax
+  4c896b:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8970:	48 89 da             	mov    rdx,rbx
+  4c8973:	be 01 00 00 00       	mov    esi,0x1
+  4c8978:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c897f:	00 
+  4c8980:	e8 2b 79 ff ff       	call   4c02b0 <codo_fread.constprop.13>
+  4c8985:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8989:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c898c:	85 c0                	test   eax,eax
+  4c898e:	0f 8e 57 e5 ff ff    	jle    4c6eeb <codo_load_pod_file+0x48b>
+  4c8994:	83 e8 01             	sub    eax,0x1
+  4c8997:	48 8b 7c 24 30       	mov    rdi,QWORD PTR [rsp+0x30]
+  4c899c:	45 31 ed             	xor    r13d,r13d
+  4c899f:	48 8d 14 80          	lea    rdx,[rax+rax*4]
+  4c89a3:	4c 89 6c 24 20       	mov    QWORD PTR [rsp+0x20],r13
+  4c89a8:	4c 8b 64 24 08       	mov    r12,QWORD PTR [rsp+0x8]
+  4c89ad:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c89b4:	00 
+  4c89b5:	48 8d 04 50          	lea    rax,[rax+rdx*2]
+  4c89b9:	48 8d af 14 01 00 00 	lea    rbp,[rdi+0x114]
+  4c89c0:	48 c1 e0 05          	shl    rax,0x5
+  4c89c4:	45 85 f6             	test   r14d,r14d
+  4c89c7:	48 8d 84 07 74 02 00 	lea    rax,[rdi+rax*1+0x274]
+  4c89ce:	00 
+  4c89cf:	48 89 44 24 28       	mov    QWORD PTR [rsp+0x28],rax
+  4c89d4:	0f 85 55 02 00 00    	jne    4c8c2f <codo_load_pod_file+0x21cf>
+  4c89da:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c89e0:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c89e4:	ba 01 00 00 00       	mov    edx,0x1
+  4c89e9:	be 04 00 00 00       	mov    esi,0x4
+  4c89ee:	4c 89 e7             	mov    rdi,r12
+  4c89f1:	e8 ea b9 f3 ff       	call   4043e0 <fread@plt>
+  4c89f6:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c89f8:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c89fc:	85 c0                	test   eax,eax
+  4c89fe:	89 95 f4 fe ff ff    	mov    DWORD PTR [rbp-0x10c],edx
+  4c8a04:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8a0b:	00 
+  4c8a0c:	0f 85 d5 09 00 00    	jne    4c93e7 <codo_load_pod_file+0x2987>
+  4c8a12:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8a16:	ba 01 00 00 00       	mov    edx,0x1
+  4c8a1b:	be 04 00 00 00       	mov    esi,0x4
+  4c8a20:	4c 89 e7             	mov    rdi,r12
+  4c8a23:	e8 b8 b9 f3 ff       	call   4043e0 <fread@plt>
+  4c8a28:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c8a2a:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c8a2e:	85 c0                	test   eax,eax
+  4c8a30:	89 95 f8 fe ff ff    	mov    DWORD PTR [rbp-0x108],edx
+  4c8a36:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8a3d:	00 
+  4c8a3e:	0f 85 9b 09 00 00    	jne    4c93df <codo_load_pod_file+0x297f>
+  4c8a44:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8a48:	ba 01 00 00 00       	mov    edx,0x1
+  4c8a4d:	be 04 00 00 00       	mov    esi,0x4
+  4c8a52:	4c 89 e7             	mov    rdi,r12
+  4c8a55:	e8 86 b9 f3 ff       	call   4043e0 <fread@plt>
+  4c8a5a:	8b 03                	mov    eax,DWORD PTR [rbx]
+  4c8a5c:	8b 54 24 44          	mov    edx,DWORD PTR [rsp+0x44]
+  4c8a60:	85 c0                	test   eax,eax
+  4c8a62:	89 95 fc fe ff ff    	mov    DWORD PTR [rbp-0x104],edx
+  4c8a68:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8a6f:	00 
+  4c8a70:	0f 85 96 09 00 00    	jne    4c940c <codo_load_pod_file+0x29ac>
+  4c8a76:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8a7a:	ba 01 00 00 00       	mov    edx,0x1
+  4c8a7f:	be 04 00 00 00       	mov    esi,0x4
+  4c8a84:	4c 89 e7             	mov    rdi,r12
+  4c8a87:	e8 54 b9 f3 ff       	call   4043e0 <fread@plt>
+  4c8a8c:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8a8f:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8a93:	45 85 f6             	test   r14d,r14d
+  4c8a96:	89 45 4c             	mov    DWORD PTR [rbp+0x4c],eax
+  4c8a99:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8aa0:	00 
+  4c8aa1:	0f 85 d1 01 00 00    	jne    4c8c78 <codo_load_pod_file+0x2218>
+  4c8aa7:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8aab:	ba 01 00 00 00       	mov    edx,0x1
+  4c8ab0:	be 04 00 00 00       	mov    esi,0x4
+  4c8ab5:	4c 89 e7             	mov    rdi,r12
+  4c8ab8:	e8 23 b9 f3 ff       	call   4043e0 <fread@plt>
+  4c8abd:	44 8b 74 24 44       	mov    r14d,DWORD PTR [rsp+0x44]
+  4c8ac2:	44 89 75 40          	mov    DWORD PTR [rbp+0x40],r14d
+  4c8ac6:	44 89 f6             	mov    esi,r14d
+  4c8ac9:	48 89 da             	mov    rdx,rbx
+  4c8acc:	48 89 ef             	mov    rdi,rbp
+  4c8acf:	e8 4c 78 ff ff       	call   4c0320 <codo_fread.constprop.14>
+  4c8ad4:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8ad7:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8ade:	00 
+  4c8adf:	45 85 f6             	test   r14d,r14d
+  4c8ae2:	0f 85 b8 02 00 00    	jne    4c8da0 <codo_load_pod_file+0x2340>
+  4c8ae8:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8aec:	ba 01 00 00 00       	mov    edx,0x1
+  4c8af1:	be 04 00 00 00       	mov    esi,0x4
+  4c8af6:	4c 89 e7             	mov    rdi,r12
+  4c8af9:	e8 e2 b8 f3 ff       	call   4043e0 <fread@plt>
+  4c8afe:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8b01:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8b05:	85 c0                	test   eax,eax
+  4c8b07:	0f 8e f9 00 00 00    	jle    4c8c06 <codo_load_pod_file+0x21a6>
+  4c8b0d:	83 e8 01             	sub    eax,0x1
+  4c8b10:	48 03 44 24 20       	add    rax,QWORD PTR [rsp+0x20]
+  4c8b15:	48 8b 7c 24 30       	mov    rdi,QWORD PTR [rsp+0x30]
+  4c8b1a:	4c 8d ad 00 ff ff ff 	lea    r13,[rbp-0x100]
+  4c8b21:	48 c1 e0 04          	shl    rax,0x4
+  4c8b25:	4c 8d 7c 07 24       	lea    r15,[rdi+rax*1+0x24]
+  4c8b2a:	e9 8b 00 00 00       	jmp    4c8bba <codo_load_pod_file+0x215a>
+  4c8b2f:	90                   	nop
+  4c8b30:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8b34:	ba 01 00 00 00       	mov    edx,0x1
+  4c8b39:	be 04 00 00 00       	mov    esi,0x4
+  4c8b3e:	4c 89 e7             	mov    rdi,r12
+  4c8b41:	e8 9a b8 f3 ff       	call   4043e0 <fread@plt>
+  4c8b46:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8b49:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8b4d:	45 85 f6             	test   r14d,r14d
+  4c8b50:	41 89 45 00          	mov    DWORD PTR [r13+0x0],eax
+  4c8b54:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8b5b:	00 
+  4c8b5c:	0f 85 bf 08 00 00    	jne    4c9421 <codo_load_pod_file+0x29c1>
+  4c8b62:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8b66:	ba 01 00 00 00       	mov    edx,0x1
+  4c8b6b:	be 04 00 00 00       	mov    esi,0x4
+  4c8b70:	4c 89 e7             	mov    rdi,r12
+  4c8b73:	e8 68 b8 f3 ff       	call   4043e0 <fread@plt>
+  4c8b78:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8b7b:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8b7f:	45 85 f6             	test   r14d,r14d
+  4c8b82:	41 89 45 08          	mov    DWORD PTR [r13+0x8],eax
+  4c8b86:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8b8d:	00 
+  4c8b8e:	75 5d                	jne    4c8bed <codo_load_pod_file+0x218d>
+  4c8b90:	48 8b 4b 08          	mov    rcx,QWORD PTR [rbx+0x8]
+  4c8b94:	ba 01 00 00 00       	mov    edx,0x1
+  4c8b99:	be 04 00 00 00       	mov    esi,0x4
+  4c8b9e:	4c 89 e7             	mov    rdi,r12
+  4c8ba1:	e8 3a b8 f3 ff       	call   4043e0 <fread@plt>
+  4c8ba6:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8baa:	44 8b 33             	mov    r14d,DWORD PTR [rbx]
+  4c8bad:	41 89 45 0c          	mov    DWORD PTR [r13+0xc],eax
+  4c8bb1:	49 83 c5 10          	add    r13,0x10
+  4c8bb5:	4d 39 ef             	cmp    r15,r13
+  4c8bb8:	74 4c                	je     4c8c06 <codo_load_pod_file+0x21a6>
+  4c8bba:	45 85 f6             	test   r14d,r14d
+  4c8bbd:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8bc4:	00 
+  4c8bc5:	0f 84 65 ff ff ff    	je     4c8b30 <codo_load_pod_file+0x20d0>
+  4c8bcb:	41 83 fe 01          	cmp    r14d,0x1
+  4c8bcf:	0f 84 bb 00 00 00    	je     4c8c90 <codo_load_pod_file+0x2230>
+  4c8bd5:	41 c7 45 00 00 00 00 	mov    DWORD PTR [r13+0x0],0x0
+  4c8bdc:	00 
+  4c8bdd:	41 c7 45 08 00 00 00 	mov    DWORD PTR [r13+0x8],0x0
+  4c8be4:	00 
+  4c8be5:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8bec:	00 
+  4c8bed:	41 83 fe 01          	cmp    r14d,0x1
+  4c8bf1:	0f 84 49 01 00 00    	je     4c8d40 <codo_load_pod_file+0x22e0>
+  4c8bf7:	31 c0                	xor    eax,eax
+  4c8bf9:	49 83 c5 10          	add    r13,0x10
+  4c8bfd:	41 89 45 fc          	mov    DWORD PTR [r13-0x4],eax
+  4c8c01:	4d 39 ef             	cmp    r15,r13
+  4c8c04:	75 b4                	jne    4c8bba <codo_load_pod_file+0x215a>
+  4c8c06:	48 81 c5 60 01 00 00 	add    rbp,0x160
+  4c8c0d:	48 83 44 24 20 16    	add    QWORD PTR [rsp+0x20],0x16
+  4c8c13:	48 39 6c 24 28       	cmp    QWORD PTR [rsp+0x28],rbp
+  4c8c18:	0f 84 cd e2 ff ff    	je     4c6eeb <codo_load_pod_file+0x48b>
+  4c8c1e:	45 85 f6             	test   r14d,r14d
+  4c8c21:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8c28:	00 
+  4c8c29:	0f 84 b1 fd ff ff    	je     4c89e0 <codo_load_pod_file+0x1f80>
+  4c8c2f:	41 83 fe 01          	cmp    r14d,0x1
+  4c8c33:	0f 84 db 03 00 00    	je     4c9014 <codo_load_pod_file+0x25b4>
+  4c8c39:	c7 85 f4 fe ff ff 00 	mov    DWORD PTR [rbp-0x10c],0x0
+  4c8c40:	00 00 00 
+  4c8c43:	c7 85 f8 fe ff ff 00 	mov    DWORD PTR [rbp-0x108],0x0
+  4c8c4a:	00 00 00 
+  4c8c4d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8c54:	00 
+  4c8c55:	41 83 fe 01          	cmp    r14d,0x1
+  4c8c59:	0f 84 61 04 00 00    	je     4c90c0 <codo_load_pod_file+0x2660>
+  4c8c5f:	c7 85 fc fe ff ff 00 	mov    DWORD PTR [rbp-0x104],0x0
+  4c8c66:	00 00 00 
+  4c8c69:	c7 45 4c 00 00 00 00 	mov    DWORD PTR [rbp+0x4c],0x0
+  4c8c70:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8c77:	00 
+  4c8c78:	41 83 fe 01          	cmp    r14d,0x1
+  4c8c7c:	0f 84 e7 04 00 00    	je     4c9169 <codo_load_pod_file+0x2709>
+  4c8c82:	45 31 f6             	xor    r14d,r14d
+  4c8c85:	e9 38 fe ff ff       	jmp    4c8ac2 <codo_load_pod_file+0x2062>
+  4c8c8a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4c8c90:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8c94:	44 8b 73 18          	mov    r14d,DWORD PTR [rbx+0x18]
+  4c8c98:	b8 04 00 00 00       	mov    eax,0x4
+  4c8c9d:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8ca2:	4c 89 e7             	mov    rdi,r12
+  4c8ca5:	41 29 f6             	sub    r14d,esi
+  4c8ca8:	89 74 24 08          	mov    DWORD PTR [rsp+0x8],esi
+  4c8cac:	41 83 fe 04          	cmp    r14d,0x4
+  4c8cb0:	44 0f 4f f0          	cmovg  r14d,eax
+  4c8cb4:	b8 00 00 00 00       	mov    eax,0x0
+  4c8cb9:	45 85 f6             	test   r14d,r14d
+  4c8cbc:	44 0f 48 f0          	cmovs  r14d,eax
+  4c8cc0:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8cc4:	49 63 d6             	movsxd rdx,r14d
+  4c8cc7:	e8 34 b2 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8ccc:	44 8b 44 24 08       	mov    r8d,DWORD PTR [rsp+0x8]
+  4c8cd1:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8cd5:	45 01 c6             	add    r14d,r8d
+  4c8cd8:	44 89 73 1c          	mov    DWORD PTR [rbx+0x1c],r14d
+  4c8cdc:	41 89 45 00          	mov    DWORD PTR [r13+0x0],eax
+  4c8ce0:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8ce7:	00 
+  4c8ce8:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8cec:	44 8b 73 18          	mov    r14d,DWORD PTR [rbx+0x18]
+  4c8cf0:	b8 04 00 00 00       	mov    eax,0x4
+  4c8cf5:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8cfa:	4c 89 e7             	mov    rdi,r12
+  4c8cfd:	41 29 f6             	sub    r14d,esi
+  4c8d00:	89 74 24 08          	mov    DWORD PTR [rsp+0x8],esi
+  4c8d04:	41 83 fe 04          	cmp    r14d,0x4
+  4c8d08:	44 0f 4f f0          	cmovg  r14d,eax
+  4c8d0c:	b8 00 00 00 00       	mov    eax,0x0
+  4c8d11:	45 85 f6             	test   r14d,r14d
+  4c8d14:	44 0f 48 f0          	cmovs  r14d,eax
+  4c8d18:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8d1c:	49 63 d6             	movsxd rdx,r14d
+  4c8d1f:	e8 dc b1 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8d24:	44 8b 44 24 08       	mov    r8d,DWORD PTR [rsp+0x8]
+  4c8d29:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8d2d:	45 01 c6             	add    r14d,r8d
+  4c8d30:	44 89 73 1c          	mov    DWORD PTR [rbx+0x1c],r14d
+  4c8d34:	41 89 45 08          	mov    DWORD PTR [r13+0x8],eax
+  4c8d38:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c8d3f:	00 
+  4c8d40:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8d44:	44 8b 73 18          	mov    r14d,DWORD PTR [rbx+0x18]
+  4c8d48:	b8 04 00 00 00       	mov    eax,0x4
+  4c8d4d:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8d52:	4c 89 e7             	mov    rdi,r12
+  4c8d55:	41 29 f6             	sub    r14d,esi
+  4c8d58:	89 74 24 08          	mov    DWORD PTR [rsp+0x8],esi
+  4c8d5c:	41 83 fe 04          	cmp    r14d,0x4
+  4c8d60:	44 0f 4f f0          	cmovg  r14d,eax
+  4c8d64:	b8 00 00 00 00       	mov    eax,0x0
+  4c8d69:	45 85 f6             	test   r14d,r14d
+  4c8d6c:	44 0f 48 f0          	cmovs  r14d,eax
+  4c8d70:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8d74:	49 63 d6             	movsxd rdx,r14d
+  4c8d77:	e8 84 b1 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8d7c:	44 8b 44 24 08       	mov    r8d,DWORD PTR [rsp+0x8]
+  4c8d81:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c8d85:	45 01 c6             	add    r14d,r8d
+  4c8d88:	44 89 73 1c          	mov    DWORD PTR [rbx+0x1c],r14d
+  4c8d8c:	41 be 01 00 00 00    	mov    r14d,0x1
+  4c8d92:	e9 16 fe ff ff       	jmp    4c8bad <codo_load_pod_file+0x214d>
+  4c8d97:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  4c8d9e:	00 00 
+  4c8da0:	41 83 fe 01          	cmp    r14d,0x1
+  4c8da4:	0f 85 5c fe ff ff    	jne    4c8c06 <codo_load_pod_file+0x21a6>
+  4c8daa:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8dae:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c8db2:	b8 04 00 00 00       	mov    eax,0x4
+  4c8db7:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8dbc:	4c 89 e7             	mov    rdi,r12
+  4c8dbf:	41 29 f7             	sub    r15d,esi
+  4c8dc2:	49 89 f5             	mov    r13,rsi
+  4c8dc5:	41 83 ff 04          	cmp    r15d,0x4
+  4c8dc9:	44 0f 4f f8          	cmovg  r15d,eax
+  4c8dcd:	b8 00 00 00 00       	mov    eax,0x0
+  4c8dd2:	45 85 ff             	test   r15d,r15d
+  4c8dd5:	44 0f 48 f8          	cmovs  r15d,eax
+  4c8dd9:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8ddd:	49 63 d7             	movsxd rdx,r15d
+  4c8de0:	e8 1b b1 f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8de5:	47 8d 4c 3d 00       	lea    r9d,[r13+r15*1+0x0]
+  4c8dea:	44 89 4b 1c          	mov    DWORD PTR [rbx+0x1c],r9d
+  4c8dee:	e9 0e fd ff ff       	jmp    4c8b01 <codo_load_pod_file+0x20a1>
+  4c8df3:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4c8df8:	48 8b 11             	mov    rdx,QWORD PTR [rcx]
+  4c8dfb:	48 89 55 00          	mov    QWORD PTR [rbp+0x0],rdx
+  4c8dff:	89 c2                	mov    edx,eax
+  4c8e01:	48 8b 74 11 f8       	mov    rsi,QWORD PTR [rcx+rdx*1-0x8]
+  4c8e06:	48 89 74 15 f8       	mov    QWORD PTR [rbp+rdx*1-0x8],rsi
+  4c8e0b:	48 8d 75 08          	lea    rsi,[rbp+0x8]
+  4c8e0f:	48 89 ea             	mov    rdx,rbp
+  4c8e12:	48 83 e6 f8          	and    rsi,0xfffffffffffffff8
+  4c8e16:	48 29 f2             	sub    rdx,rsi
+  4c8e19:	48 29 d1             	sub    rcx,rdx
+  4c8e1c:	01 c2                	add    edx,eax
+  4c8e1e:	83 e2 f8             	and    edx,0xfffffff8
+  4c8e21:	83 fa 08             	cmp    edx,0x8
+  4c8e24:	72 17                	jb     4c8e3d <codo_load_pod_file+0x23dd>
+  4c8e26:	83 e2 f8             	and    edx,0xfffffff8
+  4c8e29:	31 ff                	xor    edi,edi
+  4c8e2b:	41 89 f8             	mov    r8d,edi
+  4c8e2e:	83 c7 08             	add    edi,0x8
+  4c8e31:	4e 8b 0c 01          	mov    r9,QWORD PTR [rcx+r8*1]
+  4c8e35:	39 d7                	cmp    edi,edx
+  4c8e37:	4e 89 0c 06          	mov    QWORD PTR [rsi+r8*1],r9
+  4c8e3b:	72 ee                	jb     4c8e2b <codo_load_pod_file+0x23cb>
+  4c8e3d:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c8e40:	e9 23 f9 ff ff       	jmp    4c8768 <codo_load_pod_file+0x1d08>
+  4c8e45:	0f 1f 00             	nop    DWORD PTR [rax]
+  4c8e48:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  4c8e4b:	48 89 55 20          	mov    QWORD PTR [rbp+0x20],rdx
+  4c8e4f:	89 ca                	mov    edx,ecx
+  4c8e51:	48 8b 74 10 f8       	mov    rsi,QWORD PTR [rax+rdx*1-0x8]
+  4c8e56:	48 89 74 17 f8       	mov    QWORD PTR [rdi+rdx*1-0x8],rsi
+  4c8e5b:	48 8d 75 28          	lea    rsi,[rbp+0x28]
+  4c8e5f:	48 83 e6 f8          	and    rsi,0xfffffffffffffff8
+  4c8e63:	48 29 f7             	sub    rdi,rsi
+  4c8e66:	48 29 f8             	sub    rax,rdi
+  4c8e69:	48 89 c2             	mov    rdx,rax
+  4c8e6c:	8d 04 39             	lea    eax,[rcx+rdi*1]
+  4c8e6f:	83 e0 f8             	and    eax,0xfffffff8
+  4c8e72:	83 f8 08             	cmp    eax,0x8
+  4c8e75:	72 17                	jb     4c8e8e <codo_load_pod_file+0x242e>
+  4c8e77:	83 e0 f8             	and    eax,0xfffffff8
+  4c8e7a:	31 ff                	xor    edi,edi
+  4c8e7c:	41 89 f8             	mov    r8d,edi
+  4c8e7f:	83 c7 08             	add    edi,0x8
+  4c8e82:	4e 8b 0c 02          	mov    r9,QWORD PTR [rdx+r8*1]
+  4c8e86:	39 c7                	cmp    edi,eax
+  4c8e88:	4e 89 0c 06          	mov    QWORD PTR [rsi+r8*1],r9
+  4c8e8c:	72 ee                	jb     4c8e7c <codo_load_pod_file+0x241c>
+  4c8e8e:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c8e91:	e9 4a f9 ff ff       	jmp    4c87e0 <codo_load_pod_file+0x1d80>
+  4c8e96:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4c8e9d:	00 00 00 
+  4c8ea0:	48 8b 08             	mov    rcx,QWORD PTR [rax]
+  4c8ea3:	48 89 0f             	mov    QWORD PTR [rdi],rcx
+  4c8ea6:	89 d1                	mov    ecx,edx
+  4c8ea8:	48 8b 74 08 f8       	mov    rsi,QWORD PTR [rax+rcx*1-0x8]
+  4c8ead:	48 89 74 0f f8       	mov    QWORD PTR [rdi+rcx*1-0x8],rsi
+  4c8eb2:	48 8d 77 08          	lea    rsi,[rdi+0x8]
+  4c8eb6:	48 83 e6 f8          	and    rsi,0xfffffffffffffff8
+  4c8eba:	48 29 f7             	sub    rdi,rsi
+  4c8ebd:	48 29 f8             	sub    rax,rdi
+  4c8ec0:	48 89 c1             	mov    rcx,rax
+  4c8ec3:	8d 04 3a             	lea    eax,[rdx+rdi*1]
+  4c8ec6:	83 e0 f8             	and    eax,0xfffffff8
+  4c8ec9:	83 f8 08             	cmp    eax,0x8
+  4c8ecc:	0f 82 26 f2 ff ff    	jb     4c80f8 <codo_load_pod_file+0x1698>
+  4c8ed2:	83 e0 f8             	and    eax,0xfffffff8
+  4c8ed5:	31 ff                	xor    edi,edi
+  4c8ed7:	41 89 f8             	mov    r8d,edi
+  4c8eda:	83 c7 08             	add    edi,0x8
+  4c8edd:	4e 8b 0c 01          	mov    r9,QWORD PTR [rcx+r8*1]
+  4c8ee1:	39 c7                	cmp    edi,eax
+  4c8ee3:	4e 89 0c 06          	mov    QWORD PTR [rsi+r8*1],r9
+  4c8ee7:	72 ee                	jb     4c8ed7 <codo_load_pod_file+0x2477>
+  4c8ee9:	e9 0a f2 ff ff       	jmp    4c80f8 <codo_load_pod_file+0x1698>
+  4c8eee:	66 90                	xchg   ax,ax
+  4c8ef0:	48 c7 44 24 18 00 00 	mov    QWORD PTR [rsp+0x18],0x0
+  4c8ef7:	00 00 
+  4c8ef9:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c8efe:	e9 cc db ff ff       	jmp    4c6acf <codo_load_pod_file+0x6f>
+  4c8f03:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8f07:	44 8b 4b 18          	mov    r9d,DWORD PTR [rbx+0x18]
+  4c8f0b:	b8 02 00 00 00       	mov    eax,0x2
+  4c8f10:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8f15:	b9 02 00 00 00       	mov    ecx,0x2
+  4c8f1a:	41 29 f1             	sub    r9d,esi
+  4c8f1d:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c8f21:	41 83 f9 02          	cmp    r9d,0x2
+  4c8f25:	44 0f 4f c8          	cmovg  r9d,eax
+  4c8f29:	45 85 c9             	test   r9d,r9d
+  4c8f2c:	45 0f 48 cc          	cmovs  r9d,r12d
+  4c8f30:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8f34:	49 63 d1             	movsxd rdx,r9d
+  4c8f37:	44 89 4c 24 28       	mov    DWORD PTR [rsp+0x28],r9d
+  4c8f3c:	e8 bf af f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8f41:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c8f46:	44 8b 54 24 20       	mov    r10d,DWORD PTR [rsp+0x20]
+  4c8f4b:	31 ff                	xor    edi,edi
+  4c8f4d:	44 8b 4c 24 28       	mov    r9d,DWORD PTR [rsp+0x28]
+  4c8f52:	4d 8b 45 28          	mov    r8,QWORD PTR [r13+0x28]
+  4c8f56:	45 01 d1             	add    r9d,r10d
+  4c8f59:	4d 01 f0             	add    r8,r14
+  4c8f5c:	44 89 4b 1c          	mov    DWORD PTR [rbx+0x1c],r9d
+  4c8f60:	66 41 89 07          	mov    WORD PTR [r15],ax
+  4c8f64:	66 89 7c 24 44       	mov    WORD PTR [rsp+0x44],di
+  4c8f69:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8f6d:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c8f71:	b8 02 00 00 00       	mov    eax,0x2
+  4c8f76:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8f7b:	b9 02 00 00 00       	mov    ecx,0x2
+  4c8f80:	4c 89 44 24 28       	mov    QWORD PTR [rsp+0x28],r8
+  4c8f85:	41 29 f7             	sub    r15d,esi
+  4c8f88:	89 74 24 20          	mov    DWORD PTR [rsp+0x20],esi
+  4c8f8c:	41 83 ff 02          	cmp    r15d,0x2
+  4c8f90:	44 0f 4f f8          	cmovg  r15d,eax
+  4c8f94:	45 85 ff             	test   r15d,r15d
+  4c8f97:	45 0f 48 fc          	cmovs  r15d,r12d
+  4c8f9b:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8f9f:	49 63 d7             	movsxd rdx,r15d
+  4c8fa2:	e8 59 af f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c8fa7:	44 8b 54 24 20       	mov    r10d,DWORD PTR [rsp+0x20]
+  4c8fac:	0f b7 44 24 44       	movzx  eax,WORD PTR [rsp+0x44]
+  4c8fb1:	be 01 00 00 00       	mov    esi,0x1
+  4c8fb6:	4c 8b 44 24 28       	mov    r8,QWORD PTR [rsp+0x28]
+  4c8fbb:	45 01 fa             	add    r10d,r15d
+  4c8fbe:	4d 8b 7d 28          	mov    r15,QWORD PTR [r13+0x28]
+  4c8fc2:	44 89 53 1c          	mov    DWORD PTR [rbx+0x1c],r10d
+  4c8fc6:	4d 01 f7             	add    r15,r14
+  4c8fc9:	e9 2d f4 ff ff       	jmp    4c83fb <codo_load_pod_file+0x199b>
+  4c8fce:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c8fd2:	8b 6b 18             	mov    ebp,DWORD PTR [rbx+0x18]
+  4c8fd5:	b8 04 00 00 00       	mov    eax,0x4
+  4c8fda:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+  4c8fdf:	b9 04 00 00 00       	mov    ecx,0x4
+  4c8fe4:	29 f5                	sub    ebp,esi
+  4c8fe6:	49 89 f6             	mov    r14,rsi
+  4c8fe9:	83 fd 04             	cmp    ebp,0x4
+  4c8fec:	0f 4f e8             	cmovg  ebp,eax
+  4c8fef:	b8 00 00 00 00       	mov    eax,0x0
+  4c8ff4:	85 ed                	test   ebp,ebp
+  4c8ff6:	0f 48 e8             	cmovs  ebp,eax
+  4c8ff9:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c8ffd:	48 63 d5             	movsxd rdx,ebp
+  4c9000:	44 01 f5             	add    ebp,r14d
+  4c9003:	e8 f8 ae f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c9008:	89 6b 1c             	mov    DWORD PTR [rbx+0x1c],ebp
+  4c900b:	8b 6c 24 44          	mov    ebp,DWORD PTR [rsp+0x44]
+  4c900f:	e9 79 e0 ff ff       	jmp    4c708d <codo_load_pod_file+0x62d>
+  4c9014:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c9018:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c901c:	b8 04 00 00 00       	mov    eax,0x4
+  4c9021:	b9 04 00 00 00       	mov    ecx,0x4
+  4c9026:	4c 89 e7             	mov    rdi,r12
+  4c9029:	41 29 f7             	sub    r15d,esi
+  4c902c:	49 89 f5             	mov    r13,rsi
+  4c902f:	41 83 ff 04          	cmp    r15d,0x4
+  4c9033:	44 0f 4f f8          	cmovg  r15d,eax
+  4c9037:	b8 00 00 00 00       	mov    eax,0x0
+  4c903c:	45 85 ff             	test   r15d,r15d
+  4c903f:	44 0f 48 f8          	cmovs  r15d,eax
+  4c9043:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c9047:	49 63 d7             	movsxd rdx,r15d
+  4c904a:	e8 b1 ae f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c904f:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c9053:	47 8d 44 3d 00       	lea    r8d,[r13+r15*1+0x0]
+  4c9058:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c905c:	89 85 f4 fe ff ff    	mov    DWORD PTR [rbp-0x10c],eax
+  4c9062:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c9069:	00 
+  4c906a:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c906e:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c9072:	b8 04 00 00 00       	mov    eax,0x4
+  4c9077:	b9 04 00 00 00       	mov    ecx,0x4
+  4c907c:	4c 89 e7             	mov    rdi,r12
+  4c907f:	41 29 f7             	sub    r15d,esi
+  4c9082:	49 89 f5             	mov    r13,rsi
+  4c9085:	41 83 ff 04          	cmp    r15d,0x4
+  4c9089:	44 0f 4f f8          	cmovg  r15d,eax
+  4c908d:	b8 00 00 00 00       	mov    eax,0x0
+  4c9092:	45 85 ff             	test   r15d,r15d
+  4c9095:	44 0f 48 f8          	cmovs  r15d,eax
+  4c9099:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c909d:	49 63 d7             	movsxd rdx,r15d
+  4c90a0:	e8 5b ae f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c90a5:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c90a9:	47 8d 44 3d 00       	lea    r8d,[r13+r15*1+0x0]
+  4c90ae:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c90b2:	89 85 f8 fe ff ff    	mov    DWORD PTR [rbp-0x108],eax
+  4c90b8:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c90bf:	00 
+  4c90c0:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c90c4:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c90c8:	b8 04 00 00 00       	mov    eax,0x4
+  4c90cd:	b9 04 00 00 00       	mov    ecx,0x4
+  4c90d2:	4c 89 e7             	mov    rdi,r12
+  4c90d5:	41 29 f7             	sub    r15d,esi
+  4c90d8:	49 89 f5             	mov    r13,rsi
+  4c90db:	41 83 ff 04          	cmp    r15d,0x4
+  4c90df:	44 0f 4f f8          	cmovg  r15d,eax
+  4c90e3:	b8 00 00 00 00       	mov    eax,0x0
+  4c90e8:	45 85 ff             	test   r15d,r15d
+  4c90eb:	44 0f 48 f8          	cmovs  r15d,eax
+  4c90ef:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c90f3:	49 63 d7             	movsxd rdx,r15d
+  4c90f6:	e8 05 ae f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c90fb:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c90ff:	47 8d 44 3d 00       	lea    r8d,[r13+r15*1+0x0]
+  4c9104:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c9108:	89 85 fc fe ff ff    	mov    DWORD PTR [rbp-0x104],eax
+  4c910e:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c9115:	00 
+  4c9116:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c911a:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c911e:	b8 04 00 00 00       	mov    eax,0x4
+  4c9123:	b9 04 00 00 00       	mov    ecx,0x4
+  4c9128:	4c 89 e7             	mov    rdi,r12
+  4c912b:	41 29 f7             	sub    r15d,esi
+  4c912e:	49 89 f5             	mov    r13,rsi
+  4c9131:	41 83 ff 04          	cmp    r15d,0x4
+  4c9135:	44 0f 4f f8          	cmovg  r15d,eax
+  4c9139:	b8 00 00 00 00       	mov    eax,0x0
+  4c913e:	45 85 ff             	test   r15d,r15d
+  4c9141:	44 0f 48 f8          	cmovs  r15d,eax
+  4c9145:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c9149:	49 63 d7             	movsxd rdx,r15d
+  4c914c:	e8 af ad f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c9151:	8b 44 24 44          	mov    eax,DWORD PTR [rsp+0x44]
+  4c9155:	47 8d 44 3d 00       	lea    r8d,[r13+r15*1+0x0]
+  4c915a:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c915e:	89 45 4c             	mov    DWORD PTR [rbp+0x4c],eax
+  4c9161:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c9168:	00 
+  4c9169:	48 63 73 1c          	movsxd rsi,DWORD PTR [rbx+0x1c]
+  4c916d:	44 8b 7b 18          	mov    r15d,DWORD PTR [rbx+0x18]
+  4c9171:	b8 04 00 00 00       	mov    eax,0x4
+  4c9176:	b9 04 00 00 00       	mov    ecx,0x4
+  4c917b:	4c 89 e7             	mov    rdi,r12
+  4c917e:	41 29 f7             	sub    r15d,esi
+  4c9181:	49 89 f5             	mov    r13,rsi
+  4c9184:	41 83 ff 04          	cmp    r15d,0x4
+  4c9188:	44 0f 4f f8          	cmovg  r15d,eax
+  4c918c:	b8 00 00 00 00       	mov    eax,0x0
+  4c9191:	45 85 ff             	test   r15d,r15d
+  4c9194:	44 0f 48 f8          	cmovs  r15d,eax
+  4c9198:	48 03 73 10          	add    rsi,QWORD PTR [rbx+0x10]
+  4c919c:	49 63 d7             	movsxd rdx,r15d
+  4c919f:	e8 5c ad f3 ff       	call   403f00 <__memcpy_chk@plt>
+  4c91a4:	47 8d 44 3d 00       	lea    r8d,[r13+r15*1+0x0]
+  4c91a9:	44 8b 74 24 44       	mov    r14d,DWORD PTR [rsp+0x44]
+  4c91ae:	44 89 43 1c          	mov    DWORD PTR [rbx+0x1c],r8d
+  4c91b2:	e9 0b f9 ff ff       	jmp    4c8ac2 <codo_load_pod_file+0x2062>
+  4c91b7:	48 63 53 1c          	movsxd rdx,DWORD PTR [rbx+0x1c]
+  4c91bb:	8b 43 18             	mov    eax,DWORD PTR [rbx+0x18]
+  4c91be:	b9 00 03 00 00       	mov    ecx,0x300
+  4c91c3:	48 8b 73 10          	mov    rsi,QWORD PTR [rbx+0x10]
+  4c91c7:	29 d0                	sub    eax,edx
+  4c91c9:	3d 00 03 00 00       	cmp    eax,0x300
+  4c91ce:	0f 4f c1             	cmovg  eax,ecx
+  4c91d1:	b9 00 00 00 00       	mov    ecx,0x0
+  4c91d6:	85 c0                	test   eax,eax
+  4c91d8:	0f 48 c1             	cmovs  eax,ecx
+  4c91db:	48 01 d6             	add    rsi,rdx
+  4c91de:	83 f8 08             	cmp    eax,0x8
+  4c91e1:	73 22                	jae    4c9205 <codo_load_pod_file+0x27a5>
+  4c91e3:	a8 04                	test   al,0x4
+  4c91e5:	0f 85 3a 01 00 00    	jne    4c9325 <codo_load_pod_file+0x28c5>
+  4c91eb:	85 c0                	test   eax,eax
+  4c91ed:	74 0e                	je     4c91fd <codo_load_pod_file+0x279d>
+  4c91ef:	0f b6 16             	movzx  edx,BYTE PTR [rsi]
+  4c91f2:	a8 02                	test   al,0x2
+  4c91f4:	88 55 00             	mov    BYTE PTR [rbp+0x0],dl
+  4c91f7:	0f 85 3c 01 00 00    	jne    4c9339 <codo_load_pod_file+0x28d9>
+  4c91fd:	01 43 1c             	add    DWORD PTR [rbx+0x1c],eax
+  4c9200:	e9 20 e0 ff ff       	jmp    4c7225 <codo_load_pod_file+0x7c5>
+  4c9205:	48 8b 16             	mov    rdx,QWORD PTR [rsi]
+  4c9208:	48 8d 7d 08          	lea    rdi,[rbp+0x8]
+  4c920c:	48 83 e7 f8          	and    rdi,0xfffffffffffffff8
+  4c9210:	48 89 55 00          	mov    QWORD PTR [rbp+0x0],rdx
+  4c9214:	89 c2                	mov    edx,eax
+  4c9216:	48 8b 4c 16 f8       	mov    rcx,QWORD PTR [rsi+rdx*1-0x8]
+  4c921b:	48 89 4c 15 f8       	mov    QWORD PTR [rbp+rdx*1-0x8],rcx
+  4c9220:	48 89 ea             	mov    rdx,rbp
+  4c9223:	48 29 fa             	sub    rdx,rdi
+  4c9226:	8d 0c 10             	lea    ecx,[rax+rdx*1]
+  4c9229:	48 29 d6             	sub    rsi,rdx
+  4c922c:	c1 e9 03             	shr    ecx,0x3
+  4c922f:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+  4c9232:	eb c9                	jmp    4c91fd <codo_load_pod_file+0x279d>
+  4c9234:	48 8b 7b 08          	mov    rdi,QWORD PTR [rbx+0x8]
+  4c9238:	ba 01 00 00 00       	mov    edx,0x1
+  4c923d:	48 c7 c6 f8 ff ff ff 	mov    rsi,0xfffffffffffffff8
+  4c9244:	e8 17 ab f3 ff       	call   403d60 <fseek@plt>
+  4c9249:	e9 71 d8 ff ff       	jmp    4c6abf <codo_load_pod_file+0x5f>
+  4c924e:	48 63 53 1c          	movsxd rdx,DWORD PTR [rbx+0x1c]
+  4c9252:	8b 43 18             	mov    eax,DWORD PTR [rbx+0x18]
+  4c9255:	b9 60 00 00 00       	mov    ecx,0x60
+  4c925a:	48 8b 73 10          	mov    rsi,QWORD PTR [rbx+0x10]
+  4c925e:	29 d0                	sub    eax,edx
+  4c9260:	83 f8 60             	cmp    eax,0x60
+  4c9263:	0f 4f c1             	cmovg  eax,ecx
+  4c9266:	b9 00 00 00 00       	mov    ecx,0x0
+  4c926b:	85 c0                	test   eax,eax
+  4c926d:	0f 48 c1             	cmovs  eax,ecx
+  4c9270:	48 01 d6             	add    rsi,rdx
+  4c9273:	83 f8 08             	cmp    eax,0x8
+  4c9276:	73 3d                	jae    4c92b5 <codo_load_pod_file+0x2855>
+  4c9278:	a8 04                	test   al,0x4
+  4c927a:	0f 85 ca 00 00 00    	jne    4c934a <codo_load_pod_file+0x28ea>
+  4c9280:	85 c0                	test   eax,eax
+  4c9282:	74 0e                	je     4c9292 <codo_load_pod_file+0x2832>
+  4c9284:	0f b6 16             	movzx  edx,BYTE PTR [rsi]
+  4c9287:	a8 02                	test   al,0x2
+  4c9289:	88 55 00             	mov    BYTE PTR [rbp+0x0],dl
+  4c928c:	0f 85 cc 00 00 00    	jne    4c935e <codo_load_pod_file+0x28fe>
+  4c9292:	01 43 1c             	add    DWORD PTR [rbx+0x1c],eax
+  4c9295:	e9 03 e1 ff ff       	jmp    4c739d <codo_load_pod_file+0x93d>
+  4c929a:	48 89 c7             	mov    rdi,rax
+  4c929d:	e8 2e 35 ff ff       	call   4bc7d0 <codo_destroy_pod>
+  4c92a2:	48 c7 44 24 18 00 00 	mov    QWORD PTR [rsp+0x18],0x0
+  4c92a9:	00 00 
+  4c92ab:	48 8b 44 24 18       	mov    rax,QWORD PTR [rsp+0x18]
+  4c92b0:	e9 1a d8 ff ff       	jmp    4c6acf <codo_load_pod_file+0x6f>
+  4c92b5:	48 8b 16             	mov    rdx,QWORD PTR [rsi]
+  4c92b8:	48 8d 7d 08          	lea    rdi,[rbp+0x8]
+  4c92bc:	48 83 e7 f8          	and    rdi,0xfffffffffffffff8
+  4c92c0:	48 89 55 00          	mov    QWORD PTR [rbp+0x0],rdx
+  4c92c4:	89 c2                	mov    edx,eax
+  4c92c6:	48 8b 4c 16 f8       	mov    rcx,QWORD PTR [rsi+rdx*1-0x8]
+  4c92cb:	48 89 4c 15 f8       	mov    QWORD PTR [rbp+rdx*1-0x8],rcx
+  4c92d0:	48 89 ea             	mov    rdx,rbp
+  4c92d3:	48 29 fa             	sub    rdx,rdi
+  4c92d6:	8d 0c 10             	lea    ecx,[rax+rdx*1]
+  4c92d9:	48 29 d6             	sub    rsi,rdx
+  4c92dc:	c1 e9 03             	shr    ecx,0x3
+  4c92df:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+  4c92e2:	eb ae                	jmp    4c9292 <codo_load_pod_file+0x2832>
+  4c92e4:	8b 10                	mov    edx,DWORD PTR [rax]
+  4c92e6:	89 55 20             	mov    DWORD PTR [rbp+0x20],edx
+  4c92e9:	89 ca                	mov    edx,ecx
+  4c92eb:	8b 44 10 fc          	mov    eax,DWORD PTR [rax+rdx*1-0x4]
+  4c92ef:	89 44 17 fc          	mov    DWORD PTR [rdi+rdx*1-0x4],eax
+  4c92f3:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c92f6:	e9 e5 f4 ff ff       	jmp    4c87e0 <codo_load_pod_file+0x1d80>
+  4c92fb:	8b 11                	mov    edx,DWORD PTR [rcx]
+  4c92fd:	89 55 00             	mov    DWORD PTR [rbp+0x0],edx
+  4c9300:	89 c2                	mov    edx,eax
+  4c9302:	8b 4c 11 fc          	mov    ecx,DWORD PTR [rcx+rdx*1-0x4]
+  4c9306:	89 4c 15 fc          	mov    DWORD PTR [rbp+rdx*1-0x4],ecx
+  4c930a:	41 8b 17             	mov    edx,DWORD PTR [r15]
+  4c930d:	e9 56 f4 ff ff       	jmp    4c8768 <codo_load_pod_file+0x1d08>
+  4c9312:	8b 08                	mov    ecx,DWORD PTR [rax]
+  4c9314:	89 0f                	mov    DWORD PTR [rdi],ecx
+  4c9316:	89 d1                	mov    ecx,edx
+  4c9318:	8b 44 08 fc          	mov    eax,DWORD PTR [rax+rcx*1-0x4]
+  4c931c:	89 44 0f fc          	mov    DWORD PTR [rdi+rcx*1-0x4],eax
+  4c9320:	e9 d3 ed ff ff       	jmp    4c80f8 <codo_load_pod_file+0x1698>
+  4c9325:	8b 16                	mov    edx,DWORD PTR [rsi]
+  4c9327:	89 55 00             	mov    DWORD PTR [rbp+0x0],edx
+  4c932a:	89 c2                	mov    edx,eax
+  4c932c:	8b 4c 16 fc          	mov    ecx,DWORD PTR [rsi+rdx*1-0x4]
+  4c9330:	89 4c 15 fc          	mov    DWORD PTR [rbp+rdx*1-0x4],ecx
+  4c9334:	e9 c4 fe ff ff       	jmp    4c91fd <codo_load_pod_file+0x279d>
+  4c9339:	89 c2                	mov    edx,eax
+  4c933b:	0f b7 4c 16 fe       	movzx  ecx,WORD PTR [rsi+rdx*1-0x2]
+  4c9340:	66 89 4c 15 fe       	mov    WORD PTR [rbp+rdx*1-0x2],cx
+  4c9345:	e9 b3 fe ff ff       	jmp    4c91fd <codo_load_pod_file+0x279d>
+  4c934a:	8b 16                	mov    edx,DWORD PTR [rsi]
+  4c934c:	89 55 00             	mov    DWORD PTR [rbp+0x0],edx
+  4c934f:	89 c2                	mov    edx,eax
+  4c9351:	8b 4c 16 fc          	mov    ecx,DWORD PTR [rsi+rdx*1-0x4]
+  4c9355:	89 4c 15 fc          	mov    DWORD PTR [rbp+rdx*1-0x4],ecx
+  4c9359:	e9 34 ff ff ff       	jmp    4c9292 <codo_load_pod_file+0x2832>
+  4c935e:	89 c2                	mov    edx,eax
+  4c9360:	0f b7 4c 16 fe       	movzx  ecx,WORD PTR [rsi+rdx*1-0x2]
+  4c9365:	66 89 4c 15 fe       	mov    WORD PTR [rbp+rdx*1-0x2],cx
+  4c936a:	e9 23 ff ff ff       	jmp    4c9292 <codo_load_pod_file+0x2832>
+  4c936f:	31 c0                	xor    eax,eax
+  4c9371:	83 ea 01             	sub    edx,0x1
+  4c9374:	0f 84 cb f4 ff ff    	je     4c8845 <codo_load_pod_file+0x1de5>
+  4c937a:	e9 63 e7 ff ff       	jmp    4c7ae2 <codo_load_pod_file+0x1082>
+  4c937f:	c7 45 44 00 00 00 00 	mov    DWORD PTR [rbp+0x44],0x0
+  4c9386:	c7 45 48 00 00 00 00 	mov    DWORD PTR [rbp+0x48],0x0
+  4c938d:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c9394:	00 
+  4c9395:	83 f8 01             	cmp    eax,0x1
+  4c9398:	0f 84 2d f2 ff ff    	je     4c85cb <codo_load_pod_file+0x1b6b>
+  4c939e:	c7 45 4c 00 00 00 00 	mov    DWORD PTR [rbp+0x4c],0x0
+  4c93a5:	c7 45 78 00 00 00 00 	mov    DWORD PTR [rbp+0x78],0x0
+  4c93ac:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c93b3:	00 
+  4c93b4:	83 f8 01             	cmp    eax,0x1
+  4c93b7:	0f 84 b0 f2 ff ff    	je     4c866d <codo_load_pod_file+0x1c0d>
+  4c93bd:	c7 45 7c 00 00 00 00 	mov    DWORD PTR [rbp+0x7c],0x0
+  4c93c4:	31 d2                	xor    edx,edx
+  4c93c6:	e9 70 e2 ff ff       	jmp    4c763b <codo_load_pod_file+0xbdb>
+  4c93cb:	83 e8 01             	sub    eax,0x1
+  4c93ce:	0f 84 30 ee ff ff    	je     4c8204 <codo_load_pod_file+0x17a4>
+  4c93d4:	45 31 c9             	xor    r9d,r9d
+  4c93d7:	45 31 ed             	xor    r13d,r13d
+  4c93da:	e9 bf db ff ff       	jmp    4c6f9e <codo_load_pod_file+0x53e>
+  4c93df:	41 89 c6             	mov    r14d,eax
+  4c93e2:	e9 6e f8 ff ff       	jmp    4c8c55 <codo_load_pod_file+0x21f5>
+  4c93e7:	83 f8 01             	cmp    eax,0x1
+  4c93ea:	0f 84 7a fc ff ff    	je     4c906a <codo_load_pod_file+0x260a>
+  4c93f0:	c7 85 f8 fe ff ff 00 	mov    DWORD PTR [rbp-0x108],0x0
+  4c93f7:	00 00 00 
+  4c93fa:	c7 85 fc fe ff ff 00 	mov    DWORD PTR [rbp-0x104],0x0
+  4c9401:	00 00 00 
+  4c9404:	c7 44 24 44 00 00 00 	mov    DWORD PTR [rsp+0x44],0x0
+  4c940b:	00 
+  4c940c:	83 e8 01             	sub    eax,0x1
+  4c940f:	0f 84 01 fd ff ff    	je     4c9116 <codo_load_pod_file+0x26b6>
+  4c9415:	c7 45 4c 00 00 00 00 	mov    DWORD PTR [rbp+0x4c],0x0
+  4c941c:	e9 a1 f6 ff ff       	jmp    4c8ac2 <codo_load_pod_file+0x2062>
+  4c9421:	41 83 fe 01          	cmp    r14d,0x1
+  4c9425:	0f 84 bd f8 ff ff    	je     4c8ce8 <codo_load_pod_file+0x2288>
+  4c942b:	41 c7 45 08 00 00 00 	mov    DWORD PTR [r13+0x8],0x0
+  4c9432:	00 
+  4c9433:	31 c0                	xor    eax,eax
+  4c9435:	e9 73 f7 ff ff       	jmp    4c8bad <codo_load_pod_file+0x214d>
+  4c943a:	83 e8 01             	sub    eax,0x1
+  4c943d:	0f 84 59 ea ff ff    	je     4c7e9c <codo_load_pod_file+0x143c>
+  4c9443:	45 31 c9             	xor    r9d,r9d
+  4c9446:	45 31 e4             	xor    r12d,r12d
+  4c9449:	e9 fc d9 ff ff       	jmp    4c6e4a <codo_load_pod_file+0x3ea>
+  4c944e:	41 83 fe 01          	cmp    r14d,0x1
+  4c9452:	0f 84 4b ec ff ff    	je     4c80a3 <codo_load_pod_file+0x1643>
+  4c9458:	e9 8e da ff ff       	jmp    4c6eeb <codo_load_pod_file+0x48b>
+  4c945d:	83 e8 01             	sub    eax,0x1
+  4c9460:	66 0f ef c0          	pxor   xmm0,xmm0
+  4c9464:	0f 84 10 e9 ff ff    	je     4c7d7a <codo_load_pod_file+0x131a>
+  4c946a:	e9 25 e7 ff ff       	jmp    4c7b94 <codo_load_pod_file+0x1134>
+  4c946f:	83 fe 01             	cmp    esi,0x1
+  4c9472:	0f 84 f1 fa ff ff    	je     4c8f69 <codo_load_pod_file+0x2509>
+  4c9478:	4d 89 c7             	mov    r15,r8
+  4c947b:	31 c0                	xor    eax,eax
+  4c947d:	e9 79 ef ff ff       	jmp    4c83fb <codo_load_pod_file+0x199b>
+  4c9482:	83 e8 01             	sub    eax,0x1
+  4c9485:	0f 84 0f eb ff ff    	je     4c7f9a <codo_load_pod_file+0x153a>
+  4c948b:	e9 27 da ff ff       	jmp    4c6eb7 <codo_load_pod_file+0x457>
+  4c9490:	83 e8 01             	sub    eax,0x1
+  4c9493:	0f 84 ca ec ff ff    	je     4c8163 <codo_load_pod_file+0x1703>
+  4c9499:	e9 6e db ff ff       	jmp    4c700c <codo_load_pod_file+0x5ac>
+  4c949e:	e8 ed af f3 ff       	call   404490 <__stack_chk_fail@plt>
+
+Disassembly of section .fini:

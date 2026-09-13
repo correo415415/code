@@ -1,0 +1,1137 @@
+[
+  {
+    "source": "original/pico-8/pico8",
+    "size": 9377000,
+    "sha256": "a48bb8c4a36873c324990a265d0070bf9f8aba866071b33da80b4bcd729326c8",
+    "file": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=e18bccbcf438c0a11414e9cb928cbbbf64b8383f, with debug_info, not stripped",
+    "format": "ELF",
+    "Class": "ELF64",
+    "Machine": "Advanced Micro Devices X86-64",
+    "Type": "EXEC (Executable file)",
+    "Entry point address": "0x405230",
+    "has_debug_info": true,
+    "has_symbol_table": true,
+    "needed_libraries": [
+      "libm.so.6",
+      "libdl.so.2",
+      "libpthread.so.0",
+      "librt.so.1",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 5486,
+    "source_filenames": [
+      "SDL.c",
+      "SDL_RLEaccel.c",
+      "SDL_alsa_audio.c",
+      "SDL_assert.c",
+      "SDL_atomic.c",
+      "SDL_audio.c",
+      "SDL_audiocvt.c",
+      "SDL_audiodev.c",
+      "SDL_audiotypecvt.c",
+      "SDL_blendfillrect.c",
+      "SDL_blendline.c",
+      "SDL_blendpoint.c",
+      "SDL_blit.c",
+      "SDL_blit_0.c",
+      "SDL_blit_1.c",
+      "SDL_blit_A.c",
+      "SDL_blit_N.c",
+      "SDL_blit_auto.c",
+      "SDL_blit_copy.c",
+      "SDL_blit_slow.c",
+      "SDL_bmp.c",
+      "SDL_clipboard.c",
+      "SDL_clipboardevents.c",
+      "SDL_cpuinfo.c",
+      "SDL_dataqueue.c",
+      "SDL_dbus.c",
+      "SDL_diskaudio.c",
+      "SDL_drawline.c",
+      "SDL_drawpoint.c",
+      "SDL_dropevents.c",
+      "SDL_dspaudio.c",
+      "SDL_dummyaudio.c",
+      "SDL_dynapi.c",
+      "SDL_egl.c",
+      "SDL_error.c",
+      "SDL_events.c",
+      "SDL_fcitx.c",
+      "SDL_fillrect.c",
+      "SDL_gamecontroller.c",
+      "SDL_gesture.c",
+      "SDL_getenv.c",
+      "SDL_haptic.c",
+      "SDL_hints.c",
+      "SDL_ibus.c",
+      "SDL_iconv.c",
+      "SDL_ime.c",
+      "SDL_joystick.c",
+      "SDL_keyboard.c",
+      "SDL_log.c",
+      "SDL_malloc.c",
+      "SDL_mixer.c",
+      "SDL_mouse.c",
+      "SDL_nullevents.c",
+      "SDL_nullframebuffer.c",
+      "SDL_nullvideo.c",
+      "SDL_pixels.c",
+      "SDL_poll.c",
+      "SDL_power.c",
+      "SDL_pulseaudio.c",
+      "SDL_qsort.c",
+      "SDL_quit.c",
+      "SDL_rect.c",
+      "SDL_render.c",
+      "SDL_render_gl.c",
+      "SDL_render_gles2.c",
+      "SDL_render_sw.c",
+      "SDL_rotate.c",
+      "SDL_rwops.c",
+      "SDL_shaders_gl.c",
+      "SDL_shaders_gles2.c",
+      "SDL_shape.c",
+      "SDL_spinlock.c",
+      "SDL_stdlib.c",
+      "SDL_steamcontroller.c",
+      "SDL_stretch.c",
+      "SDL_string.c",
+      "SDL_surface.c",
+      "SDL_syscond.c",
+      "SDL_sysfilesystem.c",
+      "SDL_syshaptic.c",
+      "SDL_sysjoystick.c",
+      "SDL_sysloadso.c",
+      "SDL_sysmutex.c",
+      "SDL_syspower.c",
+      "SDL_syssem.c",
+      "SDL_systhread.c",
+      "SDL_systimer.c",
+      "SDL_systls.c",
+      "SDL_thread.c",
+      "SDL_timer.c",
+      "SDL_touch.c",
+      "SDL_udev.c",
+      "SDL_video.c",
+      "SDL_vulkan_utils.c",
+      "SDL_wave.c",
+      "SDL_windowevents.c",
+      "SDL_x11clipboard.c",
+      "SDL_x11dyn.c",
+      "SDL_x11events.c",
+      "SDL_x11framebuffer.c",
+      "SDL_x11keyboard.c",
+      "SDL_x11messagebox.c",
+      "SDL_x11modes.c",
+      "SDL_x11mouse.c",
+      "SDL_x11opengl.c",
+      "SDL_x11opengles.c",
+      "SDL_x11shape.c",
+      "SDL_x11touch.c",
+      "SDL_x11video.c",
+      "SDL_x11vulkan.c",
+      "SDL_x11window.c",
+      "SDL_x11xinput2.c",
+      "SDL_yuv.c",
+      "SDL_yuv_sw.c",
+      "anim.c",
+      "api.c",
+      "audio.c",
+      "blit.c",
+      "boot.c",
+      "button.c",
+      "cdata.c",
+      "codo.c",
+      "compress.c",
+      "crtstuff.c",
+      "ctext.c",
+      "dbmp.c",
+      "disk.c",
+      "edid-parse.c",
+      "edit.c",
+      "editsfx.c",
+      "export.c",
+      "export_b.c",
+      "fill.c",
+      "gfx.c",
+      "gif_lib.c",
+      "gpio.c",
+      "gui.c",
+      "help.c",
+      "imKStoUCS.c",
+      "include.c",
+      "install.c",
+      "keyconfig.c",
+      "keys0.c",
+      "lodepng.c",
+      "lua1.c",
+      "lz4.c",
+      "lz4hc.c",
+      "map.c",
+      "math.c",
+      "mem.c",
+      "miniz.c",
+      "misc.c",
+      "model.c",
+      "mouse0.c",
+      "p_common.c",
+      "pico8.c",
+      "pod.c",
+      "pre.c",
+      "run.c",
+      "sdl2.c",
+      "serial.c",
+      "sha1.c",
+      "splore.c",
+      "sprite32.c",
+      "sprite8.c",
+      "sprite8h.c",
+      "stable.c",
+      "string.c",
+      "synth.c",
+      "text.c",
+      "token.c",
+      "undo.c",
+      "vdisk.c",
+      "video.c",
+      "xm.c",
+      "yuv_rgb.c"
+    ],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ],
+    "dwarf_compile_units": [
+      "/home/zep/prog/SDL2-2.0.8/src/dynapi/SDL_dynapi.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_events.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_gesture.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_keyboard.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_mouse.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_quit.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_touch.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_windowevents.c",
+      "/home/zep/prog/SDL2-2.0.8/src/file/SDL_rwops.c",
+      "/home/zep/prog/SDL2-2.0.8/src/haptic/SDL_haptic.c",
+      "/home/zep/prog/SDL2-2.0.8/src/joystick/SDL_gamecontroller.c",
+      "/home/zep/prog/SDL2-2.0.8/src/joystick/SDL_joystick.c",
+      "/home/zep/prog/SDL2-2.0.8/src/power/SDL_power.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/SDL_render.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/SDL_yuv_sw.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/opengl/SDL_render_gl.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/opengl/SDL_shaders_gl.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/opengles2/SDL_render_gles2.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/opengles2/SDL_shaders_gles2.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_render_sw.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_rotate.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_getenv.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_iconv.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_malloc.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_qsort.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_stdlib.c",
+      "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_string.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/SDL_thread.c",
+      "/home/zep/prog/SDL2-2.0.8/src/timer/SDL_timer.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_bmp.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_clipboard.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_fillrect.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_pixels.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_rect.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_shape.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_stretch.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_surface.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_video.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_yuv.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/yuv2rgb/yuv_rgb.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullvideo.c",
+      "/home/zep/prog/SDL2-2.0.8/src/loadso/dlopen/SDL_sysloadso.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11messagebox.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11video.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11vulkan.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11window.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11xinput2.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_dbus.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_systhread.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_syssem.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_sysmutex.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_syscond.c",
+      "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_systls.c",
+      "/home/zep/prog/SDL2-2.0.8/src/joystick/linux/SDL_sysjoystick.c",
+      "/home/zep/prog/SDL2-2.0.8/src/joystick/steam/SDL_steamcontroller.c",
+      "/home/zep/prog/SDL2-2.0.8/src/haptic/linux/SDL_syshaptic.c",
+      "/home/zep/prog/SDL2-2.0.8/src/power/linux/SDL_syspower.c",
+      "/home/zep/prog/SDL2-2.0.8/src/filesystem/unix/SDL_sysfilesystem.c",
+      "/home/zep/prog/SDL2-2.0.8/src/timer/unix/SDL_systimer.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_udev.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/unix/SDL_poll.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL_assert.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL_error.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL_hints.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL_log.c",
+      "/home/zep/prog/SDL2-2.0.8/src/atomic/SDL_atomic.c",
+      "/home/zep/prog/SDL2-2.0.8/src/atomic/SDL_spinlock.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiocvt.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiotypecvt.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_mixer.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_wave.c",
+      "/home/zep/prog/SDL2-2.0.8/src/cpuinfo/SDL_cpuinfo.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendfillrect.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendline.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendpoint.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_drawline.c",
+      "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_drawpoint.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_RLEaccel.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_0.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_1.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_A.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_N.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_auto.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_copy.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_slow.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_egl.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/SDL_vulkan_utils.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullevents.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullframebuffer.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/disk/SDL_diskaudio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/dummy/SDL_dummyaudio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/dsp/SDL_dspaudio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/alsa/SDL_alsa_audio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/pulseaudio/SDL_pulseaudio.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11clipboard.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11dyn.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11events.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11framebuffer.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11keyboard.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11modes.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11mouse.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11opengl.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11opengles.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11shape.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11touch.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/edid-parse.c",
+      "/home/zep/prog/SDL2-2.0.8/src/video/x11/imKStoUCS.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_ime.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_ibus.c",
+      "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_fcitx.c",
+      "/home/zep/prog/SDL2-2.0.8/src/SDL_dataqueue.c",
+      "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiodev.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_clipboardevents.c",
+      "/home/zep/prog/SDL2-2.0.8/src/events/SDL_dropevents.c"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_html5.pod.contents/src/pico8_wasm.wasm",
+    "size": 713512,
+    "sha256": "f2ed0dccb0d4e41d25a9735667e027726851c714f1c13c3816e17cbfc837a5c9",
+    "file": "WebAssembly (wasm) binary module version 0x1 (MVP)",
+    "format": "WebAssembly",
+    "imports": [
+      {
+        "module": "env",
+        "name": "abort",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "setTempRet0",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "getTempRet0",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "invoke_vii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_ClearError",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_GetError",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_GetModState",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_GetMouseState",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_GetTicks",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_GetWindowSize",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_Init",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_LockAudio",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_LockSurface",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_PollEvent",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_SetVideoMode",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_UnlockAudio",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_SDL_UnlockSurface",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___buildEnvironment",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___lock",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___setErrNo",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall140",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall145",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall146",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall195",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall220",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall221",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall5",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall54",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___syscall6",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "___unlock",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_abort",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_i",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_ii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_iii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_iiiii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_iiiiiii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_asm_const_iiiiiiiii",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_async_wget_data",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_get_heap_size",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_memcpy_big",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_resize_heap",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_run_script",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_emscripten_set_main_loop",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_exit",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_gmtime",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_localtime",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_longjmp",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_strftime",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "_time",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "abortOnCannotGrowMemory",
+        "kind": "function"
+      },
+      {
+        "module": "env",
+        "name": "__table_base",
+        "kind": "global"
+      },
+      {
+        "module": "env",
+        "name": "DYNAMICTOP_PTR",
+        "kind": "global"
+      },
+      {
+        "module": "global",
+        "name": "NaN",
+        "kind": "global"
+      },
+      {
+        "module": "global",
+        "name": "Infinity",
+        "kind": "global"
+      },
+      {
+        "module": "env",
+        "name": "memory",
+        "kind": "memory"
+      },
+      {
+        "module": "env",
+        "name": "table",
+        "kind": "table"
+      }
+    ],
+    "exports": [
+      {
+        "name": "___emscripten_environ_constructor",
+        "kind": "function"
+      },
+      {
+        "name": "___errno_location",
+        "kind": "function"
+      },
+      {
+        "name": "__get_daylight",
+        "kind": "function"
+      },
+      {
+        "name": "__get_environ",
+        "kind": "function"
+      },
+      {
+        "name": "__get_timezone",
+        "kind": "function"
+      },
+      {
+        "name": "__get_tzname",
+        "kind": "function"
+      },
+      {
+        "name": "_codo_mixer_callback",
+        "kind": "function"
+      },
+      {
+        "name": "_free",
+        "kind": "function"
+      },
+      {
+        "name": "_main",
+        "kind": "function"
+      },
+      {
+        "name": "_malloc",
+        "kind": "function"
+      },
+      {
+        "name": "_memcpy",
+        "kind": "function"
+      },
+      {
+        "name": "_memset",
+        "kind": "function"
+      },
+      {
+        "name": "_mix_0",
+        "kind": "function"
+      },
+      {
+        "name": "_realloc",
+        "kind": "function"
+      },
+      {
+        "name": "_saveSetjmp",
+        "kind": "function"
+      },
+      {
+        "name": "_sbrk",
+        "kind": "function"
+      },
+      {
+        "name": "_setThrew",
+        "kind": "function"
+      },
+      {
+        "name": "_testSetjmp",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_ii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_iidiiii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_iii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_iiii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_iiiii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_jiji",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_v",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_vi",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_vii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_viii",
+        "kind": "function"
+      },
+      {
+        "name": "dynCall_viiiii",
+        "kind": "function"
+      },
+      {
+        "name": "establishStackSpace",
+        "kind": "function"
+      },
+      {
+        "name": "stackAlloc",
+        "kind": "function"
+      },
+      {
+        "name": "stackRestore",
+        "kind": "function"
+      },
+      {
+        "name": "stackSave",
+        "kind": "function"
+      }
+    ],
+    "validation": "V8 WebAssembly.Module constructor; no instantiation"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/bin/pico8.exe",
+    "size": 1323008,
+    "sha256": "c79e5324bb4a8ef30a2f84bdf3d7fa0ab70b261f7c82ec88b9e45b1e9f80c630",
+    "file": "PE32 executable for MS Windows 4.00 (GUI), Intel i386 (stripped to external PDB), 8 sections",
+    "format": "PE",
+    "needed_libraries": [
+      "KERNEL32.dll",
+      "msvcrt.dll",
+      "SHELL32.dll",
+      "USER32.dll",
+      "WININET.DLL",
+      "SDL2.dll"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/bin/SDL2.dll",
+    "size": 1088000,
+    "sha256": "6510202682a42c85928267e17746d88e972b062c99a4e01b750483954c59ddc8",
+    "file": "PE32 executable for MS Windows 4.00 (DLL), Intel i386 (stripped to external PDB), 10 sections",
+    "format": "PE",
+    "needed_libraries": [
+      "ADVAPI32.dll",
+      "GDI32.dll",
+      "IMM32.DLL",
+      "KERNEL32.dll",
+      "msvcrt.dll",
+      "ole32.dll",
+      "OLEAUT32.dll",
+      "SETUPAPI.dll",
+      "SHELL32.dll",
+      "USER32.dll",
+      "VERSION.dll",
+      "WINMM.DLL"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/bin/pico8_dyn.amd64",
+    "size": 1604776,
+    "sha256": "8156a7c72f99601624bb503461bf5019bb1e718da52c64ccd77d576b2e1d5c89",
+    "file": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=75f64a3ff5da3b094fe0727296d5565c2ac4bf51, not stripped",
+    "format": "ELF",
+    "Class": "ELF64",
+    "Machine": "Advanced Micro Devices X86-64",
+    "Type": "EXEC (Executable file)",
+    "Entry point address": "0x4052e0",
+    "has_debug_info": false,
+    "has_symbol_table": true,
+    "needed_libraries": [
+      "libSDL2-2.0.so.0",
+      "libm.so.6",
+      "libdl.so.2",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 2532,
+    "source_filenames": [
+      "anim.c",
+      "api.c",
+      "audio.c",
+      "blit.c",
+      "boot.c",
+      "button.c",
+      "cdata.c",
+      "codo.c",
+      "compress.c",
+      "crtstuff.c",
+      "ctext.c",
+      "dbmp.c",
+      "disk.c",
+      "edit.c",
+      "editsfx.c",
+      "export.c",
+      "export_b.c",
+      "gfx.c",
+      "gif_lib.c",
+      "gpio.c",
+      "gui.c",
+      "help.c",
+      "include.c",
+      "install.c",
+      "keyconfig.c",
+      "keys0.c",
+      "lodepng.c",
+      "lua1.c",
+      "lz4.c",
+      "lz4hc.c",
+      "map.c",
+      "math.c",
+      "mem.c",
+      "miniz.c",
+      "misc.c",
+      "model.c",
+      "mouse0.c",
+      "p_common.c",
+      "pico8.c",
+      "pod.c",
+      "pre.c",
+      "run.c",
+      "sdl2.c",
+      "serial.c",
+      "sha1.c",
+      "splore.c",
+      "sprite32.c",
+      "sprite8.c",
+      "sprite8h.c",
+      "stable.c",
+      "string.c",
+      "synth.c",
+      "text.c",
+      "token.c",
+      "undo.c",
+      "vdisk.c",
+      "video.c",
+      "xm.c"
+    ],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/pico8_player",
+    "size": 1416112,
+    "sha256": "bfd5e393836092f100e85e9a270f4fac131edd2db1c9243bf4d8c5fe43d81bfa",
+    "file": "Mach-O 64-bit x86_64 executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|PIE>",
+    "format": "Mach-O",
+    "analysis_scope": "file signature/header identification only"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/A/hidapi",
+    "size": 40656,
+    "sha256": "7ca08fb4bd9cac4dd1d77e9176532dede7ca77d99836f463a9a9174e37a7b772",
+    "file": "Mach-O 64-bit x86_64 dynamically linked shared library, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|NO_REEXPORTED_DYLIBS>",
+    "format": "Mach-O",
+    "analysis_scope": "file signature/header identification only"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/hidapi",
+    "size": 40656,
+    "sha256": "7ca08fb4bd9cac4dd1d77e9176532dede7ca77d99836f463a9a9174e37a7b772",
+    "file": "Mach-O 64-bit x86_64 dynamically linked shared library, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|NO_REEXPORTED_DYLIBS>",
+    "format": "Mach-O",
+    "analysis_scope": "file signature/header identification only"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Resources/default.metallib",
+    "size": 22640,
+    "sha256": "0399455f7945200b6ee0bc608e1ed35dd2150ded27e86d623e87c0fb71fec4c0",
+    "file": "data",
+    "format": "Metal library",
+    "analysis_scope": "file signature/header identification only"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/SDL2",
+    "size": 1482320,
+    "sha256": "81db340d81c8222beed2154108746ab7ae8a09940ea5ce29c0f911801e4c7e06",
+    "file": "Mach-O 64-bit x86_64 dynamically linked shared library, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|NO_REEXPORTED_DYLIBS>",
+    "format": "Mach-O",
+    "analysis_scope": "file signature/header identification only"
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/pi_builds/pico8_player",
+    "size": 2322864,
+    "sha256": "d677bba17c3e20bdf944940710a90d346353d5d8b616544904fe53c79e2f65bf",
+    "file": "ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 2.6.32, BuildID[sha1]=816cb24f47d835a0660d3fc0c6e052c20b159bcc, stripped",
+    "format": "ELF",
+    "Class": "ELF32",
+    "Machine": "ARM",
+    "Type": "EXEC (Executable file)",
+    "Entry point address": "0x14c80",
+    "has_debug_info": false,
+    "has_symbol_table": false,
+    "needed_libraries": [
+      "libm.so.6",
+      "libdl.so.2",
+      "libpthread.so.0",
+      "librt.so.1",
+      "libbcm_host.so",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 267,
+    "source_filenames": [],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/pi_builds/pico8_player_dyn",
+    "size": 1291900,
+    "sha256": "faa0eccf2f9c6ee1f90f054ca10e99b4723bc39f34c1038ed20b0ef07cacfd53",
+    "file": "ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 2.6.32, BuildID[sha1]=782e36dc8427cefc11c8f808089b7854820cf788, not stripped",
+    "format": "ELF",
+    "Class": "ELF32",
+    "Machine": "ARM",
+    "Type": "EXEC (Executable file)",
+    "Entry point address": "0x14198",
+    "has_debug_info": false,
+    "has_symbol_table": true,
+    "needed_libraries": [
+      "libSDL2-2.0.so.0",
+      "libm.so.6",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 2544,
+    "source_filenames": [
+      "/usr/lib/gcc/arm-linux-gnueabihf/4.9/../../../arm-linux-gnueabihf/crt1.o",
+      "/usr/lib/gcc/arm-linux-gnueabihf/4.9/../../../arm-linux-gnueabihf/crti.o",
+      "/usr/lib/gcc/arm-linux-gnueabihf/4.9/../../../arm-linux-gnueabihf/crtn.o",
+      "_aeabi_ldivmod.o",
+      "_aeabi_uldivmod.o",
+      "_divdi3.o",
+      "_divsi3.o",
+      "_dvmd_lnx.o",
+      "_fixdfdi.o",
+      "_fixunsdfdi.o",
+      "_udivdi3.o",
+      "_udivsi3.o",
+      "anim.c",
+      "api.c",
+      "audio.c",
+      "blit.c",
+      "boot.c",
+      "bpabi.o",
+      "button.c",
+      "cdata.c",
+      "codo.c",
+      "compress.c",
+      "crtstuff.c",
+      "ctext.c",
+      "dbmp.c",
+      "disk.c",
+      "edit.c",
+      "editsfx.c",
+      "elf-init.oS",
+      "export.c",
+      "export_b.c",
+      "gfx.c",
+      "gif_lib.c",
+      "gpio.c",
+      "gui.c",
+      "help.c",
+      "include.c",
+      "install.c",
+      "keyconfig.c",
+      "keys0.c",
+      "lodepng.c",
+      "lua1.c",
+      "lz4.c",
+      "lz4hc.c",
+      "map.c",
+      "math.c",
+      "mem.c",
+      "miniz.c",
+      "misc.c",
+      "model.c",
+      "mouse0.c",
+      "p_common.c",
+      "pico8.c",
+      "pod.c",
+      "pre.c",
+      "run.c",
+      "sdl2.c",
+      "serial.c",
+      "sha1.c",
+      "splore.c",
+      "sprite32.c",
+      "sprite8.c",
+      "sprite8h.c",
+      "stable.c",
+      "string.c",
+      "synth.c",
+      "text.c",
+      "token.c",
+      "undo.c",
+      "vdisk.c",
+      "video.c",
+      "xm.c"
+    ],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ]
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/pi_builds/pico8_player_64",
+    "size": 1331888,
+    "sha256": "4a2235bd6aa66e6a0d0182e23dc8df57185da4aa9ec2d4011e8b993ac6bb92e2",
+    "file": "ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=cc3c45d425f8bc2559f5d7855cf9b4d087227965, for GNU/Linux 3.7.0, stripped",
+    "format": "ELF",
+    "Class": "ELF64",
+    "Machine": "AArch64",
+    "Type": "DYN (Position-Independent Executable file)",
+    "Entry point address": "0xa8b4",
+    "has_debug_info": false,
+    "has_symbol_table": false,
+    "needed_libraries": [
+      "libm.so.6",
+      "libpthread.so.0",
+      "libSDL2-2.0.so.0",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 224,
+    "source_filenames": [],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ]
+  },
+  {
+    "source": "original/pico-8/pico8_dyn",
+    "size": 1761480,
+    "sha256": "55603df52a26eac1d6a8ad7f5fa2b4ff52228aa063e0ef2ebe1eaf72b5f6ba08",
+    "file": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=79f434136c62a26b01175f0b1d185341bfb45b00, not stripped",
+    "format": "ELF",
+    "Class": "ELF64",
+    "Machine": "Advanced Micro Devices X86-64",
+    "Type": "EXEC (Executable file)",
+    "Entry point address": "0x405320",
+    "has_debug_info": false,
+    "has_symbol_table": true,
+    "needed_libraries": [
+      "libSDL2-2.0.so.0",
+      "libm.so.6",
+      "libdl.so.2",
+      "libc.so.6"
+    ],
+    "function_symbol_rows": 2622,
+    "source_filenames": [
+      "anim.c",
+      "api.c",
+      "audio.c",
+      "blit.c",
+      "boot.c",
+      "button.c",
+      "cdata.c",
+      "codo.c",
+      "compress.c",
+      "crtstuff.c",
+      "ctext.c",
+      "dbmp.c",
+      "disk.c",
+      "edit.c",
+      "editsfx.c",
+      "export.c",
+      "export_b.c",
+      "fill.c",
+      "gfx.c",
+      "gif_lib.c",
+      "gpio.c",
+      "gui.c",
+      "help.c",
+      "include.c",
+      "install.c",
+      "keyconfig.c",
+      "keys0.c",
+      "lodepng.c",
+      "lua1.c",
+      "lz4.c",
+      "lz4hc.c",
+      "map.c",
+      "math.c",
+      "mem.c",
+      "miniz.c",
+      "misc.c",
+      "model.c",
+      "mouse0.c",
+      "p_common.c",
+      "pico8.c",
+      "pod.c",
+      "pre.c",
+      "run.c",
+      "sdl2.c",
+      "serial.c",
+      "sha1.c",
+      "splore.c",
+      "sprite32.c",
+      "sprite8.c",
+      "sprite8h.c",
+      "stable.c",
+      "string.c",
+      "synth.c",
+      "text.c",
+      "token.c",
+      "undo.c",
+      "vdisk.c",
+      "video.c",
+      "xm.c"
+    ],
+    "version_strings": [
+      "pico-8 0.2.5g"
+    ],
+    "direct_call_edges": 7596
+  }
+]

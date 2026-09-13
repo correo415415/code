@@ -1,0 +1,6 @@
+--------------------------------
+-- legacy 0.1.1 api injected
+--------------------------------
+	function _validate(c) if (c._num==nil) then local i=0 while(c[i+1]~=nil) do i=i+1 end c._num=i c._max=i 	c._min=i+1 c._num = i c._ci = i end end 	function foreach(c, f) if (c == nil) then return end _validate(c) if (c._max == nil) then return end for i=1,c._max do if (c[i] ~= nil) then c._ci = i f(c[i]) end end end function all(c) if (c == nil) then return function() end end _validate(c) local i=0 return function() i=i+1 while (c[i]==nil and i<c._max) do i=i+1 end if (c[i] ~= nil) then c._ci=i return c[i] end end end function add(c, i) if (c == nil) then return end _validate(c) for j=c._min,c._max+1 do if (c[j] == nil) then c._max = max(c._max,j) c._min = j+1 c._num = c._num+1 c[j]=i return i end end end function count(c) if (c == nil) then return 0 end _validate(c) return c._num end function del(c,i) if (c == nil) then return end _validate(c) if (i==nil) then return end if (c._ci==i) then c[c._ci]=nil c._min=min(c._min, c._ci) c._num=c._num-1 return else for j=1,c._max do if (c[j]==i) then c[j]=nil c._min=min(c._min,j) c._num=c._num-1 return end end end while (c._max>1 and c[c._max]==nil) do c._max=c._max-1 end end  nd=0
+--------------------------------
+

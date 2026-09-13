@@ -1,0 +1,1594 @@
+
+original/pico-8/pico8_dyn:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+0000000000495530 <pxa_decompress>:
+  495530:	41 57                	push   r15
+  495532:	41 56                	push   r14
+  495534:	49 89 f3             	mov    r11,rsi
+  495537:	41 55                	push   r13
+  495539:	41 54                	push   r12
+  49553b:	49 89 fc             	mov    r12,rdi
+  49553e:	55                   	push   rbp
+  49553f:	53                   	push   rbx
+  495540:	48 81 ec 58 08 00 00 	sub    rsp,0x858
+  495547:	c7 05 9f 8f 2f 00 01 	mov    DWORD PTR [rip+0x2f8f9f],0x1        # 78e4f0 <bit>
+  49554e:	00 00 00 
+  495551:	c7 05 4d 37 38 00 00 	mov    DWORD PTR [rip+0x38374d],0x0        # 818ca8 <byte>
+  495558:	00 00 00 
+  49555b:	4c 8d 6c 24 40       	lea    r13,[rsp+0x40]
+  495560:	89 54 24 04          	mov    DWORD PTR [rsp+0x4],edx
+  495564:	48 89 3d 25 37 38 00 	mov    QWORD PTR [rip+0x383725],rdi        # 818c90 <src_buf>
+  49556b:	66 0f 6f 05 6d 5a 0a 	movdqa xmm0,XMMWORD PTR [rip+0xa5a6d]        # 53afe0 <lua_ident+0x3ac0>
+  495572:	00 
+  495573:	49 8d 95 00 04 00 00 	lea    rdx,[r13+0x400]
+  49557a:	c7 05 1c 37 38 00 00 	mov    DWORD PTR [rip+0x38371c],0x0        # 818ca0 <src_pos>
+  495581:	00 00 00 
+  495584:	66 0f 6f 0d 54 ee 0a 	movdqa xmm1,XMMWORD PTR [rip+0xaee54]        # 5443e0 <mem_section+0x75a0>
+  49558b:	00 
+  49558c:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+  495593:	00 00 
+  495595:	48 89 84 24 48 08 00 	mov    QWORD PTR [rsp+0x848],rax
+  49559c:	00 
+  49559d:	31 c0                	xor    eax,eax
+  49559f:	4c 89 e8             	mov    rax,r13
+  4955a2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4955a8:	0f 29 00             	movaps XMMWORD PTR [rax],xmm0
+  4955ab:	66 0f fe c1          	paddd  xmm0,xmm1
+  4955af:	48 83 c0 10          	add    rax,0x10
+  4955b3:	48 39 d0             	cmp    rax,rdx
+  4955b6:	75 f0                	jne    4955a8 <pxa_decompress+0x78>
+  4955b8:	31 c0                	xor    eax,eax
+  4955ba:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4955c0:	49 63 54 85 00       	movsxd rdx,DWORD PTR [r13+rax*4+0x0]
+  4955c5:	89 84 94 40 04 00 00 	mov    DWORD PTR [rsp+rdx*4+0x440],eax
+  4955cc:	48 83 c0 01          	add    rax,0x1
+  4955d0:	48 3d 00 01 00 00    	cmp    rax,0x100
+  4955d6:	75 e8                	jne    4955c0 <pxa_decompress+0x90>
+  4955d8:	48 8d 74 24 20       	lea    rsi,[rsp+0x20]
+  4955dd:	31 ed                	xor    ebp,ebp
+  4955df:	48 8d 7e 20          	lea    rdi,[rsi+0x20]
+  4955e3:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4955e8:	48 63 c5             	movsxd rax,ebp
+  4955eb:	41 0f b6 14 04       	movzx  edx,BYTE PTR [r12+rax*1]
+  4955f0:	89 d1                	mov    ecx,edx
+  4955f2:	83 e1 01             	and    ecx,0x1
+  4955f5:	0f b6 c1             	movzx  eax,cl
+  4955f8:	83 c9 02             	or     ecx,0x2
+  4955fb:	f6 c2 02             	test   dl,0x2
+  4955fe:	0f b6 c9             	movzx  ecx,cl
+  495601:	0f 45 c1             	cmovne eax,ecx
+  495604:	89 c1                	mov    ecx,eax
+  495606:	83 c9 04             	or     ecx,0x4
+  495609:	f6 c2 04             	test   dl,0x4
+  49560c:	0f 45 c1             	cmovne eax,ecx
+  49560f:	89 c1                	mov    ecx,eax
+  495611:	83 c9 08             	or     ecx,0x8
+  495614:	f6 c2 08             	test   dl,0x8
+  495617:	0f 45 c1             	cmovne eax,ecx
+  49561a:	89 c1                	mov    ecx,eax
+  49561c:	83 c9 10             	or     ecx,0x10
+  49561f:	f6 c2 10             	test   dl,0x10
+  495622:	0f 45 c1             	cmovne eax,ecx
+  495625:	89 c1                	mov    ecx,eax
+  495627:	83 c9 20             	or     ecx,0x20
+  49562a:	f6 c2 20             	test   dl,0x20
+  49562d:	0f 45 c1             	cmovne eax,ecx
+  495630:	89 c1                	mov    ecx,eax
+  495632:	83 c9 40             	or     ecx,0x40
+  495635:	f6 c2 40             	test   dl,0x40
+  495638:	0f 45 c1             	cmovne eax,ecx
+  49563b:	83 c5 01             	add    ebp,0x1
+  49563e:	84 d2                	test   dl,dl
+  495640:	0f 89 ca 03 00 00    	jns    495a10 <pxa_decompress+0x4e0>
+  495646:	0c 80                	or     al,0x80
+  495648:	48 83 c6 04          	add    rsi,0x4
+  49564c:	89 46 fc             	mov    DWORD PTR [rsi-0x4],eax
+  49564f:	48 39 f7             	cmp    rdi,rsi
+  495652:	75 94                	jne    4955e8 <pxa_decompress+0xb8>
+  495654:	8b 44 24 30          	mov    eax,DWORD PTR [rsp+0x30]
+  495658:	31 d2                	xor    edx,edx
+  49565a:	45 31 f6             	xor    r14d,r14d
+  49565d:	45 31 ff             	xor    r15d,r15d
+  495660:	4c 89 6c 24 08       	mov    QWORD PTR [rsp+0x8],r13
+  495665:	89 2d 35 36 38 00    	mov    DWORD PTR [rip+0x383635],ebp        # 818ca0 <src_pos>
+  49566b:	c7 05 7b 8e 2f 00 01 	mov    DWORD PTR [rip+0x2f8e7b],0x1        # 78e4f0 <bit>
+  495672:	00 00 00 
+  495675:	bb 01 00 00 00       	mov    ebx,0x1
+  49567a:	4d 89 dd             	mov    r13,r11
+  49567d:	c1 e0 08             	shl    eax,0x8
+  495680:	03 44 24 34          	add    eax,DWORD PTR [rsp+0x34]
+  495684:	89 c7                	mov    edi,eax
+  495686:	89 04 24             	mov    DWORD PTR [rsp],eax
+  495689:	8b 44 24 38          	mov    eax,DWORD PTR [rsp+0x38]
+  49568d:	c1 e0 08             	shl    eax,0x8
+  495690:	03 44 24 3c          	add    eax,DWORD PTR [rsp+0x3c]
+  495694:	89 44 24 10          	mov    DWORD PTR [rsp+0x10],eax
+  495698:	8b 44 24 04          	mov    eax,DWORD PTR [rsp+0x4]
+  49569c:	83 e8 01             	sub    eax,0x1
+  49569f:	39 6c 24 10          	cmp    DWORD PTR [rsp+0x10],ebp
+  4956a3:	89 44 24 18          	mov    DWORD PTR [rsp+0x18],eax
+  4956a7:	8d 47 ff             	lea    eax,[rdi-0x1]
+  4956aa:	89 44 24 1c          	mov    DWORD PTR [rsp+0x1c],eax
+  4956ae:	0f 8e 18 03 00 00    	jle    4959cc <pxa_decompress+0x49c>
+  4956b4:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4956b8:	8b 34 24             	mov    esi,DWORD PTR [rsp]
+  4956bb:	8b 44 24 04          	mov    eax,DWORD PTR [rsp+0x4]
+  4956bf:	39 c6                	cmp    esi,eax
+  4956c1:	0f 4e c6             	cmovle eax,esi
+  4956c4:	41 39 c7             	cmp    r15d,eax
+  4956c7:	0f 8d ff 02 00 00    	jge    4959cc <pxa_decompress+0x49c>
+  4956cd:	48 63 cd             	movsxd rcx,ebp
+  4956d0:	8d 34 1b             	lea    esi,[rbx+rbx*1]
+  4956d3:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4956d8:	41 89 d1             	mov    r9d,edx
+  4956db:	41 21 d9             	and    r9d,ebx
+  4956de:	81 fe 00 01 00 00    	cmp    esi,0x100
+  4956e4:	0f 84 3e 03 00 00    	je     495a28 <pxa_decompress+0x4f8>
+  4956ea:	21 d6                	and    esi,edx
+  4956ec:	45 85 c9             	test   r9d,r9d
+  4956ef:	8d 04 9d 00 00 00 00 	lea    eax,[rbx*4+0x0]
+  4956f6:	0f 84 fc 04 00 00    	je     495bf8 <pxa_decompress+0x6c8>
+  4956fc:	3d 00 01 00 00       	cmp    eax,0x100
+  495701:	0f 85 d4 0a 00 00    	jne    4961db <pxa_decompress+0xcab>
+  495707:	83 c5 01             	add    ebp,0x1
+  49570a:	48 63 cd             	movsxd rcx,ebp
+  49570d:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495712:	41 89 d1             	mov    r9d,edx
+  495715:	89 d7                	mov    edi,edx
+  495717:	41 83 e1 01          	and    r9d,0x1
+  49571b:	85 f6                	test   esi,esi
+  49571d:	0f 84 d0 0e 00 00    	je     4965f3 <pxa_decompress+0x10c3>
+  495723:	83 e7 02             	and    edi,0x2
+  495726:	45 84 c9             	test   r9b,r9b
+  495729:	bb 04 00 00 00       	mov    ebx,0x4
+  49572e:	40 0f b6 c7          	movzx  eax,dil
+  495732:	41 be 01 00 00 00    	mov    r14d,0x1
+  495738:	0f 84 f2 0d 00 00    	je     496530 <pxa_decompress+0x1000>
+  49573e:	89 d6                	mov    esi,edx
+  495740:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  495743:	21 de                	and    esi,ebx
+  495745:	85 c0                	test   eax,eax
+  495747:	0f 84 41 10 00 00    	je     49678e <pxa_decompress+0x125e>
+  49574d:	81 ff 00 01 00 00    	cmp    edi,0x100
+  495753:	0f 85 61 11 00 00    	jne    4968ba <pxa_decompress+0x138a>
+  495759:	83 c5 01             	add    ebp,0x1
+  49575c:	48 63 cd             	movsxd rcx,ebp
+  49575f:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495764:	89 d0                	mov    eax,edx
+  495766:	89 d7                	mov    edi,edx
+  495768:	83 e0 01             	and    eax,0x1
+  49576b:	85 f6                	test   esi,esi
+  49576d:	0f 84 96 0e 00 00    	je     496609 <pxa_decompress+0x10d9>
+  495773:	83 e7 02             	and    edi,0x2
+  495776:	84 c0                	test   al,al
+  495778:	bb 04 00 00 00       	mov    ebx,0x4
+  49577d:	40 0f b6 f7          	movzx  esi,dil
+  495781:	41 be 01 00 00 00    	mov    r14d,0x1
+  495787:	0f 84 f7 0d 00 00    	je     496584 <pxa_decompress+0x1054>
+  49578d:	89 d8                	mov    eax,ebx
+  49578f:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  495792:	21 d0                	and    eax,edx
+  495794:	85 f6                	test   esi,esi
+  495796:	0f 84 ca 10 00 00    	je     496866 <pxa_decompress+0x1336>
+  49579c:	81 ff 00 01 00 00    	cmp    edi,0x100
+  4957a2:	0f 85 d9 0a 00 00    	jne    496281 <pxa_decompress+0xd51>
+  4957a8:	83 c5 01             	add    ebp,0x1
+  4957ab:	48 63 cd             	movsxd rcx,ebp
+  4957ae:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4957b3:	89 d6                	mov    esi,edx
+  4957b5:	89 d7                	mov    edi,edx
+  4957b7:	83 e6 01             	and    esi,0x1
+  4957ba:	85 c0                	test   eax,eax
+  4957bc:	0f 84 92 0e 00 00    	je     496654 <pxa_decompress+0x1124>
+  4957c2:	83 e7 02             	and    edi,0x2
+  4957c5:	40 84 f6             	test   sil,sil
+  4957c8:	bb 04 00 00 00       	mov    ebx,0x4
+  4957cd:	40 0f b6 c7          	movzx  eax,dil
+  4957d1:	41 be 01 00 00 00    	mov    r14d,0x1
+  4957d7:	0f 84 bc 0d 00 00    	je     496599 <pxa_decompress+0x1069>
+  4957dd:	89 d6                	mov    esi,edx
+  4957df:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  4957e2:	21 de                	and    esi,ebx
+  4957e4:	85 c0                	test   eax,eax
+  4957e6:	0f 84 8a 10 00 00    	je     496876 <pxa_decompress+0x1346>
+  4957ec:	81 ff 00 01 00 00    	cmp    edi,0x100
+  4957f2:	0f 85 da 0a 00 00    	jne    4962d2 <pxa_decompress+0xda2>
+  4957f8:	83 c5 01             	add    ebp,0x1
+  4957fb:	48 63 cd             	movsxd rcx,ebp
+  4957fe:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495803:	89 d0                	mov    eax,edx
+  495805:	89 d7                	mov    edi,edx
+  495807:	83 e0 01             	and    eax,0x1
+  49580a:	85 f6                	test   esi,esi
+  49580c:	0f 84 fd 0e 00 00    	je     49670f <pxa_decompress+0x11df>
+  495812:	83 e7 02             	and    edi,0x2
+  495815:	84 c0                	test   al,al
+  495817:	bb 04 00 00 00       	mov    ebx,0x4
+  49581c:	40 0f b6 f7          	movzx  esi,dil
+  495820:	41 be 01 00 00 00    	mov    r14d,0x1
+  495826:	0f 84 5e 0e 00 00    	je     49668a <pxa_decompress+0x115a>
+  49582c:	89 d0                	mov    eax,edx
+  49582e:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  495831:	21 d8                	and    eax,ebx
+  495833:	85 f6                	test   esi,esi
+  495835:	0f 84 e9 0f 00 00    	je     496824 <pxa_decompress+0x12f4>
+  49583b:	81 ff 00 01 00 00    	cmp    edi,0x100
+  495841:	0f 85 dd 0a 00 00    	jne    496324 <pxa_decompress+0xdf4>
+  495847:	83 c5 01             	add    ebp,0x1
+  49584a:	48 63 cd             	movsxd rcx,ebp
+  49584d:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495852:	89 d6                	mov    esi,edx
+  495854:	89 d7                	mov    edi,edx
+  495856:	83 e6 01             	and    esi,0x1
+  495859:	85 c0                	test   eax,eax
+  49585b:	0f 84 8f 0c 00 00    	je     4964f0 <pxa_decompress+0xfc0>
+  495861:	83 e7 02             	and    edi,0x2
+  495864:	40 84 f6             	test   sil,sil
+  495867:	41 be 01 00 00 00    	mov    r14d,0x1
+  49586d:	40 0f b6 c7          	movzx  eax,dil
+  495871:	bf 04 00 00 00       	mov    edi,0x4
+  495876:	0f 84 e2 0e 00 00    	je     49675e <pxa_decompress+0x122e>
+  49587c:	89 fe                	mov    esi,edi
+  49587e:	44 8d 0c 3f          	lea    r9d,[rdi+rdi*1]
+  495882:	21 d6                	and    esi,edx
+  495884:	85 c0                	test   eax,eax
+  495886:	0f 84 e9 14 00 00    	je     496d75 <pxa_decompress+0x1845>
+  49588c:	41 81 f9 00 01 00 00 	cmp    r9d,0x100
+  495893:	0f 85 ee 14 00 00    	jne    496d87 <pxa_decompress+0x1857>
+  495899:	83 c5 01             	add    ebp,0x1
+  49589c:	85 f6                	test   esi,esi
+  49589e:	bb 02 00 00 00       	mov    ebx,0x2
+  4958a3:	41 be 01 00 00 00    	mov    r14d,0x1
+  4958a9:	48 63 cd             	movsxd rcx,ebp
+  4958ac:	0f 84 68 0f 00 00    	je     49681a <pxa_decompress+0x12ea>
+  4958b2:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4958b7:	41 b9 14 00 00 00    	mov    r9d,0x14
+  4958bd:	be f0 ff 0f 00       	mov    esi,0xffff0
+  4958c2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4958c8:	31 c0                	xor    eax,eax
+  4958ca:	31 c9                	xor    ecx,ecx
+  4958cc:	41 ba 01 00 00 00    	mov    r10d,0x1
+  4958d2:	eb 0c                	jmp    4958e0 <pxa_decompress+0x3b0>
+  4958d4:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  4958d8:	48 63 d5             	movsxd rdx,ebp
+  4958db:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  4958e0:	21 da                	and    edx,ebx
+  4958e2:	01 db                	add    ebx,ebx
+  4958e4:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  4958ea:	75 0e                	jne    4958fa <pxa_decompress+0x3ca>
+  4958ec:	83 c5 01             	add    ebp,0x1
+  4958ef:	bb 01 00 00 00       	mov    ebx,0x1
+  4958f4:	41 be 01 00 00 00    	mov    r14d,0x1
+  4958fa:	45 89 d0             	mov    r8d,r10d
+  4958fd:	89 c7                	mov    edi,eax
+  4958ff:	41 d3 e0             	shl    r8d,cl
+  495902:	44 09 c0             	or     eax,r8d
+  495905:	85 d2                	test   edx,edx
+  495907:	0f 44 c7             	cmove  eax,edi
+  49590a:	83 c1 01             	add    ecx,0x1
+  49590d:	44 39 c9             	cmp    ecx,r9d
+  495910:	75 c6                	jne    4958d8 <pxa_decompress+0x3a8>
+  495912:	01 f0                	add    eax,esi
+  495914:	3d ff 00 00 00       	cmp    eax,0xff
+  495919:	0f 8f ec 0b 00 00    	jg     49650b <pxa_decompress+0xfdb>
+  49591f:	48 63 f8             	movsxd rdi,eax
+  495922:	49 63 d7             	movsxd rdx,r15d
+  495925:	41 83 c7 01          	add    r15d,0x1
+  495929:	48 63 4c bc 40       	movsxd rcx,DWORD PTR [rsp+rdi*4+0x40]
+  49592e:	85 c0                	test   eax,eax
+  495930:	41 88 4c 15 00       	mov    BYTE PTR [r13+rdx*1+0x0],cl
+  495935:	49 63 d7             	movsxd rdx,r15d
+  495938:	41 c6 44 15 00 00    	mov    BYTE PTR [r13+rdx*1+0x0],0x0
+  49593e:	74 6e                	je     4959ae <pxa_decompress+0x47e>
+  495940:	83 e8 01             	sub    eax,0x1
+  495943:	4c 8b 5c 24 08       	mov    r11,QWORD PTR [rsp+0x8]
+  495948:	4c 63 c8             	movsxd r9,eax
+  49594b:	89 c0                	mov    eax,eax
+  49594d:	4a 8d 34 8d 00 00 00 	lea    rsi,[r9*4+0x0]
+  495954:	00 
+  495955:	48 c1 e0 02          	shl    rax,0x2
+  495959:	49 8d 14 33          	lea    rdx,[r11+rsi*1]
+  49595d:	49 8d 74 33 fc       	lea    rsi,[r11+rsi*1-0x4]
+  495962:	48 29 c6             	sub    rsi,rax
+  495965:	0f 1f 00             	nop    DWORD PTR [rax]
+  495968:	48 63 02             	movsxd rax,DWORD PTR [rdx]
+  49596b:	48 83 ea 04          	sub    rdx,0x4
+  49596f:	83 84 84 40 04 00 00 	add    DWORD PTR [rsp+rax*4+0x440],0x1
+  495976:	01 
+  495977:	48 39 f2             	cmp    rdx,rsi
+  49597a:	75 ec                	jne    495968 <pxa_decompress+0x438>
+  49597c:	4a 8d 14 8d 04 00 00 	lea    rdx,[r9*4+0x4]
+  495983:	00 
+  495984:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  495989:	48 c1 e7 02          	shl    rdi,0x2
+  49598d:	48 89 fe             	mov    rsi,rdi
+  495990:	48 83 c7 04          	add    rdi,0x4
+  495994:	89 4c 24 14          	mov    DWORD PTR [rsp+0x14],ecx
+  495998:	48 29 d6             	sub    rsi,rdx
+  49599b:	48 29 d7             	sub    rdi,rdx
+  49599e:	48 01 c6             	add    rsi,rax
+  4959a1:	48 01 c7             	add    rdi,rax
+  4959a4:	e8 17 ea f6 ff       	call   4043c0 <memmove@plt>
+  4959a9:	48 63 4c 24 14       	movsxd rcx,DWORD PTR [rsp+0x14]
+  4959ae:	89 4c 24 40          	mov    DWORD PTR [rsp+0x40],ecx
+  4959b2:	c7 84 8c 40 04 00 00 	mov    DWORD PTR [rsp+rcx*4+0x440],0x0
+  4959b9:	00 00 00 00 
+  4959bd:	ba 01 00 00 00       	mov    edx,0x1
+  4959c2:	39 6c 24 10          	cmp    DWORD PTR [rsp+0x10],ebp
+  4959c6:	0f 8f ec fc ff ff    	jg     4956b8 <pxa_decompress+0x188>
+  4959cc:	45 84 f6             	test   r14b,r14b
+  4959cf:	0f 85 ff 0e 00 00    	jne    4968d4 <pxa_decompress+0x13a4>
+  4959d5:	84 d2                	test   dl,dl
+  4959d7:	0f 85 37 0b 00 00    	jne    496514 <pxa_decompress+0xfe4>
+  4959dd:	31 c0                	xor    eax,eax
+  4959df:	48 8b 9c 24 48 08 00 	mov    rbx,QWORD PTR [rsp+0x848]
+  4959e6:	00 
+  4959e7:	64 48 33 1c 25 28 00 	xor    rbx,QWORD PTR fs:0x28
+  4959ee:	00 00 
+  4959f0:	0f 85 bf 0e 00 00    	jne    4968b5 <pxa_decompress+0x1385>
+  4959f6:	48 81 c4 58 08 00 00 	add    rsp,0x858
+  4959fd:	5b                   	pop    rbx
+  4959fe:	5d                   	pop    rbp
+  4959ff:	41 5c                	pop    r12
+  495a01:	41 5d                	pop    r13
+  495a03:	41 5e                	pop    r14
+  495a05:	41 5f                	pop    r15
+  495a07:	c3                   	ret
+  495a08:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  495a0f:	00 
+  495a10:	89 06                	mov    DWORD PTR [rsi],eax
+  495a12:	48 83 c6 04          	add    rsi,0x4
+  495a16:	48 39 fe             	cmp    rsi,rdi
+  495a19:	0f 85 c9 fb ff ff    	jne    4955e8 <pxa_decompress+0xb8>
+  495a1f:	e9 30 fc ff ff       	jmp    495654 <pxa_decompress+0x124>
+  495a24:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  495a28:	83 c5 01             	add    ebp,0x1
+  495a2b:	48 63 cd             	movsxd rcx,ebp
+  495a2e:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495a33:	89 d7                	mov    edi,edx
+  495a35:	89 d6                	mov    esi,edx
+  495a37:	83 e7 02             	and    edi,0x2
+  495a3a:	83 e6 01             	and    esi,0x1
+  495a3d:	45 85 c9             	test   r9d,r9d
+  495a40:	44 0f b6 cf          	movzx  r9d,dil
+  495a44:	0f 84 6e 07 00 00    	je     4961b8 <pxa_decompress+0xc88>
+  495a4a:	85 f6                	test   esi,esi
+  495a4c:	bf 04 00 00 00       	mov    edi,0x4
+  495a51:	41 be 01 00 00 00    	mov    r14d,0x1
+  495a57:	0f 84 c3 0a 00 00    	je     496520 <pxa_decompress+0xff0>
+  495a5d:	89 f8                	mov    eax,edi
+  495a5f:	8d 1c 3f             	lea    ebx,[rdi+rdi*1]
+  495a62:	21 d0                	and    eax,edx
+  495a64:	45 85 c9             	test   r9d,r9d
+  495a67:	0f 84 c7 0d 00 00    	je     496834 <pxa_decompress+0x1304>
+  495a6d:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495a73:	0f 85 c5 fc ff ff    	jne    49573e <pxa_decompress+0x20e>
+  495a79:	83 c5 01             	add    ebp,0x1
+  495a7c:	48 63 cd             	movsxd rcx,ebp
+  495a7f:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495a84:	89 d6                	mov    esi,edx
+  495a86:	89 d7                	mov    edi,edx
+  495a88:	83 e6 01             	and    esi,0x1
+  495a8b:	85 c0                	test   eax,eax
+  495a8d:	0f 84 a6 0b 00 00    	je     496639 <pxa_decompress+0x1109>
+  495a93:	83 e7 02             	and    edi,0x2
+  495a96:	40 84 f6             	test   sil,sil
+  495a99:	41 be 01 00 00 00    	mov    r14d,0x1
+  495a9f:	40 0f b6 c7          	movzx  eax,dil
+  495aa3:	bf 04 00 00 00       	mov    edi,0x4
+  495aa8:	0f 84 c1 0a 00 00    	je     49656f <pxa_decompress+0x103f>
+  495aae:	89 fe                	mov    esi,edi
+  495ab0:	8d 1c 3f             	lea    ebx,[rdi+rdi*1]
+  495ab3:	21 d6                	and    esi,edx
+  495ab5:	85 c0                	test   eax,eax
+  495ab7:	0f 84 c9 0d 00 00    	je     496886 <pxa_decompress+0x1356>
+  495abd:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495ac3:	0f 85 c4 fc ff ff    	jne    49578d <pxa_decompress+0x25d>
+  495ac9:	83 c5 01             	add    ebp,0x1
+  495acc:	48 63 cd             	movsxd rcx,ebp
+  495acf:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495ad4:	89 d0                	mov    eax,edx
+  495ad6:	89 d7                	mov    edi,edx
+  495ad8:	83 e0 01             	and    eax,0x1
+  495adb:	85 f6                	test   esi,esi
+  495add:	0f 84 bc 0b 00 00    	je     49669f <pxa_decompress+0x116f>
+  495ae3:	83 e7 02             	and    edi,0x2
+  495ae6:	84 c0                	test   al,al
+  495ae8:	41 b9 04 00 00 00    	mov    r9d,0x4
+  495aee:	40 0f b6 f7          	movzx  esi,dil
+  495af2:	41 be 01 00 00 00    	mov    r14d,0x1
+  495af8:	0f 84 b0 0a 00 00    	je     4965ae <pxa_decompress+0x107e>
+  495afe:	89 d0                	mov    eax,edx
+  495b00:	43 8d 1c 09          	lea    ebx,[r9+r9*1]
+  495b04:	44 21 c8             	and    eax,r9d
+  495b07:	85 f6                	test   esi,esi
+  495b09:	0f 84 b2 0d 00 00    	je     4968c1 <pxa_decompress+0x1391>
+  495b0f:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495b15:	0f 85 c2 fc ff ff    	jne    4957dd <pxa_decompress+0x2ad>
+  495b1b:	83 c5 01             	add    ebp,0x1
+  495b1e:	48 63 cd             	movsxd rcx,ebp
+  495b21:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495b26:	89 d6                	mov    esi,edx
+  495b28:	89 d7                	mov    edi,edx
+  495b2a:	83 e6 01             	and    esi,0x1
+  495b2d:	85 c0                	test   eax,eax
+  495b2f:	0f 84 a4 0b 00 00    	je     4966d9 <pxa_decompress+0x11a9>
+  495b35:	83 e7 02             	and    edi,0x2
+  495b38:	40 84 f6             	test   sil,sil
+  495b3b:	41 b9 04 00 00 00    	mov    r9d,0x4
+  495b41:	40 0f b6 c7          	movzx  eax,dil
+  495b45:	41 be 01 00 00 00    	mov    r14d,0x1
+  495b4b:	0f 84 d3 0a 00 00    	je     496624 <pxa_decompress+0x10f4>
+  495b51:	89 d6                	mov    esi,edx
+  495b53:	43 8d 1c 09          	lea    ebx,[r9+r9*1]
+  495b57:	44 21 ce             	and    esi,r9d
+  495b5a:	85 c0                	test   eax,eax
+  495b5c:	0f 84 e4 0c 00 00    	je     496846 <pxa_decompress+0x1316>
+  495b62:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495b68:	0f 85 be fc ff ff    	jne    49582c <pxa_decompress+0x2fc>
+  495b6e:	83 c5 01             	add    ebp,0x1
+  495b71:	48 63 cd             	movsxd rcx,ebp
+  495b74:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495b79:	89 d0                	mov    eax,edx
+  495b7b:	89 d7                	mov    edi,edx
+  495b7d:	83 e0 01             	and    eax,0x1
+  495b80:	85 f6                	test   esi,esi
+  495b82:	0f 84 eb 0b 00 00    	je     496773 <pxa_decompress+0x1243>
+  495b88:	83 e7 02             	and    edi,0x2
+  495b8b:	84 c0                	test   al,al
+  495b8d:	bb 04 00 00 00       	mov    ebx,0x4
+  495b92:	40 0f b6 f7          	movzx  esi,dil
+  495b96:	41 be 01 00 00 00    	mov    r14d,0x1
+  495b9c:	0f 84 39 09 00 00    	je     4964db <pxa_decompress+0xfab>
+  495ba2:	89 d0                	mov    eax,edx
+  495ba4:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  495ba7:	21 d8                	and    eax,ebx
+  495ba9:	85 f6                	test   esi,esi
+  495bab:	0f 84 3a 0c 00 00    	je     4967eb <pxa_decompress+0x12bb>
+  495bb1:	81 ff 00 01 00 00    	cmp    edi,0x100
+  495bb7:	0f 85 bf fc ff ff    	jne    49587c <pxa_decompress+0x34c>
+  495bbd:	83 c5 01             	add    ebp,0x1
+  495bc0:	48 63 cd             	movsxd rcx,ebp
+  495bc3:	41 0f b6 3c 0c       	movzx  edi,BYTE PTR [r12+rcx*1]
+  495bc8:	89 fa                	mov    edx,edi
+  495bca:	83 e2 01             	and    edx,0x1
+  495bcd:	85 c0                	test   eax,eax
+  495bcf:	0f 84 26 0c 00 00    	je     4967fb <pxa_decompress+0x12cb>
+  495bd5:	84 d2                	test   dl,dl
+  495bd7:	bb 04 00 00 00       	mov    ebx,0x4
+  495bdc:	41 be 01 00 00 00    	mov    r14d,0x1
+  495be2:	0f 85 ca fc ff ff    	jne    4958b2 <pxa_decompress+0x382>
+  495be8:	bb 02 00 00 00       	mov    ebx,0x2
+  495bed:	e9 85 07 00 00       	jmp    496377 <pxa_decompress+0xe47>
+  495bf2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  495bf8:	3d 00 01 00 00       	cmp    eax,0x100
+  495bfd:	0f 85 8d 07 00 00    	jne    496390 <pxa_decompress+0xe60>
+  495c03:	83 c5 01             	add    ebp,0x1
+  495c06:	85 f6                	test   esi,esi
+  495c08:	48 63 cd             	movsxd rcx,ebp
+  495c0b:	41 0f b6 3c 0c       	movzx  edi,BYTE PTR [r12+rcx*1]
+  495c10:	0f 84 14 08 00 00    	je     49642a <pxa_decompress+0xefa>
+  495c16:	41 89 f9             	mov    r9d,edi
+  495c19:	b8 02 00 00 00       	mov    eax,0x2
+  495c1e:	41 be 01 00 00 00    	mov    r14d,0x1
+  495c24:	41 83 e1 01          	and    r9d,0x1
+  495c28:	40 0f b6 d7          	movzx  edx,dil
+  495c2c:	31 ff                	xor    edi,edi
+  495c2e:	45 85 c9             	test   r9d,r9d
+  495c31:	be 02 00 00 00       	mov    esi,0x2
+  495c36:	40 0f 95 c7          	setne  dil
+  495c3a:	29 fe                	sub    esi,edi
+  495c3c:	8d 34 b6             	lea    esi,[rsi+rsi*4]
+  495c3f:	83 fe 0a             	cmp    esi,0xa
+  495c42:	41 0f 94 c1          	sete   r9b
+  495c46:	21 c2                	and    edx,eax
+  495c48:	01 c0                	add    eax,eax
+  495c4a:	3d 00 01 00 00       	cmp    eax,0x100
+  495c4f:	75 11                	jne    495c62 <pxa_decompress+0x732>
+  495c51:	83 c5 01             	add    ebp,0x1
+  495c54:	b8 01 00 00 00       	mov    eax,0x1
+  495c59:	41 be 01 00 00 00    	mov    r14d,0x1
+  495c5f:	48 63 cd             	movsxd rcx,ebp
+  495c62:	31 ff                	xor    edi,edi
+  495c64:	85 d2                	test   edx,edx
+  495c66:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495c6b:	40 0f 95 c7          	setne  dil
+  495c6f:	21 c2                	and    edx,eax
+  495c71:	01 c0                	add    eax,eax
+  495c73:	3d 00 01 00 00       	cmp    eax,0x100
+  495c78:	0f 84 6a 07 00 00    	je     4963e8 <pxa_decompress+0xeb8>
+  495c7e:	41 89 fa             	mov    r10d,edi
+  495c81:	41 83 ca 02          	or     r10d,0x2
+  495c85:	85 d2                	test   edx,edx
+  495c87:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495c8c:	41 0f 45 fa          	cmovne edi,r10d
+  495c90:	21 c2                	and    edx,eax
+  495c92:	01 c0                	add    eax,eax
+  495c94:	3d 00 01 00 00       	cmp    eax,0x100
+  495c99:	0f 84 5f 07 00 00    	je     4963fe <pxa_decompress+0xece>
+  495c9f:	41 89 fa             	mov    r10d,edi
+  495ca2:	41 83 ca 04          	or     r10d,0x4
+  495ca6:	85 d2                	test   edx,edx
+  495ca8:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495cad:	41 0f 45 fa          	cmovne edi,r10d
+  495cb1:	21 c2                	and    edx,eax
+  495cb3:	01 c0                	add    eax,eax
+  495cb5:	3d 00 01 00 00       	cmp    eax,0x100
+  495cba:	0f 84 54 07 00 00    	je     496414 <pxa_decompress+0xee4>
+  495cc0:	41 89 fa             	mov    r10d,edi
+  495cc3:	8d 1c 00             	lea    ebx,[rax+rax*1]
+  495cc6:	41 83 ca 08          	or     r10d,0x8
+  495cca:	85 d2                	test   edx,edx
+  495ccc:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  495cd1:	41 0f 45 fa          	cmovne edi,r10d
+  495cd5:	21 c2                	and    edx,eax
+  495cd7:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495cdd:	0f 84 74 07 00 00    	je     496457 <pxa_decompress+0xf27>
+  495ce3:	89 f8                	mov    eax,edi
+  495ce5:	83 c8 10             	or     eax,0x10
+  495ce8:	85 d2                	test   edx,edx
+  495cea:	0f 45 f8             	cmovne edi,eax
+  495ced:	83 fe 05             	cmp    esi,0x5
+  495cf0:	0f 84 da 01 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495cf6:	48 63 c5             	movsxd rax,ebp
+  495cf9:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495cfe:	21 d8                	and    eax,ebx
+  495d00:	01 db                	add    ebx,ebx
+  495d02:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495d08:	75 0e                	jne    495d18 <pxa_decompress+0x7e8>
+  495d0a:	83 c5 01             	add    ebp,0x1
+  495d0d:	bb 01 00 00 00       	mov    ebx,0x1
+  495d12:	41 be 01 00 00 00    	mov    r14d,0x1
+  495d18:	89 fa                	mov    edx,edi
+  495d1a:	83 ca 20             	or     edx,0x20
+  495d1d:	85 c0                	test   eax,eax
+  495d1f:	0f 45 fa             	cmovne edi,edx
+  495d22:	83 fe 06             	cmp    esi,0x6
+  495d25:	0f 84 a5 01 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495d2b:	48 63 c5             	movsxd rax,ebp
+  495d2e:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495d33:	21 d8                	and    eax,ebx
+  495d35:	01 db                	add    ebx,ebx
+  495d37:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495d3d:	75 0e                	jne    495d4d <pxa_decompress+0x81d>
+  495d3f:	83 c5 01             	add    ebp,0x1
+  495d42:	bb 01 00 00 00       	mov    ebx,0x1
+  495d47:	41 be 01 00 00 00    	mov    r14d,0x1
+  495d4d:	89 fa                	mov    edx,edi
+  495d4f:	83 ca 40             	or     edx,0x40
+  495d52:	85 c0                	test   eax,eax
+  495d54:	0f 45 fa             	cmovne edi,edx
+  495d57:	83 fe 07             	cmp    esi,0x7
+  495d5a:	0f 84 70 01 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495d60:	48 63 c5             	movsxd rax,ebp
+  495d63:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495d68:	21 d8                	and    eax,ebx
+  495d6a:	01 db                	add    ebx,ebx
+  495d6c:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495d72:	75 0e                	jne    495d82 <pxa_decompress+0x852>
+  495d74:	83 c5 01             	add    ebp,0x1
+  495d77:	bb 01 00 00 00       	mov    ebx,0x1
+  495d7c:	41 be 01 00 00 00    	mov    r14d,0x1
+  495d82:	89 fa                	mov    edx,edi
+  495d84:	80 ca 80             	or     dl,0x80
+  495d87:	85 c0                	test   eax,eax
+  495d89:	0f 45 fa             	cmovne edi,edx
+  495d8c:	83 fe 08             	cmp    esi,0x8
+  495d8f:	0f 84 3b 01 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495d95:	48 63 c5             	movsxd rax,ebp
+  495d98:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495d9d:	21 d8                	and    eax,ebx
+  495d9f:	01 db                	add    ebx,ebx
+  495da1:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495da7:	0f 84 bd 06 00 00    	je     49646a <pxa_decompress+0xf3a>
+  495dad:	89 fa                	mov    edx,edi
+  495daf:	80 ce 01             	or     dh,0x1
+  495db2:	85 c0                	test   eax,eax
+  495db4:	0f 45 fa             	cmovne edi,edx
+  495db7:	83 fe 09             	cmp    esi,0x9
+  495dba:	0f 84 10 01 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495dc0:	48 63 c5             	movsxd rax,ebp
+  495dc3:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495dc8:	21 d8                	and    eax,ebx
+  495dca:	01 db                	add    ebx,ebx
+  495dcc:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495dd2:	0f 84 a5 06 00 00    	je     49647d <pxa_decompress+0xf4d>
+  495dd8:	89 fa                	mov    edx,edi
+  495dda:	80 ce 02             	or     dh,0x2
+  495ddd:	85 c0                	test   eax,eax
+  495ddf:	0f 45 fa             	cmovne edi,edx
+  495de2:	83 fe 0a             	cmp    esi,0xa
+  495de5:	0f 84 e5 00 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495deb:	48 63 c5             	movsxd rax,ebp
+  495dee:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495df3:	21 d8                	and    eax,ebx
+  495df5:	01 db                	add    ebx,ebx
+  495df7:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495dfd:	75 0e                	jne    495e0d <pxa_decompress+0x8dd>
+  495dff:	83 c5 01             	add    ebp,0x1
+  495e02:	bb 01 00 00 00       	mov    ebx,0x1
+  495e07:	41 be 01 00 00 00    	mov    r14d,0x1
+  495e0d:	89 fa                	mov    edx,edi
+  495e0f:	80 ce 04             	or     dh,0x4
+  495e12:	85 c0                	test   eax,eax
+  495e14:	0f 45 fa             	cmovne edi,edx
+  495e17:	83 fe 0b             	cmp    esi,0xb
+  495e1a:	0f 84 b0 00 00 00    	je     495ed0 <pxa_decompress+0x9a0>
+  495e20:	48 63 c5             	movsxd rax,ebp
+  495e23:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495e28:	21 d8                	and    eax,ebx
+  495e2a:	01 db                	add    ebx,ebx
+  495e2c:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495e32:	75 0e                	jne    495e42 <pxa_decompress+0x912>
+  495e34:	83 c5 01             	add    ebp,0x1
+  495e37:	bb 01 00 00 00       	mov    ebx,0x1
+  495e3c:	41 be 01 00 00 00    	mov    r14d,0x1
+  495e42:	89 fa                	mov    edx,edi
+  495e44:	80 ce 08             	or     dh,0x8
+  495e47:	85 c0                	test   eax,eax
+  495e49:	0f 45 fa             	cmovne edi,edx
+  495e4c:	83 fe 0c             	cmp    esi,0xc
+  495e4f:	74 7f                	je     495ed0 <pxa_decompress+0x9a0>
+  495e51:	48 63 c5             	movsxd rax,ebp
+  495e54:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495e59:	21 d8                	and    eax,ebx
+  495e5b:	01 db                	add    ebx,ebx
+  495e5d:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495e63:	75 0e                	jne    495e73 <pxa_decompress+0x943>
+  495e65:	83 c5 01             	add    ebp,0x1
+  495e68:	bb 01 00 00 00       	mov    ebx,0x1
+  495e6d:	41 be 01 00 00 00    	mov    r14d,0x1
+  495e73:	89 fa                	mov    edx,edi
+  495e75:	80 ce 10             	or     dh,0x10
+  495e78:	85 c0                	test   eax,eax
+  495e7a:	0f 45 fa             	cmovne edi,edx
+  495e7d:	83 fe 0d             	cmp    esi,0xd
+  495e80:	74 4e                	je     495ed0 <pxa_decompress+0x9a0>
+  495e82:	48 63 c5             	movsxd rax,ebp
+  495e85:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495e8a:	21 d8                	and    eax,ebx
+  495e8c:	01 db                	add    ebx,ebx
+  495e8e:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495e94:	0f 84 1b 06 00 00    	je     4964b5 <pxa_decompress+0xf85>
+  495e9a:	89 fa                	mov    edx,edi
+  495e9c:	80 ce 20             	or     dh,0x20
+  495e9f:	85 c0                	test   eax,eax
+  495ea1:	0f 45 fa             	cmovne edi,edx
+  495ea4:	83 fe 0f             	cmp    esi,0xf
+  495ea7:	75 27                	jne    495ed0 <pxa_decompress+0x9a0>
+  495ea9:	48 63 c5             	movsxd rax,ebp
+  495eac:	41 0f b6 04 04       	movzx  eax,BYTE PTR [r12+rax*1]
+  495eb1:	21 d8                	and    eax,ebx
+  495eb3:	01 db                	add    ebx,ebx
+  495eb5:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  495ebb:	0f 84 07 06 00 00    	je     4964c8 <pxa_decompress+0xf98>
+  495ec1:	89 fa                	mov    edx,edi
+  495ec3:	80 ce 40             	or     dh,0x40
+  495ec6:	85 c0                	test   eax,eax
+  495ec8:	0f 45 fa             	cmovne edi,edx
+  495ecb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  495ed0:	85 ff                	test   edi,edi
+  495ed2:	0f 94 c0             	sete   al
+  495ed5:	41 20 c1             	and    r9b,al
+  495ed8:	0f 84 08 0a 00 00    	je     4968e6 <pxa_decompress+0x13b6>
+  495ede:	44 3b 3c 24          	cmp    r15d,DWORD PTR [rsp]
+  495ee2:	0f 8d d5 fa ff ff    	jge    4959bd <pxa_decompress+0x48d>
+  495ee8:	8b 44 24 1c          	mov    eax,DWORD PTR [rsp+0x1c]
+  495eec:	49 63 f7             	movsxd rsi,r15d
+  495eef:	44 29 f8             	sub    eax,r15d
+  495ef2:	4c 8d 44 06 01       	lea    r8,[rsi+rax*1+0x1]
+  495ef7:	eb 25                	jmp    495f1e <pxa_decompress+0x9ee>
+  495ef9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  495f00:	85 c0                	test   eax,eax
+  495f02:	41 88 44 35 00       	mov    BYTE PTR [r13+rsi*1+0x0],al
+  495f07:	0f 84 b0 fa ff ff    	je     4959bd <pxa_decompress+0x48d>
+  495f0d:	44 8d 7e 01          	lea    r15d,[rsi+0x1]
+  495f11:	48 83 c6 01          	add    rsi,0x1
+  495f15:	49 39 f0             	cmp    r8,rsi
+  495f18:	0f 84 9f fa ff ff    	je     4959bd <pxa_decompress+0x48d>
+  495f1e:	48 63 c5             	movsxd rax,ebp
+  495f21:	8d 0c 1b             	lea    ecx,[rbx+rbx*1]
+  495f24:	41 89 f7             	mov    r15d,esi
+  495f27:	41 0f b6 14 04       	movzx  edx,BYTE PTR [r12+rax*1]
+  495f2c:	31 c0                	xor    eax,eax
+  495f2e:	85 da                	test   edx,ebx
+  495f30:	0f 95 c0             	setne  al
+  495f33:	81 f9 00 01 00 00    	cmp    ecx,0x100
+  495f39:	0f 84 f9 00 00 00    	je     496038 <pxa_decompress+0xb08>
+  495f3f:	8d 3c 9d 00 00 00 00 	lea    edi,[rbx*4+0x0]
+  495f46:	21 d1                	and    ecx,edx
+  495f48:	81 ff 00 01 00 00    	cmp    edi,0x100
+  495f4e:	0f 85 d4 01 00 00    	jne    496128 <pxa_decompress+0xbf8>
+  495f54:	83 c5 01             	add    ebp,0x1
+  495f57:	48 63 d5             	movsxd rdx,ebp
+  495f5a:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  495f5f:	89 d7                	mov    edi,edx
+  495f61:	83 e7 01             	and    edi,0x1
+  495f64:	85 c9                	test   ecx,ecx
+  495f66:	0f 84 dc 01 00 00    	je     496148 <pxa_decompress+0xc18>
+  495f6c:	83 c8 02             	or     eax,0x2
+  495f6f:	45 89 ce             	mov    r14d,r9d
+  495f72:	bb 02 00 00 00       	mov    ebx,0x2
+  495f77:	8d 0c 1b             	lea    ecx,[rbx+rbx*1]
+  495f7a:	41 89 c2             	mov    r10d,eax
+  495f7d:	21 d3                	and    ebx,edx
+  495f7f:	41 83 ca 04          	or     r10d,0x4
+  495f83:	85 ff                	test   edi,edi
+  495f85:	41 0f 45 c2          	cmovne eax,r10d
+  495f89:	81 f9 00 01 00 00    	cmp    ecx,0x100
+  495f8f:	0f 85 fe 00 00 00    	jne    496093 <pxa_decompress+0xb63>
+  495f95:	83 c5 01             	add    ebp,0x1
+  495f98:	48 63 d5             	movsxd rdx,ebp
+  495f9b:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  495fa0:	89 d1                	mov    ecx,edx
+  495fa2:	83 e1 01             	and    ecx,0x1
+  495fa5:	85 db                	test   ebx,ebx
+  495fa7:	0f 84 83 01 00 00    	je     496130 <pxa_decompress+0xc00>
+  495fad:	83 c8 08             	or     eax,0x8
+  495fb0:	45 89 ce             	mov    r14d,r9d
+  495fb3:	41 ba 02 00 00 00    	mov    r10d,0x2
+  495fb9:	43 8d 3c 12          	lea    edi,[r10+r10*1]
+  495fbd:	41 89 c3             	mov    r11d,eax
+  495fc0:	41 21 d2             	and    r10d,edx
+  495fc3:	41 83 cb 10          	or     r11d,0x10
+  495fc7:	85 c9                	test   ecx,ecx
+  495fc9:	41 0f 45 c3          	cmovne eax,r11d
+  495fcd:	81 ff 00 01 00 00    	cmp    edi,0x100
+  495fd3:	0f 85 fc 00 00 00    	jne    4960d5 <pxa_decompress+0xba5>
+  495fd9:	83 c5 01             	add    ebp,0x1
+  495fdc:	48 63 d5             	movsxd rdx,ebp
+  495fdf:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  495fe4:	89 d7                	mov    edi,edx
+  495fe6:	83 e7 01             	and    edi,0x1
+  495fe9:	45 85 d2             	test   r10d,r10d
+  495fec:	0f 84 96 01 00 00    	je     496188 <pxa_decompress+0xc58>
+  495ff2:	83 c8 20             	or     eax,0x20
+  495ff5:	45 89 ce             	mov    r14d,r9d
+  495ff8:	b9 02 00 00 00       	mov    ecx,0x2
+  495ffd:	8d 1c 09             	lea    ebx,[rcx+rcx*1]
+  496000:	21 ca                	and    edx,ecx
+  496002:	89 c1                	mov    ecx,eax
+  496004:	83 c9 40             	or     ecx,0x40
+  496007:	85 ff                	test   edi,edi
+  496009:	0f 45 c1             	cmovne eax,ecx
+  49600c:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  496012:	75 0b                	jne    49601f <pxa_decompress+0xaef>
+  496014:	83 c5 01             	add    ebp,0x1
+  496017:	45 89 ce             	mov    r14d,r9d
+  49601a:	bb 01 00 00 00       	mov    ebx,0x1
+  49601f:	85 d2                	test   edx,edx
+  496021:	0f 84 d9 fe ff ff    	je     495f00 <pxa_decompress+0x9d0>
+  496027:	0c 80                	or     al,0x80
+  496029:	41 88 44 35 00       	mov    BYTE PTR [r13+rsi*1+0x0],al
+  49602e:	e9 da fe ff ff       	jmp    495f0d <pxa_decompress+0x9dd>
+  496033:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  496038:	83 c5 01             	add    ebp,0x1
+  49603b:	45 89 ce             	mov    r14d,r9d
+  49603e:	bb 04 00 00 00       	mov    ebx,0x4
+  496043:	48 63 d5             	movsxd rdx,ebp
+  496046:	bf 02 00 00 00       	mov    edi,0x2
+  49604b:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  496050:	89 d1                	mov    ecx,edx
+  496052:	83 e1 01             	and    ecx,0x1
+  496055:	41 89 c2             	mov    r10d,eax
+  496058:	21 d7                	and    edi,edx
+  49605a:	41 83 ca 02          	or     r10d,0x2
+  49605e:	85 c9                	test   ecx,ecx
+  496060:	41 0f 45 c2          	cmovne eax,r10d
+  496064:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  49606a:	0f 85 07 ff ff ff    	jne    495f77 <pxa_decompress+0xa47>
+  496070:	83 c5 01             	add    ebp,0x1
+  496073:	48 63 d5             	movsxd rdx,ebp
+  496076:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  49607b:	89 d3                	mov    ebx,edx
+  49607d:	83 e3 01             	and    ebx,0x1
+  496080:	85 ff                	test   edi,edi
+  496082:	0f 84 d8 00 00 00    	je     496160 <pxa_decompress+0xc30>
+  496088:	83 c8 04             	or     eax,0x4
+  49608b:	45 89 ce             	mov    r14d,r9d
+  49608e:	b9 02 00 00 00       	mov    ecx,0x2
+  496093:	44 8d 14 09          	lea    r10d,[rcx+rcx*1]
+  496097:	89 c7                	mov    edi,eax
+  496099:	21 d1                	and    ecx,edx
+  49609b:	83 cf 08             	or     edi,0x8
+  49609e:	85 db                	test   ebx,ebx
+  4960a0:	0f 45 c7             	cmovne eax,edi
+  4960a3:	41 81 fa 00 01 00 00 	cmp    r10d,0x100
+  4960aa:	0f 85 09 ff ff ff    	jne    495fb9 <pxa_decompress+0xa89>
+  4960b0:	83 c5 01             	add    ebp,0x1
+  4960b3:	48 63 d5             	movsxd rdx,ebp
+  4960b6:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  4960bb:	41 89 d2             	mov    r10d,edx
+  4960be:	41 83 e2 01          	and    r10d,0x1
+  4960c2:	85 c9                	test   ecx,ecx
+  4960c4:	0f 84 d6 00 00 00    	je     4961a0 <pxa_decompress+0xc70>
+  4960ca:	83 c8 10             	or     eax,0x10
+  4960cd:	45 89 ce             	mov    r14d,r9d
+  4960d0:	bf 02 00 00 00       	mov    edi,0x2
+  4960d5:	8d 0c 3f             	lea    ecx,[rdi+rdi*1]
+  4960d8:	41 89 c3             	mov    r11d,eax
+  4960db:	21 d7                	and    edi,edx
+  4960dd:	41 83 cb 20          	or     r11d,0x20
+  4960e1:	45 85 d2             	test   r10d,r10d
+  4960e4:	41 0f 45 c3          	cmovne eax,r11d
+  4960e8:	81 f9 00 01 00 00    	cmp    ecx,0x100
+  4960ee:	0f 85 09 ff ff ff    	jne    495ffd <pxa_decompress+0xacd>
+  4960f4:	83 c5 01             	add    ebp,0x1
+  4960f7:	48 63 d5             	movsxd rdx,ebp
+  4960fa:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  4960ff:	83 e2 01             	and    edx,0x1
+  496102:	85 ff                	test   edi,edi
+  496104:	74 72                	je     496178 <pxa_decompress+0xc48>
+  496106:	83 c8 40             	or     eax,0x40
+  496109:	85 d2                	test   edx,edx
+  49610b:	0f 84 bf 02 00 00    	je     4963d0 <pxa_decompress+0xea0>
+  496111:	0c 80                	or     al,0x80
+  496113:	45 89 ce             	mov    r14d,r9d
+  496116:	bb 02 00 00 00       	mov    ebx,0x2
+  49611b:	41 88 44 35 00       	mov    BYTE PTR [r13+rsi*1+0x0],al
+  496120:	e9 e8 fd ff ff       	jmp    495f0d <pxa_decompress+0x9dd>
+  496125:	0f 1f 00             	nop    DWORD PTR [rax]
+  496128:	c1 e3 03             	shl    ebx,0x3
+  49612b:	e9 25 ff ff ff       	jmp    496055 <pxa_decompress+0xb25>
+  496130:	45 89 ce             	mov    r14d,r9d
+  496133:	bf 04 00 00 00       	mov    edi,0x4
+  496138:	41 ba 02 00 00 00    	mov    r10d,0x2
+  49613e:	e9 7a fe ff ff       	jmp    495fbd <pxa_decompress+0xa8d>
+  496143:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  496148:	45 89 ce             	mov    r14d,r9d
+  49614b:	b9 04 00 00 00       	mov    ecx,0x4
+  496150:	bb 02 00 00 00       	mov    ebx,0x2
+  496155:	e9 20 fe ff ff       	jmp    495f7a <pxa_decompress+0xa4a>
+  49615a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  496160:	45 89 ce             	mov    r14d,r9d
+  496163:	41 ba 04 00 00 00    	mov    r10d,0x4
+  496169:	b9 02 00 00 00       	mov    ecx,0x2
+  49616e:	e9 24 ff ff ff       	jmp    496097 <pxa_decompress+0xb67>
+  496173:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  496178:	45 89 ce             	mov    r14d,r9d
+  49617b:	bb 02 00 00 00       	mov    ebx,0x2
+  496180:	e9 9a fe ff ff       	jmp    49601f <pxa_decompress+0xaef>
+  496185:	0f 1f 00             	nop    DWORD PTR [rax]
+  496188:	45 89 ce             	mov    r14d,r9d
+  49618b:	bb 04 00 00 00       	mov    ebx,0x4
+  496190:	b9 02 00 00 00       	mov    ecx,0x2
+  496195:	e9 66 fe ff ff       	jmp    496000 <pxa_decompress+0xad0>
+  49619a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4961a0:	45 89 ce             	mov    r14d,r9d
+  4961a3:	b9 04 00 00 00       	mov    ecx,0x4
+  4961a8:	bf 02 00 00 00       	mov    edi,0x2
+  4961ad:	e9 26 ff ff ff       	jmp    4960d8 <pxa_decompress+0xba8>
+  4961b2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4961b8:	85 f6                	test   esi,esi
+  4961ba:	0f 85 87 02 00 00    	jne    496447 <pxa_decompress+0xf17>
+  4961c0:	44 89 ca             	mov    edx,r9d
+  4961c3:	be 0f 00 00 00       	mov    esi,0xf
+  4961c8:	45 31 c9             	xor    r9d,r9d
+  4961cb:	b8 04 00 00 00       	mov    eax,0x4
+  4961d0:	41 be 01 00 00 00    	mov    r14d,0x1
+  4961d6:	e9 87 fa ff ff       	jmp    495c62 <pxa_decompress+0x732>
+  4961db:	41 89 d1             	mov    r9d,edx
+  4961de:	8d 3c dd 00 00 00 00 	lea    edi,[rbx*8+0x0]
+  4961e5:	41 21 c1             	and    r9d,eax
+  4961e8:	85 f6                	test   esi,esi
+  4961ea:	0f 84 69 06 00 00    	je     496859 <pxa_decompress+0x1329>
+  4961f0:	81 ff 00 01 00 00    	cmp    edi,0x100
+  4961f6:	0f 85 61 f8 ff ff    	jne    495a5d <pxa_decompress+0x52d>
+  4961fc:	83 c5 01             	add    ebp,0x1
+  4961ff:	48 63 cd             	movsxd rcx,ebp
+  496202:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  496207:	89 d0                	mov    eax,edx
+  496209:	89 d7                	mov    edi,edx
+  49620b:	83 e0 01             	and    eax,0x1
+  49620e:	45 85 c9             	test   r9d,r9d
+  496211:	0f 84 c1 03 00 00    	je     4965d8 <pxa_decompress+0x10a8>
+  496217:	83 e7 02             	and    edi,0x2
+  49621a:	84 c0                	test   al,al
+  49621c:	bb 04 00 00 00       	mov    ebx,0x4
+  496221:	40 0f b6 f7          	movzx  esi,dil
+  496225:	41 be 01 00 00 00    	mov    r14d,0x1
+  49622b:	0f 84 14 03 00 00    	je     496545 <pxa_decompress+0x1015>
+  496231:	89 d0                	mov    eax,edx
+  496233:	8d 3c 1b             	lea    edi,[rbx+rbx*1]
+  496236:	21 d8                	and    eax,ebx
+  496238:	85 f6                	test   esi,esi
+  49623a:	0f 84 8b 05 00 00    	je     4967cb <pxa_decompress+0x129b>
+  496240:	81 ff 00 01 00 00    	cmp    edi,0x100
+  496246:	0f 85 62 f8 ff ff    	jne    495aae <pxa_decompress+0x57e>
+  49624c:	83 c5 01             	add    ebp,0x1
+  49624f:	48 63 cd             	movsxd rcx,ebp
+  496252:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  496257:	89 d6                	mov    esi,edx
+  496259:	89 d7                	mov    edi,edx
+  49625b:	83 e6 01             	and    esi,0x1
+  49625e:	85 c0                	test   eax,eax
+  496260:	0f 84 09 04 00 00    	je     49666f <pxa_decompress+0x113f>
+  496266:	83 e7 02             	and    edi,0x2
+  496269:	40 84 f6             	test   sil,sil
+  49626c:	41 be 01 00 00 00    	mov    r14d,0x1
+  496272:	40 0f b6 c7          	movzx  eax,dil
+  496276:	bf 04 00 00 00       	mov    edi,0x4
+  49627b:	0f 84 d9 02 00 00    	je     49655a <pxa_decompress+0x102a>
+  496281:	89 d6                	mov    esi,edx
+  496283:	44 8d 0c 3f          	lea    r9d,[rdi+rdi*1]
+  496287:	21 fe                	and    esi,edi
+  496289:	85 c0                	test   eax,eax
+  49628b:	0f 84 07 06 00 00    	je     496898 <pxa_decompress+0x1368>
+  496291:	41 81 f9 00 01 00 00 	cmp    r9d,0x100
+  496298:	0f 85 60 f8 ff ff    	jne    495afe <pxa_decompress+0x5ce>
+  49629e:	83 c5 01             	add    ebp,0x1
+  4962a1:	48 63 cd             	movsxd rcx,ebp
+  4962a4:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4962a9:	89 d0                	mov    eax,edx
+  4962ab:	89 d7                	mov    edi,edx
+  4962ad:	83 e0 01             	and    eax,0x1
+  4962b0:	85 f6                	test   esi,esi
+  4962b2:	0f 84 3c 04 00 00    	je     4966f4 <pxa_decompress+0x11c4>
+  4962b8:	83 e7 02             	and    edi,0x2
+  4962bb:	84 c0                	test   al,al
+  4962bd:	41 be 01 00 00 00    	mov    r14d,0x1
+  4962c3:	40 0f b6 f7          	movzx  esi,dil
+  4962c7:	bf 04 00 00 00       	mov    edi,0x4
+  4962cc:	0f 84 f1 02 00 00    	je     4965c3 <pxa_decompress+0x1093>
+  4962d2:	89 d0                	mov    eax,edx
+  4962d4:	44 8d 0c 3f          	lea    r9d,[rdi+rdi*1]
+  4962d8:	21 f8                	and    eax,edi
+  4962da:	85 f6                	test   esi,esi
+  4962dc:	0f 84 81 0a 00 00    	je     496d63 <pxa_decompress+0x1833>
+  4962e2:	41 81 f9 00 01 00 00 	cmp    r9d,0x100
+  4962e9:	0f 85 62 f8 ff ff    	jne    495b51 <pxa_decompress+0x621>
+  4962ef:	83 c5 01             	add    ebp,0x1
+  4962f2:	48 63 cd             	movsxd rcx,ebp
+  4962f5:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4962fa:	89 d6                	mov    esi,edx
+  4962fc:	89 d7                	mov    edi,edx
+  4962fe:	83 e6 01             	and    esi,0x1
+  496301:	85 c0                	test   eax,eax
+  496303:	0f 84 95 04 00 00    	je     49679e <pxa_decompress+0x126e>
+  496309:	83 e7 02             	and    edi,0x2
+  49630c:	40 84 f6             	test   sil,sil
+  49630f:	41 be 01 00 00 00    	mov    r14d,0x1
+  496315:	40 0f b6 c7          	movzx  eax,dil
+  496319:	bf 04 00 00 00       	mov    edi,0x4
+  49631e:	0f 84 06 04 00 00    	je     49672a <pxa_decompress+0x11fa>
+  496324:	89 d6                	mov    esi,edx
+  496326:	8d 1c 3f             	lea    ebx,[rdi+rdi*1]
+  496329:	21 fe                	and    esi,edi
+  49632b:	85 c0                	test   eax,eax
+  49632d:	0f 84 86 04 00 00    	je     4967b9 <pxa_decompress+0x1289>
+  496333:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  496339:	0f 85 63 f8 ff ff    	jne    495ba2 <pxa_decompress+0x672>
+  49633f:	83 c5 01             	add    ebp,0x1
+  496342:	48 63 cd             	movsxd rcx,ebp
+  496345:	41 0f b6 3c 0c       	movzx  edi,BYTE PTR [r12+rcx*1]
+  49634a:	89 f8                	mov    eax,edi
+  49634c:	83 e0 01             	and    eax,0x1
+  49634f:	85 f6                	test   esi,esi
+  496351:	0f 84 e8 03 00 00    	je     49673f <pxa_decompress+0x120f>
+  496357:	89 fa                	mov    edx,edi
+  496359:	83 e2 02             	and    edx,0x2
+  49635c:	84 c0                	test   al,al
+  49635e:	0f 84 56 03 00 00    	je     4966ba <pxa_decompress+0x118a>
+  496364:	84 d2                	test   dl,dl
+  496366:	0f 85 6f 04 00 00    	jne    4967db <pxa_decompress+0x12ab>
+  49636c:	bb 04 00 00 00       	mov    ebx,0x4
+  496371:	41 be 01 00 00 00    	mov    r14d,0x1
+  496377:	41 b9 13 00 00 00    	mov    r9d,0x13
+  49637d:	be f0 ff 07 00       	mov    esi,0x7fff0
+  496382:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  496387:	e9 3c f5 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49638c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  496390:	41 89 d1             	mov    r9d,edx
+  496393:	c1 e3 03             	shl    ebx,0x3
+  496396:	41 21 c1             	and    r9d,eax
+  496399:	85 f6                	test   esi,esi
+  49639b:	0f 84 07 01 00 00    	je     4964a8 <pxa_decompress+0xf78>
+  4963a1:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  4963a7:	0f 85 32 05 00 00    	jne    4968df <pxa_decompress+0x13af>
+  4963ad:	83 c5 01             	add    ebp,0x1
+  4963b0:	b8 01 00 00 00       	mov    eax,0x1
+  4963b5:	41 be 01 00 00 00    	mov    r14d,0x1
+  4963bb:	48 63 cd             	movsxd rcx,ebp
+  4963be:	41 0f b6 14 0c       	movzx  edx,BYTE PTR [r12+rcx*1]
+  4963c3:	e9 64 f8 ff ff       	jmp    495c2c <pxa_decompress+0x6fc>
+  4963c8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  4963cf:	00 
+  4963d0:	41 88 44 35 00       	mov    BYTE PTR [r13+rsi*1+0x0],al
+  4963d5:	45 89 ce             	mov    r14d,r9d
+  4963d8:	bb 02 00 00 00       	mov    ebx,0x2
+  4963dd:	e9 2b fb ff ff       	jmp    495f0d <pxa_decompress+0x9dd>
+  4963e2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  4963e8:	83 c5 01             	add    ebp,0x1
+  4963eb:	b8 01 00 00 00       	mov    eax,0x1
+  4963f0:	41 be 01 00 00 00    	mov    r14d,0x1
+  4963f6:	48 63 cd             	movsxd rcx,ebp
+  4963f9:	e9 80 f8 ff ff       	jmp    495c7e <pxa_decompress+0x74e>
+  4963fe:	83 c5 01             	add    ebp,0x1
+  496401:	b8 01 00 00 00       	mov    eax,0x1
+  496406:	41 be 01 00 00 00    	mov    r14d,0x1
+  49640c:	48 63 cd             	movsxd rcx,ebp
+  49640f:	e9 8b f8 ff ff       	jmp    495c9f <pxa_decompress+0x76f>
+  496414:	83 c5 01             	add    ebp,0x1
+  496417:	b8 01 00 00 00       	mov    eax,0x1
+  49641c:	41 be 01 00 00 00    	mov    r14d,0x1
+  496422:	48 63 cd             	movsxd rcx,ebp
+  496425:	e9 96 f8 ff ff       	jmp    495cc0 <pxa_decompress+0x790>
+  49642a:	89 fa                	mov    edx,edi
+  49642c:	be 0f 00 00 00       	mov    esi,0xf
+  496431:	45 31 c9             	xor    r9d,r9d
+  496434:	83 e2 01             	and    edx,0x1
+  496437:	b8 02 00 00 00       	mov    eax,0x2
+  49643c:	41 be 01 00 00 00    	mov    r14d,0x1
+  496442:	e9 1b f8 ff ff       	jmp    495c62 <pxa_decompress+0x732>
+  496447:	b8 04 00 00 00       	mov    eax,0x4
+  49644c:	41 be 01 00 00 00    	mov    r14d,0x1
+  496452:	e9 d5 f7 ff ff       	jmp    495c2c <pxa_decompress+0x6fc>
+  496457:	83 c5 01             	add    ebp,0x1
+  49645a:	bb 01 00 00 00       	mov    ebx,0x1
+  49645f:	41 be 01 00 00 00    	mov    r14d,0x1
+  496465:	e9 79 f8 ff ff       	jmp    495ce3 <pxa_decompress+0x7b3>
+  49646a:	83 c5 01             	add    ebp,0x1
+  49646d:	bb 01 00 00 00       	mov    ebx,0x1
+  496472:	41 be 01 00 00 00    	mov    r14d,0x1
+  496478:	e9 30 f9 ff ff       	jmp    495dad <pxa_decompress+0x87d>
+  49647d:	89 fa                	mov    edx,edi
+  49647f:	83 c5 01             	add    ebp,0x1
+  496482:	bb 01 00 00 00       	mov    ebx,0x1
+  496487:	80 ce 02             	or     dh,0x2
+  49648a:	85 c0                	test   eax,eax
+  49648c:	41 be 01 00 00 00    	mov    r14d,0x1
+  496492:	0f 45 fa             	cmovne edi,edx
+  496495:	83 fe 0a             	cmp    esi,0xa
+  496498:	0f 85 4d f9 ff ff    	jne    495deb <pxa_decompress+0x8bb>
+  49649e:	e9 2d fa ff ff       	jmp    495ed0 <pxa_decompress+0x9a0>
+  4964a3:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  4964a8:	be 0f 00 00 00       	mov    esi,0xf
+  4964ad:	45 31 c9             	xor    r9d,r9d
+  4964b0:	e9 91 f7 ff ff       	jmp    495c46 <pxa_decompress+0x716>
+  4964b5:	83 c5 01             	add    ebp,0x1
+  4964b8:	bb 01 00 00 00       	mov    ebx,0x1
+  4964bd:	41 be 01 00 00 00    	mov    r14d,0x1
+  4964c3:	e9 d2 f9 ff ff       	jmp    495e9a <pxa_decompress+0x96a>
+  4964c8:	83 c5 01             	add    ebp,0x1
+  4964cb:	bb 01 00 00 00       	mov    ebx,0x1
+  4964d0:	41 be 01 00 00 00    	mov    r14d,0x1
+  4964d6:	e9 e6 f9 ff ff       	jmp    495ec1 <pxa_decompress+0x991>
+  4964db:	41 b9 10 00 00 00    	mov    r9d,0x10
+  4964e1:	bb 02 00 00 00       	mov    ebx,0x2
+  4964e6:	be f0 ff 00 00       	mov    esi,0xfff0
+  4964eb:	e9 d8 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4964f0:	41 b9 10 00 00 00    	mov    r9d,0x10
+  4964f6:	bb 01 00 00 00       	mov    ebx,0x1
+  4964fb:	41 be 01 00 00 00    	mov    r14d,0x1
+  496501:	be f0 ff 00 00       	mov    esi,0xfff0
+  496506:	e9 bd f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49650b:	45 84 f6             	test   r14b,r14b
+  49650e:	0f 85 96 03 00 00    	jne    4968aa <pxa_decompress+0x137a>
+  496514:	89 1d d6 7f 2f 00    	mov    DWORD PTR [rip+0x2f7fd6],ebx        # 78e4f0 <bit>
+  49651a:	e9 be f4 ff ff       	jmp    4959dd <pxa_decompress+0x4ad>
+  49651f:	90                   	nop
+  496520:	41 b9 04 00 00 00    	mov    r9d,0x4
+  496526:	bb 02 00 00 00       	mov    ebx,0x2
+  49652b:	e9 98 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496530:	41 b9 05 00 00 00    	mov    r9d,0x5
+  496536:	bb 02 00 00 00       	mov    ebx,0x2
+  49653b:	be 10 00 00 00       	mov    esi,0x10
+  496540:	e9 83 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496545:	41 b9 06 00 00 00    	mov    r9d,0x6
+  49654b:	bb 02 00 00 00       	mov    ebx,0x2
+  496550:	be 30 00 00 00       	mov    esi,0x30
+  496555:	e9 6e f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49655a:	41 b9 09 00 00 00    	mov    r9d,0x9
+  496560:	bb 02 00 00 00       	mov    ebx,0x2
+  496565:	be f0 01 00 00       	mov    esi,0x1f0
+  49656a:	e9 59 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49656f:	41 b9 07 00 00 00    	mov    r9d,0x7
+  496575:	bb 02 00 00 00       	mov    ebx,0x2
+  49657a:	be 70 00 00 00       	mov    esi,0x70
+  49657f:	e9 44 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496584:	41 b9 08 00 00 00    	mov    r9d,0x8
+  49658a:	bb 02 00 00 00       	mov    ebx,0x2
+  49658f:	be f0 00 00 00       	mov    esi,0xf0
+  496594:	e9 2f f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496599:	41 b9 0b 00 00 00    	mov    r9d,0xb
+  49659f:	bb 02 00 00 00       	mov    ebx,0x2
+  4965a4:	be f0 07 00 00       	mov    esi,0x7f0
+  4965a9:	e9 1a f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4965ae:	41 b9 0a 00 00 00    	mov    r9d,0xa
+  4965b4:	bb 02 00 00 00       	mov    ebx,0x2
+  4965b9:	be f0 03 00 00       	mov    esi,0x3f0
+  4965be:	e9 05 f3 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4965c3:	41 b9 0c 00 00 00    	mov    r9d,0xc
+  4965c9:	bb 02 00 00 00       	mov    ebx,0x2
+  4965ce:	be f0 0f 00 00       	mov    esi,0xff0
+  4965d3:	e9 f0 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4965d8:	41 b9 05 00 00 00    	mov    r9d,0x5
+  4965de:	bb 01 00 00 00       	mov    ebx,0x1
+  4965e3:	41 be 01 00 00 00    	mov    r14d,0x1
+  4965e9:	be 10 00 00 00       	mov    esi,0x10
+  4965ee:	e9 d5 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4965f3:	41 b9 04 00 00 00    	mov    r9d,0x4
+  4965f9:	bb 01 00 00 00       	mov    ebx,0x1
+  4965fe:	41 be 01 00 00 00    	mov    r14d,0x1
+  496604:	e9 bf f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496609:	41 b9 07 00 00 00    	mov    r9d,0x7
+  49660f:	bb 01 00 00 00       	mov    ebx,0x1
+  496614:	41 be 01 00 00 00    	mov    r14d,0x1
+  49661a:	be 70 00 00 00       	mov    esi,0x70
+  49661f:	e9 a4 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496624:	41 b9 0d 00 00 00    	mov    r9d,0xd
+  49662a:	bb 02 00 00 00       	mov    ebx,0x2
+  49662f:	be f0 1f 00 00       	mov    esi,0x1ff0
+  496634:	e9 8f f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496639:	41 b9 06 00 00 00    	mov    r9d,0x6
+  49663f:	bb 01 00 00 00       	mov    ebx,0x1
+  496644:	41 be 01 00 00 00    	mov    r14d,0x1
+  49664a:	be 30 00 00 00       	mov    esi,0x30
+  49664f:	e9 74 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496654:	41 b9 0a 00 00 00    	mov    r9d,0xa
+  49665a:	bb 01 00 00 00       	mov    ebx,0x1
+  49665f:	41 be 01 00 00 00    	mov    r14d,0x1
+  496665:	be f0 03 00 00       	mov    esi,0x3f0
+  49666a:	e9 59 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49666f:	41 b9 08 00 00 00    	mov    r9d,0x8
+  496675:	bb 01 00 00 00       	mov    ebx,0x1
+  49667a:	41 be 01 00 00 00    	mov    r14d,0x1
+  496680:	be f0 00 00 00       	mov    esi,0xf0
+  496685:	e9 3e f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49668a:	41 b9 0e 00 00 00    	mov    r9d,0xe
+  496690:	bb 02 00 00 00       	mov    ebx,0x2
+  496695:	be f0 3f 00 00       	mov    esi,0x3ff0
+  49669a:	e9 29 f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49669f:	41 b9 09 00 00 00    	mov    r9d,0x9
+  4966a5:	bb 01 00 00 00       	mov    ebx,0x1
+  4966aa:	41 be 01 00 00 00    	mov    r14d,0x1
+  4966b0:	be f0 01 00 00       	mov    esi,0x1f0
+  4966b5:	e9 0e f2 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4966ba:	41 b9 12 00 00 00    	mov    r9d,0x12
+  4966c0:	bb 02 00 00 00       	mov    ebx,0x2
+  4966c5:	41 be 01 00 00 00    	mov    r14d,0x1
+  4966cb:	be f0 ff 03 00       	mov    esi,0x3fff0
+  4966d0:	40 0f b6 d7          	movzx  edx,dil
+  4966d4:	e9 ef f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4966d9:	41 b9 0c 00 00 00    	mov    r9d,0xc
+  4966df:	bb 01 00 00 00       	mov    ebx,0x1
+  4966e4:	41 be 01 00 00 00    	mov    r14d,0x1
+  4966ea:	be f0 0f 00 00       	mov    esi,0xff0
+  4966ef:	e9 d4 f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4966f4:	41 b9 0b 00 00 00    	mov    r9d,0xb
+  4966fa:	bb 01 00 00 00       	mov    ebx,0x1
+  4966ff:	41 be 01 00 00 00    	mov    r14d,0x1
+  496705:	be f0 07 00 00       	mov    esi,0x7f0
+  49670a:	e9 b9 f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49670f:	41 b9 0d 00 00 00    	mov    r9d,0xd
+  496715:	bb 01 00 00 00       	mov    ebx,0x1
+  49671a:	41 be 01 00 00 00    	mov    r14d,0x1
+  496720:	be f0 1f 00 00       	mov    esi,0x1ff0
+  496725:	e9 9e f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49672a:	41 b9 0f 00 00 00    	mov    r9d,0xf
+  496730:	bb 02 00 00 00       	mov    ebx,0x2
+  496735:	be f0 7f 00 00       	mov    esi,0x7ff0
+  49673a:	e9 89 f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49673f:	41 b9 11 00 00 00    	mov    r9d,0x11
+  496745:	bb 01 00 00 00       	mov    ebx,0x1
+  49674a:	41 be 01 00 00 00    	mov    r14d,0x1
+  496750:	be f0 ff 01 00       	mov    esi,0x1fff0
+  496755:	40 0f b6 d7          	movzx  edx,dil
+  496759:	e9 6a f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49675e:	41 b9 11 00 00 00    	mov    r9d,0x11
+  496764:	bb 02 00 00 00       	mov    ebx,0x2
+  496769:	be f0 ff 01 00       	mov    esi,0x1fff0
+  49676e:	e9 55 f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496773:	41 b9 0f 00 00 00    	mov    r9d,0xf
+  496779:	bb 01 00 00 00       	mov    ebx,0x1
+  49677e:	41 be 01 00 00 00    	mov    r14d,0x1
+  496784:	be f0 7f 00 00       	mov    esi,0x7ff0
+  496789:	e9 3a f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49678e:	41 b9 06 00 00 00    	mov    r9d,0x6
+  496794:	be 30 00 00 00       	mov    esi,0x30
+  496799:	e9 2a f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49679e:	41 b9 0e 00 00 00    	mov    r9d,0xe
+  4967a4:	bb 01 00 00 00       	mov    ebx,0x1
+  4967a9:	41 be 01 00 00 00    	mov    r14d,0x1
+  4967af:	be f0 3f 00 00       	mov    esi,0x3ff0
+  4967b4:	e9 0f f1 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4967b9:	89 fb                	mov    ebx,edi
+  4967bb:	41 b9 10 00 00 00    	mov    r9d,0x10
+  4967c1:	be f0 ff 00 00       	mov    esi,0xfff0
+  4967c6:	e9 fd f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4967cb:	41 b9 07 00 00 00    	mov    r9d,0x7
+  4967d1:	be 70 00 00 00       	mov    esi,0x70
+  4967d6:	e9 ed f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4967db:	bb 08 00 00 00       	mov    ebx,0x8
+  4967e0:	41 be 01 00 00 00    	mov    r14d,0x1
+  4967e6:	e9 c7 f0 ff ff       	jmp    4958b2 <pxa_decompress+0x382>
+  4967eb:	41 b9 11 00 00 00    	mov    r9d,0x11
+  4967f1:	be f0 ff 01 00       	mov    esi,0x1fff0
+  4967f6:	e9 cd f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4967fb:	41 b9 12 00 00 00    	mov    r9d,0x12
+  496801:	bb 01 00 00 00       	mov    ebx,0x1
+  496806:	41 be 01 00 00 00    	mov    r14d,0x1
+  49680c:	be f0 ff 03 00       	mov    esi,0x3fff0
+  496811:	40 0f b6 d7          	movzx  edx,dil
+  496815:	e9 ae f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  49681a:	bb 01 00 00 00       	mov    ebx,0x1
+  49681f:	e9 53 fb ff ff       	jmp    496377 <pxa_decompress+0xe47>
+  496824:	41 b9 0f 00 00 00    	mov    r9d,0xf
+  49682a:	be f0 7f 00 00       	mov    esi,0x7ff0
+  49682f:	e9 94 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496834:	89 fb                	mov    ebx,edi
+  496836:	41 b9 05 00 00 00    	mov    r9d,0x5
+  49683c:	be 10 00 00 00       	mov    esi,0x10
+  496841:	e9 82 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496846:	44 89 cb             	mov    ebx,r9d
+  496849:	be f0 3f 00 00       	mov    esi,0x3ff0
+  49684e:	41 b9 0e 00 00 00    	mov    r9d,0xe
+  496854:	e9 6f f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496859:	89 c3                	mov    ebx,eax
+  49685b:	41 b9 04 00 00 00    	mov    r9d,0x4
+  496861:	e9 62 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496866:	41 b9 09 00 00 00    	mov    r9d,0x9
+  49686c:	be f0 01 00 00       	mov    esi,0x1f0
+  496871:	e9 52 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496876:	41 b9 0c 00 00 00    	mov    r9d,0xc
+  49687c:	be f0 0f 00 00       	mov    esi,0xff0
+  496881:	e9 42 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496886:	89 fb                	mov    ebx,edi
+  496888:	41 b9 08 00 00 00    	mov    r9d,0x8
+  49688e:	be f0 00 00 00       	mov    esi,0xf0
+  496893:	e9 30 f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496898:	89 fb                	mov    ebx,edi
+  49689a:	41 b9 0a 00 00 00    	mov    r9d,0xa
+  4968a0:	be f0 03 00 00       	mov    esi,0x3f0
+  4968a5:	e9 1e f0 ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4968aa:	89 2d f0 23 38 00    	mov    DWORD PTR [rip+0x3823f0],ebp        # 818ca0 <src_pos>
+  4968b0:	e9 5f fc ff ff       	jmp    496514 <pxa_decompress+0xfe4>
+  4968b5:	e8 d6 db f6 ff       	call   404490 <__stack_chk_fail@plt>
+  4968ba:	89 fb                	mov    ebx,edi
+  4968bc:	e9 70 f9 ff ff       	jmp    496231 <pxa_decompress+0xd01>
+  4968c1:	44 89 cb             	mov    ebx,r9d
+  4968c4:	be f0 07 00 00       	mov    esi,0x7f0
+  4968c9:	41 b9 0b 00 00 00    	mov    r9d,0xb
+  4968cf:	e9 f4 ef ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  4968d4:	89 2d c6 23 38 00    	mov    DWORD PTR [rip+0x3823c6],ebp        # 818ca0 <src_pos>
+  4968da:	e9 f6 f0 ff ff       	jmp    4959d5 <pxa_decompress+0x4a5>
+  4968df:	89 d8                	mov    eax,ebx
+  4968e1:	e9 46 f3 ff ff       	jmp    495c2c <pxa_decompress+0x6fc>
+  4968e6:	44 8d 47 01          	lea    r8d,[rdi+0x1]
+  4968ea:	45 31 c9             	xor    r9d,r9d
+  4968ed:	45 31 d2             	xor    r10d,r10d
+  4968f0:	48 63 c5             	movsxd rax,ebp
+  4968f3:	31 c9                	xor    ecx,ecx
+  4968f5:	41 0f b6 34 04       	movzx  esi,BYTE PTR [r12+rax*1]
+  4968fa:	8d 04 1b             	lea    eax,[rbx+rbx*1]
+  4968fd:	85 de                	test   esi,ebx
+  4968ff:	0f 95 c1             	setne  cl
+  496902:	3d 00 01 00 00       	cmp    eax,0x100
+  496907:	0f 84 93 03 00 00    	je     496ca0 <pxa_decompress+0x1770>
+  49690d:	8d 14 9d 00 00 00 00 	lea    edx,[rbx*4+0x0]
+  496914:	21 f0                	and    eax,esi
+  496916:	81 fa 00 01 00 00    	cmp    edx,0x100
+  49691c:	0f 85 ce 03 00 00    	jne    496cf0 <pxa_decompress+0x17c0>
+  496922:	83 c5 01             	add    ebp,0x1
+  496925:	48 63 d5             	movsxd rdx,ebp
+  496928:	41 0f b6 14 14       	movzx  edx,BYTE PTR [r12+rdx*1]
+  49692d:	83 e2 01             	and    edx,0x1
+  496930:	85 c0                	test   eax,eax
+  496932:	0f 84 c0 03 00 00    	je     496cf8 <pxa_decompress+0x17c8>
+  496938:	83 c9 02             	or     ecx,0x2
+  49693b:	bb 02 00 00 00       	mov    ebx,0x2
+  496940:	41 be 01 00 00 00    	mov    r14d,0x1
+  496946:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  49694d:	00 00 00 
+  496950:	85 d2                	test   edx,edx
+  496952:	0f 84 38 03 00 00    	je     496c90 <pxa_decompress+0x1760>
+  496958:	83 c9 04             	or     ecx,0x4
+  49695b:	41 83 c2 03          	add    r10d,0x3
+  49695f:	41 01 c9             	add    r9d,ecx
+  496962:	41 81 fa 9f 86 01 00 	cmp    r10d,0x1869f
+  496969:	7f 05                	jg     496970 <pxa_decompress+0x1440>
+  49696b:	83 f9 07             	cmp    ecx,0x7
+  49696e:	74 80                	je     4968f0 <pxa_decompress+0x13c0>
+  496970:	49 63 cf             	movsxd rcx,r15d
+  496973:	48 63 f7             	movsxd rsi,edi
+  496976:	41 8d 51 03          	lea    edx,[r9+0x3]
+  49697a:	48 8d 41 0f          	lea    rax,[rcx+0xf]
+  49697e:	48 8d 79 ff          	lea    rdi,[rcx-0x1]
+  496982:	48 29 f0             	sub    rax,rsi
+  496985:	48 29 f7             	sub    rdi,rsi
+  496988:	48 39 c1             	cmp    rcx,rax
+  49698b:	48 8d 41 10          	lea    rax,[rcx+0x10]
+  49698f:	49 89 fb             	mov    r11,rdi
+  496992:	40 0f 9d c6          	setge  sil
+  496996:	48 39 c7             	cmp    rdi,rax
+  496999:	0f 9d c0             	setge  al
+  49699c:	40 08 c6             	or     sil,al
+  49699f:	0f 84 63 03 00 00    	je     496d08 <pxa_decompress+0x17d8>
+  4969a5:	83 fa 16             	cmp    edx,0x16
+  4969a8:	0f 86 5a 03 00 00    	jbe    496d08 <pxa_decompress+0x17d8>
+  4969ae:	49 8d 7c 3d 00       	lea    rdi,[r13+rdi*1+0x0]
+  4969b3:	41 8d 71 02          	lea    esi,[r9+0x2]
+  4969b7:	48 f7 df             	neg    rdi
+  4969ba:	89 74 24 14          	mov    DWORD PTR [rsp+0x14],esi
+  4969be:	83 e7 0f             	and    edi,0xf
+  4969c1:	8d 47 0f             	lea    eax,[rdi+0xf]
+  4969c4:	39 f0                	cmp    eax,esi
+  4969c6:	44 89 f8             	mov    eax,r15d
+  4969c9:	0f 87 82 03 00 00    	ja     496d51 <pxa_decompress+0x1821>
+  4969cf:	85 ff                	test   edi,edi
+  4969d1:	0f 84 83 03 00 00    	je     496d5a <pxa_decompress+0x182a>
+  4969d7:	44 29 c0             	sub    eax,r8d
+  4969da:	45 8d 57 01          	lea    r10d,[r15+0x1]
+  4969de:	83 ff 01             	cmp    edi,0x1
+  4969e1:	48 98                	cdqe
+  4969e3:	89 f2                	mov    edx,esi
+  4969e5:	41 0f b6 44 05 00    	movzx  eax,BYTE PTR [r13+rax*1+0x0]
+  4969eb:	41 88 44 0d 00       	mov    BYTE PTR [r13+rcx*1+0x0],al
+  4969f0:	44 89 d0             	mov    eax,r10d
+  4969f3:	0f 84 ff 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  4969f9:	44 29 c0             	sub    eax,r8d
+  4969fc:	83 ff 02             	cmp    edi,0x2
+  4969ff:	48 98                	cdqe
+  496a01:	41 0f b6 54 05 00    	movzx  edx,BYTE PTR [r13+rax*1+0x0]
+  496a07:	49 63 c2             	movsxd rax,r10d
+  496a0a:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496a0f:	41 8d 47 02          	lea    eax,[r15+0x2]
+  496a13:	41 8d 51 01          	lea    edx,[r9+0x1]
+  496a17:	0f 84 db 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496a1d:	89 c2                	mov    edx,eax
+  496a1f:	48 98                	cdqe
+  496a21:	44 29 c2             	sub    edx,r8d
+  496a24:	83 ff 03             	cmp    edi,0x3
+  496a27:	48 63 d2             	movsxd rdx,edx
+  496a2a:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496a30:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496a35:	41 8d 47 03          	lea    eax,[r15+0x3]
+  496a39:	0f 84 0a 03 00 00    	je     496d49 <pxa_decompress+0x1819>
+  496a3f:	89 c2                	mov    edx,eax
+  496a41:	48 98                	cdqe
+  496a43:	44 29 c2             	sub    edx,r8d
+  496a46:	83 ff 04             	cmp    edi,0x4
+  496a49:	48 63 d2             	movsxd rdx,edx
+  496a4c:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496a52:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496a57:	41 8d 47 04          	lea    eax,[r15+0x4]
+  496a5b:	41 8d 51 ff          	lea    edx,[r9-0x1]
+  496a5f:	0f 84 93 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496a65:	89 c2                	mov    edx,eax
+  496a67:	48 98                	cdqe
+  496a69:	44 29 c2             	sub    edx,r8d
+  496a6c:	83 ff 05             	cmp    edi,0x5
+  496a6f:	48 63 d2             	movsxd rdx,edx
+  496a72:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496a78:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496a7d:	41 8d 47 05          	lea    eax,[r15+0x5]
+  496a81:	41 8d 51 fe          	lea    edx,[r9-0x2]
+  496a85:	0f 84 6d 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496a8b:	89 c2                	mov    edx,eax
+  496a8d:	48 98                	cdqe
+  496a8f:	44 29 c2             	sub    edx,r8d
+  496a92:	83 ff 06             	cmp    edi,0x6
+  496a95:	48 63 d2             	movsxd rdx,edx
+  496a98:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496a9e:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496aa3:	41 8d 47 06          	lea    eax,[r15+0x6]
+  496aa7:	41 8d 51 fd          	lea    edx,[r9-0x3]
+  496aab:	0f 84 47 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496ab1:	89 c2                	mov    edx,eax
+  496ab3:	48 98                	cdqe
+  496ab5:	44 29 c2             	sub    edx,r8d
+  496ab8:	83 ff 07             	cmp    edi,0x7
+  496abb:	48 63 d2             	movsxd rdx,edx
+  496abe:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496ac4:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496ac9:	41 8d 47 07          	lea    eax,[r15+0x7]
+  496acd:	41 8d 51 fc          	lea    edx,[r9-0x4]
+  496ad1:	0f 84 21 01 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496ad7:	89 c2                	mov    edx,eax
+  496ad9:	48 98                	cdqe
+  496adb:	44 29 c2             	sub    edx,r8d
+  496ade:	83 ff 08             	cmp    edi,0x8
+  496ae1:	48 63 d2             	movsxd rdx,edx
+  496ae4:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496aea:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496aef:	41 8d 47 08          	lea    eax,[r15+0x8]
+  496af3:	41 8d 51 fb          	lea    edx,[r9-0x5]
+  496af7:	0f 84 fb 00 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496afd:	89 c2                	mov    edx,eax
+  496aff:	48 98                	cdqe
+  496b01:	44 29 c2             	sub    edx,r8d
+  496b04:	83 ff 09             	cmp    edi,0x9
+  496b07:	48 63 d2             	movsxd rdx,edx
+  496b0a:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496b10:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496b15:	41 8d 47 09          	lea    eax,[r15+0x9]
+  496b19:	41 8d 51 fa          	lea    edx,[r9-0x6]
+  496b1d:	0f 84 d5 00 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496b23:	89 c2                	mov    edx,eax
+  496b25:	48 98                	cdqe
+  496b27:	44 29 c2             	sub    edx,r8d
+  496b2a:	83 ff 0a             	cmp    edi,0xa
+  496b2d:	48 63 d2             	movsxd rdx,edx
+  496b30:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496b36:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496b3b:	41 8d 47 0a          	lea    eax,[r15+0xa]
+  496b3f:	41 8d 51 f9          	lea    edx,[r9-0x7]
+  496b43:	0f 84 af 00 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496b49:	89 c2                	mov    edx,eax
+  496b4b:	48 98                	cdqe
+  496b4d:	44 29 c2             	sub    edx,r8d
+  496b50:	83 ff 0b             	cmp    edi,0xb
+  496b53:	48 63 d2             	movsxd rdx,edx
+  496b56:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496b5c:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496b61:	41 8d 47 0b          	lea    eax,[r15+0xb]
+  496b65:	41 8d 51 f8          	lea    edx,[r9-0x8]
+  496b69:	0f 84 89 00 00 00    	je     496bf8 <pxa_decompress+0x16c8>
+  496b6f:	89 c2                	mov    edx,eax
+  496b71:	48 98                	cdqe
+  496b73:	44 29 c2             	sub    edx,r8d
+  496b76:	83 ff 0c             	cmp    edi,0xc
+  496b79:	48 63 d2             	movsxd rdx,edx
+  496b7c:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496b82:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496b87:	41 8d 47 0c          	lea    eax,[r15+0xc]
+  496b8b:	41 8d 51 f7          	lea    edx,[r9-0x9]
+  496b8f:	74 67                	je     496bf8 <pxa_decompress+0x16c8>
+  496b91:	89 c2                	mov    edx,eax
+  496b93:	48 98                	cdqe
+  496b95:	44 29 c2             	sub    edx,r8d
+  496b98:	83 ff 0d             	cmp    edi,0xd
+  496b9b:	48 63 d2             	movsxd rdx,edx
+  496b9e:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496ba4:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496ba9:	41 8d 47 0d          	lea    eax,[r15+0xd]
+  496bad:	41 8d 51 f6          	lea    edx,[r9-0xa]
+  496bb1:	74 45                	je     496bf8 <pxa_decompress+0x16c8>
+  496bb3:	89 c2                	mov    edx,eax
+  496bb5:	48 98                	cdqe
+  496bb7:	44 29 c2             	sub    edx,r8d
+  496bba:	83 ff 0f             	cmp    edi,0xf
+  496bbd:	48 63 d2             	movsxd rdx,edx
+  496bc0:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496bc6:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496bcb:	41 8d 47 0e          	lea    eax,[r15+0xe]
+  496bcf:	41 8d 51 f5          	lea    edx,[r9-0xb]
+  496bd3:	75 23                	jne    496bf8 <pxa_decompress+0x16c8>
+  496bd5:	89 c2                	mov    edx,eax
+  496bd7:	48 98                	cdqe
+  496bd9:	44 29 c2             	sub    edx,r8d
+  496bdc:	48 63 d2             	movsxd rdx,edx
+  496bdf:	41 0f b6 54 15 00    	movzx  edx,BYTE PTR [r13+rdx*1+0x0]
+  496be5:	41 88 54 05 00       	mov    BYTE PTR [r13+rax*1+0x0],dl
+  496bea:	41 8d 47 0f          	lea    eax,[r15+0xf]
+  496bee:	41 8d 51 f4          	lea    edx,[r9-0xc]
+  496bf2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+  496bf8:	41 29 f9             	sub    r9d,edi
+  496bfb:	89 fe                	mov    esi,edi
+  496bfd:	45 8d 79 03          	lea    r15d,[r9+0x3]
+  496c01:	49 8d 3c 33          	lea    rdi,[r11+rsi*1]
+  496c05:	48 01 f1             	add    rcx,rsi
+  496c08:	4d 8d 5c 0d 00       	lea    r11,[r13+rcx*1+0x0]
+  496c0d:	31 f6                	xor    esi,esi
+  496c0f:	31 c9                	xor    ecx,ecx
+  496c11:	45 89 f9             	mov    r9d,r15d
+  496c14:	4c 01 ef             	add    rdi,r13
+  496c17:	41 c1 e9 04          	shr    r9d,0x4
+  496c1b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  496c20:	66 0f 6f 04 0f       	movdqa xmm0,XMMWORD PTR [rdi+rcx*1]
+  496c25:	83 c6 01             	add    esi,0x1
+  496c28:	41 0f 11 04 0b       	movups XMMWORD PTR [r11+rcx*1],xmm0
+  496c2d:	48 83 c1 10          	add    rcx,0x10
+  496c31:	44 39 ce             	cmp    esi,r9d
+  496c34:	72 ea                	jb     496c20 <pxa_decompress+0x16f0>
+  496c36:	44 89 f9             	mov    ecx,r15d
+  496c39:	83 e1 f0             	and    ecx,0xfffffff0
+  496c3c:	01 c8                	add    eax,ecx
+  496c3e:	29 ca                	sub    edx,ecx
+  496c40:	44 39 f9             	cmp    ecx,r15d
+  496c43:	74 1b                	je     496c60 <pxa_decompress+0x1730>
+  496c45:	48 98                	cdqe
+  496c47:	49 63 f0             	movsxd rsi,r8d
+  496c4a:	4c 01 e8             	add    rax,r13
+  496c4d:	48 f7 de             	neg    rsi
+  496c50:	0f b6 0c 30          	movzx  ecx,BYTE PTR [rax+rsi*1]
+  496c54:	48 83 c0 01          	add    rax,0x1
+  496c58:	88 48 ff             	mov    BYTE PTR [rax-0x1],cl
+  496c5b:	83 ea 01             	sub    edx,0x1
+  496c5e:	75 f0                	jne    496c50 <pxa_decompress+0x1720>
+  496c60:	44 8b 7c 24 14       	mov    r15d,DWORD PTR [rsp+0x14]
+  496c65:	45 01 d7             	add    r15d,r10d
+  496c68:	44 39 7c 24 18       	cmp    DWORD PTR [rsp+0x18],r15d
+  496c6d:	0f 8e 4a ed ff ff    	jle    4959bd <pxa_decompress+0x48d>
+  496c73:	49 63 c7             	movsxd rax,r15d
+  496c76:	ba 01 00 00 00       	mov    edx,0x1
+  496c7b:	41 c6 44 05 00 00    	mov    BYTE PTR [r13+rax*1+0x0],0x0
+  496c81:	e9 3c ed ff ff       	jmp    4959c2 <pxa_decompress+0x492>
+  496c86:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  496c8d:	00 00 00 
+  496c90:	41 01 c9             	add    r9d,ecx
+  496c93:	e9 d8 fc ff ff       	jmp    496970 <pxa_decompress+0x1440>
+  496c98:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  496c9f:	00 
+  496ca0:	83 c5 01             	add    ebp,0x1
+  496ca3:	bb 04 00 00 00       	mov    ebx,0x4
+  496ca8:	ba 02 00 00 00       	mov    edx,0x2
+  496cad:	48 63 c5             	movsxd rax,ebp
+  496cb0:	41 be 01 00 00 00    	mov    r14d,0x1
+  496cb6:	41 0f b6 34 04       	movzx  esi,BYTE PTR [r12+rax*1]
+  496cbb:	89 f0                	mov    eax,esi
+  496cbd:	83 e0 01             	and    eax,0x1
+  496cc0:	21 f2                	and    edx,esi
+  496cc2:	89 ce                	mov    esi,ecx
+  496cc4:	83 ce 02             	or     esi,0x2
+  496cc7:	85 c0                	test   eax,eax
+  496cc9:	0f 45 ce             	cmovne ecx,esi
+  496ccc:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  496cd2:	0f 85 78 fc ff ff    	jne    496950 <pxa_decompress+0x1420>
+  496cd8:	83 c5 01             	add    ebp,0x1
+  496cdb:	bb 01 00 00 00       	mov    ebx,0x1
+  496ce0:	41 be 01 00 00 00    	mov    r14d,0x1
+  496ce6:	e9 65 fc ff ff       	jmp    496950 <pxa_decompress+0x1420>
+  496ceb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  496cf0:	c1 e3 03             	shl    ebx,0x3
+  496cf3:	eb cb                	jmp    496cc0 <pxa_decompress+0x1790>
+  496cf5:	0f 1f 00             	nop    DWORD PTR [rax]
+  496cf8:	bb 02 00 00 00       	mov    ebx,0x2
+  496cfd:	41 be 01 00 00 00    	mov    r14d,0x1
+  496d03:	e9 48 fc ff ff       	jmp    496950 <pxa_decompress+0x1420>
+  496d08:	49 8d 74 0d 01       	lea    rsi,[r13+rcx*1+0x1]
+  496d0d:	49 63 d0             	movsxd rdx,r8d
+  496d10:	48 89 c8             	mov    rax,rcx
+  496d13:	41 8d 49 02          	lea    ecx,[r9+0x2]
+  496d17:	48 29 d0             	sub    rax,rdx
+  496d1a:	48 29 d6             	sub    rsi,rdx
+  496d1d:	4c 01 e8             	add    rax,r13
+  496d20:	89 4c 24 14          	mov    DWORD PTR [rsp+0x14],ecx
+  496d24:	48 01 ce             	add    rsi,rcx
+  496d27:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  496d2e:	00 00 
+  496d30:	0f b6 08             	movzx  ecx,BYTE PTR [rax]
+  496d33:	48 83 c0 01          	add    rax,0x1
+  496d37:	88 4c 10 ff          	mov    BYTE PTR [rax+rdx*1-0x1],cl
+  496d3b:	48 39 f0             	cmp    rax,rsi
+  496d3e:	75 f0                	jne    496d30 <pxa_decompress+0x1800>
+  496d40:	45 8d 57 01          	lea    r10d,[r15+0x1]
+  496d44:	e9 17 ff ff ff       	jmp    496c60 <pxa_decompress+0x1730>
+  496d49:	44 89 ca             	mov    edx,r9d
+  496d4c:	e9 a7 fe ff ff       	jmp    496bf8 <pxa_decompress+0x16c8>
+  496d51:	45 8d 57 01          	lea    r10d,[r15+0x1]
+  496d55:	e9 eb fe ff ff       	jmp    496c45 <pxa_decompress+0x1715>
+  496d5a:	45 8d 57 01          	lea    r10d,[r15+0x1]
+  496d5e:	e9 95 fe ff ff       	jmp    496bf8 <pxa_decompress+0x16c8>
+  496d63:	89 fb                	mov    ebx,edi
+  496d65:	41 b9 0d 00 00 00    	mov    r9d,0xd
+  496d6b:	be f0 1f 00 00       	mov    esi,0x1ff0
+  496d70:	e9 53 eb ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496d75:	89 fb                	mov    ebx,edi
+  496d77:	41 b9 12 00 00 00    	mov    r9d,0x12
+  496d7d:	be f0 ff 03 00       	mov    esi,0x3fff0
+  496d82:	e9 41 eb ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496d87:	85 f6                	test   esi,esi
+  496d89:	8d 1c bd 00 00 00 00 	lea    ebx,[rdi*4+0x0]
+  496d90:	74 32                	je     496dc4 <pxa_decompress+0x1894>
+  496d92:	81 fb 00 01 00 00    	cmp    ebx,0x100
+  496d98:	0f 85 14 eb ff ff    	jne    4958b2 <pxa_decompress+0x382>
+  496d9e:	83 c5 01             	add    ebp,0x1
+  496da1:	41 b9 14 00 00 00    	mov    r9d,0x14
+  496da7:	bb 01 00 00 00       	mov    ebx,0x1
+  496dac:	48 63 c5             	movsxd rax,ebp
+  496daf:	41 be 01 00 00 00    	mov    r14d,0x1
+  496db5:	be f0 ff 0f 00       	mov    esi,0xffff0
+  496dba:	41 0f b6 14 04       	movzx  edx,BYTE PTR [r12+rax*1]
+  496dbf:	e9 04 eb ff ff       	jmp    4958c8 <pxa_decompress+0x398>
+  496dc4:	44 89 cb             	mov    ebx,r9d
+  496dc7:	e9 ab f5 ff ff       	jmp    496377 <pxa_decompress+0xe47>
+
+Disassembly of section .fini:

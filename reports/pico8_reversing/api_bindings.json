@@ -1,0 +1,1194 @@
+[
+  {
+    "name": "deli",
+    "native_address": 4394592,
+    "native_symbol": "tremove",
+    "pushcclosure_instruction": 4625212,
+    "setglobal_instruction": 4625227,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "add",
+    "native_address": 4394208,
+    "native_symbol": "tinsert",
+    "pushcclosure_instruction": 4625256,
+    "setglobal_instruction": 4625271,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "del",
+    "native_address": 4394912,
+    "native_symbol": "tdel",
+    "pushcclosure_instruction": 4625300,
+    "setglobal_instruction": 4625315,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "count",
+    "native_address": 4395248,
+    "native_symbol": "tcount",
+    "pushcclosure_instruction": 4625344,
+    "setglobal_instruction": 4625359,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "flip",
+    "native_address": 4577856,
+    "native_symbol": "p8_flip",
+    "pushcclosure_instruction": 4625388,
+    "setglobal_instruction": 4625403,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__flip",
+    "native_address": 4577856,
+    "native_symbol": "p8_flip",
+    "pushcclosure_instruction": 4625432,
+    "setglobal_instruction": 4625447,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__superyield",
+    "native_address": 4578080,
+    "native_symbol": "p8_superyield",
+    "pushcclosure_instruction": 4625464,
+    "setglobal_instruction": 4625479,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "reset",
+    "native_address": 4578656,
+    "native_symbol": "p8_reset",
+    "pushcclosure_instruction": 4625496,
+    "setglobal_instruction": 4625511,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "camera",
+    "native_address": 4579072,
+    "native_symbol": "p8_camera",
+    "pushcclosure_instruction": 4625540,
+    "setglobal_instruction": 4625555,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "clip",
+    "native_address": 4598720,
+    "native_symbol": "p8_clip",
+    "pushcclosure_instruction": 4625584,
+    "setglobal_instruction": 4625599,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cls",
+    "native_address": 4599296,
+    "native_symbol": "p8_cls",
+    "pushcclosure_instruction": 4625628,
+    "setglobal_instruction": 4625643,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "folder",
+    "native_address": 4582720,
+    "native_symbol": "p8_folder",
+    "pushcclosure_instruction": 4625672,
+    "setglobal_instruction": 4625687,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "ls",
+    "native_address": 4603056,
+    "native_symbol": "p8_ls",
+    "pushcclosure_instruction": 4625704,
+    "setglobal_instruction": 4625719,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "dir",
+    "native_address": 4603056,
+    "native_symbol": "p8_ls",
+    "pushcclosure_instruction": 4625748,
+    "setglobal_instruction": 4625763,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cd",
+    "native_address": 4580704,
+    "native_symbol": "p8_cd",
+    "pushcclosure_instruction": 4625780,
+    "setglobal_instruction": 4625795,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "mkdir",
+    "native_address": 4603904,
+    "native_symbol": "p8_mkdir",
+    "pushcclosure_instruction": 4625812,
+    "setglobal_instruction": 4625827,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "backup",
+    "native_address": 4602592,
+    "native_symbol": "p8_backup",
+    "pushcclosure_instruction": 4625844,
+    "setglobal_instruction": 4625859,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "install_demos",
+    "native_address": 4598656,
+    "native_symbol": "p8_install_demos",
+    "pushcclosure_instruction": 4625876,
+    "setglobal_instruction": 4625891,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "install_games",
+    "native_address": 4606256,
+    "native_symbol": "p8_install_games",
+    "pushcclosure_instruction": 4625908,
+    "setglobal_instruction": 4625923,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "keyconfig",
+    "native_address": 4606176,
+    "native_symbol": "p8_keyconfig",
+    "pushcclosure_instruction": 4625940,
+    "setglobal_instruction": 4625955,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "splore",
+    "native_address": 4606080,
+    "native_symbol": "p8_splore",
+    "pushcclosure_instruction": 4625972,
+    "setglobal_instruction": 4625987,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "pset",
+    "native_address": 4612976,
+    "native_symbol": "p8f_pset",
+    "pushcclosure_instruction": 4626007,
+    "setglobal_instruction": 4626022,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "pget",
+    "native_address": 4596464,
+    "native_symbol": "p8f_pget",
+    "pushcclosure_instruction": 4626054,
+    "setglobal_instruction": 4626069,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "color",
+    "native_address": 4615280,
+    "native_symbol": "p8_color",
+    "pushcclosure_instruction": 4626098,
+    "setglobal_instruction": 4626113,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "print",
+    "native_address": 4617872,
+    "native_symbol": "p8_print",
+    "pushcclosure_instruction": 4626142,
+    "setglobal_instruction": 4626157,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "printh",
+    "native_address": 4611056,
+    "native_symbol": "p8_printh",
+    "pushcclosure_instruction": 4626186,
+    "setglobal_instruction": 4626201,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "tostr",
+    "native_address": 4585024,
+    "native_symbol": "p8_tostr",
+    "pushcclosure_instruction": 4626230,
+    "setglobal_instruction": 4626245,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__tostr",
+    "native_address": 4585024,
+    "native_symbol": "p8_tostr",
+    "pushcclosure_instruction": 4626274,
+    "setglobal_instruction": 4626289,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__print",
+    "native_address": 4617872,
+    "native_symbol": "p8_print",
+    "pushcclosure_instruction": 4626306,
+    "setglobal_instruction": 4626321,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__printh",
+    "native_address": 4611056,
+    "native_symbol": "p8_printh",
+    "pushcclosure_instruction": 4626338,
+    "setglobal_instruction": 4626353,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cursor",
+    "native_address": 4615456,
+    "native_symbol": "p8_cursor",
+    "pushcclosure_instruction": 4626370,
+    "setglobal_instruction": 4626385,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "tonum",
+    "native_address": 4598096,
+    "native_symbol": "p8_tonum",
+    "pushcclosure_instruction": 4626414,
+    "setglobal_instruction": 4626429,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "spr",
+    "native_address": 4612224,
+    "native_symbol": "p8_spr",
+    "pushcclosure_instruction": 4626458,
+    "setglobal_instruction": 4626473,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sspr",
+    "native_address": 4614400,
+    "native_symbol": "p8_sspr",
+    "pushcclosure_instruction": 4626502,
+    "setglobal_instruction": 4626517,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rect",
+    "native_address": 4613504,
+    "native_symbol": "p8f_rect",
+    "pushcclosure_instruction": 4626549,
+    "setglobal_instruction": 4626564,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rectfill",
+    "native_address": 4604320,
+    "native_symbol": "p8f_rectfill",
+    "pushcclosure_instruction": 4626596,
+    "setglobal_instruction": 4626611,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "circ",
+    "native_address": 4617296,
+    "native_symbol": "p8_circ",
+    "pushcclosure_instruction": 4626640,
+    "setglobal_instruction": 4626655,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "circfill",
+    "native_address": 4616720,
+    "native_symbol": "p8_circfill",
+    "pushcclosure_instruction": 4626684,
+    "setglobal_instruction": 4626699,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "oval",
+    "native_address": 4615728,
+    "native_symbol": "p8_oval",
+    "pushcclosure_instruction": 4626728,
+    "setglobal_instruction": 4626743,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "ovalfill",
+    "native_address": 4616224,
+    "native_symbol": "p8_ovalfill",
+    "pushcclosure_instruction": 4626772,
+    "setglobal_instruction": 4626787,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "line",
+    "native_address": 4597536,
+    "native_symbol": "p8_line",
+    "pushcclosure_instruction": 4626816,
+    "setglobal_instruction": 4626831,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "tline",
+    "native_address": 4596912,
+    "native_symbol": "p8_tline",
+    "pushcclosure_instruction": 4626860,
+    "setglobal_instruction": 4626875,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "pal",
+    "native_address": 4608800,
+    "native_symbol": "p8_pal",
+    "pushcclosure_instruction": 4626904,
+    "setglobal_instruction": 4626919,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "palt",
+    "native_address": 4581376,
+    "native_symbol": "p8_palt",
+    "pushcclosure_instruction": 4626948,
+    "setglobal_instruction": 4626963,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "fillp",
+    "native_address": 4577680,
+    "native_symbol": "p8_fillp",
+    "pushcclosure_instruction": 4626992,
+    "setglobal_instruction": 4627007,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "mapdraw",
+    "native_address": 4607600,
+    "native_symbol": "p8_map",
+    "pushcclosure_instruction": 4627036,
+    "setglobal_instruction": 4627051,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "map",
+    "native_address": 4607600,
+    "native_symbol": "p8_map",
+    "pushcclosure_instruction": 4627080,
+    "setglobal_instruction": 4627095,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "mget",
+    "native_address": 4596832,
+    "native_symbol": "p8_mget",
+    "pushcclosure_instruction": 4627124,
+    "setglobal_instruction": 4627139,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "mset",
+    "native_address": 4596736,
+    "native_symbol": "p8_mset",
+    "pushcclosure_instruction": 4627168,
+    "setglobal_instruction": 4627183,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "fget",
+    "native_address": 4604080,
+    "native_symbol": "p8_fget",
+    "pushcclosure_instruction": 4627212,
+    "setglobal_instruction": 4627227,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "fset",
+    "native_address": 4577312,
+    "native_symbol": "p8_fset",
+    "pushcclosure_instruction": 4627256,
+    "setglobal_instruction": 4627271,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sget",
+    "native_address": 4596320,
+    "native_symbol": "p8_sget",
+    "pushcclosure_instruction": 4627300,
+    "setglobal_instruction": 4627315,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sset",
+    "native_address": 4578848,
+    "native_symbol": "p8_sset",
+    "pushcclosure_instruction": 4627344,
+    "setglobal_instruction": 4627359,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "music",
+    "native_address": 4596064,
+    "native_symbol": "p8_music",
+    "pushcclosure_instruction": 4627388,
+    "setglobal_instruction": 4627403,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sfx",
+    "native_address": 4605520,
+    "native_symbol": "p8_sfx",
+    "pushcclosure_instruction": 4627432,
+    "setglobal_instruction": 4627447,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "serial",
+    "native_address": 4595728,
+    "native_symbol": "p8_serial",
+    "pushcclosure_instruction": 4627476,
+    "setglobal_instruction": 4627491,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "memcpy",
+    "native_address": 4595600,
+    "native_symbol": "p8_memcpy",
+    "pushcclosure_instruction": 4627520,
+    "setglobal_instruction": 4627535,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "memset",
+    "native_address": 4595472,
+    "native_symbol": "p8_memset",
+    "pushcclosure_instruction": 4627564,
+    "setglobal_instruction": 4627579,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "reload",
+    "native_address": 4594624,
+    "native_symbol": "p8_reload",
+    "pushcclosure_instruction": 4627608,
+    "setglobal_instruction": 4627623,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cstore",
+    "native_address": 4593792,
+    "native_symbol": "p8_cstore",
+    "pushcclosure_instruction": 4627652,
+    "setglobal_instruction": 4627667,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rnd",
+    "native_address": 4605328,
+    "native_symbol": "p8_rnd",
+    "pushcclosure_instruction": 4627696,
+    "setglobal_instruction": 4627711,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "srand",
+    "native_address": 4592496,
+    "native_symbol": "p8f_srand",
+    "pushcclosure_instruction": 4627743,
+    "setglobal_instruction": 4627758,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "ceil",
+    "native_address": 4592400,
+    "native_symbol": "p8f_ceil",
+    "pushcclosure_instruction": 4627790,
+    "setglobal_instruction": 4627805,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sgn",
+    "native_address": 4592304,
+    "native_symbol": "p8f_sgn",
+    "pushcclosure_instruction": 4627837,
+    "setglobal_instruction": 4627852,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "abs",
+    "native_address": 4592192,
+    "native_symbol": "p8f_abs",
+    "pushcclosure_instruction": 4627884,
+    "setglobal_instruction": 4627899,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "mid",
+    "native_address": 4591952,
+    "native_symbol": "p8f_mid",
+    "pushcclosure_instruction": 4627931,
+    "setglobal_instruction": 4627946,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cos",
+    "native_address": 4593712,
+    "native_symbol": "p8f_cos",
+    "pushcclosure_instruction": 4627978,
+    "setglobal_instruction": 4627993,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sin",
+    "native_address": 4593632,
+    "native_symbol": "p8f_sin",
+    "pushcclosure_instruction": 4628025,
+    "setglobal_instruction": 4628040,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sqrt",
+    "native_address": 4593552,
+    "native_symbol": "p8f_sqrt",
+    "pushcclosure_instruction": 4628072,
+    "setglobal_instruction": 4628087,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "atan2",
+    "native_address": 4593392,
+    "native_symbol": "p8f_atan2",
+    "pushcclosure_instruction": 4628119,
+    "setglobal_instruction": 4628134,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "bnot",
+    "native_address": 4591872,
+    "native_symbol": "p8f_bnot",
+    "pushcclosure_instruction": 4628166,
+    "setglobal_instruction": 4628181,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "flr",
+    "native_address": 4591776,
+    "native_symbol": "p8f_flr",
+    "pushcclosure_instruction": 4628213,
+    "setglobal_instruction": 4628228,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "band",
+    "native_address": 4591632,
+    "native_symbol": "p8f_band",
+    "pushcclosure_instruction": 4628260,
+    "setglobal_instruction": 4628275,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "bor",
+    "native_address": 4591488,
+    "native_symbol": "p8f_bor",
+    "pushcclosure_instruction": 4628307,
+    "setglobal_instruction": 4628322,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "bxor",
+    "native_address": 4591344,
+    "native_symbol": "p8f_bxor",
+    "pushcclosure_instruction": 4628354,
+    "setglobal_instruction": 4628369,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "shl",
+    "native_address": 4593232,
+    "native_symbol": "p8f_shl",
+    "pushcclosure_instruction": 4628401,
+    "setglobal_instruction": 4628416,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "shr",
+    "native_address": 4593072,
+    "native_symbol": "p8f_shr",
+    "pushcclosure_instruction": 4628448,
+    "setglobal_instruction": 4628463,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "lshr",
+    "native_address": 4592912,
+    "native_symbol": "p8f_lshr",
+    "pushcclosure_instruction": 4628495,
+    "setglobal_instruction": 4628510,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rotl",
+    "native_address": 4592752,
+    "native_symbol": "p8f_rotl",
+    "pushcclosure_instruction": 4628542,
+    "setglobal_instruction": 4628557,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rotr",
+    "native_address": 4592592,
+    "native_symbol": "p8f_rotr",
+    "pushcclosure_instruction": 4628589,
+    "setglobal_instruction": 4628604,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "min",
+    "native_address": 4591072,
+    "native_symbol": "p8f_min",
+    "pushcclosure_instruction": 4628636,
+    "setglobal_instruction": 4628651,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "max",
+    "native_address": 4590800,
+    "native_symbol": "p8f_max",
+    "pushcclosure_instruction": 4628683,
+    "setglobal_instruction": 4628698,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "peek",
+    "native_address": 4588912,
+    "native_symbol": "p8_peek_multiple",
+    "pushcclosure_instruction": 4628727,
+    "setglobal_instruction": 4628742,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "peek2",
+    "native_address": 4588640,
+    "native_symbol": "p8_peek2_multiple",
+    "pushcclosure_instruction": 4628771,
+    "setglobal_instruction": 4628786,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "peek4",
+    "native_address": 4588320,
+    "native_symbol": "p8_peek4_multiple",
+    "pushcclosure_instruction": 4628815,
+    "setglobal_instruction": 4628830,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "poke",
+    "native_address": 4590400,
+    "native_symbol": "p8f_poke",
+    "pushcclosure_instruction": 4628862,
+    "setglobal_instruction": 4628877,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "poke2",
+    "native_address": 4589904,
+    "native_symbol": "p8f_poke2",
+    "pushcclosure_instruction": 4628909,
+    "setglobal_instruction": 4628924,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "poke4",
+    "native_address": 4589280,
+    "native_symbol": "p8f_poke4",
+    "pushcclosure_instruction": 4628956,
+    "setglobal_instruction": 4628971,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__load",
+    "native_address": 4601008,
+    "native_symbol": "p8_load",
+    "pushcclosure_instruction": 4629000,
+    "setglobal_instruction": 4629015,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "load",
+    "native_address": 4601008,
+    "native_symbol": "p8_load",
+    "pushcclosure_instruction": 4629032,
+    "setglobal_instruction": 4629047,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "save",
+    "native_address": 4579392,
+    "native_symbol": "p8_save",
+    "pushcclosure_instruction": 4629076,
+    "setglobal_instruction": 4629091,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "run",
+    "native_address": 4601488,
+    "native_symbol": "p8_run",
+    "pushcclosure_instruction": 4629108,
+    "setglobal_instruction": 4629123,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "stop",
+    "native_address": 4618944,
+    "native_symbol": "p8_stop",
+    "pushcclosure_instruction": 4629152,
+    "setglobal_instruction": 4629167,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "reboot",
+    "native_address": 4602304,
+    "native_symbol": "p8_reboot",
+    "pushcclosure_instruction": 4629196,
+    "setglobal_instruction": 4629211,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "shutdown",
+    "native_address": 4602192,
+    "native_symbol": "p8_shutdown",
+    "pushcclosure_instruction": 4629228,
+    "setglobal_instruction": 4629243,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "exit",
+    "native_address": 4602192,
+    "native_symbol": "p8_shutdown",
+    "pushcclosure_instruction": 4629260,
+    "setglobal_instruction": 4629275,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "info",
+    "native_address": 4602144,
+    "native_symbol": "p8_info",
+    "pushcclosure_instruction": 4629292,
+    "setglobal_instruction": 4629307,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "export",
+    "native_address": 4578336,
+    "native_symbol": "p8_export",
+    "pushcclosure_instruction": 4629324,
+    "setglobal_instruction": 4629339,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "import",
+    "native_address": 4578160,
+    "native_symbol": "p8_import",
+    "pushcclosure_instruction": 4629356,
+    "setglobal_instruction": 4629371,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "help",
+    "native_address": 4602640,
+    "native_symbol": "p8_help",
+    "pushcclosure_instruction": 4629388,
+    "setglobal_instruction": 4629403,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "time",
+    "native_address": 4577616,
+    "native_symbol": "p8_time",
+    "pushcclosure_instruction": 4629420,
+    "setglobal_instruction": 4629435,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "t",
+    "native_address": 4577616,
+    "native_symbol": "p8_time",
+    "pushcclosure_instruction": 4629464,
+    "setglobal_instruction": 4629479,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "login",
+    "native_address": 4580464,
+    "native_symbol": "p8_login",
+    "pushcclosure_instruction": 4629496,
+    "setglobal_instruction": 4629511,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "logout",
+    "native_address": 4580528,
+    "native_symbol": "p8_logout",
+    "pushcclosure_instruction": 4629540,
+    "setglobal_instruction": 4629555,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "bbsreq",
+    "native_address": 4582656,
+    "native_symbol": "p8_bbsreq",
+    "pushcclosure_instruction": 4629584,
+    "setglobal_instruction": 4629599,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "scoresub",
+    "native_address": 4582576,
+    "native_symbol": "p8_scoresub",
+    "pushcclosure_instruction": 4629628,
+    "setglobal_instruction": 4629643,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "extcmd",
+    "native_address": 4599504,
+    "native_symbol": "p8_extcmd",
+    "pushcclosure_instruction": 4629672,
+    "setglobal_instruction": 4629687,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__extcmd",
+    "native_address": 4599504,
+    "native_symbol": "p8_extcmd",
+    "pushcclosure_instruction": 4629716,
+    "setglobal_instruction": 4629731,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "radio",
+    "native_address": 4580496,
+    "native_symbol": "p8_radio",
+    "pushcclosure_instruction": 4629748,
+    "setglobal_instruction": 4629763,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "set_draw_slice",
+    "native_address": 4576992,
+    "native_symbol": "p8_set_draw_slice",
+    "pushcclosure_instruction": 4629780,
+    "setglobal_instruction": 4629795,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "btn",
+    "native_address": 4606704,
+    "native_symbol": "p8_btn",
+    "pushcclosure_instruction": 4629824,
+    "setglobal_instruction": 4629839,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "btnp",
+    "native_address": 4607152,
+    "native_symbol": "p8_btnp",
+    "pushcclosure_instruction": 4629868,
+    "setglobal_instruction": 4629883,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_menuitem",
+    "native_address": 4580560,
+    "native_symbol": "p8_menuitem",
+    "pushcclosure_instruction": 4629912,
+    "setglobal_instruction": 4629927,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cartdata",
+    "native_address": 4589152,
+    "native_symbol": "p8_cartdata",
+    "pushcclosure_instruction": 4629944,
+    "setglobal_instruction": 4629959,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "dget",
+    "native_address": 4583424,
+    "native_symbol": "p8_dget",
+    "pushcclosure_instruction": 4629988,
+    "setglobal_instruction": 4630003,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "dset",
+    "native_address": 4583296,
+    "native_symbol": "p8_dset",
+    "pushcclosure_instruction": 4630032,
+    "setglobal_instruction": 4630047,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "stat",
+    "native_address": 4621184,
+    "native_symbol": "p8_stat",
+    "pushcclosure_instruction": 4630076,
+    "setglobal_instruction": 4630091,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "sub",
+    "native_address": 4586208,
+    "native_symbol": "p8_sub",
+    "pushcclosure_instruction": 4630120,
+    "setglobal_instruction": 4630135,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "chr",
+    "native_address": 4585984,
+    "native_symbol": "p8_chr",
+    "pushcclosure_instruction": 4630164,
+    "setglobal_instruction": 4630179,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "ord",
+    "native_address": 4587936,
+    "native_symbol": "p8_ord",
+    "pushcclosure_instruction": 4630208,
+    "setglobal_instruction": 4630223,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "split",
+    "native_address": 4586672,
+    "native_symbol": "p8_split",
+    "pushcclosure_instruction": 4630252,
+    "setglobal_instruction": 4630267,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__pairs__",
+    "native_address": 4413536,
+    "native_symbol": "luaB_pairs",
+    "pushcclosure_instruction": 4630296,
+    "setglobal_instruction": 4630311,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "__ipairs__",
+    "native_address": 4406416,
+    "native_symbol": "luaB_ipairs",
+    "pushcclosure_instruction": 4630328,
+    "setglobal_instruction": 4630343,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "type",
+    "native_address": 4578112,
+    "native_symbol": "p8_type",
+    "pushcclosure_instruction": 4630360,
+    "setglobal_instruction": 4630375,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "next",
+    "native_address": 4371296,
+    "native_symbol": "luaB_next",
+    "pushcclosure_instruction": 4630404,
+    "setglobal_instruction": 4630419,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "inext",
+    "native_address": 4371680,
+    "native_symbol": "ipairsaux",
+    "pushcclosure_instruction": 4630448,
+    "setglobal_instruction": 4630463,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "setmetatable",
+    "native_address": 4392144,
+    "native_symbol": "luaB_setmetatable",
+    "pushcclosure_instruction": 4630492,
+    "setglobal_instruction": 4630507,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "getmetatable",
+    "native_address": 4388304,
+    "native_symbol": "luaB_getmetatable",
+    "pushcclosure_instruction": 4630536,
+    "setglobal_instruction": 4630551,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rawequal",
+    "native_address": 4388688,
+    "native_symbol": "luaB_rawequal",
+    "pushcclosure_instruction": 4630580,
+    "setglobal_instruction": 4630595,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rawlen",
+    "native_address": 4382272,
+    "native_symbol": "luaB_rawlen",
+    "pushcclosure_instruction": 4630624,
+    "setglobal_instruction": 4630639,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rawget",
+    "native_address": 4389184,
+    "native_symbol": "luaB_rawget",
+    "pushcclosure_instruction": 4630668,
+    "setglobal_instruction": 4630683,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "rawset",
+    "native_address": 4389344,
+    "native_symbol": "luaB_rawset",
+    "pushcclosure_instruction": 4630712,
+    "setglobal_instruction": 4630727,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "assert",
+    "native_address": 4391472,
+    "native_symbol": "luaB_assert",
+    "pushcclosure_instruction": 4630756,
+    "setglobal_instruction": 4630771,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "cocreate",
+    "native_address": 4371904,
+    "native_symbol": "luaB_cocreate",
+    "pushcclosure_instruction": 4630800,
+    "setglobal_instruction": 4630815,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "coresume",
+    "native_address": 4582560,
+    "native_symbol": "p8_coresume",
+    "pushcclosure_instruction": 4630844,
+    "setglobal_instruction": 4630859,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "yield",
+    "native_address": 4585888,
+    "native_symbol": "p8_yield",
+    "pushcclosure_instruction": 4630888,
+    "setglobal_instruction": 4630903,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "costatus",
+    "native_address": 4383360,
+    "native_symbol": "luaB_costatus",
+    "pushcclosure_instruction": 4630932,
+    "setglobal_instruction": 4630947,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "unpack",
+    "native_address": 4395552,
+    "native_symbol": "unpack",
+    "pushcclosure_instruction": 4630976,
+    "setglobal_instruction": 4630991,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "pack",
+    "native_address": 4364864,
+    "native_symbol": "pack",
+    "pushcclosure_instruction": 4631020,
+    "setglobal_instruction": 4631035,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "select",
+    "native_address": 4382416,
+    "native_symbol": "luaB_select",
+    "pushcclosure_instruction": 4631064,
+    "setglobal_instruction": 4631079,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "holdframe",
+    "native_address": 4576944,
+    "native_symbol": "p8_holdframe",
+    "pushcclosure_instruction": 4631171,
+    "setglobal_instruction": 4631186,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_startframe",
+    "native_address": 4576944,
+    "native_symbol": "p8_holdframe",
+    "pushcclosure_instruction": 4631203,
+    "setglobal_instruction": 4631218,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_get_menu_item_selected",
+    "native_address": 4577520,
+    "native_symbol": "p8_get_menu_item_selected",
+    "pushcclosure_instruction": 4631235,
+    "setglobal_instruction": 4631250,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_update_buttons",
+    "native_address": 4585840,
+    "native_symbol": "p8_update_buttons",
+    "pushcclosure_instruction": 4631267,
+    "setglobal_instruction": 4631282,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_update_framerate",
+    "native_address": 4585808,
+    "native_symbol": "p8_update_frame_rate",
+    "pushcclosure_instruction": 4631299,
+    "setglobal_instruction": 4631314,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_set_mainloop_exists",
+    "native_address": 4577280,
+    "native_symbol": "p8_set_mainloop_exists",
+    "pushcclosure_instruction": 4631331,
+    "setglobal_instruction": 4631346,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_set_fps",
+    "native_address": 4577232,
+    "native_symbol": "p8_set_fps",
+    "pushcclosure_instruction": 4631363,
+    "setglobal_instruction": 4631378,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_mark_cpu",
+    "native_address": 4585712,
+    "native_symbol": "p8_mark_cpu",
+    "pushcclosure_instruction": 4631395,
+    "setglobal_instruction": 4631410,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  },
+  {
+    "name": "_map_display",
+    "native_address": 4585600,
+    "native_symbol": "p8_map_display",
+    "pushcclosure_instruction": 4631427,
+    "setglobal_instruction": 4631442,
+    "evidence": "adjacent pushcclosure/setglobal call pair with concrete RSI"
+  }
+]
