@@ -1,0 +1,192 @@
+[
+  {
+    "path": "api_bindings.json",
+    "size": 37662,
+    "sha256": "1cf83fd9737ab071f9433885f92850e66765c85739f53aa412d98d58cbb25780"
+  },
+  {
+    "path": "direct_edges.json",
+    "size": 3741050,
+    "sha256": "4f11117997abf04a832974de51de781118699d52030e0ebd5cee49956f40bd9f"
+  },
+  {
+    "path": "dwarf_units.json",
+    "size": 38409,
+    "sha256": "5218008e95aa1e8905b5cffe02ad3bf0dd00fbe87fe2b5379251b290c2ef3121"
+  },
+  {
+    "path": "embedded_lua/lua_at_00632af0.lua",
+    "size": 1270,
+    "sha256": "d6bd1af0c85e557f60e1da0c23954848176db7d4fc338dd7ea50ba08ad02b51f"
+  },
+  {
+    "path": "embedded_lua/lua_at_00632af0.tab_view.txt",
+    "size": 1270,
+    "sha256": "13614a87442ca143ebc92aedff6e5aeb228473d79628c8e2607402b68040b083"
+  },
+  {
+    "path": "embedded_lua/lua_at_006366c0.lua",
+    "size": 4026,
+    "sha256": "b1933c9e345a425eae34afab0832c7b035ed85425dffd918f6f0a9026fbfc43d"
+  },
+  {
+    "path": "embedded_lua/lua_at_006366c0.tab_view.txt",
+    "size": 4026,
+    "sha256": "e840bc2eef540c7afc2494462b12f3635f02bd057f05c4ba34a5faa5c8e4cb3c"
+  },
+  {
+    "path": "embedded_lua.json",
+    "size": 1549,
+    "sha256": "10cc55a4647586de310874710e3370f2c97001c6d338c8435ce36958ebaa54f8"
+  },
+  {
+    "path": "full_disassembly.asm",
+    "size": 38967921,
+    "sha256": "e3e60df700a3a383d725bbf8504f2e9443b19a5270ef0e13e709e3a254808d58"
+  },
+  {
+    "path": "functions/add_c_functions.asm",
+    "size": 88487,
+    "sha256": "9341c0273a609e0b7d9c86e07a3ade53a8960c80df8ba43433cd83533a72f325"
+  },
+  {
+    "path": "functions/boot_init.asm",
+    "size": 4425,
+    "sha256": "f8354c489a4de8f77901203abfa4c191f038e8d57e7aa2364c73d0b62290c59f"
+  },
+  {
+    "path": "functions/codo_load_pod_file.asm",
+    "size": 180473,
+    "sha256": "5828acdb2d0920d52d50711b09cd2f21f6e7fd18e20501784c225e2e65960242"
+  },
+  {
+    "path": "functions/codo_main.asm",
+    "size": 20808,
+    "sha256": "22ab67e22275fb72c2db3e6f5fb12c3f863c43c74463e1d0b42ac82b3759a959"
+  },
+  {
+    "path": "functions/codo_main_draw.asm",
+    "size": 48209,
+    "sha256": "a500188c26ef5b6ecf18cb6e79c63f2560164e3df38fc4262f558aa6b32236b2"
+  },
+  {
+    "path": "functions/codo_main_init.asm",
+    "size": 38937,
+    "sha256": "b4d9876f6c270bd6353747001bd590da59e98d920d82b44374748ebee727a427"
+  },
+  {
+    "path": "functions/codo_main_update.asm",
+    "size": 95554,
+    "sha256": "f13ee6f2302a334ffcbbcc5b9142d219892fe95d581e0eba73a857e9a55af0c6"
+  },
+  {
+    "path": "functions/get_boot_fps.asm",
+    "size": 1195,
+    "sha256": "82f52fecb39db45a6fe7e4bf95bc4e18f7ca83085563bdc3b466d7a1df11fb8e"
+  },
+  {
+    "path": "functions/load_pico8_cart_lua.asm",
+    "size": 21538,
+    "sha256": "fecb7fc1d87408e96ebf7747b4305c627eddc2b2e635b0f78e293e1c0c7b6227"
+  },
+  {
+    "path": "functions/luaV_execute.asm",
+    "size": 154890,
+    "sha256": "343db2aafbd00c44ef4d6e4abab1bfa162f69a2864934002e2309b2f3631cf4c"
+  },
+  {
+    "path": "functions/main.asm",
+    "size": 64,
+    "sha256": "b98d46683f70a717ed9980242d2ac49c1b8247a32f31ff715f694144617b35c8"
+  },
+  {
+    "path": "functions/p8f_pget.asm",
+    "size": 4668,
+    "sha256": "cbd1a9ed77b7b72d2b68dd48d445c38f87c7d49d99656c46f400f451214bbc03"
+  },
+  {
+    "path": "functions/p8f_pset.asm",
+    "size": 8693,
+    "sha256": "234679f905ccdd067b532c82e94b0ad37c42f97de9e1ab8e94fe7ea68ae38847"
+  },
+  {
+    "path": "functions/pico8_peek.asm",
+    "size": 23052,
+    "sha256": "3159ca17b48c2ec6a9cefb0645d702ce3c5ee39947a95de04be560082c225b86"
+  },
+  {
+    "path": "functions/pico8_poke.asm",
+    "size": 31221,
+    "sha256": "36909d0828b39e1b42433dc919e73f828486597059ea0e3e767b5cdd9dc6f4f0"
+  },
+  {
+    "path": "functions/pico8_rand.asm",
+    "size": 597,
+    "sha256": "18849097790f75e251c042b03c81fdfbd6a1baa284269d20011e570dd18c7399"
+  },
+  {
+    "path": "functions/pico8_random.asm",
+    "size": 976,
+    "sha256": "7fbb3b316485b4f11c56974d4004868f392e855099ea521623b3e5fec420947a"
+  },
+  {
+    "path": "functions/pico8_srand.asm",
+    "size": 1229,
+    "sha256": "a45bad070dfe7227ba473f5806a63981bd3cdd458c91929bf7165a13a0bae5a0"
+  },
+  {
+    "path": "functions/pxa_decompress.asm",
+    "size": 103283,
+    "sha256": "6de4bbd27b423d7281277361a03d685624406f54ac45734d3f7a68cc4e41d204"
+  },
+  {
+    "path": "functions/reset_lua_machine.asm",
+    "size": 1701,
+    "sha256": "70f52e9177b220c0c43ecb29768d6d6967f172037f8ae2a2998ce576aa40c4bb"
+  },
+  {
+    "path": "functions/reset_runtime_state.asm",
+    "size": 11066,
+    "sha256": "bce2633eae27db9ec25bc707dcc54a7295f03b596b74cbe6008b6ff2c83861ab"
+  },
+  {
+    "path": "functions.json",
+    "size": 585554,
+    "sha256": "08bc270ff3d9b9465e12a17a8fcd33943a33f20ed08150b258d9298672154166"
+  },
+  {
+    "path": "identity.json",
+    "size": 5742,
+    "sha256": "8f724428f1addcab3d5ecd611b3386b2d80fc3d5be56aaa49678aa84cb2e637d"
+  },
+  {
+    "path": "indirect_calls.json",
+    "size": 305241,
+    "sha256": "7a1ac7e27ad04d3e776917187f3e36d4e7654ed9407774aa4ccb7492ddde2423"
+  },
+  {
+    "path": "runtime_strings.json",
+    "size": 835477,
+    "sha256": "e535325ce391abaa47432aceb871edd74328fabf8f8b5a85ca8af8c8dd839564"
+  },
+  {
+    "path": "source_filenames.json",
+    "size": 3064,
+    "sha256": "3065fa4824bd6bb09512b3c1726e4b5ced608a8768ee152cbd13dced3558a4f2"
+  },
+  {
+    "path": "string_xrefs.json",
+    "size": 1700775,
+    "sha256": "0c94fb7b7ca20fac892393194b9fd7d9f1af50d3fe13597d81c76f0c8e251516"
+  },
+  {
+    "path": "summary.json",
+    "size": 557,
+    "sha256": "fefbd2e1a6b2819c5e8f76340caefd870ad4b222d2cda0547bfbb1ac5279717e"
+  },
+  {
+    "path": "symbols.tsv",
+    "size": 367912,
+    "sha256": "c76fe191c5dec548bf30e6106c9d5a28de71b6943b4ce3a6a6eda11597f497d1"
+  }
+]

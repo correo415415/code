@@ -1,0 +1,786 @@
+[
+  {
+    "source": "resources/pico8.dat.contents/pod/pico8_boot.p8",
+    "path": "readable/cartridges/boot/pico8_boot.p8",
+    "method": "verbatim",
+    "sha256": "13f64f5de410eb7bef7c6944c419d7fec6d162cc33d75c5d7815277c3c129cfc",
+    "size": 36987
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/pico8_boot.p8",
+    "path": "readable/lua/boot/pico8_boot.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "17082e8608d16ee0536e84621023ea47c0f7e433014eae8308befa7033a10ca1",
+    "size": 49
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/hello.p8",
+    "path": "readable/cartridges/demos/hello.p8",
+    "method": "verbatim",
+    "sha256": "916217c0cda6f0fd6987f33cdf4242ca6cbe635817f43ed0c5a0b19743aa9d4f",
+    "size": 20698
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/hello.p8",
+    "path": "readable/lua/demos/hello.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "49c976fa0c2ef860dd459ab7bef73442a1cde0e75f898a18cb2624070b0529e8",
+    "size": 487
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/api.p8",
+    "path": "readable/cartridges/demos/api.p8",
+    "method": "verbatim",
+    "sha256": "fab2914e2d6019830aa550369e5f90df261cff4fc61e0a37020f223dc2e589bb",
+    "size": 32516
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/api.p8",
+    "path": "readable/lua/demos/api.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "3450817f64361854937f5a4848605c0492f48d07c6b9c4231c4e81d0076e0ac0",
+    "size": 2805
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/auto2d.p8",
+    "path": "readable/cartridges/demos/auto2d.p8",
+    "method": "verbatim",
+    "sha256": "10a7ed35d84d16c57c3195b42361173e2753196cb7f1028a5c11f4f4361de722",
+    "size": 21352
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/auto2d.p8",
+    "path": "readable/lua/demos/auto2d.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "583d6eee3442d92326f6e77480a99d98b0c8f79dbd0161bc2e760a8cb24ce139",
+    "size": 761
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/bounce.p8",
+    "path": "readable/cartridges/demos/bounce.p8",
+    "method": "verbatim",
+    "sha256": "13ade28cf4e2161ddc889c1f9d5a58d1049817ddf6debecfd777799d8e4508e8",
+    "size": 19348
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/bounce.p8",
+    "path": "readable/lua/demos/bounce.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "bf03c36b0b89e2da90d58c4a14ca147a80e6dd88bf524de5829a823a4dc29da3",
+    "size": 1040
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/cast.p8",
+    "path": "readable/cartridges/demos/cast.p8",
+    "method": "verbatim",
+    "sha256": "c3140912a9259ee7e620357cf19fb0e28479faff9a20f2434a02ad0566eaddbe",
+    "size": 31886
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/cast.p8",
+    "path": "readable/lua/demos/cast.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "d70c965d54f0b1c36219afa3b2b3b6e3f7a7b50a1277f6043946e10cc625a9d5",
+    "size": 4219
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/collide.p8",
+    "path": "readable/cartridges/demos/collide.p8",
+    "method": "verbatim",
+    "sha256": "8fd130a2bee54a4aa9953f8e3f9b1d3959b3938d46a1d6809799c9990dbf46c2",
+    "size": 34478
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/collide.p8",
+    "path": "readable/lua/demos/collide.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "7582064185c641843f48c709326c458a7adac1dd25e3b841635eddd0aeae8642",
+    "size": 4320
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/dots3d.p8",
+    "path": "readable/cartridges/demos/dots3d.p8",
+    "method": "verbatim",
+    "sha256": "0ada8283ed3fc9eedd26bdbb8cc31c69725e9f58b5d0304b570f1c94121e7497",
+    "size": 30488
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/dots3d.p8",
+    "path": "readable/lua/demos/dots3d.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "bc6ab0bb305eb808a4d63df483c9a113fd9cb435ddd8a96a297e0714cfd07b50",
+    "size": 1254
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/drippy.p8",
+    "path": "readable/cartridges/demos/drippy.p8",
+    "method": "verbatim",
+    "sha256": "4d785f15bd021be7acb71ef062f3fe2831fabe321a9d664e0d169e45f7715c32",
+    "size": 45235
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/drippy.p8",
+    "path": "readable/lua/demos/drippy.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "e5e8b1226de35aa9d1e5fc85b4292b4c52fb3359a2b83d5a531a91f23250ec9f",
+    "size": 528
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/jelpi.p8",
+    "path": "readable/cartridges/demos/jelpi.p8",
+    "method": "verbatim",
+    "sha256": "1f885cf8c6577dad3242fe7b4610d7c11f097d1b2605cf6ffb828a5adb1923c4",
+    "size": 81123
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/jelpi.p8",
+    "path": "readable/lua/demos/jelpi.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "0d80e6ca43867c6755e8a00c8052489e1da4aec35a65929a707e4505f9eb8411",
+    "size": 31002
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/sort.p8",
+    "path": "readable/cartridges/demos/sort.p8",
+    "method": "verbatim",
+    "sha256": "f3d770ec9c0a5719499805bd875f4e59a9fa8c108c50b1b9deac744eedc22965",
+    "size": 21031
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/sort.p8",
+    "path": "readable/lua/demos/sort.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "de8d3c8cad8707f1df939033d2b7930aaedeaac795f885f1d33ebfdeb9a0a904",
+    "size": 997
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/wander.p8",
+    "path": "readable/cartridges/demos/wander.p8",
+    "method": "verbatim",
+    "sha256": "0ac321f8381ad6aa220ec84d75907d3325b6fa69ff497e46ef4ca9b8b9a15381",
+    "size": 29383
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/wander.p8",
+    "path": "readable/lua/demos/wander.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "069ea2eb61725bf08d0c6b9bcb976d8cdbe7ec21e6c917e239bb2f4838ae6893",
+    "size": 925
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/waves.p8",
+    "path": "readable/cartridges/demos/waves.p8",
+    "method": "verbatim",
+    "sha256": "e2d35e4c78c5943979e9451ffa6e978c925edb1f24bd26197e40a5c5984f8dd3",
+    "size": 17550
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_demos.pod.contents/waves.p8",
+    "path": "readable/lua/demos/waves.lua",
+    "method": "exact __lua__ section slice",
+    "sha256": "778ca132b650f10d5a0b17973def13590501b85b12e2faee21ad6b36cba44f3b",
+    "size": 184
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_html5.pod.contents/src/pico8.js",
+    "path": "readable/web_export/pico8.js",
+    "method": "verbatim",
+    "sha256": "832fd2ff06b33abb7a34a236cbe9e0dfb57ec895e32a7de784c2a6b1eaa29de3",
+    "size": 1573996
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_html5.pod.contents/src/shell.html",
+    "path": "readable/web_export/shell.html",
+    "method": "verbatim",
+    "sha256": "f4a9e799212781b2b136400dad51feaa41c09f38310d39a23dedfba43d4d5d71",
+    "size": 42786
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_html5.pod.contents/src/pico8_wasm.js",
+    "path": "readable/web_export/pico8_wasm.js",
+    "method": "verbatim",
+    "sha256": "4db144139d6f5da021944496c6b58b8eba488c56963ed99d7838e660816e791e",
+    "size": 240901
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/celeste.p8.png",
+    "path": "readable/lua/bbs/celeste.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "efe6360170857a6c41f2a4767bd8a6962274c8f7d0e7b76d7e0b231a8a554688",
+    "size": 26589
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/frog_home.p8.png",
+    "path": "readable/lua/bbs/frog_home.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "24a6e7364c9dc1578f24f5b360d1d0d45a01a5bde3b5e309fa3c3bcd2202ee0c",
+    "size": 17771
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/hug.p8.png",
+    "path": "readable/lua/bbs/hug.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "47daa156b423c569be6c5a97cf0c3a6ffd2737dafc46597c8d9d9036fd0f91ba",
+    "size": 15258
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/archeos_2020.p8.png",
+    "path": "readable/lua/bbs/archeos_2020.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "278cada52e6f994de2f0d42815c2b12e7b0338ba854521b972633d2ea6a68db3",
+    "size": 31070
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/dusk.p8.png",
+    "path": "readable/lua/bbs/dusk.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "8e668985293b517974d9dd8222f7c10bac1f7af77744ae816b6fa4609e1689e2",
+    "size": 31550
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/8legs.p8.png",
+    "path": "readable/lua/bbs/8legs.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "f6793c448c29568f9f3eb885b2a4da8976cc179dcfb985f66d4ff33959b2ef01",
+    "size": 41987
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bbsc.pod.contents/bbsc/embrace.p8.png",
+    "path": "readable/lua/bbs/embrace.lua",
+    "method": "PNG channel bits -> decompression -> PICO-8 charset to UTF-8",
+    "sha256": "4dedb26a510a925026950908b22d5e2e584b730c8e4d1afb2df13f0bd5dfd6fd",
+    "size": 33022
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Resources",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Resources",
+    "method": "verbatim",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/Current",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Versions/Current",
+    "method": "verbatim",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/A/Resources/Info.plist",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Versions/A/Resources/Info.plist",
+    "method": "verbatim",
+    "sha256": "511b5985964c550d16f009c8a28d551769a437d681bede4b6b57a5ef16349865",
+    "size": 1225
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/__unnamed__/entry_0009.bin",
+    "path": "readable/sdl_metadata/__unnamed__/entry_0009.bin",
+    "method": "verbatim",
+    "sha256": "fb5436aa63d1b71a8dfbf74ecaf1a5b4e1ec4df7f80074d11fec99284f69ca5f",
+    "size": 264
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/__unnamed__/entry_0010.bin",
+    "path": "readable/sdl_metadata/__unnamed__/entry_0010.bin",
+    "method": "verbatim",
+    "sha256": "30eb1bef29b46f8ba7ab8b416035dbd93cb034a45481dd97815b944284582cd2",
+    "size": 1534
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/A/Resources/AUTHORS.txt",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Versions/A/Resources/AUTHORS.txt",
+    "method": "verbatim",
+    "sha256": "b327a7b3a4597e5902556ec3e8407cbdd1e288abd4623b7b4b56d14d49e84ecb",
+    "size": 355
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/__unnamed__/entry_0012.bin",
+    "path": "readable/sdl_metadata/__unnamed__/entry_0012.bin",
+    "method": "verbatim",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "size": 35147
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/A/Resources/LICENSE.txt",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Versions/A/Resources/LICENSE.txt",
+    "method": "verbatim",
+    "sha256": "7d3b087c34f35d4d538e3bcddd1ff8f66e92f9ef336881999482800ddf840913",
+    "size": 530
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Frameworks/hidapi.framework/Versions/A/_CodeSignature",
+    "path": "readable/sdl_metadata/Frameworks/hidapi.framework/Versions/A/_CodeSignature",
+    "method": "verbatim",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/__unnamed__/entry_0015.bin",
+    "path": "readable/sdl_metadata/__unnamed__/entry_0015.bin",
+    "method": "verbatim",
+    "sha256": "ca6366b47122479a870984d3f3acc66c2b3afef5021118dd6382e16acf692e1b",
+    "size": 4042
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_stdinc.h",
+    "path": "readable/sdl_headers/SDL_stdinc.h",
+    "method": "verbatim",
+    "sha256": "4ca2ca8b2b701dae628c2777e807bbc875ff6db056a9dbeb9ce85a17d7d76b41",
+    "size": 22681
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_name.h",
+    "path": "readable/sdl_headers/SDL_name.h",
+    "method": "verbatim",
+    "sha256": "3944fdd625f5ee5df0aa2867f8c0428309d320d9093f584a657c2863b493c760",
+    "size": 1155
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_error.h",
+    "path": "readable/sdl_headers/SDL_error.h",
+    "method": "verbatim",
+    "sha256": "159588d8e958bdbbab6480d079e1b6f43ccccfc9fc8733ba6dabd71835a81e19",
+    "size": 2271
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_sensor.h",
+    "path": "readable/sdl_headers/SDL_sensor.h",
+    "method": "verbatim",
+    "sha256": "dc025e1e60bc2e4c4b05b12a0e09c7d59a016c0fc22536081ee7b7c774061f93",
+    "size": 7545
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_copying.h",
+    "path": "readable/sdl_headers/SDL_copying.h",
+    "method": "verbatim",
+    "sha256": "05be84086b3c5580077a37eded5da15320cafb8d4793bf5b702b297faad0810c",
+    "size": 939
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_events.h",
+    "path": "readable/sdl_headers/SDL_events.h",
+    "method": "verbatim",
+    "sha256": "9dd2fa4184a466578937855ad27786d02d5ccad422eac37661105936a8342865",
+    "size": 30957
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_atomic.h",
+    "path": "readable/sdl_headers/SDL_atomic.h",
+    "method": "verbatim",
+    "sha256": "958bcfff611d842ee48e3465a3b90b1bb6ed73942d62a5aeaf6e7ac8a5956025",
+    "size": 10839
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_gamecontroller.h",
+    "path": "readable/sdl_headers/SDL_gamecontroller.h",
+    "method": "verbatim",
+    "sha256": "b8bdfbc89542dbcb1dcfa3c04ed1aaa2e2dd11cc4424af9c5479484411a6c300",
+    "size": 14508
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles2_gl2platform.h",
+    "path": "readable/sdl_headers/SDL_opengles2_gl2platform.h",
+    "method": "verbatim",
+    "sha256": "c252914ec99332b9e7898a92bd092525f6fd545d3b274303a6acd839c7e20c36",
+    "size": 913
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_power.h",
+    "path": "readable/sdl_headers/SDL_power.h",
+    "method": "verbatim",
+    "sha256": "98b10b1c4c2b24e0346a4ad301a583f9e61342bdf4aa00b3e89f0aefdb0f0df9",
+    "size": 2463
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_rect.h",
+    "path": "readable/sdl_headers/SDL_rect.h",
+    "method": "verbatim",
+    "sha256": "afa4fb3566e197cd13cf7621b38223158f1a6faf074339ebadefc28c3e7cb6c8",
+    "size": 4839
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_endian.h",
+    "path": "readable/sdl_headers/SDL_endian.h",
+    "method": "verbatim",
+    "sha256": "d72fb033c7689965c50e8b74cf30a68c76f7e2f96a3bc63bbfddc36a62384e68",
+    "size": 6516
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_thread.h",
+    "path": "readable/sdl_headers/SDL_thread.h",
+    "method": "verbatim",
+    "sha256": "ed684b6a7075da6c344a54e3405119cc37a3707987b6aff006d73ba2e8ec4924",
+    "size": 13256
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles.h",
+    "path": "readable/sdl_headers/SDL_opengles.h",
+    "method": "verbatim",
+    "sha256": "4f63318fba511733848508d1044b91ae23a404b672511dd1c47dbeb6bde97f0f",
+    "size": 1254
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_blendmode.h",
+    "path": "readable/sdl_headers/SDL_blendmode.h",
+    "method": "verbatim",
+    "sha256": "a3a69cc5bc5eb2e6d2e73e3813268a4f12ede2c17dee3d3ea21f6eef0e2fa4d0",
+    "size": 5361
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_clipboard.h",
+    "path": "readable/sdl_headers/SDL_clipboard.h",
+    "method": "verbatim",
+    "sha256": "73ca27bea2c38e94b7da4257fe6a93fc2645ad3ddbac8b32076b3af89ea43e5a",
+    "size": 1966
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_timer.h",
+    "path": "readable/sdl_headers/SDL_timer.h",
+    "method": "verbatim",
+    "sha256": "a68483fb2b917761ab4960c050d12b11c9608811fd12264e64387a65f1bf8dc7",
+    "size": 3454
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_log.h",
+    "path": "readable/sdl_headers/SDL_log.h",
+    "method": "verbatim",
+    "sha256": "290325289bebf62c06bf848fc5dc6a4f2d4ddaa0fc3dd5e92510f3a9e59fca29",
+    "size": 6515
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_shape.h",
+    "path": "readable/sdl_headers/SDL_shape.h",
+    "method": "verbatim",
+    "sha256": "440f3a72cf1195bee216660e809f1d38789bb9d8faad0bc71b7b781fc0069a68",
+    "size": 5681
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengl_glext.h",
+    "path": "readable/sdl_headers/SDL_opengl_glext.h",
+    "method": "verbatim",
+    "sha256": "47065c604afbe34b2b1acbdb7b88d08476134cdc29f9ed395460e3ab236462be",
+    "size": 731576
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_messagebox.h",
+    "path": "readable/sdl_headers/SDL_messagebox.h",
+    "method": "verbatim",
+    "sha256": "72433c18f5a959f95cbbc12be5cf9469148969e54d3e40aae6590beb6f249d64",
+    "size": 4826
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_platform.h",
+    "path": "readable/sdl_headers/SDL_platform.h",
+    "method": "verbatim",
+    "sha256": "a505af23c30280cf6342089bd71185211706e4ec382c55f0d1c9bbd9356c64b5",
+    "size": 5203
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_system.h",
+    "path": "readable/sdl_headers/SDL_system.h",
+    "method": "verbatim",
+    "sha256": "67047d73f06da35d2db3783225980179910391c7d80716d7a99621a35ac3ba52",
+    "size": 10434
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_assert.h",
+    "path": "readable/sdl_headers/SDL_assert.h",
+    "method": "verbatim",
+    "sha256": "06f2d7531f957ebdaeca06ae395607f13c5491d3a346ba6e0b9d75f3b521a025",
+    "size": 11045
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_scancode.h",
+    "path": "readable/sdl_headers/SDL_scancode.h",
+    "method": "verbatim",
+    "sha256": "1beb3f357a7593aa1a71de7f588e8ce57da7caeee38a569d4c3068cd91d71e25",
+    "size": 15254
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/begin_code.h",
+    "path": "readable/sdl_headers/begin_code.h",
+    "method": "verbatim",
+    "sha256": "856fde974ce680731794a8e4293ca844f8683eef1942fa6c9635ef2bdb57ccf8",
+    "size": 4804
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_syswm.h",
+    "path": "readable/sdl_headers/SDL_syswm.h",
+    "method": "verbatim",
+    "sha256": "89b18aed395b9d89a2ce2c393ea4e3a6dd8106ca3c32cc172d10e990ae73ea5d",
+    "size": 9352
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_surface.h",
+    "path": "readable/sdl_headers/SDL_surface.h",
+    "method": "verbatim",
+    "sha256": "85d07bd83c7f81a4eae6c2a93c33bebcdde05c75ec13b6312fccf60a8ca463ca",
+    "size": 20632
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_revision.h",
+    "path": "readable/sdl_headers/SDL_revision.h",
+    "method": "verbatim",
+    "sha256": "3a5d35345a6a43efd60d021f65b569c707c973213faadcc201c1515d583adeb6",
+    "size": 79
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_types.h",
+    "path": "readable/sdl_headers/SDL_types.h",
+    "method": "verbatim",
+    "sha256": "4474d10a21f6e4049678f6dd8f699b174bdeb9ac08b80c7d69c26213210cc1bc",
+    "size": 1031
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_hints.h",
+    "path": "readable/sdl_headers/SDL_hints.h",
+    "method": "verbatim",
+    "sha256": "28805a0bc81bbb658e6354739ffc75a3e269ce48e7eec9a176039e8a1ae9eac5",
+    "size": 56878
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_config.h",
+    "path": "readable/sdl_headers/SDL_config.h",
+    "method": "verbatim",
+    "sha256": "54d863569516a08e461fa6b30de9f61294c5e5cc23f9a98c4e1fe0727047f18f",
+    "size": 1770
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_filesystem.h",
+    "path": "readable/sdl_headers/SDL_filesystem.h",
+    "method": "verbatim",
+    "sha256": "7de84bbd904f402766313f859732b4140aea915d785e3247715cc18a2e417524",
+    "size": 5255
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_mouse.h",
+    "path": "readable/sdl_headers/SDL_mouse.h",
+    "method": "verbatim",
+    "sha256": "a12c97589d1397e175be34ef5bb34ee752ff1643f3d043f02a159f794f394437",
+    "size": 10924
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_video.h",
+    "path": "readable/sdl_headers/SDL_video.h",
+    "method": "verbatim",
+    "sha256": "0a2b9300bde06f2f59e361ef38fed2b4a5c30a96f1e399fea5f7b7cc6c37344d",
+    "size": 46461
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_touch.h",
+    "path": "readable/sdl_headers/SDL_touch.h",
+    "method": "verbatim",
+    "sha256": "89921ce7114aa85a088051b1f4fe234923cdbfbe7122a118e5885a8ea3f73472",
+    "size": 2946
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengl.h",
+    "path": "readable/sdl_headers/SDL_opengl.h",
+    "method": "verbatim",
+    "sha256": "23cba399145592070cc1100aa1e40db45247d637d715b7385f0e5d4d4993bb84",
+    "size": 82593
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_render.h",
+    "path": "readable/sdl_headers/SDL_render.h",
+    "method": "verbatim",
+    "sha256": "463e7a343ed85d5ff5875447e97d87a347c9d228cf0d39acebe35ae37174b9e4",
+    "size": 45044
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_keyboard.h",
+    "path": "readable/sdl_headers/SDL_keyboard.h",
+    "method": "verbatim",
+    "sha256": "1c0cc7b648dbd591ae2095297af21cf77acd8f070619c8ea3b41567e45ae6899",
+    "size": 6437
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles2_khrplatform.h",
+    "path": "readable/sdl_headers/SDL_opengles2_khrplatform.h",
+    "method": "verbatim",
+    "sha256": "7631de0f2ce64747bfd893486eaa41aa08b9e8c5e5c6501b81c045c6ebf04b2a",
+    "size": 10022
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_keycode.h",
+    "path": "readable/sdl_headers/SDL_keycode.h",
+    "method": "verbatim",
+    "sha256": "eeaf1af7a182c7398cfc87ae0b941ee87754449fed930ed913ec35101d3930c5",
+    "size": 15282
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_rwops.h",
+    "path": "readable/sdl_headers/SDL_rwops.h",
+    "method": "verbatim",
+    "sha256": "1482fa713fd8fb401716cdc617d109de6da96e498c2714ff23e2ee64fe3f26b5",
+    "size": 9197
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_version.h",
+    "path": "readable/sdl_headers/SDL_version.h",
+    "method": "verbatim",
+    "sha256": "78511f2d9d044cf48e7f4ed0f1d7f81184a70ea9ea2e538fa7039ead8f531ea2",
+    "size": 5162
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles2_gl2.h",
+    "path": "readable/sdl_headers/SDL_opengles2_gl2.h",
+    "method": "verbatim",
+    "sha256": "f460302b4720f183eb647595a8c1a9c95c0a173dc0cbd5478b2cfbd23cd696d0",
+    "size": 31876
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_gesture.h",
+    "path": "readable/sdl_headers/SDL_gesture.h",
+    "method": "verbatim",
+    "sha256": "e47e1f85b9d60ef48a71c0f842d1dc42d621b2b82d92dc854f2abd8e084a6432",
+    "size": 2157
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_audio.h",
+    "path": "readable/sdl_headers/SDL_audio.h",
+    "method": "verbatim",
+    "sha256": "107e064767d359b5739e19c0e41dc3addb6924db9e727d383611413d97505f99",
+    "size": 35788
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_vulkan.h",
+    "path": "readable/sdl_headers/SDL_vulkan.h",
+    "method": "verbatim",
+    "sha256": "65497667aae3e2b236fa68ad25007677ee214c8b9323355fd1fafb28cf6180ac",
+    "size": 10797
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_config_macosx.h",
+    "path": "readable/sdl_headers/SDL_config_macosx.h",
+    "method": "verbatim",
+    "sha256": "85319ad800fe193c6eb20dccb1423303ec66448169811dfdc6cbf9d6f9ff265d",
+    "size": 6899
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles2_gl2ext.h",
+    "path": "readable/sdl_headers/SDL_opengles2_gl2ext.h",
+    "method": "verbatim",
+    "sha256": "e78d3824e1d71f8a463bad2047fb8b873f735ba7cacbd8ef74cc398b5593729a",
+    "size": 98695
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_cpuinfo.h",
+    "path": "readable/sdl_headers/SDL_cpuinfo.h",
+    "method": "verbatim",
+    "sha256": "a4f552f260cc0f5ed3870212761f8d11718ea9090e382945a14d329588033523",
+    "size": 8751
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_joystick.h",
+    "path": "readable/sdl_headers/SDL_joystick.h",
+    "method": "verbatim",
+    "sha256": "05e829828f12602ddbb2b75141350f5d9cace6196fa85c8754d3dcae70fd0c06",
+    "size": 14151
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_loadso.h",
+    "path": "readable/sdl_headers/SDL_loadso.h",
+    "method": "verbatim",
+    "sha256": "6e972efccb39084e441d5575cd721f5a0870f0933ca81db5d78c5fb085013de1",
+    "size": 2866
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL.h",
+    "path": "readable/sdl_headers/SDL.h",
+    "method": "verbatim",
+    "sha256": "19113de016377833a3b51f440e0e87b4b1090198d868d57e76ae327da1158fe5",
+    "size": 4233
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_main.h",
+    "path": "readable/sdl_headers/SDL_main.h",
+    "method": "verbatim",
+    "sha256": "41aa954e11c6c55e8fb0a4c379b899243a606c00e69681ac4db593bd08d1d23d",
+    "size": 5375
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_mutex.h",
+    "path": "readable/sdl_headers/SDL_mutex.h",
+    "method": "verbatim",
+    "sha256": "4db41a0fdd8fd21fb7b0d1297981e0f56d434a3dc2bb5ae7dc720881e7910c2e",
+    "size": 6665
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_quit.h",
+    "path": "readable/sdl_headers/SDL_quit.h",
+    "method": "verbatim",
+    "sha256": "19d3fcccadf762f34cfd894acbced7827c7925704baf41f79d6d61e89bd7bd57",
+    "size": 2106
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_metal.h",
+    "path": "readable/sdl_headers/SDL_metal.h",
+    "method": "verbatim",
+    "sha256": "7175fed4d6a80ac1c502434954df51bf5234c74386c680f794273f37055139e0",
+    "size": 2683
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_haptic.h",
+    "path": "readable/sdl_headers/SDL_haptic.h",
+    "method": "verbatim",
+    "sha256": "23b2e5ea89a765ddd3b364bb924f4670c4eb366f3b4921205a8698491b7fee95",
+    "size": 39294
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_bits.h",
+    "path": "readable/sdl_headers/SDL_bits.h",
+    "method": "verbatim",
+    "sha256": "a4e0e7dc05feedbbf5dcfde747d26510898d3c9c14ed22b442164d86c88126de",
+    "size": 3096
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_opengles2.h",
+    "path": "readable/sdl_headers/SDL_opengles2.h",
+    "method": "verbatim",
+    "sha256": "470414ac95283e7c9764bee2a5068efe6b1f5d6b0997aa33e27117a98c480da4",
+    "size": 1552
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/SDL_pixels.h",
+    "path": "readable/sdl_headers/SDL_pixels.h",
+    "method": "verbatim",
+    "sha256": "0e08c82367fc5f97a673f7cab16d21babf4c1a94ecf2aa5a4c77bf342ed67461",
+    "size": 17474
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Headers/close_code.h",
+    "path": "readable/sdl_headers/close_code.h",
+    "method": "verbatim",
+    "sha256": "33b3409fcefb5d55acddea1ecc799cce496ca25588757327787a081c4f68c331",
+    "size": 1480
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Resources/Info.plist",
+    "path": "readable/sdl_metadata/Resources/Info.plist",
+    "method": "verbatim",
+    "sha256": "8581cf12575d75cfc4b20b67929f6cbf5504c6201d3c272024b177405248d809",
+    "size": 1372
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Resources/License.txt",
+    "path": "readable/sdl_metadata/Resources/License.txt",
+    "method": "verbatim",
+    "sha256": "63af28e6db4bad012b6afbbca8311e9610635892439bd72e677dea3fa70f8c1e",
+    "size": 909
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/Resources/ReadMe.txt",
+    "path": "readable/sdl_metadata/Resources/ReadMe.txt",
+    "method": "verbatim",
+    "sha256": "a4ea4c1e21638f7a48590a99e4a0ef60dca9d2dc14eef09998bc004092d5913e",
+    "size": 1178
+  },
+  {
+    "source": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod.contents/_CodeSignature/CodeResources",
+    "path": "readable/sdl_metadata/_CodeSignature/CodeResources",
+    "method": "verbatim",
+    "sha256": "cef671aba3dc3ebce863a233297552c2a04df44e1970df44ecc7d9e4359f0489",
+    "size": 17171
+  }
+]

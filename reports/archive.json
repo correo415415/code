@@ -1,0 +1,39 @@
+{
+  "name": "zip para extraer.zip",
+  "size": 10283480,
+  "sha256": "4d6c30a30e21c7332cace81db9c1ef7147af69a93d9aa49098561f12eeeb795c",
+  "files": [
+    {
+      "path": "pico-8/lexaloffle-pico8.png",
+      "size": 442,
+      "sha256": "85b58474263c6e97d717beef76976b2a65123552849c209eb7ade48d1e7e0383",
+      "crc32": "45b39e28",
+      "crc_validated": true,
+      "original_mode": "0o100775"
+    },
+    {
+      "path": "pico-8/pico8",
+      "size": 9377000,
+      "sha256": "a48bb8c4a36873c324990a265d0070bf9f8aba866071b33da80b4bcd729326c8",
+      "crc32": "64f91739",
+      "crc_validated": true,
+      "original_mode": "0o100775"
+    },
+    {
+      "path": "pico-8/pico8.dat",
+      "size": 17721245,
+      "sha256": "4ab066ca9f2e48543603cf6f05ee4e41d632116338919ecf11fdac93f1c2da1a",
+      "crc32": "e1f257ed",
+      "crc_validated": true,
+      "original_mode": "0o100664"
+    },
+    {
+      "path": "pico-8/pico8_dyn",
+      "size": 1761480,
+      "sha256": "55603df52a26eac1d6a8ad7f5fa2b4ff52228aa063e0ef2ebe1eaf72b5f6ba08",
+      "crc32": "218b228f",
+      "crc_validated": true,
+      "original_mode": "0o100775"
+    }
+  ]
+}

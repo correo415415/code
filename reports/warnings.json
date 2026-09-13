@@ -1,0 +1,22 @@
+[
+  {
+    "container": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod",
+    "index": 9,
+    "reason": "Empty original name; indexed fallback, not a recovered name"
+  },
+  {
+    "container": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod",
+    "index": 10,
+    "reason": "Empty original name; indexed fallback, not a recovered name"
+  },
+  {
+    "container": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod",
+    "index": 12,
+    "reason": "Empty original name; indexed fallback, not a recovered name"
+  },
+  {
+    "container": "resources/pico8.dat.contents/pod/f_bin.pod.contents/builds/osx_builds/sdl2_framework_2.0.12.pod",
+    "index": 15,
+    "reason": "Empty original name; indexed fallback, not a recovered name"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "containers": 9,
+  "pod_records": 910,
+  "record_types": {
+    "CFIL": 130,
+    "CBMP": 777,
+    "CPAL": 3
+  },
+  "cartridges": 20,
+  "cart_kinds": {
+    "p8-text": 13,
+    "p8-png": 7
+  },
+  "binary_artifacts": 14,
+  "readable_files": 112,
+  "unnamed_records": 4,
+  "analysis_mode": "static; no supplied code executed"
+}

@@ -1,0 +1,29 @@
+test_crc (test_analysis.Extraction.test_crc) ... ok
+test_nameless_records (test_analysis.Extraction.test_nameless_records) ... ok
+test_size_and_overwrite_limits (test_analysis.Extraction.test_size_and_overwrite_limits) ... ok
+test_symlink_and_fifo (test_analysis.Extraction.test_symlink_and_fifo) ... ok
+test_unsafe_duplicate_conflicting (test_analysis.Extraction.test_unsafe_duplicate_conflicting) ... ok
+test_valid_zip (test_analysis.Extraction.test_valid_zip) ... ok
+test_all_truncations (test_analysis.Formats.test_all_truncations) ... ok
+test_bitmap (test_analysis.Formats.test_bitmap) ... ok
+test_bounded_disassembly_matches_whole (test_analysis.Formats.test_bounded_disassembly_matches_whole) ... ok
+test_compression_rejections (test_analysis.Formats.test_compression_rejections) ... ok
+test_legacy_literals_and_copy (test_analysis.Formats.test_legacy_literals_and_copy) ... ok
+test_mutated_pod (test_analysis.Formats.test_mutated_pod) ... ok
+test_p8_slice (test_analysis.Formats.test_p8_slice) ... ok
+test_paths (test_analysis.Formats.test_paths) ... ok
+test_png_all_byte_values (test_analysis.Formats.test_png_all_byte_values) ... ok
+test_pod_rejections (test_analysis.Formats.test_pod_rejections) ... ok
+test_pod_roundtrip (test_analysis.Formats.test_pod_roundtrip) ... ok
+test_pxa_literal_block (test_analysis.Formats.test_pxa_literal_block) ... ok
+test_pxa_literals_and_copy (test_analysis.Formats.test_pxa_literals_and_copy) ... ok
+test_every_extraction_hash (test_analysis.Sample.test_every_extraction_hash) ... ok
+test_independent_decoder_and_lua_syntax (test_analysis.Sample.test_independent_decoder_and_lua_syntax) ... ok
+test_js_syntax (test_analysis.Sample.test_js_syntax) ... ok
+test_reversing_evidence (test_analysis.Sample.test_reversing_evidence) ... ok
+test_rng_models_against_isolated_x86_emulation (test_analysis.Sample.test_rng_models_against_isolated_x86_emulation) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 5.034s
+
+OK

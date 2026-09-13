@@ -1,0 +1,821 @@
+[
+  {
+    "offset": 0,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/dynapi/SDL_dynapi.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 174937,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_events.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 202191,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_gesture.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 214924,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_keyboard.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 234126,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_mouse.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 259947,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_quit.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 264787,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_touch.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 282138,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_windowevents.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 295659,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/file/SDL_rwops.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 303145,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/haptic/SDL_haptic.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 315009,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/joystick/SDL_gamecontroller.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 341617,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/joystick/SDL_joystick.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 369176,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/power/SDL_power.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 370383,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/SDL_render.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 408570,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/SDL_yuv_sw.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 413239,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/opengl/SDL_render_gl.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 447671,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/opengl/SDL_shaders_gl.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 452115,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/opengles2/SDL_render_gles2.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 496470,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/opengles2/SDL_shaders_gles2.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 499318,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_render_sw.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 515784,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_rotate.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 523732,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_getenv.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 524855,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_iconv.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 527187,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_malloc.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 529230,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_qsort.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 530244,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_stdlib.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 534393,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/stdlib/SDL_string.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 544152,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/SDL_thread.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 551344,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/timer/SDL_timer.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 556075,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_bmp.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 564395,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_clipboard.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 571904,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_fillrect.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 579442,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_pixels.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 593826,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_rect.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 597569,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_shape.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 610423,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_stretch.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 613819,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_surface.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 633752,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_video.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 690663,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_yuv.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 712549,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/yuv2rgb/yuv_rgb.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1093340,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullvideo.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1103790,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/loadso/dlopen/SDL_sysloadso.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1105239,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11messagebox.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1163587,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11video.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1219207,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11vulkan.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1272738,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11window.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1341472,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11xinput2.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1395664,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_dbus.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1405687,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_systhread.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1408743,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_syssem.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1411534,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_sysmutex.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1413855,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_syscond.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1416701,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/thread/pthread/SDL_systls.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1418298,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/joystick/linux/SDL_sysjoystick.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1429513,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/joystick/steam/SDL_steamcontroller.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1431270,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/haptic/linux/SDL_syshaptic.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1446230,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/power/linux/SDL_syspower.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1457077,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/filesystem/unix/SDL_sysfilesystem.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1459975,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/timer/unix/SDL_systimer.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1462343,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_udev.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1472055,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/unix/SDL_poll.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1473318,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1481147,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL_assert.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1493609,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL_error.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1496389,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL_hints.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1499929,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL_log.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1503502,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/atomic/SDL_atomic.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1504870,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/atomic/SDL_spinlock.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1505975,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1535848,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiocvt.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1558116,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiotypecvt.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1569709,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_mixer.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1574569,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_wave.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1580704,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/cpuinfo/SDL_cpuinfo.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1590289,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendfillrect.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1604671,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendline.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1627732,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_blendpoint.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1634527,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_drawline.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1640166,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/render/software/SDL_drawpoint.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1642804,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_RLEaccel.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1666245,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1675249,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_0.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1680641,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_1.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1692204,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_A.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1717948,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_N.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1730911,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_auto.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1771615,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_copy.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1774488,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_blit_slow.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1776887,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_egl.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1793494,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/SDL_vulkan_utils.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1795673,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullevents.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1802746,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/dummy/SDL_nullframebuffer.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1811358,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/disk/SDL_diskaudio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1816510,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/dummy/SDL_dummyaudio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1819886,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/dsp/SDL_dspaudio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1827537,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/alsa/SDL_alsa_audio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1843901,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/pulseaudio/SDL_pulseaudio.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1862686,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11clipboard.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1915457,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11dyn.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 1973588,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11events.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2036132,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11framebuffer.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2087807,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11keyboard.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2143748,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11modes.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2204899,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11mouse.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2261041,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11opengl.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2322607,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11opengles.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2373752,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11shape.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2423983,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/SDL_x11touch.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2470818,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/edid-parse.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2485291,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/video/x11/imKStoUCS.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2486219,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_ime.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2490784,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_ibus.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2551655,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/core/linux/SDL_fcitx.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2608679,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/SDL_dataqueue.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2611902,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/audio/SDL_audiodev.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2617408,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_clipboardevents.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  },
+  {
+    "offset": 2623605,
+    "version": 4,
+    "DW_AT_name": "/home/zep/prog/SDL2-2.0.8/src/events/SDL_dropevents.c",
+    "DW_AT_comp_dir": "/home/zep/prog/SDL2-2.0.8",
+    "DW_AT_producer": "GNU C11 7.3.0 -mmmx -m3dnow -msse -msse2 -msse3 -mtune=generic -march=x86-64 -g -O3 -fvisibility=hidden -fstack-protector-strong"
+  }
+]

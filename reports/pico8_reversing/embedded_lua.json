@@ -1,0 +1,54 @@
+[
+  {
+    "name": "lua_at_00632af0",
+    "va": 6499056,
+    "offset": 2304752,
+    "size": 1270,
+    "sha256": "d6bd1af0c85e557f60e1da0c23954848176db7d4fc338dd7ea50ba08ad02b51f",
+    "method": "literal bytes to first NUL; .lua unchanged; tab_view is derivative",
+    "xrefs": [
+      {
+        "instruction": 4261231,
+        "function": "apply_legacy_changes.part.0",
+        "string_va": 6499056,
+        "target_va": 6499056,
+        "kind": "RIP-relative operand",
+        "instruction_text": "lea rsi, [rip + 0x22257a]"
+      }
+    ]
+  },
+  {
+    "name": "lua_at_006366c0",
+    "va": 6514368,
+    "offset": 2320064,
+    "size": 4026,
+    "sha256": "b1933c9e345a425eae34afab0832c7b035ed85425dffd918f6f0a9026fbfc43d",
+    "method": "literal bytes to first NUL; .lua unchanged; tab_view is derivative",
+    "xrefs": [
+      {
+        "instruction": 4461737,
+        "function": "run_program",
+        "string_va": 6514368,
+        "target_va": 6514368,
+        "kind": "RIP-relative operand",
+        "instruction_text": "lea rsi, [rip + 0x1f5210]"
+      },
+      {
+        "instruction": 4462425,
+        "function": "run_program",
+        "string_va": 6514368,
+        "target_va": 6514368,
+        "kind": "RIP-relative operand",
+        "instruction_text": "lea r8, [rip + 0x1f4f60]"
+      },
+      {
+        "instruction": 4463117,
+        "function": "run_program",
+        "string_va": 6514368,
+        "target_va": 6514368,
+        "kind": "RIP-relative operand",
+        "instruction_text": "lea r8, [rip + 0x1f4cac]"
+      }
+    ]
+  }
+]
